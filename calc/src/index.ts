@@ -77,8 +77,11 @@ export class Move extends A.Move {
   constructor(
     gen: I.GenerationNum | I.Generation,
     name: string,
-    options: Partial<Omit<State.Move, 'ability' | 'item' | 'species'>> & {
+    options: Partial<Omit<State.Move, 'innate1' | 'innate2' | 'innate3' | 'ability' | 'item' | 'species'>> & {
       ability?: string;
+      innate1?: string;
+      innate2?: string;
+      innate3?: string;
       item?: string;
       species?: string;
     } = {}
@@ -91,8 +94,11 @@ export class Pokemon extends A.Pokemon {
   constructor(
     gen: I.GenerationNum | I.Generation,
     name: string,
-    options: Partial<Omit<State.Pokemon, 'ability' | 'item' | 'nature' | 'moves'>> & {
+    options: Partial<Omit<State.Pokemon, 'innate1' | 'innate2' | 'innate3' | 'ability' | 'item' | 'nature' | 'moves'>> & {
       ability?: string;
+      innate1?: string;
+      innate2?: string;
+      innate3?: string;
       item?: string;
       nature?: string;
       moves?: string[];

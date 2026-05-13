@@ -10,6 +10,9 @@ export class Move implements State.Move {
 
   originalName: string;
   ability?: I.AbilityName;
+  innate1?: I.AbilityName;
+  innate2?: I.AbilityName;
+  innate3?: I.AbilityName;
   item?: I.ItemName;
   species?: I.SpeciesName;
   useZ?: boolean;
