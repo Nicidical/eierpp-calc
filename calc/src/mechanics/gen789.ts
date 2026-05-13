@@ -958,7 +958,7 @@ export function calculateBasePowerSMSSSV(
       }
       break;
     default:
-      basePower = 80;
+      basePower = 90; // Tri-Attack was buffed to 90 BP
       desc.moveName = 'Tri Attack';
     }
     break;
