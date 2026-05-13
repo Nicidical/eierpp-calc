@@ -18,9 +18,6 @@ export class Pokemon implements State.Pokemon {
   level: number;
   gender?: I.GenderName;
   ability?: I.AbilityName;
-  innate1?: I.AbilityName;
-  innate2?: I.AbilityName;
-  innate3?: I.AbilityName;
   abilityOn?: boolean;
   isDynamaxed?: boolean;
   dynamaxLevel?: number;
@@ -128,10 +125,7 @@ export class Pokemon implements State.Pokemon {
   }
 
   hasAbility(...abilities: string[]) {
-    return !!((this.ability) && abilities.includes(this.ability) ||
-              (this.innate1) && abilities.includes(this.innate1) ||
-              (this.innate2) && abilities.includes(this.innate2) ||
-              (this.innate3) && abilities.includes(this.innate3)); /* Including the other 3 innates in the check */
+    return !!(this.ability && abilities.includes(this.ability));
   }
 
   hasItem(...items: string[]) {
