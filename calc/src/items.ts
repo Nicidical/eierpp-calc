@@ -6,6 +6,7 @@ export const SEED_BOOSTED_STAT: {[item: string]: StatID} = {
   'Grassy Seed': 'def',
   'Misty Seed': 'spd',
   'Psychic Seed': 'spd',
+  'Toxic Seed': 'spd',
 };
 
 export function getItemBoostType(item: string | undefined) {

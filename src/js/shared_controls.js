@@ -425,6 +425,10 @@ function autosetTerrain(ability, i) {
 		lastAutoTerrain[i] = "Psychic";
 		$("#psychic").prop("checked", true);
 		break;
+	case "Toxic Surge":
+		lastAutoTerrain[i] = "Toxic";
+		$("#toxic").prop("checked", true);
+		break;
 	default:
 		lastAutoTerrain[i] = "";
 		var newTerrain = lastAutoTerrain[1 - i] !== "" ? lastAutoTerrain[1 - i] : lastManualTerrain;

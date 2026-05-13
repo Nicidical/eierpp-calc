@@ -544,6 +544,7 @@ const SV = SS.concat(
     'Griseous Core',
     'Strange Ball',
     'Syrupy Apple',
+    'Toxic Seed',
     'Unremarkable Teacup',
     'Wellspring Mask',
   ].sort()

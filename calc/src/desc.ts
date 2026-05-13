@@ -672,6 +672,13 @@ function getEndOfTurn(
     }
   }
 
+  if (field.hasTerrain('Toxic')) {
+    if (isGrounded(defender, field) && !(defender.hasType('Poison') || defender.hasType('Steel'))) {
+      damage -= Math.floor(defender.maxHP() / 16);
+      texts.push('Toxic Terrain damage');
+    }
+  }
+
   if (defender.hasStatus('psn')) {
     if (defender.hasAbility('Poison Heal')) {
       if (!healBlock) {

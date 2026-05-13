@@ -271,6 +271,7 @@ export function calculateSMSSSV(
       : field.hasTerrain('Grassy') ? 'Grass'
       : field.hasTerrain('Misty') ? 'Fairy'
       : field.hasTerrain('Psychic') ? 'Psychic'
+      : field.hasTerrain('Toxic') ? 'Poison'
       : 'Normal';
     desc.terrain = field.terrain;
 
@@ -938,8 +939,12 @@ export function calculateBasePowerSMSSSV(
       desc.moveName = 'Energy Ball';
       break;
     case 'Misty':
-      basePower = 95;
+      basePower = 90; // Moonblast was nerfed to 90 BP
       desc.moveName = 'Moonblast';
+      break;
+    case 'Toxic':
+      basePower = 90;
+      desc.moveName = 'Sludge Bomb';
       break;
     case 'Psychic':
       // Nature Power does not affect grounded Pokemon if it is affected by
@@ -1143,12 +1148,15 @@ export function calculateBPModsSMSSSV(
   if (isGrounded(attacker, field)) {
     if ((field.hasTerrain('Electric') && move.hasType('Electric')) ||
         (field.hasTerrain('Grassy') && move.hasType('Grass')) ||
-        (field.hasTerrain('Psychic') && move.hasType('Psychic'))
+        (field.hasTerrain('Psychic') && move.hasType('Psychic')) ||
+        (field.hasTerrain('Misty') && move.hasType('Fairy')) ||
+        (field.hasTerrain('Toxic') && move.hasType('Poison'))
     ) {
       bpMods.push(terrainMultiplier);
       desc.terrain = field.terrain;
     }
   }
+  /* Misty Terrain and Grassy Terrain don't do this anymore
   if (isGrounded(defender, field)) {
     if ((field.hasTerrain('Misty') && move.hasType('Dragon')) ||
         (field.hasTerrain('Grassy') && move.named('Bulldoze', 'Earthquake'))
@@ -1157,6 +1165,7 @@ export function calculateBPModsSMSSSV(
       desc.terrain = field.terrain;
     }
   }
+  */
 
   // Abilities
 
@@ -1820,5 +1829,5 @@ export function calculateFinalModsSMSSSV(
 }
 
 function hasTerrainSeed(pokemon: Pokemon) {
-  return pokemon.hasItem('Electric Seed', 'Misty Seed', 'Grassy Seed', 'Psychic Seed');
+  return pokemon.hasItem('Electric Seed', 'Misty Seed', 'Grassy Seed', 'Psychic Seed', 'Toxic Seed');
 }
