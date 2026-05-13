@@ -22,9 +22,6 @@ export class Pokemon implements State.Pokemon {
   innate2?: I.AbilityName;
   innate3?: I.AbilityName;
   abilityOn?: boolean;
-  innate1On?: boolean;
-  innate2On?: boolean;
-  innate3On?: boolean;
   isDynamaxed?: boolean;
   dynamaxLevel?: number;
   alliesFainted?: number;
@@ -66,13 +63,10 @@ export class Pokemon implements State.Pokemon {
     this.level = gen.num === 0 ? 50 : options.level || 100;
     this.gender = options.gender || this.species.gender || 'M';
     this.ability = options.ability || this.species.abilities?.[0] || undefined;
-    this.innate1 = options.innate1 || undefined;
-    this.innate2 = options.innate2 || undefined;
-    this.innate3 = options.innate3 || undefined;
+    this.innate1 = options.ability || undefined;
+    this.innate2 = options.ability || undefined;
+    this.innate3 = options.ability || undefined;
     this.abilityOn = !!options.abilityOn;
-    this.innate1On = !!options.innate1On;
-    this.innate2On = !!options.innate2On;
-    this.innate3On = !!options.innate3On;
 
     this.isDynamaxed = !!options.isDynamaxed;
     this.dynamaxLevel = this.isDynamaxed

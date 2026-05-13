@@ -5,13 +5,7 @@ export namespace State {
     name: I.SpeciesName;
     level?: number;
     ability?: I.AbilityName;
-    innate1?: I.AbilityName;
-    innate2?: I.AbilityName;
-    innate3?: I.AbilityName;
     abilityOn?: boolean;
-    innate1On?: boolean;
-    innate2On?: boolean;
-    innate3On?: boolean;
     isDynamaxed?: boolean;
     dynamaxLevel?: number;
     alliesFainted?: number;
