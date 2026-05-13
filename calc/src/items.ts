@@ -334,6 +334,7 @@ const FLING_10 = new Set([
   'Soothe Bell',
   'Star Sweet',
   'Strawberry Sweet',
+  'Toxic Seed',
   'Wave Incense',
   'White Herb',
   'Wide Lens',
