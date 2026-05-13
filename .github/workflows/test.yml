@@ -34,7 +34,7 @@ jobs:
   #       CI: true
 
   publish:
-    if: ${{ github.repository == 'sylvieonsoup/eipp-calc' && (github.event_name == 'push' || github.event.workflow_run.conclusion == 'success') }}
+    if: ${{ github.repository == 'Nicidcal/eierpp-calc' && (github.event_name == 'push' || github.event.workflow_run.conclusion == 'success') }}
     # needs: build
     runs-on: ubuntu-latest
     permissions:
