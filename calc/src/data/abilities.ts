@@ -302,6 +302,7 @@ const SV = SS.concat([
   'Cud Chew',
   'Dragonize',
   'Earth Eater',
+  'Eerie Fog',
   'Electromorphosis',
   'Embody Aspect (Cornerstone)',
   'Embody Aspect (Hearthflame)',

@@ -362,13 +362,19 @@ function autosetWeather(ability, i) {
 		$("#sand").prop("checked", true);
 		break;
 	case "Snow Warning":
+		/* No Snow, its Hail
 		if (gen >= 9) {
 			lastAutoWeather[i] = "Snow";
 			$("#snow").prop("checked", true);
 		} else {
+		*/	
 			lastAutoWeather[i] = "Hail";
 			$("#hail").prop("checked", true);
-		}
+		// }
+		break;
+	case "Eerie Fog":
+		lastAutoWeather[i] = "Fog";
+		$("#fog").prop("checked", true);
 		break;
 	case "Desolate Land":
 		lastAutoWeather[i] = "Harsh Sunshine";

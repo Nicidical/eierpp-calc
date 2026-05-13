@@ -244,6 +244,7 @@ export function calculateSMSSSV(
       : field.hasWeather('Rain', 'Heavy Rain') && !holdingUmbrella ? 'Water'
       : field.hasWeather('Sand') ? 'Rock'
       : field.hasWeather('Hail', 'Snow') ? 'Ice'
+      : field.hasWeather('Fog') ? 'Ghost'
       : 'Normal';
     isMegaSol ? desc.attackerAbility = attacker.ability : desc.weather = field.weather;
     desc.moveType = type;
@@ -884,6 +885,10 @@ export function calculateBasePowerSMSSSV(
     basePower = move.bp * ((isGrounded(defender, field) && field.hasTerrain('Electric')) ? 2 : 1);
     desc.moveBP = basePower;
     break;
+  case 'Ominous Wind': /* Doubled BP in fog */
+    basePower = move.bp * (field.hasWeather('Fog') ? 2 : 1);
+    desc.moveBP = basePower;
+    break;
   case 'Psyblade':
     basePower = move.bp * (field.hasTerrain('Electric') ? 1.5 : 1);
     if (field.hasTerrain('Electric')) {
@@ -1086,6 +1091,7 @@ export function calculateBPModsSMSSSV(
   if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox')) ||
     (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
     (move.named('Venoshock') && defender.hasStatus('psn', 'tox')) ||
+    (move.named('Venoshock') && isGrounded(defender, field) && field.hasTerrain('Toxic')) || /* New Venoshock Condition */
     (move.named('Lash Out') && (countBoosts(gen, attacker.boosts) < 0))
   ) {
     bpMods.push(8192);
@@ -1553,8 +1559,12 @@ export function calculateDefenseSMSSSV(
     defense = pokeRound((defense * 3) / 2);
     desc.weather = field.weather;
   }
-  if (field.hasWeather('Snow') && defender.hasType('Ice') && hitsPhysical) {
+  if (field.hasWeather('Hail') && defender.hasType('Ice') && hitsPhysical) { /* Changed from Snow to Hail */ 
     defense = pokeRound((defense * 3) / 2);
+    desc.weather = field.weather;
+  }
+  if (field.hasWeather('Fog') && defender.hasType('Ghost')) { /* Fog Defense Boost */ 
+    defense = pokeRound((defense * 6) / 5);
     desc.weather = field.weather;
   }
 

@@ -659,6 +659,9 @@ function getEndOfTurn(
     if (attacker.hasAbility('Liquid Ooze')) {
       damage -= recovery;
       texts.push('Liquid Ooze damage');
+    } else if (attacker.hasType('Poison') && field.hasTerrain('Toxic') && isGrounded(attacker, field)) {
+      damage -= recovery;
+      texts.push('Toxic Terrain damage');
     } else if (!healBlock) {
       damage += recovery;
       texts.push('Leech Seed recovery');
@@ -673,7 +676,7 @@ function getEndOfTurn(
   }
 
   if (field.hasTerrain('Toxic')) {
-    if (isGrounded(defender, field) && !(defender.hasType('Poison') || defender.hasType('Steel'))) {
+    if (isGrounded(defender, field) && !(defender.hasType('Poison') || defender.hasType('Steel')) && !defender.hasAbility('Poison Heal')) {
       damage -= Math.floor(defender.maxHP() / 16);
       texts.push('Toxic Terrain damage');
     }
