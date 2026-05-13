@@ -300,6 +300,147 @@ $(".ability").bind("keyup change", function () {
 
 });
 
+$(".innate1").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innate1").val();
+
+	for (var i = 1; i <= 4; i++) {
+		var moveSelector = ".move" + i;
+		var moveHits = 3;
+
+		var moveName = $(this).closest(".poke-info").find(moveSelector).find(".select2-chosen").text();
+		var move = moves[moveName] || moves['(No Move)'];
+		if (move.multiaccuracy) {
+			moveHits = move.multihit;
+		} else if (ability === 'Skill Link') {
+			moveHits = 5;
+		} else if ($(this).closest(".poke-info").find(".item").val() === 'Loaded Dice') {
+			moveHits = 4;
+		}
+		$(this).closest(".poke-info").find(moveSelector).find(".move-hits").val(moveHits);
+	}
+
+	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero'];
+
+	if (TOGGLE_ABILITIES.indexOf(ability) >= 0) {
+		$(this).closest(".poke-info").find(".innate1Toggle").show();
+	} else {
+		$(this).closest(".poke-info").find(".innate1Toggle").hide();
+	}
+
+	checkRivalry(ability);
+
+	var boostedStat = $(this).closest(".poke-info").find(".boostedStat");
+	if (ability === "Protosynthesis" || ability === "Quark Drive") {
+		boostedStat.show();
+		autosetQP($(this).closest(".poke-info"));
+	} else {
+		boostedStat.val("");
+		boostedStat.hide();
+	}
+
+	if (ability === "Supreme Overlord") {
+		$(this).closest(".poke-info").find(".alliesFainted").show();
+	} else {
+		$(this).closest(".poke-info").find(".alliesFainted").val('0');
+		$(this).closest(".poke-info").find(".alliesFainted").hide();
+	}
+
+});
+
+$(".innate2").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innate2").val();
+
+	for (var i = 1; i <= 4; i++) {
+		var moveSelector = ".move" + i;
+		var moveHits = 3;
+
+		var moveName = $(this).closest(".poke-info").find(moveSelector).find(".select2-chosen").text();
+		var move = moves[moveName] || moves['(No Move)'];
+		if (move.multiaccuracy) {
+			moveHits = move.multihit;
+		} else if (ability === 'Skill Link') {
+			moveHits = 5;
+		} else if ($(this).closest(".poke-info").find(".item").val() === 'Loaded Dice') {
+			moveHits = 4;
+		}
+		$(this).closest(".poke-info").find(moveSelector).find(".move-hits").val(moveHits);
+	}
+
+	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero'];
+
+	if (TOGGLE_ABILITIES.indexOf(ability) >= 0) {
+		$(this).closest(".poke-info").find(".innate2Toggle").show();
+	} else {
+		$(this).closest(".poke-info").find(".innate2Toggle").hide();
+	}
+
+	checkRivalry(ability);
+
+	var boostedStat = $(this).closest(".poke-info").find(".boostedStat");
+	if (ability === "Protosynthesis" || ability === "Quark Drive") {
+		boostedStat.show();
+		autosetQP($(this).closest(".poke-info"));
+	} else {
+		boostedStat.val("");
+		boostedStat.hide();
+	}
+
+	if (ability === "Supreme Overlord") {
+		$(this).closest(".poke-info").find(".alliesFainted").show();
+	} else {
+		$(this).closest(".poke-info").find(".alliesFainted").val('0');
+		$(this).closest(".poke-info").find(".alliesFainted").hide();
+	}
+
+});
+
+$(".innate3").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innate3").val();
+
+	for (var i = 1; i <= 4; i++) {
+		var moveSelector = ".move" + i;
+		var moveHits = 3;
+
+		var moveName = $(this).closest(".poke-info").find(moveSelector).find(".select2-chosen").text();
+		var move = moves[moveName] || moves['(No Move)'];
+		if (move.multiaccuracy) {
+			moveHits = move.multihit;
+		} else if (ability === 'Skill Link') {
+			moveHits = 5;
+		} else if ($(this).closest(".poke-info").find(".item").val() === 'Loaded Dice') {
+			moveHits = 4;
+		}
+		$(this).closest(".poke-info").find(moveSelector).find(".move-hits").val(moveHits);
+	}
+
+	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero'];
+
+	if (TOGGLE_ABILITIES.indexOf(ability) >= 0) {
+		$(this).closest(".poke-info").find(".innate3Toggle").show();
+	} else {
+		$(this).closest(".poke-info").find(".innate3Toggle").hide();
+	}
+
+	checkRivalry(ability);
+
+	var boostedStat = $(this).closest(".poke-info").find(".boostedStat");
+	if (ability === "Protosynthesis" || ability === "Quark Drive") {
+		boostedStat.show();
+		autosetQP($(this).closest(".poke-info"));
+	} else {
+		boostedStat.val("");
+		boostedStat.hide();
+	}
+
+	if (ability === "Supreme Overlord") {
+		$(this).closest(".poke-info").find(".alliesFainted").show();
+	} else {
+		$(this).closest(".poke-info").find(".alliesFainted").val('0');
+		$(this).closest(".poke-info").find(".alliesFainted").hide();
+	}
+
+});
+
 function autosetQP(pokemon) {
 	var currentWeather = $("input:radio[name='weather']:checked").val();
 	var currentTerrain = $("input:checkbox[name='terrain']:checked").val() || "No terrain";
