@@ -15,6 +15,7 @@ const calc = (gen: I.GenerationNum) => (
 const move = (gen: I.GenerationNum) => (
   name: string,
   options: Partial<Omit<State.Move, 'ability' | 'item' | 'species'>> & {
+    innates?: string[];
     ability?: string;
     item?: string;
     species?: string;
@@ -24,6 +25,7 @@ const move = (gen: I.GenerationNum) => (
 const pokemon = (gen: I.GenerationNum) => (
   name: string,
   options: Partial<Omit<State.Pokemon, 'ability' | 'item' | 'nature' | 'moves'>> & {
+    innates?: string[];
     ability?: string;
     item?: string;
     nature?: string;

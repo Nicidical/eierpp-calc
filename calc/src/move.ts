@@ -9,6 +9,7 @@ export class Move implements State.Move {
   name: I.MoveName;
 
   originalName: string;
+  innates?: string[];
   ability?: I.AbilityName;
   item?: I.ItemName;
   species?: I.SpeciesName;
@@ -48,6 +49,7 @@ export class Move implements State.Move {
     gen: I.Generation,
     name: string,
     options: Partial<State.Move> & {
+      innates?: string[];
       ability?: I.AbilityName;
       item?: I.ItemName;
       species?: I.SpeciesName;
@@ -103,7 +105,7 @@ export class Move implements State.Move {
           } else if (options.hits) {
             this.hits = options.hits;
           } else {
-            this.hits = (options.ability === 'Skill Link')
+            this.hits = this.hasAbility('Skill Link', options.ability || '', options.innates || [])
               ? data.multihit[1]
               : data.multihit[0] + 1;
           }
@@ -114,6 +116,7 @@ export class Move implements State.Move {
     this.gen = gen;
     this.name = data.name;
     this.ability = options.ability;
+    this.innates = options.innates;
     this.item = options.item;
     this.useZ = options.useZ;
     this.useMax = options.useMax;
@@ -171,6 +174,11 @@ export class Move implements State.Move {
     }
   }
 
+  hasAbility(toCheck: string, ability: string, innates: string[]) {
+    if (ability === toCheck) return true;
+    return innates.includes(toCheck);
+  }
+
   named(...names: string[]) {
     return names.includes(this.name);
   }
@@ -182,6 +190,7 @@ export class Move implements State.Move {
   clone() {
     return new Move(this.gen, this.originalName, {
       ability: this.ability,
+      innates: this.innates,
       item: this.item,
       species: this.species,
       useZ: this.useZ,
