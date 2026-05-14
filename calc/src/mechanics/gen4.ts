@@ -118,7 +118,7 @@ export function calculateDPP(
     desc.attackerAbility = attacker.ability;
   }
 
-  const isGhostRevealed = attacker.hasAbility('Scrappy') || field.defenderSide.isForesight;
+  const isGhostRevealed = !!attacker.hasAbility('Scrappy') || field.defenderSide.isForesight;
 
   const typeEffectivenessPrecedenceRules = [
     'Normal',
