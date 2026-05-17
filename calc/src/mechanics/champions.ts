@@ -199,15 +199,15 @@ export function calculateChampions(
 
   if (!noTypeChange) {
     const normal = type === 'Normal';
-    if ((isAerilate = !!attacker.hasAbility('Aerilate') && normal)) {
+    if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
       type = 'Flying';
-    } else if ((isDragonize = !!attacker.hasAbility('Dragonize') && normal)) {
+    } else if ((isDragonize = attacker.hasAbility('Dragonize') && normal)) {
       type = 'Dragon';
-    } else if ((isLiquidVoice = !!attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
+    } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
       type = 'Water';
-    } else if ((isPixilate = !!attacker.hasAbility('Pixilate') && normal)) {
+    } else if ((isPixilate = attacker.hasAbility('Pixilate') && normal)) {
       type = 'Fairy';
-    } else if ((isRefrigerate = !!attacker.hasAbility('Refrigerate') && normal)) {
+    } else if ((isRefrigerate = attacker.hasAbility('Refrigerate') && normal)) {
       type = 'Ice';
     }
     if (isAerilate || isDragonize || isPixilate || isRefrigerate) {
@@ -220,7 +220,7 @@ export function calculateChampions(
 
   move.type = type;
 
-  const isGhostRevealed = !!attacker.hasAbility('Scrappy');
+  const isGhostRevealed = attacker.hasAbility('Scrappy');
 
   const type1Effectiveness = getMoveEffectiveness(
     gen,
@@ -317,12 +317,12 @@ export function calculateChampions(
 
   // #endregion
   // #region (Special) Attack
-  const attack = calculateAttackChampions(gen, attacker, defender, move, field, desc, !!isCritical);
+  const attack = calculateAttackChampions(gen, attacker, defender, move, field, desc, isCritical);
   // #endregion
 
   // #region (Special) Defense
 
-  const defense = calculateDefenseChampions(gen, attacker, defender, move, field, desc, !!isCritical);
+  const defense = calculateDefenseChampions(gen, attacker, defender, move, field, desc, isCritical);
   const hitsPhysical = move.overrideDefensiveStat === 'def' || move.category === 'Physical';
   const defenseStat = hitsPhysical ? 'def' : 'spd';
 
@@ -339,7 +339,7 @@ export function calculateChampions(
     move,
     field,
     desc,
-    !!isCritical
+    isCritical
   );
 
   // FIXME: this is incorrect, should be move.flags.heal, not move.drain
@@ -367,7 +367,7 @@ export function calculateChampions(
     move,
     field,
     desc,
-    !!isCritical,
+    isCritical,
     typeEffectiveness
   );
 
@@ -417,13 +417,13 @@ export function calculateChampions(
       usedItems = checkMultihitBoost(gen, attacker, defender, move,
         field, desc, usedItems[0], usedItems[1]);
       const newAttack = calculateAttackChampions(gen, attacker, defender, move,
-        field, desc, !!isCritical);
+        field, desc, isCritical);
       const newDefense = calculateDefenseChampions(gen, attacker, defender, move,
-        field, desc, !!isCritical);
+        field, desc, isCritical);
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-        !!attacker.hasAbility('Aerilate', 'Dragonize', 'Pixilate', 'Refrigerate');
+        attacker.hasAbility('Aerilate', 'Dragonize', 'Pixilate', 'Refrigerate');
 
       if (move.timesUsed! > 1) {
         stabMod = getStabMod(attacker, move, desc);
@@ -449,7 +449,7 @@ export function calculateChampions(
         move,
         field,
         desc,
-        !!isCritical
+        isCritical
       );
       const newFinalMods = calculateFinalModsChampions(
         gen,
@@ -458,7 +458,7 @@ export function calculateChampions(
         move,
         field,
         desc,
-        !!isCritical,
+        isCritical,
         typeEffectiveness,
         times
       );

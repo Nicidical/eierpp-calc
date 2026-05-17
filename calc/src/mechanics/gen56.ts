@@ -168,13 +168,13 @@ export function calculateBWXY(
 
   if (!move.isZ && !noTypeChange) {
     const normal = move.hasType('Normal');
-    if ((isAerilate = !!attacker.hasAbility('Aerilate') && normal)) {
+    if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
       move.type = 'Flying';
-    } else if ((isPixilate = !!attacker.hasAbility('Pixilate') && normal)) {
+    } else if ((isPixilate = attacker.hasAbility('Pixilate') && normal)) {
       move.type = 'Fairy';
-    } else if ((isRefrigerate = !!attacker.hasAbility('Refrigerate') && normal)) {
+    } else if ((isRefrigerate = attacker.hasAbility('Refrigerate') && normal)) {
       move.type = 'Ice';
-    } else if ((isNormalize = !!attacker.hasAbility('Normalize'))) {
+    } else if ((isNormalize = attacker.hasAbility('Normalize'))) {
       move.type = 'Normal';
     }
     if (isPixilate || isRefrigerate || isAerilate || isNormalize) {
@@ -190,7 +190,7 @@ export function calculateBWXY(
     desc.attackerAbility = attacker.ability;
   }
 
-  const isGhostRevealed = !!attacker.hasAbility('Scrappy') || field.defenderSide.isForesight;
+  const isGhostRevealed = attacker.hasAbility('Scrappy') || field.defenderSide.isForesight;
   const isRingTarget = defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
   const type1Effectiveness =
     getMoveEffectiveness(gen, move, defender.types[0], isGhostRevealed, field.isGravity,
@@ -393,7 +393,7 @@ export function calculateBWXY(
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-      !!attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate');
+      attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate');
 
       if (move.timesUsed! > 1) {
         // Adaptability does not change between hits of a multihit, only between turns
