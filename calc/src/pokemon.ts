@@ -18,9 +18,7 @@ export class Pokemon implements State.Pokemon {
   level: number;
   gender?: I.GenderName;
   ability?: I.AbilityName;
-  innates?: string[];
   abilityOn?: boolean;
-  innatesOn?: boolean[];
   isDynamaxed?: boolean;
   dynamaxLevel?: number;
   alliesFainted?: number;
@@ -62,9 +60,8 @@ export class Pokemon implements State.Pokemon {
     this.level = gen.num === 0 ? 50 : options.level || 100;
     this.gender = options.gender || this.species.gender || 'M';
     this.ability = options.ability || this.species.abilities?.[0] || undefined;
-    this.innates = options.innates || [];
     this.abilityOn = !!options.abilityOn;
-    this.innatesOn = options.innatesOn || [false, false, false];
+
     this.isDynamaxed = !!options.isDynamaxed;
     this.dynamaxLevel = this.isDynamaxed
       ? (options.dynamaxLevel === undefined ? 10 : options.dynamaxLevel) : undefined;
@@ -127,32 +124,8 @@ export class Pokemon implements State.Pokemon {
     return this.originalCurHP;
   }
 
-  hasAbilityActive(...abilities: string[]) {
-    const ability = this.hasAbility(...abilities);
-    switch (ability) {
-    case -1:
-      return this.abilityOn;
-    case undefined:
-      return false
-    default:
-      if (!this.innatesOn) return false;
-      return this.innatesOn[ability - 1];
-    }
-  }
-
   hasAbility(...abilities: string[]) {
-    if (this.ability && abilities.includes(this.ability)) {
-      return -1;
-    }
-    if (!this.innates) return undefined;
-    for (let i = 0; i < this.innates.length; i++) {
-      const innate = this.innates[i];
-      if (abilities?.includes(innate.toString())) {
-        // swap out the ability with the innate, so the description has the right ability to point
-        return i + 1; // to avoid 0
-      }
-    }
-    return undefined;
+    return !!(this.ability && abilities.includes(this.ability));
   }
 
   hasItem(...items: string[]) {
@@ -188,8 +161,6 @@ export class Pokemon implements State.Pokemon {
   clone() {
     return new Pokemon(this.gen, this.name, {
       level: this.level,
-      innates: Object.assign([], this.innates),
-      innatesOn: Object.assign([], this.innatesOn),
       ability: this.ability,
       abilityOn: this.abilityOn,
       isDynamaxed: this.isDynamaxed,
