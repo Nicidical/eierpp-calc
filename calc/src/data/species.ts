@@ -17,7 +17,7 @@ export interface SpeciesData {
   readonly gender?: I.GenderName;
   readonly nfe?: boolean;
   readonly abilities?: {0: string};
-  readonly innates?: {0: string}; // innate
+  readonly innates?: string[];
   readonly heads?: number;
   readonly otherFormes?: string[];
   readonly baseSpecies?: string;
