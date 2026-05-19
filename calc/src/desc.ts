@@ -12,10 +12,12 @@ export interface RawDesc {
   attackBoost?: number;
   attackEVs?: string;
   attackerAbility?: string;
+  attackerInnates?: string[];
   attackerItem?: string;
   attackerName: string;
   attackerTera?: string;
   defenderAbility?: string;
+  defenderInnates?: string[];
   defenderItem?: string;
   defenderName: string;
   defenderTera?: string;
@@ -983,6 +985,11 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   output = appendIfSet(output, attackerLevel);
   output = appendIfSet(output, description.attackEVs);
   output = appendIfSet(output, description.attackerItem);
+  if (description.attackerInnates) {
+    for (let innate of description.attackerInnates) {
+      output = appendIfSet(output, innate);
+    }
+  }
   output = appendIfSet(output, description.attackerAbility);
   output = appendIfSet(output, description.rivalry);
   if (description.isBurned) {
@@ -1053,6 +1060,11 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
     output += '/ ' + description.defenseEVs + ' ';
   }
   output = appendIfSet(output, description.defenderItem);
+  if (description.defenderInnates) {
+    for (let innate of description.defenderInnates) {
+      output = appendIfSet(output, innate);
+    }
+  }
   output = appendIfSet(output, description.defenderAbility);
   if (description.isTabletsOfRuin) {
     output += 'Tablets of Ruin ';
