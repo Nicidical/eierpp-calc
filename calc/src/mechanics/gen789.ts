@@ -354,19 +354,19 @@ export function calculateSMSSSV(
 
   if (!move.isZ && !noTypeChange) {
     const normal = type === 'Normal';
-    if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
+    if ((isAerilate = !!attacker.hasAbility('Aerilate') && normal)) {
       type = 'Flying';
-    } else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal)) {
+    } else if ((isGalvanize = !!attacker.hasAbility('Galvanize') && normal)) {
       type = 'Electric';
-    } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
+    } else if ((isLiquidVoice = !!attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
       type = 'Water';
-    } else if ((isPixilate = attacker.hasAbility('Pixilate') && normal)) {
+    } else if ((isPixilate = !!attacker.hasAbility('Pixilate') && normal)) {
       type = 'Fairy';
-    } else if ((isRefrigerate = attacker.hasAbility('Refrigerate') && normal)) {
+    } else if ((isRefrigerate = !!attacker.hasAbility('Refrigerate') && normal)) {
       type = 'Ice';
-    } else if ((isNormalize = attacker.hasAbility('Normalize'))) { // Boosts any type
+    } else if ((isNormalize = !!attacker.hasAbility('Normalize'))) { // Boosts any type
       type = 'Normal';
-    } else if ((isDragonize = attacker.hasAbility('Dragonize')) && normal) {
+    } else if ((isDragonize = !!attacker.hasAbility('Dragonize')) && normal) {
       type = 'Dragon';
     }
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDragonize) {
@@ -392,7 +392,7 @@ export function calculateSMSSSV(
     gen,
     move,
     defender.types[0],
-    isGhostRevealed,
+    !!isGhostRevealed,
     field.isGravity,
     isRingTarget
   );
@@ -401,7 +401,7 @@ export function calculateSMSSSV(
       gen,
       move,
       defender.types[1],
-      isGhostRevealed,
+      !!isGhostRevealed,
       field.isGravity,
       isRingTarget
     )
@@ -414,7 +414,7 @@ export function calculateSMSSSV(
       gen,
       move,
       defender.teraType,
-      isGhostRevealed,
+      !!isGhostRevealed,
       field.isGravity,
       isRingTarget
     );
@@ -584,12 +584,12 @@ export function calculateSMSSSV(
 
   // #endregion
   // #region (Special) Attack
-  const attack = calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
+  const attack = calculateAttackSMSSSV(gen, attacker, defender, move, field, desc, !!isCritical);
   // #endregion
 
   // #region (Special) Defense
 
-  const defense = calculateDefenseSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
+  const defense = calculateDefenseSMSSSV(gen, attacker, defender, move, field, desc, !!isCritical);
   const hitsPhysical = move.overrideDefensiveStat === 'def' || move.category === 'Physical';
   const defenseStat = hitsPhysical ? 'def' : 'spd';
 
@@ -606,7 +606,7 @@ export function calculateSMSSSV(
     move,
     field,
     desc,
-    isCritical
+    !!isCritical
   );
 
   // FIXME: this is incorrect, should be move.flags.heal, not move.drain
@@ -644,7 +644,7 @@ export function calculateSMSSSV(
     move,
     field,
     desc,
-    isCritical,
+    !!isCritical,
     typeEffectiveness
   );
 
@@ -696,13 +696,13 @@ export function calculateSMSSSV(
       usedItems = checkMultihitBoost(gen, attacker, defender, move,
         field, desc, usedItems[0], usedItems[1]);
       const newAttack = calculateAttackSMSSSV(gen, attacker, defender, move,
-        field, desc, isCritical);
+        field, desc, !!isCritical);
       const newDefense = calculateDefenseSMSSSV(gen, attacker, defender, move,
-        field, desc, isCritical);
+        field, desc, !!isCritical);
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-        attacker.hasAbility(
+        !!attacker.hasAbility(
           'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Dragonize'
         );
 
@@ -735,7 +735,7 @@ export function calculateSMSSSV(
         move,
         field,
         desc,
-        isCritical
+        !!isCritical
       );
       const newFinalMods = calculateFinalModsSMSSSV(
         gen,
@@ -744,7 +744,7 @@ export function calculateSMSSSV(
         move,
         field,
         desc,
-        isCritical,
+        !!isCritical,
         typeEffectiveness,
         times
       );
@@ -1125,7 +1125,7 @@ export function calculateBPModsSMSSSV(
       gen,
       move,
       types[0],
-      isGhostRevealed,
+      !!isGhostRevealed,
       field.isGravity,
       isRingTarget
     );
@@ -1133,7 +1133,7 @@ export function calculateBPModsSMSSSV(
       gen,
       move,
       types[1],
-      isGhostRevealed,
+      !!isGhostRevealed,
       field.isGravity,
       isRingTarget
     ) : 1;
