@@ -27,6 +27,7 @@ const EV_ITEMS = [
   'Power Weight',
 ];
 
+<<<<<<< HEAD
 /* A new function solely created because I hate this description system oml */
 export function getAbilOrInnate(pokemon: Pokemon, ability: string, desc: RawDesc, role: 'defender' | 'attacker') {
   if (!!(pokemon.ability && pokemon.ability === ability)) { 
@@ -43,6 +44,8 @@ export function getAbilOrInnate(pokemon: Pokemon, ability: string, desc: RawDesc
   }
 }
 
+=======
+>>>>>>> parent of bdcd540 (small innate description test)
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
@@ -360,8 +363,7 @@ export function checkMultihitBoost(
     } else {
       attacker.boosts.spe = Math.max(attacker.boosts.spe - 1, -6);
       attacker.stats.spe = getFinalSpeed(gen, attacker, field, field.attackerSide);
-      getAbilOrInnate(defender, 'Gooey', desc, 'defender');
-      getAbilOrInnate(defender, 'Tangling Hair', desc, 'defender');
+      desc.defenderAbility = defender.ability;
     }
     // BUG: Technically Sitrus/Figy Berry + Unburden can also affect the defender's speed, but
     // this goes far beyond what we care to implement (especially once Gluttony is considered) now
@@ -379,10 +381,10 @@ export function checkMultihitBoost(
     (defender.hasItem('Kee Berry') && move.category === 'Physical')) {
     const defStat = defender.hasItem('Kee Berry') ? 'def' : 'spd';
     if (attacker.hasAbility('Unaware')) {
-      getAbilOrInnate(attacker, 'Unaware', desc, 'attacker');
+      desc.attackerAbility = attacker.ability;
     } else {
       if (defender.hasAbility('Contrary')) {
-        getAbilOrInnate(defender, 'Contrary', desc, 'defender');
+        desc.defenderAbility = defender.ability;
         if (defender.hasItem('White Herb') && !defenderUsedItem) {
           desc.defenderItem = defender.item;
           defenderUsedItem = true;
@@ -392,7 +394,7 @@ export function checkMultihitBoost(
       } else {
         defender.boosts[defStat] = Math.min(6, defender.boosts[defStat] + defSimple);
       }
-      if (defSimple === 2) getAbilOrInnate(defender, 'Contrary', desc, 'defender');;
+      if (defSimple === 2) desc.defenderAbility = defender.ability;
       defender.stats[defStat] = getModifiedStat(defender.rawStats[defStat],
         defender.boosts[defStat],
         gen);
@@ -410,25 +412,23 @@ export function checkMultihitBoost(
 
   if (defender.hasAbility('Stamina')) {
     if (attacker.hasAbility('Unaware')) {
-      getAbilOrInnate(attacker, 'Unaware', desc, 'attacker');
+      desc.attackerAbility = attacker.ability;
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 1, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      getAbilOrInnate(defender, 'Stamina', desc, 'defender');
+      desc.defenderAbility = defender.ability;
     }
-  }
-  if (defender.hasAbility('Water Compaction') && move.hasType('Water')) {
+  } else if (defender.hasAbility('Water Compaction') && move.hasType('Water')) {
     if (attacker.hasAbility('Unaware')) {
-      getAbilOrInnate(attacker, 'Unaware', desc, 'attacker');
+      desc.attackerAbility = attacker.ability;
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 2, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      getAbilOrInnate(defender, 'Water Compaction', desc, 'defender');
+      desc.defenderAbility = defender.ability;
     }
-  }
-  if (defender.hasAbility('Weak Armor')) {
+  } else if (defender.hasAbility('Weak Armor')) {
     if (attacker.hasAbility('Unaware')) {
-      getAbilOrInnate(attacker, 'Unaware', desc, 'attacker');
+      desc.attackerAbility = attacker.ability;
     } else {
       if (defender.hasItem('White Herb') && !defenderUsedItem && defender.boosts.def === 0) {
         desc.defenderItem = defender.item;
@@ -437,7 +437,7 @@ export function checkMultihitBoost(
         defender.boosts.def = Math.max(defender.boosts.def - 1, -6);
         defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
       }
-      getAbilOrInnate(defender, 'Weak Armor', desc, 'defender');
+      desc.defenderAbility = defender.ability;
     }
     defender.boosts.spe = Math.min(defender.boosts.spe + 2, 6);
     defender.stats.spe = getFinalSpeed(gen, defender, field, field.defenderSide);
@@ -445,7 +445,7 @@ export function checkMultihitBoost(
 
   if (move.dropsStats) {
     if (attacker.hasAbility('Unaware')) {
-      getAbilOrInnate(attacker, 'Unaware', desc, 'attacker');
+      desc.attackerAbility = attacker.ability;
     } else {
       // No move with dropsStats has fancy logic regarding category here
       const stat = move.category === 'Special' ? 'spa' : 'atk';
@@ -453,11 +453,11 @@ export function checkMultihitBoost(
       let boosts = attacker.boosts[stat];
       if (attacker.hasAbility('Contrary')) {
         boosts = Math.min(6, boosts + move.dropsStats);
-        getAbilOrInnate(attacker, 'Contrary', desc, 'attacker');
+        desc.attackerAbility = attacker.ability;
       } else {
         boosts = Math.max(-6, boosts - move.dropsStats * atkSimple);
       }
-      if (atkSimple === 2) getAbilOrInnate(attacker, 'Contrary', desc, 'attacker');
+      if (atkSimple === 2) desc.attackerAbility = attacker.ability;
 
       if (attacker.hasItem('White Herb') && attacker.boosts[stat] < 0 && !attackerUsedItem) {
         boosts += move.dropsStats * atkSimple;
@@ -609,12 +609,10 @@ export function getWeight(pokemon: Pokemon, desc: RawDesc, role: 'defender' | 'a
   let weightHG = pokemon.weightkg * 10;
   const abilityFactor = pokemon.hasAbility('Heavy Metal') ? 2
     : pokemon.hasAbility('Light Metal') ? 0.5
-    : pokemon.hasAbility('Light Metal') && pokemon.hasAbility('Heavy Metal') ? 1
     : 1;
   if (abilityFactor !== 1) {
     weightHG = Math.max(Math.trunc(weightHG * abilityFactor), 1);
-    getAbilOrInnate(pokemon, 'Light Metal', desc, role); 
-    getAbilOrInnate(pokemon, 'Heavy Metal', desc, role); 
+    desc[`${role}Ability`] = pokemon.ability;
   }
 
   if (pokemon.hasItem('Float Stone')) {
@@ -632,8 +630,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
     stabMod += 2048;
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
     stabMod += 2048;
-    getAbilOrInnate(pokemon, 'Protean', desc, 'attacker');
-    getAbilOrInnate(pokemon, 'Libero', desc, 'attacker');
+    desc.attackerAbility = pokemon.ability;
   }
   const teraType = pokemon.teraType;
   if (teraType === move.type && teraType !== 'Stellar') {
@@ -642,7 +639,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   }
   if (pokemon.hasAbility('Adaptability') && pokemon.hasType(move.type)) {
     stabMod += teraType && pokemon.hasOriginalType(teraType) ? 1024 : 2048;
-    getAbilOrInnate(pokemon, 'Adaptability', desc, 'attacker');
+    desc.attackerAbility = pokemon.ability;
   }
   return stabMod;
 }
