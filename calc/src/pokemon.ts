@@ -18,7 +18,9 @@ export class Pokemon implements State.Pokemon {
   level: number;
   gender?: I.GenderName;
   ability?: I.AbilityName;
+  innates?: string[];
   abilityOn?: boolean;
+  innatesOn?: boolean[];
   isDynamaxed?: boolean;
   dynamaxLevel?: number;
   alliesFainted?: number;
@@ -60,8 +62,9 @@ export class Pokemon implements State.Pokemon {
     this.level = gen.num === 0 ? 50 : options.level || 100;
     this.gender = options.gender || this.species.gender || 'M';
     this.ability = options.ability || this.species.abilities?.[0] || undefined;
+    this.innates = options.innates || [];
     this.abilityOn = !!options.abilityOn;
-
+    this.innatesOn = options.innatesOn || [false, false, false];
     this.isDynamaxed = !!options.isDynamaxed;
     this.dynamaxLevel = this.isDynamaxed
       ? (options.dynamaxLevel === undefined ? 10 : options.dynamaxLevel) : undefined;
@@ -125,7 +128,16 @@ export class Pokemon implements State.Pokemon {
   }
 
   hasAbility(...abilities: string[]) {
-    return !!(this.ability && abilities.includes(this.ability));
+    var isTrue = !!(this.ability && abilities.includes(this.ability))
+    if (isTrue) { return isTrue }
+    else {
+      for (let innate in this.innates) {
+        isTrue = !!(innate && abilities.includes(innate))
+        if (isTrue) { return isTrue }
+      }
+    }
+
+    return isTrue;
   }
 
   hasItem(...items: string[]) {
@@ -161,6 +173,8 @@ export class Pokemon implements State.Pokemon {
   clone() {
     return new Pokemon(this.gen, this.name, {
       level: this.level,
+      innates: Object.assign([], this.innates),
+      innatesOn: Object.assign([], this.innatesOn),
       ability: this.ability,
       abilityOn: this.abilityOn,
       isDynamaxed: this.isDynamaxed,
