@@ -27,22 +27,6 @@ const EV_ITEMS = [
   'Power Weight',
 ];
 
-/* A new function solely created because I hate this description system oml */
-export function getAbilOrInnate(pokemon: Pokemon, ability: string, desc: RawDesc, role: 'defender' | 'attacker') {
-  if (!!(pokemon.ability && pokemon.ability === ability)) { 
-    desc[`${role}Ability`] = pokemon.ability;
-  }
-  else if (!!(desc[`${role}Innates`] && pokemon.innates)) {
-    for (let innate of pokemon.innates) {
-      if (!!(innate && innate === ability)) { 
-        desc[`${role}Innates`].concat(innate);
-      }
-    }
-  } else { 
-    return; 
-  }
-}
-
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
