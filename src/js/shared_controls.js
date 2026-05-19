@@ -980,8 +980,9 @@ $(".forme").change(function () {
 		}
 	}
 	var innates = container.find(".innates");
+	var speciesInnates = altForme.innates || [];
 	for (var i = 0; i < 3; i++){
-		setSelectValueIfValid(innates.eq(i), altForme.innates[i], "");
+		setSelectValueIfValid(innates.eq(i), speciesInnates[i], "");
 	}
 	var forcedTeraType = getForcedTeraType($(this).val());
 	if (forcedTeraType) {
