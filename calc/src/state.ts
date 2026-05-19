@@ -4,8 +4,6 @@ export namespace State {
   export interface Pokemon {
     name: I.SpeciesName;
     level?: number;
-    innates?: string[];
-    innatesOn?: boolean[];
     ability?: I.AbilityName;
     abilityOn?: boolean;
     isDynamaxed?: boolean;

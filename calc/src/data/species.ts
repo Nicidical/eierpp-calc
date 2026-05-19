@@ -19,8 +19,6 @@ export interface SpeciesData {
   readonly abilities?: {0: string};
   readonly otherFormes?: string[];
   readonly baseSpecies?: string;
-  readonly innates?: {0: string};
-  readonly heads?: number;
 }
 
 function removeAttr(set: {[name: string]: SpeciesData}, pokemon: string, attr: keyof SpeciesData) {
@@ -9194,7 +9192,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 110, at: 115, df: 80, sa: 50, sd: 90, sp: 90},
     weightkg: 56,
     abilities: {0: 'Vital Spirit'},
-    innates: ['Overgrow', 'Thick Fat', 'Poison Point'],
   },
   Arboliva: {
     types: ['Grass', 'Normal'],
