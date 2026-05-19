@@ -1131,6 +1131,7 @@ function createPokemon(pokeInfo) {
 		if (gen === 1) baseStats.spd = baseStats.spa;
 
 		var ability = pokeInfo.find(".ability").val();
+		var innates = [pokeInfo.find(".innates").eq(0).val(), pokeInfo.find(".innates").eq(1).val(), pokeInfo.find(".innates").eq(2).val()];
 		var item = pokeInfo.find(".item").val();
 		var gender = pokeInfo.find(".gender").val();
 		var isDynamaxed = pokeInfo.find(".max").prop("checked");
@@ -1152,7 +1153,9 @@ function createPokemon(pokeInfo) {
 		return new calc.Pokemon(gen, name, {
 			level: ~~pokeInfo.find(".level").val(),
 			ability: ability,
+			innates: innates,
 			abilityOn: pokeInfo.find(".abilityToggle").is(":checked"),
+			innatesOn: [pokeInfo.find(".innateToggle").eq(0).val(), pokeInfo.find(".innateToggle").eq(1).val(), pokeInfo.find(".innateToggle").eq(2).val()],
 			item: item,
 			gender: gender,
 			nature: pokeInfo.find(".nature").val(),
