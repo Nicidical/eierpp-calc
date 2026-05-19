@@ -130,8 +130,8 @@ export class Pokemon implements State.Pokemon {
   hasAbility(...abilities: string[]) {
     var isTrue = !!(this.ability && abilities.includes(this.ability))
     if (isTrue) { return isTrue }
-    else {
-      for (let innate in this.innates) {
+    else if (this.innates) {
+      for (let innate of this.innates) {
         isTrue = !!(innate && abilities.includes(innate))
         if (isTrue) { return isTrue }
       }
