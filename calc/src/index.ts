@@ -79,6 +79,7 @@ export class Move extends A.Move {
     name: string,
     options: Partial<Omit<State.Move, 'ability' | 'item' | 'species'>> & {
       ability?: string;
+      innates?: string[];
       item?: string;
       species?: string;
     } = {}
@@ -93,6 +94,7 @@ export class Pokemon extends A.Pokemon {
     name: string,
     options: Partial<Omit<State.Pokemon, 'ability' | 'item' | 'nature' | 'moves'>> & {
       ability?: string;
+      innates?: string[];
       item?: string;
       nature?: string;
       moves?: string[];
