@@ -1161,7 +1161,7 @@ function createPokemon(pokeInfo) {
 			ability: ability,
 			innates: innates,
 			abilityOn: pokeInfo.find(".abilityToggle").is(":checked"),
-			innatesOn: [pokeInfo.find(".innateToggle").eq(0).val(), pokeInfo.find(".innateToggle").eq(1).val(), pokeInfo.find(".innateToggle").eq(2).val()],
+			innatesOn: [true, true, true],
 			item: item,
 			gender: gender,
 			nature: pokeInfo.find(".nature").val(),
