@@ -754,6 +754,10 @@ $(".set-selector").change(function () {
 			}
 			pokeObj.find(".nature").val("Hardy");
 			setSelectValueIfValid(abilityObj, pokemon.abilities && pokemon.abilities[0], "");
+			var speciesInnates = pokemon.innates || [];
+			for (i = 0; i < 3; i++) {
+				setSelectValueIfValid(pokeObj.find(".innates").eq(i), speciesInnates[i], "");
+			}
 			if (startsWith(pokemonName, "Ogerpon-") && !startsWith(pokemonName, "Ogerpon-Teal")) {
 				itemObj.val(pokemonName.split("-")[1] + " Mask");
 			} else {
