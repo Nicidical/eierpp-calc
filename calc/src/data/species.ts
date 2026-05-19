@@ -17,6 +17,8 @@ export interface SpeciesData {
   readonly gender?: I.GenderName;
   readonly nfe?: boolean;
   readonly abilities?: {0: string};
+  readonly innates?: {0: string}; // innate
+  readonly heads?: number;
   readonly otherFormes?: string[];
   readonly baseSpecies?: string;
 }
@@ -9192,6 +9194,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 110, at: 115, df: 80, sa: 50, sd: 90, sp: 90},
     weightkg: 56,
     abilities: {0: 'Vital Spirit'},
+    innates: ['Tough Claws', 'Adaptability', 'Shadow Shield']
   },
   Arboliva: {
     types: ['Grass', 'Normal'],
