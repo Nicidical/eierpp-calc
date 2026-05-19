@@ -1449,7 +1449,7 @@ export function calculateAtModsSMSSSV(
     field.attackerSide.isSteelySpirit &&
     move.hasType('Steel')
   ) {
-    atMods.push(6144);
+    atMods.push(5325); // Nerfed to 1.3x in ER
     desc.isSteelySpiritAttacker = true;
   }
 
@@ -1793,7 +1793,7 @@ export function calculateFinalModsSMSSSV(
   }
 
   if (field.defenderSide.isFriendGuard) {
-    finalMods.push(3072);
+    finalMods.push(2048); // Buffed to 50% in ER
     desc.isFriendGuard = true;
   }
 
