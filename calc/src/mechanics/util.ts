@@ -31,11 +31,11 @@ const EV_ITEMS = [
 export function getAbilOrInnate(pokemon: Pokemon, ability: string, desc: RawDesc, role: 'defender' | 'attacker') {
   if (!!(pokemon.ability && pokemon.ability === ability)) { 
     desc[`${role}Ability`] = pokemon.ability;
-  }
-  else if (!!pokemon.innates) {
+  } else if (!!(desc[`${role}Innates`] && pokemon.innates)) {
+    const innates = desc[`${role}Innates`]!;
     for (let innate of pokemon.innates) {
       if (!!(innate && innate === ability)) { 
-        desc[`${role}Innates`].concat(innate);
+        innates.concat(innate);
       }
     }
   } else { 
