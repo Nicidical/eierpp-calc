@@ -979,6 +979,10 @@ $(".forme").change(function () {
 			container.find(".ability").val(chosenSet.abilities[0]);
 		}
 	}
+	var innates = container.find(".innates");
+	for (var i = 0; i < 3; i++){
+		setSelectValueIfValid(innates.eq(i), altForme.innates[i], "");
+	}
 	var forcedTeraType = getForcedTeraType($(this).val());
 	if (forcedTeraType) {
 		$(this).parent().siblings().find(".teraType").val(forcedTeraType);
@@ -1097,7 +1101,9 @@ function createPokemon(pokeInfo) {
 		return new calc.Pokemon(gen, name, {
 			level: set.level,
 			ability: set.ability,
+			innates: set.innates,
 			abilityOn: true,
+			innatesOn: [true, true, true],
 			item: set.item && typeof set.item !== "undefined" && (set.item === "Eviolite" || set.item === "White Herb" || set.item.indexOf("ite") < 0) ? set.item : "",
 			gender: set.gender,
 			nature: set.nature,
