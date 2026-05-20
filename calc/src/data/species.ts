@@ -16994,28 +16994,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Swift Swim'},
 		innates: ['Metallic', 'Ghost Frenzy', 'Infiltrator']
 	},
-	'Venusaur-Mega Y': {
+	'Venusaur-Mega-Y': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 90, at: 100, df: 123, sa: 122, sd: 120, sp: 80},
 		weightkg: 100.0,
 		abilities: {0: 'Big Leaves'},
 		innates: ['Forest Rage', 'Thick Fat', 'Poison Absorb']
 	},
-	'Charizard-Mega X': {
+	'Charizard-Mega-X': {
 		types: ['Fire', 'Dragon'],
 		bs: {hp: 79, at: 140, df: 111, sa: 105, sd: 100, sp: 100},
 		weightkg: 90.5,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Hellblaze', 'Levitate', 'Discipline']
 	},
-	'Charizard-Mega Y': {
+	'Charizard-Mega-Y': {
 		types: ['Fire', 'Flying'],
 		bs: {hp: 79, at: 123, df: 78, sa: 140, sd: 115, sp: 100},
 		weightkg: 90.5,
 		abilities: {0: 'Drought'},
 		innates: ['Hellblaze', 'Flash Fire', 'Solar Power']
 	},
-	'Blastoise-Mega Y': {
+	'Blastoise-Mega-Y': {
 		types: ['Water', 'Steel'],
 		bs: {hp: 84, at: 103, df: 120, sa: 135, sd: 115, sp: 78},
 		weightkg: 85.5,
@@ -17050,7 +17050,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Analytic'},
 		innates: ['Regenerator', 'Armor Tail', 'Shell Armor']
 	},
-	'Gengar-Mega Y': {
+	'Gengar-Mega-Y': {
 		types: ['Ghost', 'Poison'],
 		bs: {hp: 65, at: 65, df: 80, sa: 170, sd: 95, sp: 130},
 		weightkg: 40.5,
@@ -17071,7 +17071,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Aerilate', 'Hyper Cutter', 'Grip Pincer']
 	},
-	'Gyarados-Mega X': {
+	'Gyarados-Mega-X': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 95, at: 155, df: 109, sa: 70, sd: 130, sp: 81},
 		weightkg: 235.0,
@@ -17085,14 +17085,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Speed Force'},
 		innates: ['Fossilized', 'Rock Head', 'Tough Claws']
 	},
-	'Mewtwo-Mega X': {
+	'Mewtwo-Mega-X': {
 		types: ['Psychic', 'Fighting'],
 		bs: {hp: 106, at: 190, df: 100, sa: 154, sd: 100, sp: 130},
 		weightkg: 122.0,
 		abilities: {0: 'Precise Fist'},
 		innates: ['Psychic Mind', 'Raging Boxer', 'Fatal Precision']
 	},
-	'Mewtwo-Mega Y': {
+	'Mewtwo-Mega-Y': {
 		types: ['Psychic'],
 		bs: {hp: 106, at: 150, df: 70, sa: 194, sd: 120, sp: 140},
 		weightkg: 122.0,
@@ -17288,7 +17288,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Overwhelm'},
 		innates: ['Hyper Aggressive', 'Keen Edge', 'Hyper Cutter']
 	},
-	'Lucario-Mega X': {
+	'Lucario-Mega-X': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 70, at: 145, df: 78, sa: 145, sd: 70, sp: 117},
 		weightkg: 54.0,
@@ -19486,7 +19486,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Unseen Fist'},
 		innates: ['Ape Shift', 'Mold Breaker', 'Crystallize']
 	},
-	'Raichu-Mega Y': {
+	'Raichu-Mega-Y': {
 		types: ['Electric'],
 		bs: {hp: 60, at: 100, df: 60, sa: 160, sd: 80, sp: 130},
 		weightkg: 30.0,
@@ -19633,14 +19633,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Good As Gold'},
 		innates: ['Lucha Libre', 'Stamina', 'Vital Spirit']
 	},
-	'Clefable-Mega Y': {
+	'Clefable-Mega-Y': {
 		types: ['Fairy', 'Flying'],
 		bs: {hp: 100, at: 80, df: 95, sa: 135, sd: 110, sp: 88},
 		weightkg: 40.0,
 		abilities: {0: 'Lepidopteran'},
 		innates: ['Pollinate', 'Giant Wings', 'Magic Guard']
 	},
-	'Dragonite-Mega Y': {
+	'Dragonite-Mega-Y': {
 		types: ['Dragon', 'Flying'],
 		bs: {hp: 91, at: 124, df: 115, sa: 145, sd: 125, sp: 100},
 		weightkg: 210.0,
@@ -19661,7 +19661,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Tinted Lens'},
 		innates: ['Toxic Shell', 'Hemotoxin', 'Mighty Horn']
 	},
-	'Chandelure-Mega Y': {
+	'Chandelure-Mega-Y': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 80, at: 75, df: 110, sa: 175, sd: 110, sp: 90},
 		weightkg: 34.3,
@@ -19703,14 +19703,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Huge Power'},
 		innates: ['Break it Down', 'Blur', 'Mystic Power']
 	},
-	'Skarmory-Mega Y': {
+	'Skarmory-Mega-Y': {
 		types: ['Steel', 'Flying'],
 		bs: {hp: 75, at: 140, df: 110, sa: 40, sd: 100, sp: 130},
 		weightkg: 50.5,
 		abilities: {0: 'Talon Trap'},
 		innates: ['To The Bone', 'Light Metal', 'Hyper Aggressive']
 	},
-	'Froslass-Mega Y': {
+	'Froslass-Mega-Y': {
 		types: ['Ice', 'Ghost'],
 		bs: {hp: 70, at: 80, df: 70, sa: 140, sd: 100, sp: 140},
 		weightkg: 26.6,
@@ -19745,7 +19745,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Swift Swim'},
 		innates: ['Shell Armor', 'Hyper Cutter', 'Tough Claws']
 	},
-	'Lapras-Mega Y': {
+	'Lapras-Mega-Y': {
 		types: ['Water', 'Ice'],
 		bs: {hp: 130, at: 105, df: 110, sa: 125, sd: 125, sp: 50},
 		weightkg: 220.0,
@@ -19759,7 +19759,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sand Song'},
 		innates: ['Dragonfly', 'Sepia Lens', 'Desert Spirit']
 	},
-	'Kingdra-Mega X': {
+	'Kingdra-Mega-X': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 75, at: 105, df: 100, sa: 145, sd: 100, sp: 115},
 		weightkg: 152.0,
@@ -19801,7 +19801,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Elude'},
 		innates: ['Ominous Shroud', 'Spectral Shroud', 'Nosferatu']
 	},
-	'Skarmory-Mega X': {
+	'Skarmory-Mega-X': {
 		types: ['Steel', 'Flying'],
 		bs: {hp: 75, at: 100, df: 174, sa: 40, sd: 138, sp: 68},
 		weightkg: 50.5,
@@ -19871,14 +19871,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Unseen Fist'},
 		innates: ['Ape Shift', 'Truant', 'Crystallize']
 	},
-	'Feraligatr-Mega X': {
+	'Feraligatr-Mega-X': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 85, at: 160, df: 130, sa: 89, sd: 93, sp: 78},
 		weightkg: 88.8,
 		abilities: {0: 'Crushing Jaw'},
 		innates: ['Riptide', 'Sharp Edges', 'Predator']
 	},
-	'Feraligatr-Mega Y': {
+	'Feraligatr-Mega-Y': {
 		types: ['Water', 'Electric'],
 		bs: {hp: 85, at: 80, df: 130, sa: 159, sd: 113, sp: 68},
 		weightkg: 88.8,
@@ -19899,7 +19899,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Unaware'},
 		innates: ['Clueless', 'Water Absorb', 'Water Veil']
 	},
-	'Gyarados-Mega Y': {
+	'Gyarados-Mega-Y': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 95, at: 95, df: 99, sa: 130, sd: 140, sp: 81},
 		weightkg: 235.0,
@@ -19990,7 +19990,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hydro Circuit'},
 		innates: ['Radiance', 'Storm Drain', 'Volt Absorb']
 	},
-	'Lapras-Mega X': {
+	'Lapras-Mega-X': {
 		types: ['Water'],
 		bs: {hp: 130, at: 135, df: 105, sa: 100, sd: 90, sp: 85},
 		weightkg: 220.0,
@@ -20074,14 +20074,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Surprise!'},
 		innates: ['Haunted Spirit', 'Contrary', 'Purgatory']
 	},
-	'Froslass-Mega X': {
+	'Froslass-Mega-X': {
 		types: ['Ice', 'Ghost'],
 		bs: {hp: 70, at: 70, df: 120, sa: 130, sd: 120, sp: 90},
 		weightkg: 26.6,
 		abilities: {0: 'Rejection'},
 		innates: ['Hollow Ice Zone', 'Cryostasis', 'Aurora Borealis']
 	},
-	'Wigglytuff-Mega X': {
+	'Wigglytuff-Mega-X': {
 		types: ['Fighting', 'Fairy'],
 		bs: {hp: 120, at: 133, df: 45, sa: 100, sd: 40, sp: 135},
 		weightkg: 12.0,
@@ -20095,28 +20095,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Angel\'s Wrath'},
 		innates: ['Color Change', 'Impenetrable', 'Adaptability']
 	},
-	'Wigglytuff-Mega Y': {
+	'Wigglytuff-Mega-Y': {
 		types: ['Fire', 'Fairy'],
 		bs: {hp: 120, at: 90, df: 55, sa: 140, sd: 108, sp: 60},
 		weightkg: 12.0,
 		abilities: {0: 'Combustion'},
 		innates: ['Balloon Bomb', 'Immolate', 'Fur Coat']
 	},
-	'Lucario-Mega Z': {
+	'Lucario-Mega-Z': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 70, at: 100, df: 70, sa: 164, sd: 70, sp: 151},
 		weightkg: 54.0,
 		abilities: {0: 'Aura Armor'},
 		innates: ['Deflect', 'Mega Launcher', 'Inner Focus']
 	},
-	'Gyaradeath-Mega X': {
+	'Gyaradeath-Mega-X': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 95, at: 140, df: 109, sa: 70, sd: 120, sp: 106},
 		weightkg: 0.0,
 		abilities: {0: 'Fire Scales'},
 		innates: ['Levitate', 'Funeral Pyre', 'Soul Eater']
 	},
-	'Gyaradeath-Mega Y': {
+	'Gyaradeath-Mega-Y': {
 		types: ['Ghost', 'Psychic'],
 		bs: {hp: 95, at: 110, df: 90, sa: 140, sd: 69, sp: 136},
 		weightkg: 0.0,
@@ -20137,7 +20137,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sweeping Edge'},
 		innates: ['Dual Wield', 'Intimidate', 'Olé!']
 	},
-	'Golisopod-Mega Y': {
+	'Golisopod-Mega-Y': {
 		types: ['Bug', 'Water'],
 		bs: {hp: 75, at: 155, df: 140, sa: 100, sd: 100, sp: 60},
 		weightkg: 108.0,
@@ -20305,28 +20305,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Atomic Punch'},
 		innates: ['Iron Giant', 'Steely Spirit', 'Transistor']
 	},
-	'Venusaur-Mega X': {
+	'Venusaur-Mega-X': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 90, at: 125, df: 130, sa: 100, sd: 130, sp: 60},
 		weightkg: 100.0,
 		abilities: {0: 'Energy Siphon'},
 		innates: ['Forest Rage', 'Whiplash', 'Long Reach']
 	},
-	'Blastoise-Mega X': {
+	'Blastoise-Mega-X': {
 		types: ['Water', 'Steel'],
 		bs: {hp: 84, at: 145, df: 125, sa: 113, sd: 120, sp: 48},
 		weightkg: 85.5,
 		abilities: {0: 'Dauntless Shield'},
 		innates: ['Riptide', 'Shell Armor', 'Skill Link']
 	},
-	'Gengar-Mega X': {
+	'Gengar-Mega-X': {
 		types: ['Ghost', 'Poison'],
 		bs: {hp: 65, at: 155, df: 100, sa: 70, sd: 100, sp: 115},
 		weightkg: 40.5,
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Jumpscare', 'Jaws of Carnage', 'Menacing Situation']
 	},
-	'Charizard-Mega Z': {
+	'Charizard-Mega-Z': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 90.5,
@@ -20655,7 +20655,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Swamp Thing'},
 		innates: ['Amphibious', 'Toxic Surge', 'Tough Claws']
 	},
-	'Chandelure-Mega X': {
+	'Chandelure-Mega-X': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 80, at: 65, df: 100, sa: 190, sd: 115, sp: 90},
 		weightkg: 34.3,
@@ -22363,7 +22363,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hyper Cleanse'},
 		innates: ['Gooey', 'Liquid Ooze', 'Liquified']
 	},
-	'Raichu-Mega X': {
+	'Raichu-Mega-X': {
 		types: ['Electric', 'Fighting'],
 		bs: {hp: 60, at: 135, df: 95, sa: 90, sd: 95, sp: 115},
 		weightkg: 30.0,
@@ -22377,7 +22377,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Wind Chimes'},
 		innates: ['Levitate', 'Steelworker', 'Loud Bang']
 	},
-	'Absol-Mega Z': {
+	'Absol-Mega-Z': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 65, at: 154, df: 75, sa: 85, sd: 70, sp: 151},
 		weightkg: 47.0,
@@ -22391,7 +22391,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Brute Force'},
 		innates: ['Bird of Prey', 'Feathercoat', 'Adrenaline Rush']
 	},
-	'Garchomp-Mega Z': {
+	'Garchomp-Mega-Z': {
 		types: ['Dragon'],
 		bs: {hp: 108, at: 130, df: 85, sa: 141, sd: 85, sp: 151},
 		weightkg: 95.0,
