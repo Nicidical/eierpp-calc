@@ -9873,7 +9873,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 150},
 		weightkg: 66.6,
 		abilities: {0: 'Volt Absorb'},
-		innates: ['Aftermath', 'Electro Surge', 'Soundproof']
+		innates: ['Aftermath', 'Electric Surge', 'Soundproof']
 	},
 	Exeggcute: {
 		types: ['Grass', 'Psychic'],
@@ -10867,7 +10867,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 90, at: 85, df: 75, sa: 115, sd: 100, sp: 115},
 		weightkg: 178.0,
 		abilities: {0: 'Transistor'},
-		innates: ['Overcharge', 'Beast Boost', 'Electro Surge']
+		innates: ['Overcharge', 'Beast Boost', 'Electric Surge']
 	},
 	Entei: {
 		types: ['Fire'],
@@ -14661,7 +14661,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 70, at: 115, df: 75, sa: 115, sd: 65, sp: 130},
 		weightkg: 20.5,
 		abilities: {0: 'Speed Boost'},
-		innates: ['Levitate', 'Electro Surge', 'Drizzle']
+		innates: ['Levitate', 'Electric Surge', 'Drizzle']
 	},
 	'Tapu Lele': {
 		types: ['Psychic', 'Fairy'],
@@ -15234,7 +15234,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ground', 'Ghost'],
 		bs: {hp: 58, at: 95, df: 145, sa: 50, sd: 105, sp: 30},
 		weightkg: 66.6,
-		abilities: {0: 'WandrngSprit'},
+		abilities: {0: 'Wandering Spirit'},
 		innates: ['Haunted Spirit', 'Spiteful', 'Solid Rock']
 	},
 	Milcery: {
@@ -15263,7 +15263,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 75, at: 101, df: 95, sa: 101, sd: 95, sp: 15},
 		weightkg: 1.0,
 		abilities: {0: 'Lightning Rod'},
-		innates: ['Electromorphosis', 'Loose Quills', 'Electro Surge']
+		innates: ['Electromorphosis', 'Loose Quills', 'Electric Surge']
 	},
 	Snom: {
 		types: ['Ice', 'Bug'],
@@ -15305,7 +15305,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 58, at: 95, df: 58, sa: 70, sd: 58, sp: 97},
 		weightkg: 3.0,
 		abilities: {0: 'Electric Burst'},
-		innates: ['HungerSwitch', 'Gluttony', 'Lightning Rod']
+		innates: ['Hunger Switch', 'Gluttony', 'Lightning Rod']
 	},
 	Cufant: {
 		types: ['Steel'],
@@ -15437,7 +15437,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ice'],
 		bs: {hp: 100, at: 145, df: 130, sa: 65, sd: 110, sp: 30},
 		weightkg: 800.0,
-		abilities: {0: 'ChillngNeigh'},
+		abilities: {0: 'Chilling Neigh'},
 		innates: ['Permafrost', 'Stamina', 'Whiteout']
 	},
 	Spectrier: {
@@ -16718,21 +16718,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 80, at: 135, df: 104, sa: 110, sd: 96, sp: 125},
 		weightkg: 39.8,
-		abilities: {0: 'Embody Aspect'},
+		abilities: {0: 'Embody Aspect (Hearthflame)'},
 		innates: ['Mold Breaker', 'Hellblaze', 'Super Slammer']
 	},
 	'Ogerpon-Cornerstone-Mega': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 80, at: 120, df: 156, sa: 80, sd: 96, sp: 118},
 		weightkg: 39.8,
-		abilities: {0: 'Embody Aspect'},
+		abilities: {0: 'Embody Aspect (Cornerstone)'},
 		innates: ['Self Repair', 'We Will Rock You', 'Super Slammer']
 	},
 	'Ogerpon-Wellspring-Mega': {
 		types: ['Grass', 'Water'],
 		bs: {hp: 80, at: 120, df: 94, sa: 80, sd: 156, sp: 120},
 		weightkg: 39.8,
-		abilities: {0: 'Embody Aspect'},
+		abilities: {0: 'Embody Aspect (Wellspring)'},
 		innates: ['Self Repair', 'Riptide', 'Super Slammer']
 	},
 	Seerkat: {
@@ -18672,7 +18672,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 67, at: 101, df: 87, sa: 58, sd: 57, sp: 101},
 		weightkg: 3.0,
 		abilities: {0: 'Doom Blast'},
-		innates: ['HungerSwitch', 'Gluttony', 'Lightning Rod']
+		innates: ['Hunger Switch', 'Gluttony', 'Lightning Rod']
 	},
 	'Zacian-Crowned': {
 		types: ['Fairy', 'Steel'],
@@ -19540,7 +19540,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		bs: {hp: 70, at: 75, df: 135, sa: 165, sd: 125, sp: 65},
 		weightkg: 180.0,
 		abilities: {0: 'Electric Burst'},
-		innates: ['Electro Surge', 'Multi-Headed', 'Magnet Pull']
+		innates: ['Electric Surge', 'Multi-Headed', 'Magnet Pull']
 	},
 	'Shedinja-Mega': {
 		types: ['Bug', 'Ghost'],
@@ -21226,14 +21226,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 100, df: 75, sa: 120, sd: 75, sp: 142},
 		weightkg: 82.0,
-		abilities: {0: 'Electro Surge'},
+		abilities: {0: 'Electric Surge'},
 		innates: ['Levitate', 'Galvanize', 'Clear Body']
 	},
 	'Flygon-Redux-B-Mega': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 110, df: 95, sa: 150, sd: 95, sp: 162},
 		weightkg: 82.0,
-		abilities: {0: 'Electro Surge'},
+		abilities: {0: 'Electric Surge'},
 		innates: ['Thundercall', 'Galvanize', 'Energized']
 	},
 	'Ribombee-Redux': {
