@@ -1308,7 +1308,7 @@ export function calculateBPModsSMSSSV(
     (attacker.hasItem('Muscle Band') && move.category === 'Physical') ||
     (attacker.hasItem('Wise Glasses') && move.category === 'Special')
   ) {
-    bpMods.push(4505);
+    bpMods.push(4710); /* Muscle Band and Wise Glasses were both buffed to 1.15x*/
     desc.attackerItem = attacker.item;
   } else if (attacker.hasItem('Punching Glove') && move.flags.punch) {
     bpMods.push(4506);
