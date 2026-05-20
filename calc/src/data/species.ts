@@ -9168,7 +9168,7 @@ const PLA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 };
 
 const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
-  	Bulbasaur: {
+	Bulbasaur: {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 47, at: 49, df: 49, sa: 65, sd: 65, sp: 45},
 		weightkg: 6.9,
@@ -9742,7 +9742,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Analytic'},
 		innates: ['Filter', 'Multi-Headed', 'Magnet Pull']
 	},
-	Farfetchd: {
+	'Farfetch\u2019d': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 52, at: 90, df: 55, sa: 58, sd: 62, sp: 100},
 		weightkg: 15.0,
@@ -13928,7 +13928,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'No Guard'},
 		innates: ['Levitate', 'Dual Wield', 'Soul Eater']
 	},
-	'Aegislash-Shield': {
+  'Aegislash-Shield': {
 		types: ['Steel', 'Ghost'],
 		bs: {hp: 60, at: 50, df: 140, sa: 50, sd: 140, sp: 60},
 		weightkg: 53.0,
@@ -15216,7 +15216,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Perish Body'},
 		innates: ['Fertilize', 'Shadow Shield', 'Stall']
 	},
-	Sirfetchd: {
+	'Sirfetch\u2019d': {
 		types: ['Fighting'],
 		bs: {hp: 92, at: 135, df: 95, sa: 58, sd: 92, sp: 65},
 		weightkg: 117.0,
@@ -16049,84 +16049,84 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Pressure'},
 		innates: ['Supreme Overlord', 'Hyper Cutter', 'Battle Armor']
 	},
-	'Great Tusk': {
+	'Great-Tusk': {
 		types: ['Ground', 'Fighting'],
 		bs: {hp: 115, at: 131, df: 131, sa: 53, sd: 53, sp: 87},
 		weightkg: 320.0,
 		abilities: {0: 'Spike Armor'},
 		innates: ['Protosynthesis', 'Mighty Horn', 'Aftershock']
 	},
-	'Scream Tail': {
+	'Scream-Tail': {
 		types: ['Fairy', 'Psychic'],
 		bs: {hp: 115, at: 65, df: 99, sa: 65, sd: 115, sp: 111},
 		weightkg: 8.0,
 		abilities: {0: 'Fur Coat'},
 		innates: ['Protosynthesis', 'Nosferatu', 'Tangling Hair']
 	},
-	'Brute Bonnet': {
+	'Brute-Bonnet': {
 		types: ['Grass', 'Dark'],
 		bs: {hp: 111, at: 127, df: 99, sa: 79, sd: 99, sp: 55},
 		weightkg: 21.0,
 		abilities: {0: 'Fungal Infection'},
 		innates: ['Protosynthesis', 'Regenerator', 'Solar Power']
 	},
-	'Flutter Mane': {
+	'Flutter-Mane': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 55, at: 55, df: 55, sa: 135, sd: 135, sp: 135},
 		weightkg: 4.0,
 		abilities: {0: 'Vengeful Spirit'},
 		innates: ['Protosynthesis', 'Ill Will', 'Frenzied Phantom']
 	},
-	'Slither Wing': {
+	'Slither-Wing': {
 		types: ['Bug', 'Fighting'],
 		bs: {hp: 85, at: 135, df: 79, sa: 85, sd: 105, sp: 81},
 		weightkg: 92.0,
 		abilities: {0: 'Fluffy'},
 		innates: ['Protosynthesis', 'Majestic Moth', 'Powder Burst']
 	},
-	'Sandy Shocks': {
+	'Sandy-Shocks': {
 		types: ['Electric', 'Ground'],
 		bs: {hp: 85, at: 81, df: 97, sa: 121, sd: 85, sp: 101},
 		weightkg: 60.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Protosynthesis', 'Multi-Headed', 'Transistor']
 	},
-	'Iron Treads': {
+	'Iron-Treads': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 90, at: 112, df: 120, sa: 72, sd: 70, sp: 106},
 		weightkg: 240.0,
 		abilities: {0: 'Let\'s Roll'},
 		innates: ['Quark Drive', 'Impenetrable', 'Mega Launcher']
 	},
-	'Iron Bundle': {
+	'Iron-Bundle': {
 		types: ['Ice', 'Water'],
 		bs: {hp: 56, at: 80, df: 114, sa: 124, sd: 60, sp: 136},
 		weightkg: 11.0,
 		abilities: {0: 'Mountaineer'},
 		innates: ['Quark Drive', 'Cold Rebound', 'Speed Boost']
 	},
-	'Iron Hands': {
+	'Iron-Hands': {
 		types: ['Fighting', 'Electric'],
 		bs: {hp: 154, at: 140, df: 108, sa: 50, sd: 68, sp: 50},
 		weightkg: 380.7,
 		abilities: {0: 'Iron Fist'},
 		innates: ['Quark Drive', 'Power Core', 'Static']
 	},
-	'Iron Jugulis': {
+	'Iron-Jugulis': {
 		types: ['Dark', 'Flying'],
 		bs: {hp: 94, at: 80, df: 86, sa: 122, sd: 80, sp: 108},
 		weightkg: 111.0,
 		abilities: {0: 'Hubris'},
 		innates: ['Quark Drive', 'Multi-Headed', 'Rapid Response']
 	},
-	'Iron Moth': {
+	'Iron-Moth': {
 		types: ['Fire', 'Poison'],
 		bs: {hp: 80, at: 70, df: 60, sa: 140, sd: 110, sp: 110},
 		weightkg: 36.0,
 		abilities: {0: 'Molten Down'},
 		innates: ['Quark Drive', 'Majestic Moth', 'Overcoat']
 	},
-	'Iron Thorns': {
+	'Iron-Thorns': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 100, at: 134, df: 110, sa: 70, sd: 84, sp: 72},
 		weightkg: 303.0,
@@ -16168,42 +16168,42 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sharing Is Caring'},
 		innates: ['Good As Gold', 'Steely Spirit', 'Super Luck']
 	},
-	'Wo Chien': {
+	'Wo-Chien': {
 		types: ['Dark', 'Grass'],
 		bs: {hp: 125, at: 70, df: 100, sa: 95, sd: 135, sp: 55},
 		weightkg: 74.2,
 		abilities: {0: 'Grass Pelt'},
 		innates: ['Tablets Of Ruin', 'Stall', 'Absorbant']
 	},
-	'Chien Pao': {
+	'Chien-Pao': {
 		types: ['Dark', 'Ice'],
 		bs: {hp: 80, at: 130, df: 80, sa: 90, sd: 65, sp: 135},
 		weightkg: 152.2,
 		abilities: {0: 'Unaware'},
 		innates: ['Sword Of Ruin', 'Arctic Fur', 'Strong Jaw']
 	},
-	'Ting Lu': {
+	'Ting-Lu': {
 		types: ['Dark', 'Ground'],
 		bs: {hp: 165, at: 110, df: 125, sa: 55, sd: 80, sp: 45},
 		weightkg: 699.7,
 		abilities: {0: 'Aftershock'},
 		innates: ['Vessel Of Ruin', 'Pressure', 'Thick Skin']
 	},
-	'Chi Yu': {
+	'Chi-Yu': {
 		types: ['Dark', 'Fire'],
 		bs: {hp: 55, at: 80, df: 80, sa: 145, sd: 120, sp: 100},
 		weightkg: 4.9,
 		abilities: {0: 'Hellblaze'},
 		innates: ['Beads Of Ruin', 'Turboblaze', 'Molten Down']
 	},
-	'Roaring Moon': {
+	'Roaring-Moon': {
 		types: ['Dragon', 'Dark'],
 		bs: {hp: 105, at: 139, df: 71, sa: 55, sd: 101, sp: 119},
 		weightkg: 380.0,
 		abilities: {0: 'Equinox'},
 		innates: ['Protosynthesis', 'Overwhelm', 'Fearmonger']
 	},
-	'Iron Valiant': {
+	'Iron-Valiant': {
 		types: ['Fairy', 'Fighting'],
 		bs: {hp: 74, at: 130, df: 90, sa: 120, sd: 60, sp: 116},
 		weightkg: 35.0,
@@ -16224,14 +16224,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Surge Surfer'},
 		innates: ['Hadron Engine', 'Dragon\'s Maw', 'Iron Serpent']
 	},
-	'Walking Wake': {
+	'Walking-Wake': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 99, at: 83, df: 91, sa: 125, sd: 83, sp: 109},
 		weightkg: 280.0,
 		abilities: {0: 'Drought'},
 		innates: ['Protosynthesis', 'Overwhelm', 'Multiscale']
 	},
-	'Iron Leaves': {
+	'Iron-Leaves': {
 		types: ['Grass', 'Psychic'],
 		bs: {hp: 90, at: 104, df: 88, sa: 108, sd: 70, sp: 130},
 		weightkg: 125.0,
@@ -16301,28 +16301,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Self Sufficient'},
 		innates: ['Multi-Headed', 'Shell Armor', 'Super Hot Goo']
 	},
-	'Gouging Fire': {
+	'Gouging-Fire': {
 		types: ['Fire', 'Dragon'],
 		bs: {hp: 105, at: 115, df: 121, sa: 65, sd: 93, sp: 91},
 		weightkg: 10.0,
 		abilities: {0: 'Battle Armor'},
 		innates: ['Protosynthesis', 'Tough Claws', 'Turboblaze']
 	},
-	'Raging Bolt': {
+	'Raging-Bolt': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 125, at: 63, df: 91, sa: 137, sd: 99, sp: 75},
 		weightkg: 10.0,
 		abilities: {0: 'Power Spot'},
 		innates: ['Protosynthesis', 'Overwhelm', 'Teravolt']
 	},
-	'Iron Boulder': {
+	'Iron-Boulder': {
 		types: ['Rock', 'Psychic'],
 		bs: {hp: 90, at: 120, df: 80, sa: 68, sd: 108, sp: 124},
 		weightkg: 10.0,
 		abilities: {0: 'Mold Breaker'},
 		innates: ['Quark Drive', 'Keen Edge', 'Solid Rock']
 	},
-	'Iron Crown': {
+	'Iron-Crown': {
 		types: ['Steel', 'Psychic'],
 		bs: {hp: 90, at: 72, df: 100, sa: 122, sd: 98, sp: 108},
 		weightkg: 10.0,
@@ -16497,21 +16497,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Unburden'},
 		innates: ['Aerodynamics', 'Levitate', 'Skill Link']
 	},
-	'Blizzard Maw': {
+	'Blizzard-Maw': {
 		types: ['Ice', 'Dark'],
 		bs: {hp: 115, at: 133, df: 101, sa: 73, sd: 103, sp: 65},
 		weightkg: 0.0,
 		abilities: {0: 'Scare'},
 		innates: ['Protosynthesis', 'Permafrost', 'Primal Maw']
 	},
-	'Lumber Sloth': {
+	'Lumber-Sloth': {
 		types: ['Fire', 'Grass'],
 		bs: {hp: 109, at: 135, df: 91, sa: 85, sd: 89, sp: 61},
 		weightkg: 0.0,
 		abilities: {0: 'Overcoat'},
 		innates: ['Protosynthesis', 'Tough Claws', 'Flammable Coat']
 	},
-	'Iron Carapace': {
+	'Iron-Carapace': {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 92, at: 64, df: 98, sa: 132, sd: 70, sp: 114},
 		weightkg: 59.0,
@@ -16637,7 +16637,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hustle'},
 		innates: ['Aerialist', 'Overwhelm', 'Corrosion']
 	},
-	'Burmy Eterna': {
+	'Burmy-Eterna': {
 		types: ['Bug', 'Poison'],
 		bs: {hp: 210, at: 79, df: 205, sa: 255, sd: 205, sp: 86},
 		weightkg: 3.4,
@@ -16672,7 +16672,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Combat Specialist'},
 		innates: ['Intimidate', 'Rock Head', 'Reckless']
 	},
-	'Iron Voca': {
+	'Iron-Voca': {
 		types: ['Steel', 'Normal'],
 		bs: {hp: 94, at: 56, df: 120, sa: 112, sd: 70, sp: 118},
 		weightkg: 22.6,
@@ -16714,21 +16714,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Embody Aspect'},
 		innates: ['Defiant', 'Forest Rage', 'Super Slammer']
 	},
-	'Ogerpon Hearthflame-Mega': {
+	'Ogerpon-Hearthflame-Mega': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 80, at: 135, df: 104, sa: 110, sd: 96, sp: 125},
 		weightkg: 39.8,
 		abilities: {0: 'Embody Aspect'},
 		innates: ['Mold Breaker', 'Hellblaze', 'Super Slammer']
 	},
-	'Ogerpon Cornerstone-Mega': {
+	'Ogerpon-Cornerstone-Mega': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 80, at: 120, df: 156, sa: 80, sd: 96, sp: 118},
 		weightkg: 39.8,
 		abilities: {0: 'Embody Aspect'},
 		innates: ['Self Repair', 'We Will Rock You', 'Super Slammer']
 	},
-	'Ogerpon Wellspring': {
+	'Ogerpon-Wellspring-Mega': {
 		types: ['Grass', 'Water'],
 		bs: {hp: 80, at: 120, df: 94, sa: 80, sd: 156, sp: 120},
 		weightkg: 39.8,
@@ -16763,7 +16763,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Merciless'},
 		innates: ['On the Prowl', 'Chokehold', 'Compound Eyes']
 	},
-	'Crag Hopper': {
+	'Crag-Hopper': {
 		types: ['Rock', 'Ground'],
 		bs: {hp: 111, at: 125, df: 119, sa: 69, sd: 101, sp: 45},
 		weightkg: 42.4,
@@ -16784,7 +16784,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Devious Present', 'Christmas Nightmare', 'Deviate']
 	},
-	'Iron Palette': {
+	'Iron-Palette': {
 		types: ['Normal', 'Psychic'],
 		bs: {hp: 114, at: 80, df: 60, sa: 124, sd: 136, sp: 56},
 		weightkg: 22.0,
@@ -16805,14 +16805,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shield Dust'},
 		innates: ['Locust Swarm', 'Shadow Shield', 'Curse of Famine']
 	},
-	'Iron Scythe': {
+	'Iron-Scythe': {
 		types: ['Poison', 'Ghost'],
 		bs: {hp: 102, at: 126, df: 68, sa: 68, sd: 108, sp: 98},
 		weightkg: 6.9,
 		abilities: {0: 'Sweeping Edge'},
 		innates: ['Quark Drive', 'Power Edge', 'Soul Harvest']
 	},
-	'Wooly Worm': {
+	'Wooly-Worm': {
 		types: ['Grass', 'Bug'],
 		bs: {hp: 181, at: 83, df: 61, sa: 129, sd: 79, sp: 37},
 		weightkg: 6.9,
@@ -16959,21 +16959,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Well Baked Body'},
 		innates: ['Mashed Potato', 'Earth Eater', 'Seed Sower']
 	},
-	'Corn Tyrant': {
+	'Corn-Tyrant': {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 135, at: 135, df: 135, sa: 55, sd: 55, sp: 55},
 		weightkg: 6.9,
 		abilities: {0: 'Overcoat'},
 		innates: ['Protosynthesis', 'Loose Thorns', 'Seed Sower']
 	},
-	'Iron Spirals': {
+	'Iron-Spirals': {
 		types: ['Ground', 'Psychic'],
 		bs: {hp: 98, at: 68, df: 114, sa: 108, sd: 114, sp: 88},
 		weightkg: 6.9,
 		abilities: {0: 'Energy Horns'},
 		innates: ['Quark Drive', 'Impenetrable', 'Laser Drill']
 	},
-	'Iron Saber': {
+	'Iron-Saber': {
 		types: ['Grass', 'Electric'],
 		bs: {hp: 102, at: 82, df: 104, sa: 76, sd: 102, sp: 104},
 		weightkg: 6.9,
@@ -17330,14 +17330,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Delta Stream', 'Dragon\'s Maw', 'Aerilate']
 	},
-	'Kyogre Primal': {
+	'Kyogre-Primal': {
 		types: ['Water'],
 		bs: {hp: 100, at: 150, df: 90, sa: 180, sd: 160, sp: 90},
 		weightkg: 352.0,
 		abilities: {0: 'Raging Storm'},
 		innates: ['Swift Swim', 'Primal Armor', 'Primordial Sea']
 	},
-	'Groudon Primal': {
+	'Groudon-Primal': {
 		types: ['Ground', 'Fire'],
 		bs: {hp: 100, at: 180, df: 160, sa: 150, sd: 90, sp: 90},
 		weightkg: 950.0,
@@ -17519,7 +17519,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Pressure'},
 		innates: ['Levitate', 'Multi-Headed', 'Poison Absorb']
 	},
-	'Mr Mime-Galarian': {
+	'Mr. Mime-Galarian': {
 		types: ['Ice', 'Psychic'],
 		bs: {hp: 50, at: 65, df: 65, sa: 90, sd: 90, sp: 100},
 		weightkg: 54.5,
@@ -17603,700 +17603,700 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Clap Trap'},
 		innates: ['Mimicry', 'Scrapyard', 'Iron Barbs']
 	},
-	'Pikachu Cosplay': {
+	'Pikachu-Cosplay': {
 		types: ['Electric', 'Normal'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Pickup', 'Anticipation', 'Unaware']
 	},
-	'Pikachu Rock Star': {
+	'Pikachu-Rock-Star': {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Steely Spirit', 'Bulletproof', 'Rhythmic']
 	},
-	'Pikachu Belle': {
+	'Pikachu-Belle': {
 		types: ['Electric', 'Ice'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Deep Freeze', 'Water Absorb', 'Ice Scales']
 	},
-	'Pikachu Pop Star': {
+	'Pikachu-Pop-Star': {
 		types: ['Electric', 'Fairy'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Pixie Power', 'Subdue', 'Serene Grace']
 	},
-	'Pikachu Ph D': {
+	'Pikachu-Ph-D': {
 		types: ['Electric', 'Psychic'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Psychic Mind', 'Inner Focus', 'Tinted Lens']
 	},
-	'Pikachu Libre': {
+	'Pikachu-Libre': {
 		types: ['Electric', 'Fighting'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Fighter', 'Aerodynamics', 'Scrappy']
 	},
-	'Pikachu Kanto': {
+	'Pikachu-Kanto': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Hoenn': {
+	'Pikachu-Hoenn': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Sinnoh': {
+	'Pikachu-Sinnoh': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Unova': {
+	'Pikachu-Unova': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Kalos': {
+	'Pikachu-Kalos': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Alola': {
+	'Pikachu-Alola': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu Partner Cap': {
+	'Pikachu-Partner-Cap': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pikachu World': {
+	'Pikachu-World': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Pichu Spiky': {
+	'Pichu-Spiky': {
 		types: ['Electric'],
 		bs: {hp: 20, at: 40, df: 15, sa: 35, sd: 35, sp: 60},
 		weightkg: 2.0,
 		abilities: {0: 'Electrocytes'},
 		innates: ['Short Circuit', 'Plus', 'Ground Shock']
 	},
-	'Unown B': {
+	'Unown-B': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown C': {
+	'Unown-C': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown D': {
+	'Unown-D': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown E': {
+	'Unown-E': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown F': {
+	'Unown-F': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown G': {
+	'Unown-G': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown H': {
+	'Unown-H': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown I': {
+	'Unown-I': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown J': {
+	'Unown-J': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown K': {
+	'Unown-K': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown L': {
+	'Unown-L': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown M': {
+	'Unown-M': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown N': {
+	'Unown-N': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown O': {
+	'Unown-O': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown P': {
+	'Unown-P': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown Q': {
+	'Unown-Q': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown R': {
+	'Unown-R': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown S': {
+	'Unown-S': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown T': {
+	'Unown-T': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown U': {
+	'Unown-U': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown V': {
+	'Unown-V': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown W': {
+	'Unown-W': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown X': {
+	'Unown-X': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown Y': {
+	'Unown-Y': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown Z': {
+	'Unown-Z': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown Emark': {
+	'Unown-Emark': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Unown Qmark': {
+	'Unown-Qmark': {
 		types: ['Psychic'],
 		bs: {hp: 48, at: 72, df: 48, sa: 72, sd: 48, sp: 48},
 		weightkg: 5.0,
 		abilities: {0: 'Run Away'},
 		innates: ['Schooling', 'Levitate', '-------']
 	},
-	'Castform Sunny': {
+	'Castform-Sunny': {
 		types: ['Fire'],
 		bs: {hp: 75, at: 75, df: 75, sa: 105, sd: 75, sp: 110},
 		weightkg: 0.8,
 		abilities: {0: 'Solar Power'},
 		innates: ['Forecast', 'Weather Control', 'Adaptability']
 	},
-	'Castform Rainy': {
+	'Castform-Rainy': {
 		types: ['Water'],
 		bs: {hp: 75, at: 75, df: 75, sa: 105, sd: 75, sp: 110},
 		weightkg: 0.8,
 		abilities: {0: 'Swift Swim'},
 		innates: ['Forecast', 'Weather Control', 'Adaptability']
 	},
-	'Castform Snowy': {
+	'Castform-Snowy': {
 		types: ['Ice'],
 		bs: {hp: 75, at: 75, df: 75, sa: 105, sd: 75, sp: 110},
 		weightkg: 0.8,
 		abilities: {0: 'Slush Rush'},
 		innates: ['Forecast', 'Weather Control', 'Adaptability']
 	},
-	'Deoxys Attack': {
+	'Deoxys-Attack': {
 		types: ['Psychic'],
 		bs: {hp: 50, at: 180, df: 20, sa: 180, sd: 20, sp: 150},
 		weightkg: 60.8,
 		abilities: {0: 'Retriever'},
 		innates: ['Berserk DNA', 'Mold Breaker', 'Infiltrator']
 	},
-	'Deoxys Defense': {
+	'Deoxys-Defense': {
 		types: ['Psychic'],
 		bs: {hp: 50, at: 70, df: 160, sa: 70, sd: 160, sp: 90},
 		weightkg: 60.8,
 		abilities: {0: 'Aurora Borealis'},
 		innates: ['Fort Knox', 'Stamina', 'Fortitude']
 	},
-	'Deoxys Speed': {
+	'Deoxys-Speed': {
 		types: ['Psychic'],
 		bs: {hp: 50, at: 95, df: 90, sa: 95, sd: 90, sp: 180},
 		weightkg: 60.8,
 		abilities: {0: 'Blur'},
 		innates: ['Regenerator', 'Emergency Exit', 'Tactical Retreat']
 	},
-	'Burmy Sandy': {
+	'Burmy-Sandy': {
 		types: ['Bug'],
 		bs: {hp: 55, at: 29, df: 60, sa: 59, sd: 60, sp: 36},
 		weightkg: 3.4,
 		abilities: {0: 'Anticipation'},
 		innates: ['Swarm', 'Shed Skin', 'Overcoat']
 	},
-	'Burmy Trash': {
+	'Burmy-Trash': {
 		types: ['Bug'],
 		bs: {hp: 55, at: 29, df: 60, sa: 59, sd: 60, sp: 36},
 		weightkg: 3.4,
 		abilities: {0: 'Anticipation'},
 		innates: ['Swarm', 'Shed Skin', 'Overcoat']
 	},
-	'Wormadam Sandy': {
+	'Wormadam-Sandy': {
 		types: ['Bug', 'Ground'],
 		bs: {hp: 84, at: 99, df: 105, sa: 59, sd: 85, sp: 36},
 		weightkg: 6.5,
 		abilities: {0: 'Anticipation'},
 		innates: ['Adaptability', 'Battle Armor', 'Sand Veil']
 	},
-	'Wormadam Trash': {
+	'Wormadam-Trash': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 84, at: 69, df: 105, sa: 69, sd: 105, sp: 36},
 		weightkg: 6.5,
 		abilities: {0: 'Anticipation'},
 		innates: ['Adaptability', 'Battle Armor', 'Scrapyard']
 	},
-	'Cherrim Sunshine': {
+	'Cherrim-Sunshine': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 70, at: 100, df: 70, sa: 100, sd: 78, sp: 85},
 		weightkg: 9.3,
 		abilities: {0: 'Sun Basking'},
 		innates: ['Flower Gift', 'Chlorophyll', 'Leaf Guard']
 	},
-	'Shellos East': {
+	'Shellos-East': {
 		types: ['Water'],
 		bs: {hp: 76, at: 48, df: 48, sa: 57, sd: 62, sp: 34},
 		weightkg: 6.3,
 		abilities: {0: 'Shell Armor'},
 		innates: ['Sticky Hold', 'Self Sufficient', 'Limber']
 	},
-	'Gastrodon East': {
+	'Gastrodon-East': {
 		types: ['Water', 'Ground'],
 		bs: {hp: 111, at: 83, df: 68, sa: 92, sd: 82, sp: 39},
 		weightkg: 29.9,
 		abilities: {0: 'Sand Guard'},
 		innates: ['Sticky Hold', 'Self Sufficient', 'Shell Armor']
 	},
-	'Rotom Heat': {
+	'Rotom-Heat': {
 		types: ['Electric', 'Fire'],
 		bs: {hp: 50, at: 65, df: 107, sa: 115, sd: 107, sp: 86},
 		weightkg: 0.3,
 		abilities: {0: 'Flash Fire'},
 		innates: ['Levitate', 'Furnace', 'Phantom']
 	},
-	'Rotom Wash': {
+	'Rotom-Wash': {
 		types: ['Electric', 'Water'],
 		bs: {hp: 50, at: 65, df: 107, sa: 115, sd: 107, sp: 86},
 		weightkg: 0.3,
 		abilities: {0: 'Water Absorb'},
 		innates: ['Levitate', 'Damp', 'Phantom']
 	},
-	'Rotom Frost': {
+	'Rotom-Frost': {
 		types: ['Electric', 'Ice'],
 		bs: {hp: 50, at: 65, df: 107, sa: 115, sd: 107, sp: 86},
 		weightkg: 0.3,
 		abilities: {0: 'Ice Dew'},
 		innates: ['Levitate', 'Refrigerator', 'Phantom']
 	},
-	'Rotom Fan': {
+	'Rotom-Fan': {
 		types: ['Electric', 'Flying'],
 		bs: {hp: 50, at: 65, df: 107, sa: 115, sd: 107, sp: 86},
 		weightkg: 0.3,
 		abilities: {0: 'Volt Absorb'},
 		innates: ['Air Blower', 'Wind Rider', 'Phantom']
 	},
-	'Rotom Mow': {
+	'Rotom-Mow': {
 		types: ['Electric', 'Grass'],
 		bs: {hp: 50, at: 65, df: 107, sa: 115, sd: 107, sp: 86},
 		weightkg: 0.3,
 		abilities: {0: 'Teravolt'},
 		innates: ['Levitate', 'Lawnmower', 'Phantom']
 	},
-	'Giratina Origin': {
+	'Giratina-Origin': {
 		types: ['Ghost', 'Dragon'],
 		bs: {hp: 150, at: 140, df: 120, sa: 140, sd: 120, sp: 110},
 		weightkg: 750.0,
 		abilities: {0: 'Fearmonger'},
 		innates: ['Shadow Shield', 'Shadow Tag', 'Soul Eater']
 	},
-	'Shaymin Sky': {
+	'Shaymin-Sky': {
 		types: ['Grass', 'Flying'],
 		bs: {hp: 100, at: 103, df: 75, sa: 120, sd: 75, sp: 127},
 		weightkg: 2.1,
 		abilities: {0: 'Magic Bounce'},
 		innates: ['Natural Cure', 'Serene Grace', 'Speed Boost']
 	},
-	'Arceus Fighting': {
+	'Arceus-Fighting': {
 		types: ['Fighting'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Flying': {
+	'Arceus-Flying': {
 		types: ['Flying'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Poison': {
+	'Arceus-Poison': {
 		types: ['Poison'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Ground': {
+	'Arceus-Ground': {
 		types: ['Ground'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Rock': {
+	'Arceus-Rock': {
 		types: ['Rock'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Bug': {
+	'Arceus-Bug': {
 		types: ['Bug'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Ghost': {
+	'Arceus-Ghost': {
 		types: ['Ghost'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Steel': {
+	'Arceus-Steel': {
 		types: ['Steel'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Fire': {
+	'Arceus-Fire': {
 		types: ['Fire'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Water': {
+	'Arceus-Water': {
 		types: ['Water'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Grass': {
+	'Arceus-Grass': {
 		types: ['Grass'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Electric': {
+	'Arceus-Electric': {
 		types: ['Electric'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Psychic': {
+	'Arceus-Psychic': {
 		types: ['Psychic'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Ice': {
+	'Arceus-Ice': {
 		types: ['Ice'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Dragon': {
+	'Arceus-Dragon': {
 		types: ['Dragon'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Dark': {
+	'Arceus-Dark': {
 		types: ['Dark'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Arceus Fairy': {
+	'Arceus-Fairy': {
 		types: ['Fairy'],
 		bs: {hp: 120, at: 120, df: 120, sa: 120, sd: 120, sp: 120},
 		weightkg: 320.0,
 		abilities: {0: 'Multitype'},
 		innates: ['Power Core', 'Pressure', 'Levitate']
 	},
-	'Basculin Blue': {
+	'Basculin-Blue': {
 		types: ['Water'],
 		bs: {hp: 70, at: 92, df: 65, sa: 80, sd: 55, sp: 118},
 		weightkg: 18.0,
 		abilities: {0: 'Mold Breaker'},
 		innates: ['Torrent', 'Adaptability', 'Hyper Aggressive']
 	},
-	'Darmanitan Zen': {
+	'Darmanitan-Zen': {
 		types: ['Fire', 'Psychic'],
 		bs: {hp: 105, at: 35, df: 95, sa: 140, sd: 95, sp: 50},
 		weightkg: 92.9,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Enlightened', 'Impenetrable', 'Psychic Mind']
 	},
-	'Darmanitan Zen Mode-Galarian': {
+	'Darmanitan-Zen-Mode-Galarian': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 105, at: 120, df: 60, sa: 35, sd: 60, sp: 140},
 		weightkg: 92.9,
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Heatproof', 'Iron Fist', 'Turboblaze']
 	},
-	'Deerling Summer': {
+	'Deerling-Summer': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 60, at: 60, df: 50, sa: 40, sd: 50, sp: 75},
 		weightkg: 19.5,
 		abilities: {0: 'Chlorophyll'},
 		innates: ['Overgrow', 'Violent Rush', 'Sap Sipper']
 	},
-	'Deerling Autumn': {
+	'Deerling-Autumn': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 60, at: 60, df: 50, sa: 40, sd: 50, sp: 75},
 		weightkg: 19.5,
 		abilities: {0: 'Chlorophyll'},
 		innates: ['Overgrow', 'Violent Rush', 'Sap Sipper']
 	},
-	'Deerling Winter': {
+	'Deerling-Winter': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 60, at: 60, df: 50, sa: 40, sd: 50, sp: 75},
 		weightkg: 19.5,
 		abilities: {0: 'Chlorophyll'},
 		innates: ['Overgrow', 'Violent Rush', 'Sap Sipper']
 	},
-	'Sawsbuck Summer': {
+	'Sawsbuck-Summer': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 80, at: 100, df: 70, sa: 60, sd: 70, sp: 95},
 		weightkg: 92.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Mighty Horn', 'Violent Rush', 'Elude']
 	},
-	'Sawsbuck Autumn': {
+	'Sawsbuck-Autumn': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 80, at: 100, df: 70, sa: 60, sd: 70, sp: 95},
 		weightkg: 92.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Mighty Horn', 'Violent Rush', 'Elude']
 	},
-	'Sawsbuck Winter': {
+	'Sawsbuck-Winter': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 80, at: 100, df: 70, sa: 60, sd: 70, sp: 95},
 		weightkg: 92.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Mighty Horn', 'Violent Rush', 'Elude']
 	},
-	'Tornadus Therian': {
+	'Tornadus-Therian': {
 		types: ['Flying'],
 		bs: {hp: 79, at: 100, df: 80, sa: 110, sd: 90, sp: 121},
 		weightkg: 63.0,
 		abilities: {0: 'Airborne'},
 		innates: ['Regenerator', 'Weather Control', 'Keen Eye']
 	},
-	'Thundurus Therian': {
+	'Thundurus-Therian': {
 		types: ['Electric', 'Flying'],
 		bs: {hp: 79, at: 105, df: 70, sa: 145, sd: 80, sp: 101},
 		weightkg: 61.0,
 		abilities: {0: 'Transistor'},
 		innates: ['Teravolt', 'Weather Control', 'Volt Absorb']
 	},
-	'Landorus Therian': {
+	'Landorus-Therian': {
 		types: ['Ground', 'Flying'],
 		bs: {hp: 89, at: 145, df: 90, sa: 105, sd: 80, sp: 91},
 		weightkg: 68.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Sand Stream', 'Weather Control', 'Intimidate']
 	},
-	'Kyurem White': {
+	'Kyurem-White': {
 		types: ['Dragon', 'Ice'],
 		bs: {hp: 125, at: 120, df: 90, sa: 170, sd: 100, sp: 95},
 		weightkg: 325.0,
 		abilities: {0: 'Beast Boost'},
 		innates: ['Turboblaze', 'Permafrost', 'Whiteout']
 	},
-	'Kyurem Black': {
+	'Kyurem-Black': {
 		types: ['Dragon', 'Ice'],
 		bs: {hp: 125, at: 170, df: 100, sa: 120, sd: 90, sp: 95},
 		weightkg: 325.0,
 		abilities: {0: 'Beast Boost'},
 		innates: ['Teravolt', 'Permafrost', 'Multiscale']
 	},
-	'Keldeo Resolute': {
+	'Keldeo-Resolute': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 91, at: 117, df: 70, sa: 129, sd: 70, sp: 123},
 		weightkg: 48.5,
 		abilities: {0: 'Blade\'s Essence'},
 		innates: ['Fighter', 'Arcane Force', 'Riptide']
 	},
-	'Meloetta Pirouette': {
+	'Meloetta-Pirouette': {
 		types: ['Normal', 'Fighting'],
 		bs: {hp: 100, at: 128, df: 90, sa: 77, sd: 77, sp: 128},
 		weightkg: 6.5,
 		abilities: {0: 'Egoist'},
 		innates: ['Serene Grace', 'Speed Force', 'Combat Specialist']
 	},
-	'Genesect Douse Drive': {
+	'Genesect-Douse-Drive': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
 		weightkg: 82.5,
 		abilities: {0: 'Download'},
 		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
 	},
-	'Genesect Shock Drive': {
+	'Genesect-Shock-Drive': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
 		weightkg: 82.5,
 		abilities: {0: 'Download'},
 		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
 	},
-	'Genesect Burn Drive': {
+	'Genesect-Burn-Drive': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
 		weightkg: 82.5,
 		abilities: {0: 'Download'},
 		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
 	},
-	'Genesect Chill Drive': {
+	'Genesect-Chill-Drive': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
 		weightkg: 82.5,
 		abilities: {0: 'Download'},
 		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
 	},
-	'Greninja Battle Bond': {
+	'Greninja-Battle-Bond': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 72, at: 100, df: 67, sa: 103, sd: 71, sp: 122},
 		weightkg: 40.0,
@@ -18310,294 +18310,294 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Surprise!'},
 		innates: ['Riptide', 'Skill Link', 'Battle Bond']
 	},
-	'Vivillon Polar': {
+	'Vivillon-Polar': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Tundra': {
+	'Vivillon-Tundra': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Continental': {
+	'Vivillon-Continental': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Gardens': {
+	'Vivillon-Gardens': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Elegant': {
+	'Vivillon-Elegant': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Meadow': {
+	'Vivillon-Meadow': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Modern': {
+	'Vivillon-Modern': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Marine': {
+	'Vivillon-Marine': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Archipelago': {
+	'Vivillon-Archipelago': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon High Plains': {
+	'Vivillon-High-Plains': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Sandstorm': {
+	'Vivillon-Sandstorm': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon River': {
+	'Vivillon-River': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Monsoon': {
+	'Vivillon-Monsoon': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Savanna': {
+	'Vivillon-Savanna': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Sun': {
+	'Vivillon-Sun': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Ocean': {
+	'Vivillon-Ocean': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Jungle': {
+	'Vivillon-Jungle': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Fancy': {
+	'Vivillon-Fancy': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Vivillon Pokéball': {
+	'Vivillon-Pokéball': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
 		weightkg: 17.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
 	},
-	'Flabebe Yellow': {
+	'Flabebe-Yellow': {
 		types: ['Fairy'],
 		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
 		weightkg: 0.1,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
 	},
-	'Flabebe Orange': {
+	'Flabebe-Orange': {
 		types: ['Fairy'],
 		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
 		weightkg: 0.1,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
 	},
-	'Flabebe Blue': {
+	'Flabebe-Blue': {
 		types: ['Fairy'],
 		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
 		weightkg: 0.1,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
 	},
-	'Flabebe White': {
+	'Flabebe-White': {
 		types: ['Fairy'],
 		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
 		weightkg: 0.1,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
 	},
-	'Floette Yellow': {
+	'Floette-Yellow': {
 		types: ['Fairy'],
 		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
 		weightkg: 0.9,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
 	},
-	'Floette Orange': {
+	'Floette-Orange': {
 		types: ['Fairy'],
 		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
 		weightkg: 0.9,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
 	},
-	'Floette Blue': {
+	'Floette-Blue': {
 		types: ['Fairy'],
 		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
 		weightkg: 0.9,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
 	},
-	'Floette White': {
+	'Floette-White': {
 		types: ['Fairy'],
 		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
 		weightkg: 0.9,
 		abilities: {0: 'Flower Veil'},
 		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
 	},
-	'Floette Eternal Flower': {
+	'Floette-Eternal-Flower': {
 		types: ['Fairy'],
 		bs: {hp: 74, at: 65, df: 67, sa: 125, sd: 128, sp: 92},
 		weightkg: 0.9,
 		abilities: {0: 'Energy Tap'},
 		innates: ['Pastel Veil', 'Magic Guard', 'Mystic Power']
 	},
-	'Florges Yellow': {
+	'Florges-Yellow': {
 		types: ['Fairy'],
 		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
 		weightkg: 10.0,
 		abilities: {0: 'Harvest'},
 		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
 	},
-	'Florges Orange': {
+	'Florges-Orange': {
 		types: ['Fairy'],
 		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
 		weightkg: 10.0,
 		abilities: {0: 'Harvest'},
 		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
 	},
-	'Florges Blue': {
+	'Florges-Blue': {
 		types: ['Fairy'],
 		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
 		weightkg: 10.0,
 		abilities: {0: 'Harvest'},
 		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
 	},
-	'Florges White': {
+	'Florges-White': {
 		types: ['Fairy'],
 		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
 		weightkg: 10.0,
 		abilities: {0: 'Harvest'},
 		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
 	},
-	'Furfrou Heart': {
+	'Furfrou-Heart': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Entrance'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Star': {
+	'Furfrou-Star': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Wonder Skin'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Diamond': {
+	'Furfrou-Diamond': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Solid Rock'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Debutante': {
+	'Furfrou-Debutante': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Soothing Aroma'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Matron': {
+	'Furfrou-Matron': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Hospitality'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Dandy': {
+	'Furfrou-Dandy': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Moxie'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou La Reine': {
+	'Furfrou-La-Reine': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Queenly Majesty'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Kabuki': {
+	'Furfrou-Kabuki': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Cloud Nine'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Furfrou Pharaoh': {
+	'Furfrou-Pharaoh': {
 		types: ['Normal'],
 		bs: {hp: 75, at: 80, df: 60, sa: 65, sd: 90, sp: 102},
 		weightkg: 28.0,
 		abilities: {0: 'Sand Guard'},
 		innates: ['Fur Coat', 'Overcoat', 'Guard Dog']
 	},
-	'Meowstic Female': {
+	'Meowstic-Female': {
 		types: ['Psychic'],
 		bs: {hp: 84, at: 48, df: 76, sa: 103, sd: 81, sp: 104},
 		weightkg: 8.5,
@@ -18611,539 +18611,490 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shadow Shield'},
 		innates: ['Levitate', 'Keen Edge', 'Stance Change']
 	},
-	'Pumpkaboo Small': {
+  'Aegislash-Both': {
+		types: ['Steel', 'Ghost'],
+		bs: {hp: 60, at: 140, df: 140, sa: 140, sd: 140, sp: 60},
+		weightkg: 53.0,
+		abilities: {0: 'Shadow Shield'},
+		innates: ['Levitate', 'Keen Edge', 'Stance Change']
+	},
+	'Pumpkaboo-Small': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
 		weightkg: 5.0,
 		abilities: {0: 'Frisk'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Pumpkaboo Large': {
+	'Pumpkaboo-Large': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
 		weightkg: 5.0,
 		abilities: {0: 'Frisk'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Pumpkaboo Super': {
+	'Pumpkaboo-Super': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
 		weightkg: 5.0,
 		abilities: {0: 'Frisk'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Gourgeist Small': {
+	'Gourgeist-Small': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 55, at: 58, df: 122, sa: 85, sd: 75, sp: 99},
 		weightkg: 12.5,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Gourgeist Large': {
+	'Gourgeist-Large': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 75, at: 58, df: 122, sa: 95, sd: 75, sp: 69},
 		weightkg: 12.5,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Gourgeist Super': {
+	'Gourgeist-Super': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 85, at: 58, df: 122, sa: 100, sd: 75, sp: 54},
 		weightkg: 12.5,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Xerneas Active': {
+	'Xerneas-Active': {
 		types: ['Fairy'],
 		bs: {hp: 126, at: 131, df: 95, sa: 131, sd: 98, sp: 99},
 		weightkg: 215.0,
 		abilities: {0: 'Pixilate'},
 		innates: ['Fairy Aura', 'Illuminate', 'Soul-Heart']
 	},
-	'Zygarde 10': {
+	'Zygarde-10': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 74, at: 120, df: 71, sa: 61, sd: 85, sp: 115},
 		weightkg: 305.0,
 		abilities: {0: 'Aura Break'},
 		innates: ['Primal Maw', 'Earthbound', 'Speed Force']
 	},
-	'Zygarde 10 Power Construct': {
+	'Zygarde-10-Power-Construct': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 74, at: 120, df: 71, sa: 61, sd: 85, sp: 115},
 		weightkg: 305.0,
 		abilities: {0: 'Aura Break'},
 		innates: ['Primal Maw', 'Earthbound', 'Speed Force']
 	},
-	'Zygarde 50 Power Construct': {
+	'Zygarde-50-Power-Construct': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 108, at: 100, df: 121, sa: 81, sd: 95, sp: 95},
 		weightkg: 305.0,
 		abilities: {0: 'Aura Break'},
 		innates: ['Primal Armor', 'Earthbound', 'Power Core']
 	},
-	'Zygarde Complete': {
+	'Zygarde-Complete': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 216, at: 100, df: 121, sa: 91, sd: 95, sp: 85},
 		weightkg: 305.0,
 		abilities: {0: 'Power Construct'},
 		innates: ['Primal Armor', 'Earthbound', 'Power Core']
 	},
-	'Hoopa Unbound': {
+	'Hoopa-Unbound': {
 		types: ['Psychic', 'Dark'],
 		bs: {hp: 80, at: 170, df: 60, sa: 160, sd: 130, sp: 80},
 		weightkg: 9.0,
 		abilities: {0: 'Intimidate'},
 		innates: ['Soul Eater', 'Hyper Aggressive', 'Infiltrator']
 	},
-	'Oricorio Pom Pom': {
+	'Oricorio-Pom-Pom': {
 		types: ['Electric', 'Flying'],
 		bs: {hp: 75, at: 70, df: 70, sa: 108, sd: 70, sp: 103},
 		weightkg: 3.4,
 		abilities: {0: 'Dancer'},
 		innates: ['Serene Grace', 'Lightning Rod', 'Flock']
 	},
-	'Oricorio Pau': {
+	'Oricorio-Pau': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 75, at: 70, df: 70, sa: 108, sd: 70, sp: 103},
 		weightkg: 3.4,
 		abilities: {0: 'Dancer'},
 		innates: ['Serene Grace', 'Psychic Mind', 'Flock']
 	},
-	'Oricorio Sensu': {
+	'Oricorio-Sensu': {
 		types: ['Ghost', 'Flying'],
 		bs: {hp: 75, at: 70, df: 70, sa: 108, sd: 70, sp: 103},
 		weightkg: 3.4,
 		abilities: {0: 'Dancer'},
 		innates: ['Serene Grace', 'Phantom Pain', 'Flock']
 	},
-	'Rockruff Own Tempo': {
+	'Rockruff-Own-Tempo': {
 		types: ['Rock'],
 		bs: {hp: 45, at: 65, df: 40, sa: 30, sd: 40, sp: 60},
 		weightkg: 9.2,
 		abilities: {0: 'Own Tempo'},
 		innates: ['Keen Eye', 'Opportunist', 'Rock Head']
 	},
-	'Lycanroc Midnight': {
+	'Lycanroc-Midnight': {
 		types: ['Rock', 'Dark'],
 		bs: {hp: 85, at: 115, df: 75, sa: 55, sd: 75, sp: 82},
 		weightkg: 25.0,
 		abilities: {0: 'Tough Claws'},
 		innates: ['No Guard', 'Nocturnal', 'Hyper Aggressive']
 	},
-	'Lycanroc Dusk': {
+	'Lycanroc-Dusk': {
 		types: ['Rock', 'Fighting'],
 		bs: {hp: 75, at: 117, df: 65, sa: 55, sd: 65, sp: 110},
 		weightkg: 25.0,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Opportunist', 'Fatal Precision', 'Rock Head']
 	},
-	'Wishiwashi School': {
+	'Wishiwashi-School': {
 		types: ['Water'],
 		bs: {hp: 45, at: 140, df: 130, sa: 140, sd: 135, sp: 30},
 		weightkg: 0.3,
 		abilities: {0: 'Water Veil'},
 		innates: ['Schooling', 'Regenerator', 'Multiscale']
 	},
-	'Silvally Fighting': {
+	'Silvally-Fighting': {
 		types: ['Fighting'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Inner Focus']
 	},
-	'Silvally Flying': {
+	'Silvally-Flying': {
 		types: ['Flying'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Aerialist']
 	},
-	'Silvally Poison': {
+	'Silvally-Poison': {
 		types: ['Poison'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Poison Point']
 	},
-	'Silvally Ground': {
+	'Silvally-Ground': {
 		types: ['Ground'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Earth Eater']
 	},
-	'Silvally Rock': {
+	'Silvally-Rock': {
 		types: ['Rock'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Mountaineer']
 	},
-	'Silvally Bug': {
+	'Silvally-Bug': {
 		types: ['Bug'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Predator']
 	},
-	'Silvally Ghost': {
+	'Silvally-Ghost': {
 		types: ['Ghost'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Cursed Body']
 	},
-	'Silvally Steel': {
+	'Silvally-Steel': {
 		types: ['Steel'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Armor Tail']
 	},
-	'Silvally Fire': {
+	'Silvally-Fire': {
 		types: ['Fire'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Flash Fire']
 	},
-	'Silvally Water': {
+	'Silvally-Water': {
 		types: ['Water'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Storm Drain']
 	},
-	'Silvally Grass': {
+	'Silvally-Grass': {
 		types: ['Grass'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Raw Wood']
 	},
-	'Silvally Electric': {
+	'Silvally-Electric': {
 		types: ['Electric'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Lightning Rod']
 	},
-	'Silvally Psychic': {
+	'Silvally-Psychic': {
 		types: ['Psychic'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Magic Bounce']
 	},
-	'Silvally Ice': {
+	'Silvally-Ice': {
 		types: ['Ice'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Freezing Point']
 	},
-	'Silvally Dragon': {
+	'Silvally-Dragon': {
 		types: ['Dragon'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Overwhelm']
 	},
-	'Silvally Dark': {
+	'Silvally-Dark': {
 		types: ['Dark'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Justified']
 	},
-	'Silvally Fairy': {
+	'Silvally-Fairy': {
 		types: ['Fairy'],
 		bs: {hp: 95, at: 95, df: 95, sa: 95, sd: 95, sp: 95},
 		weightkg: 100.5,
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Regenerator']
 	},
-	'Minior Orange': {
+	'Minior-Orange': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Yellow': {
+	'Minior-Yellow': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Green': {
+	'Minior-Green': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Blue': {
+	'Minior-Blue': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Indigo': {
+	'Minior-Indigo': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Violet': {
+	'Minior-Violet': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
 		weightkg: 40.0,
 		abilities: {0: 'Regenerator'},
 		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
 	},
-	'Minior Core Red': {
+	'Minior-Core-Red': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Orange': {
+	'Minior-Core-Orange': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Yellow': {
+	'Minior-Core-Yellow': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Green': {
+	'Minior-Core-Green': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Blue': {
+	'Minior-Core-Blue': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Indigo': {
+	'Minior-Core-Indigo': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Minior Core Violet': {
+	'Minior-Core-Violet': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
 		weightkg: 40.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Shields Down', 'Equinox', 'Frisk']
 	},
-	'Mimikyu Busted': {
+	'Mimikyu-Busted': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 55, at: 90, df: 80, sa: 50, sd: 105, sp: 96},
 		weightkg: 0.7,
 		abilities: {0: 'Ethereal Rush'},
 		innates: ['Disguise', 'Violent Rush', 'Phantom Pain']
 	},
-	'Dusk Mane': {
+	'Dusk-Mane': {
 		types: ['Psychic', 'Steel'],
 		bs: {hp: 97, at: 157, df: 127, sa: 113, sd: 109, sp: 77},
 		weightkg: 230.0,
 		abilities: {0: 'Neuroforce'},
 		innates: ['Solar Flare', 'Impenetrable', 'Prism Armor']
 	},
-	'Dawn Wings': {
+	'Dawn-Wings': {
 		types: ['Psychic', 'Ghost'],
 		bs: {hp: 97, at: 113, df: 109, sa: 157, sd: 127, sp: 77},
 		weightkg: 230.0,
 		abilities: {0: 'Neuroforce'},
 		innates: ['Lunar Eclipse', 'Shadow Shield', 'Levitate']
 	},
-	'Necrozma Ultra': {
+	'Necrozma-Ultra': {
 		types: ['Psychic', 'Dragon'],
 		bs: {hp: 97, at: 167, df: 109, sa: 167, sd: 109, sp: 131},
 		weightkg: 230.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Beast Boost', 'Neuroforce', 'Levitate']
 	},
-	'Magearna Original': {
+	'Magearna-Original': {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 80, at: 95, df: 115, sa: 130, sd: 115, sp: 65},
 		weightkg: 80.5,
 		abilities: {0: 'Steelworker'},
 		innates: ['Mirror Armor', 'Soul-Heart', 'Power Core']
 	},
-	'Cramorant Gulping': {
+	'Cramorant-Gulping': {
 		types: ['Flying', 'Water'],
 		bs: {hp: 75, at: 90, df: 85, sa: 90, sd: 95, sp: 85},
 		weightkg: 18.0,
 		abilities: {0: 'Predator'},
 		innates: ['Gulp Missile', 'Water Veil', 'Field Explorer']
 	},
-	'Cramorant Gorging': {
+	'Cramorant-Gorging': {
 		types: ['Flying', 'Water'],
 		bs: {hp: 75, at: 90, df: 85, sa: 90, sd: 95, sp: 85},
 		weightkg: 18.0,
 		abilities: {0: 'Predator'},
 		innates: ['Gulp Missile', 'Transistor', 'Field Explorer']
 	},
-	'Toxtricity Low Key': {
+	'Toxtricity-Low-Key': {
 		types: ['Electric', 'Poison'],
 		bs: {hp: 75, at: 75, df: 70, sa: 114, sd: 70, sp: 98},
 		weightkg: 40.0,
 		abilities: {0: 'Technician'},
 		innates: ['Punk Rock', 'Loud Bang', 'Water Absorb']
 	},
-	'Sinistea Antique': {
+	'Sinistea-Antique': {
 		types: ['Ghost'],
 		bs: {hp: 40, at: 45, df: 45, sa: 74, sd: 54, sp: 50},
 		weightkg: 0.2,
 		abilities: {0: 'Weak Armor'},
 		innates: ['-------', '-------', '-------']
 	},
-	'Polteageist Antique': {
+	'Polteageist-Antique': {
 		types: ['Ghost'],
 		bs: {hp: 60, at: 65, df: 65, sa: 134, sd: 114, sp: 70},
 		weightkg: 0.4,
 		abilities: {0: 'Weak Armor'},
 		innates: ['-------', '-------', '-------']
 	},
-	'Alcremie Ruby': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Matcha': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Mint': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Lemon': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Salted': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Ruby Swirl': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Caramel': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Alcremie Rainbow': {
-		types: ['Fairy'],
-		bs: {hp: 75, at: 60, df: 75, sa: 110, sd: 121, sp: 64},
-		weightkg: 0.5,
-		abilities: {0: 'Gooey'},
-		innates: ['Fluffy', 'Aroma Veil', 'Self Sufficient']
-	},
-	'Eiscue Noice Face': {
+	'Eiscue-Noice-Face': {
 		types: ['Ice'],
 		bs: {hp: 85, at: 100, df: 70, sa: 65, sd: 55, sp: 135},
 		weightkg: 89.0,
 		abilities: {0: 'Swift Swim'},
 		innates: ['Ice Face', 'Antarctic Bird', 'Amphibious']
 	},
-	'Indeedee Female': {
+	'Indeedee-Female': {
 		types: ['Psychic', 'Normal'],
 		bs: {hp: 70, at: 55, df: 75, sa: 95, sd: 115, sp: 85},
 		weightkg: 28.0,
 		abilities: {0: 'Hospitality'},
 		innates: ['Telekinetic', 'Friend Guard', 'Fluffy']
 	},
-	'Morpeko Hangry': {
+	'Morpeko-Hangry': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 67, at: 101, df: 87, sa: 58, sd: 57, sp: 101},
 		weightkg: 3.0,
 		abilities: {0: 'Doom Blast'},
 		innates: ['HungerSwitch', 'Gluttony', 'Lightning Rod']
 	},
-	'Zacian Crowned': {
+	'Zacian-Crowned': {
 		types: ['Fairy', 'Steel'],
 		bs: {hp: 92, at: 170, df: 115, sa: 80, sd: 115, sp: 148},
 		weightkg: 110.0,
 		abilities: {0: 'Crowned Sword'},
 		innates: ['Steelworker', 'Battle Armor', 'Keen Edge']
 	},
-	'Zamazenta Crowned': {
+	'Zamazenta-Crowned': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 92, at: 110, df: 155, sa: 80, sd: 155, sp: 128},
 		weightkg: 210.0,
 		abilities: {0: 'Crowned Shield'},
 		innates: ['Steelworker', 'Battle Armor', 'Lead Coat']
 	},
-	'Eternatus Primal': {
+	'Eternatus-Primal': {
 		types: ['Poison', 'Dragon'],
 		bs: {hp: 140, at: 105, df: 105, sa: 185, sd: 115, sp: 140},
 		weightkg: 950.0,
 		abilities: {0: 'Corrosion'},
 		innates: ['Levitate', 'Master Hand', 'Primal Armor']
 	},
-	'Urshifu Rapid Strike Style': {
+	'Urshifu-Rapid-Strike-Style': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 90, at: 140, df: 100, sa: 60, sd: 60, sp: 110},
 		weightkg: 105.0,
 		abilities: {0: 'Fatal Precision'},
 		innates: ['Unseen Fist', 'Combat Specialist', 'Precise Fist']
 	},
-	'Zarude Dada': {
+	'Zarude-Dada': {
 		types: ['Fairy', 'Grass'],
 		bs: {hp: 105, at: 100, df: 105, sa: 70, sd: 115, sp: 105},
 		weightkg: 70.0,
 		abilities: {0: 'Parental Bond'},
 		innates: ['Friend Guard', 'Jungle\'s Guard', 'Overgrow']
 	},
-	'Calyrex Ice Rider': {
+	'Calyrex-Ice-Rider': {
 		types: ['Psychic', 'Ice'],
 		bs: {hp: 100, at: 165, df: 150, sa: 85, sd: 130, sp: 50},
 		weightkg: 7.7,
 		abilities: {0: 'As One'},
 		innates: ['Permafrost', 'Stamina', 'Whiteout']
 	},
-	'Calyrex Shadow Rider': {
+	'Calyrex-Shadow-Rider': {
 		types: ['Psychic', 'Ghost'],
 		bs: {hp: 100, at: 85, df: 80, sa: 165, sd: 100, sp: 150},
 		weightkg: 7.7,
@@ -19283,203 +19234,203 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Rock Head', 'Violent Rush', 'Frisk']
 	},
-	'Ursaluna Bloodmoon': {
+	'Ursaluna-Bloodmoon': {
 		types: ['Ground', 'Normal'],
 		bs: {hp: 113, at: 70, df: 120, sa: 135, sd: 65, sp: 52},
 		weightkg: 290.0,
 		abilities: {0: 'Voodoo Power'},
 		innates: ['Mind\'s Eye', 'Moon Spirit', 'Overcoat']
 	},
-	'Palafin Hero': {
+	'Palafin-Hero': {
 		types: ['Water'],
 		bs: {hp: 100, at: 160, df: 97, sa: 106, sd: 87, sp: 100},
 		weightkg: 60.2,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Zero To Hero', 'Justified', 'Adaptability']
 	},
-	'Dudunsparce Three': {
+	'Dudunsparce-Three': {
 		types: ['Normal'],
 		bs: {hp: 125, at: 100, df: 80, sa: 85, sd: 75, sp: 55},
 		weightkg: 39.2,
 		abilities: {0: 'Mighty Horn'},
 		innates: ['Super Luck', 'Own Tempo', 'Serene Grace']
 	},
-	'Maushold Four': {
+	'Maushold-Four': {
 		types: ['Normal'],
 		bs: {hp: 74, at: 75, df: 70, sa: 65, sd: 75, sp: 111},
 		weightkg: 2.3,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Own Tempo', 'Parental Bond', 'Technician']
 	},
-	'Tatsugiri Curly': {
+	'Tatsugiri-Curly': {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 68, at: 50, df: 60, sa: 120, sd: 95, sp: 82},
 		weightkg: 8.0,
 		abilities: {0: 'Commander'},
 		innates: ['Torrent', 'High Tide', 'Opportunist']
 	},
-	'Tatsugiri Stretchy': {
+	'Tatsugiri-Stretchy': {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 68, at: 50, df: 60, sa: 120, sd: 95, sp: 82},
 		weightkg: 8.0,
 		abilities: {0: 'Commander'},
 		innates: ['Torrent', 'High Tide', 'Opportunist']
 	},
-	'Tatsugiri Droopy': {
+	'Tatsugiri-Droopy': {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 68, at: 50, df: 60, sa: 120, sd: 95, sp: 82},
 		weightkg: 8.0,
 		abilities: {0: 'Commander'},
 		innates: ['Torrent', 'High Tide', 'Opportunist']
 	},
-	'Squawkabilly Green Plumage': {
+	'Squawkabilly-Green-Plumage': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 90, at: 45, df: 100, sa: 76, sd: 90, sp: 85},
 		weightkg: 2.4,
 		abilities: {0: 'Power Spot'},
 		innates: ['Airborne', 'Flock', 'Parroting']
 	},
-	'Squawkabilly Blue': {
+	'Squawkabilly-Blue': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 90, at: 45, df: 100, sa: 76, sd: 90, sp: 85},
 		weightkg: 2.4,
 		abilities: {0: 'Power Spot'},
 		innates: ['Airborne', 'Flock', 'Parroting']
 	},
-	'Squawkabilly Yellow': {
+	'Squawkabilly-Yellow': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 90, at: 45, df: 100, sa: 76, sd: 90, sp: 85},
 		weightkg: 2.4,
 		abilities: {0: 'Power Spot'},
 		innates: ['Airborne', 'Flock', 'Parroting']
 	},
-	'Squawkabilly White': {
+	'Squawkabilly-White': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 90, at: 45, df: 100, sa: 76, sd: 90, sp: 85},
 		weightkg: 2.4,
 		abilities: {0: 'Power Spot'},
 		innates: ['Airborne', 'Flock', 'Parroting']
 	},
-	'Ogerpon Wellspring Mask': {
+	'Ogerpon-Wellspring': {
 		types: ['Grass', 'Water'],
 		bs: {hp: 80, at: 120, df: 84, sa: 60, sd: 96, sp: 110},
 		weightkg: 39.8,
 		abilities: {0: 'Water Veil'},
 		innates: ['Long Reach', 'Torrent', 'Super Slammer']
 	},
-	'Ogerpon Hearthflame': {
+	'Ogerpon-Hearthflame': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 80, at: 120, df: 84, sa: 60, sd: 96, sp: 110},
 		weightkg: 39.8,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Long Reach', 'Blaze', 'Super Slammer']
 	},
-	'Ogerpon Cornerstone': {
+	'Ogerpon-Cornerstone': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 80, at: 120, df: 84, sa: 60, sd: 96, sp: 110},
 		weightkg: 39.8,
 		abilities: {0: 'Loose Rocks'},
 		innates: ['Long Reach', 'Rockhard Will', 'Super Slammer']
 	},
-	'Dialga Origin': {
+	'Dialga-Origin': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 100, at: 120, df: 140, sa: 170, sd: 140, sp: 110},
 		weightkg: 683.0,
 		abilities: {0: 'Temporal Rupture'},
 		innates: ['Primal Armor', 'Impenetrable', 'Power Core']
 	},
-	'Palkia Origin': {
+	'Palkia-Origin': {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 90, at: 120, df: 120, sa: 170, sd: 140, sp: 140},
 		weightkg: 336.0,
 		abilities: {0: 'Heaven Asunder'},
 		innates: ['Prism Scales', 'Primal Armor', 'Power Core']
 	},
-	'Enamorus Therian': {
+	'Enamorus-Therian': {
 		types: ['Fairy', 'Flying'],
 		bs: {hp: 74, at: 115, df: 110, sa: 135, sd: 100, sp: 46},
 		weightkg: 48.0,
 		abilities: {0: 'Pure Love'},
 		innates: ['Pixie Power', 'Fluffy', 'Weather Control']
 	},
-	'Castform Sandy': {
+	'Castform-Sandy': {
 		types: ['Rock'],
 		bs: {hp: 75, at: 75, df: 75, sa: 105, sd: 75, sp: 110},
 		weightkg: 0.8,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Forecast', 'Weather Control', 'Adaptability']
 	},
-	'Polartic Bluemoon': {
+	'Polartic-Bluemoon': {
 		types: ['Ice', 'Fighting'],
 		bs: {hp: 130, at: 145, df: 70, sa: 50, sd: 105, sp: 55},
 		weightkg: 0.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Equinox', 'Ice Downfall', 'Last Stand']
 	},
-	'Lumbering Sloth Engulfed': {
+	'Lumbering-Sloth-Engulfed': {
 		types: ['Fire', 'Grass'],
 		bs: {hp: 109, at: 135, df: 65, sa: 85, sd: 65, sp: 111},
 		weightkg: 0.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Protosynthesis', 'Tough Claws', 'Pyromancy']
 	},
-	'Gimmighoul Roaming': {
+	'Gimmighoul-Roaming': {
 		types: ['Ghost'],
 		bs: {hp: 65, at: 30, df: 25, sa: 75, sd: 45, sp: 80},
 		weightkg: 5.0,
 		abilities: {0: 'Surprise!'},
 		innates: ['Good As Gold', 'Super Luck', 'Prankster']
 	},
-	'Basculegion F': {
+	'Basculegion-F': {
 		types: ['Water', 'Ghost'],
 		bs: {hp: 130, at: 75, df: 65, sa: 112, sd: 75, sp: 73},
 		weightkg: 110.0,
 		abilities: {0: 'Rapid Response'},
 		innates: ['Shadow Shield', 'Wonder Skin', 'Supreme Overlord']
 	},
-	'Terapagos Primal': {
+	'Terapagos-Primal': {
 		types: ['Stellar'],
 		bs: {hp: 170, at: 115, df: 110, sa: 150, sd: 110, sp: 65},
 		weightkg: 10.0,
 		abilities: {0: 'Wonder Skin'},
 		innates: ['Teraform Zero', 'Adaptability', 'Terastal Treasure']
 	},
-	'Hydroar F': {
+	'Hydroar-F': {
 		types: ['Water', 'Poison'],
 		bs: {hp: 100, at: 125, df: 85, sa: 60, sd: 60, sp: 87},
 		weightkg: 54.0,
 		abilities: {0: 'Violent Rush'},
 		innates: ['Predator', 'Nocturnal', 'Moxie']
 	},
-	'Pikachu Partner': {
+	'Pikachu-Partner': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 80, df: 50, sa: 75, sd: 60, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Short Circuit', 'Electrocytes', 'Overcharge']
 	},
-	'Eevee Partner': {
+	'Eevee-Partner': {
 		types: ['Normal'],
 		bs: {hp: 65, at: 75, df: 70, sa: 65, sd: 85, sp: 75},
 		weightkg: 6.5,
 		abilities: {0: 'Prankster'},
 		innates: ['Adaptability', 'Overcoat', 'Cute Charm']
 	},
-	'Meowth Partner': {
+	'Meowth-Partner': {
 		types: ['Normal'],
 		bs: {hp: 50, at: 90, df: 45, sa: 75, sd: 50, sp: 125},
 		weightkg: 4.2,
 		abilities: {0: 'Opportunist'},
 		innates: ['Cheap Tactics', 'Scrappy', 'Super Luck']
 	},
-	'Mimikyu Primal': {
+	'Mimikyu-Primal': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 79, at: 120, df: 90, sa: 120, sd: 115, sp: 116},
 		weightkg: 0.7,
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Patchwork', 'Pretty Princess', 'Phantom Pain']
 	},
-	'Slaking-Mega Ape Shift': {
+	'Slaking-Mega-Ape-Shift': {
 		types: ['Normal', 'Ice'],
 		bs: {hp: 130, at: 210, df: 110, sa: 85, sd: 105, sp: 110},
 		weightkg: 130.5,
@@ -19493,14 +19444,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Power Outage'},
 		innates: ['Generator', 'Shiny Lightning', 'Ground Shock']
 	},
-	'Castform Foggy': {
+	'Castform-Foggy': {
 		types: ['Ghost'],
 		bs: {hp: 75, at: 75, df: 75, sa: 105, sd: 75, sp: 110},
 		weightkg: 0.8,
 		abilities: {0: 'Ethereal Rush'},
 		innates: ['Forecast', 'Weather Control', 'Adaptability']
 	},
-	'Chesnaught Battle Bond': {
+	'Chesnaught-Battle-Bond': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 88, at: 107, df: 122, sa: 74, sd: 80, sp: 64},
 		weightkg: 90.0,
@@ -19514,7 +19465,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Faraday Cage'},
 		innates: ['Forest Rage', 'Teravolt', 'Battle Bond']
 	},
-	'Delphox Battle Bond': {
+	'Delphox-Battle-Bond': {
 		types: ['Fire', 'Psychic'],
 		bs: {hp: 75, at: 69, df: 72, sa: 114, sd: 100, sp: 105},
 		weightkg: 39.0,
@@ -19528,28 +19479,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Adaptability'},
 		innates: ['Hellblaze', 'Soothsayer', 'Battle Bond']
 	},
-	'Morpekyll Hangry': {
+	'Morpekyll-Hangry': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 87, at: 121, df: 78, sa: 62, sd: 85, sp: 121},
 		weightkg: 0.0,
 		abilities: {0: 'Gluttony'},
 		innates: ['Two-Faced', 'Magic Bounce', 'Lightning Rod']
 	},
-	'Unown Revelation': {
+	'Unown-Revelation': {
 		types: ['Psychic'],
 		bs: {hp: 58, at: 138, df: 133, sa: 138, sd: 133, sp: 30},
 		weightkg: 5.0,
 		abilities: {0: 'Anticipation'},
 		innates: ['Revelation', 'Wonder Skin', 'Unown Power']
 	},
-	'Lycanroc Eclipse': {
+	'Lycanroc-Eclipse': {
 		types: ['Rock', 'Ghost'],
 		bs: {hp: 85, at: 76, df: 55, sa: 85, sd: 75, sp: 111},
 		weightkg: 25.0,
 		abilities: {0: 'Sturdy'},
 		innates: ['Dead Power', 'To The Bone', 'Lunar Eclipse']
 	},
-	'Lycanroc Twilight': {
+	'Lycanroc-Twilight': {
 		types: ['Rock', 'Fairy'],
 		bs: {hp: 92, at: 53, df: 75, sa: 115, sd: 64, sp: 88},
 		weightkg: 25.0,
@@ -20088,7 +20039,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Violent Rush'},
 		innates: ['Balloon Blitz', 'Combat Specialist', 'Defiant']
 	},
-	'Cascoon Primal': {
+	'Cascoon-Primal': {
 		types: ['Bug'],
 		bs: {hp: 121, at: 121, df: 121, sa: 121, sd: 121, sp: 121},
 		weightkg: 11.5,
@@ -20291,7 +20242,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Way of Precision'},
 		innates: ['Final Blow', 'Combat Specialist', 'Pretentious']
 	},
-	'Urshifu Rapid Strike Style-Mega': {
+	'Urshifu-Rapid-Strike-Style-Mega': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 90, at: 170, df: 100, sa: 70, sd: 80, sp: 150},
 		weightkg: 105.0,
@@ -20683,21 +20634,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Blistering Sun'},
 		innates: ['Fire Aspect', 'Molten Core', 'Majestic Bird']
 	},
-	'Zapdos Ex': {
+	'Zapdos-Ex': {
 		types: ['Electric', 'Flying'],
 		bs: {hp: 90, at: 90, df: 85, sa: 135, sd: 90, sp: 110},
 		weightkg: 52.6,
 		abilities: {0: 'Overcharge'},
 		innates: ['Volt Absorb', 'Ground Shock', 'Static']
 	},
-	'Articuno Ex': {
+	'Articuno-Ex': {
 		types: ['Ice', 'Flying'],
 		bs: {hp: 90, at: 85, df: 110, sa: 95, sd: 135, sp: 85},
 		weightkg: 55.4,
 		abilities: {0: 'North Wind'},
 		innates: ['Antarctic Bird', 'Majestic Bird', 'Permafrost']
 	},
-	'Moltres Ex': {
+	'Moltres-Ex': {
 		types: ['Fire', 'Flying'],
 		bs: {hp: 90, at: 100, df: 90, sa: 125, sd: 85, sp: 90},
 		weightkg: 60.0,
@@ -20767,35 +20718,35 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Desert Cloak'},
 		innates: ['Crystalline Armor', 'Arcane Force', 'Adaptability']
 	},
-	'Grotom Glass': {
+	'Grotom-Glass': {
 		types: ['Poison', 'Rock'],
 		bs: {hp: 70, at: 110, df: 107, sa: 65, sd: 107, sp: 71},
 		weightkg: 0.3,
 		abilities: {0: 'Sharp Edges'},
 		innates: ['Water Absorb', 'Clear Body', 'Slime Mold']
 	},
-	'Grotom Roll': {
+	'Grotom-Roll': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 70, at: 110, df: 107, sa: 65, sd: 107, sp: 71},
 		weightkg: 0.3,
 		abilities: {0: 'Inflatable'},
 		innates: ['Water Absorb', 'Let\'s Roll', 'Slime Mold']
 	},
-	'Grotom Drum': {
+	'Grotom-Drum': {
 		types: ['Poison', 'Steel'],
 		bs: {hp: 70, at: 110, df: 107, sa: 65, sd: 107, sp: 71},
 		weightkg: 0.3,
 		abilities: {0: 'Fort Knox'},
 		innates: ['Water Absorb', 'Lead Coat', 'Gooey']
 	},
-	'Grotom Kick': {
+	'Grotom-Kick': {
 		types: ['Poison', 'Fighting'],
 		bs: {hp: 70, at: 110, df: 107, sa: 65, sd: 107, sp: 71},
 		weightkg: 0.3,
 		abilities: {0: 'Roundhouse'},
 		innates: ['Water Absorb', 'Striker', 'Slime Mold']
 	},
-	'Grotom Fill': {
+	'Grotom-Fill': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 70, at: 110, df: 107, sa: 65, sd: 107, sp: 71},
 		weightkg: 0.3,
@@ -20809,7 +20760,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Venom Crown'},
 		innates: ['Dragonfruit', 'Equinox', 'Spike Armor']
 	},
-	'Wispywaspy Hivemind': {
+	'Wispywaspy-Hivemind': {
 		types: ['Bug', 'Ghost'],
 		bs: {hp: 50, at: 130, df: 120, sa: 130, sd: 115, sp: 75},
 		weightkg: 0.3,
@@ -21180,7 +21131,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Soul Eater'},
 		innates: ['Sweeping Edge', 'Vengeance', 'Cursed Body']
 	},
-	'Aegislash-Shield-Redux': {
+	'Aegislash-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 140, df: 140, sa: 20, sd: 70, sp: 60},
 		weightkg: 53.0,
@@ -21565,7 +21516,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Guts'},
 		innates: ['Fluffy', 'Predator', 'Contempt']
 	},
-	'Iron Exo': {
+	'Iron-Exo': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 70, at: 74, df: 90, sa: 140, sd: 140, sp: 76},
 		weightkg: 97.0,
@@ -21586,7 +21537,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Wonder Skin'},
 		innates: ['Toxic Debris', 'Water Absorb', 'Poison Point']
 	},
-	'Basculin White': {
+	'Basculin-White': {
 		types: ['Water'],
 		bs: {hp: 70, at: 80, df: 65, sa: 92, sd: 55, sp: 118},
 		weightkg: 18.0,
@@ -21600,14 +21551,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shell Armor'},
 		innates: ['Overcoat', 'Harvest', 'Impenetrable']
 	},
-	'Dragonite Delivery': {
+	'Dragonite-Delivery': {
 		types: ['Dragon', 'Flying'],
 		bs: {hp: 91, at: 159, df: 120, sa: 125, sd: 125, sp: 80},
 		weightkg: 210.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Dragon\'s Ritual', 'Thick Fat', 'Discipline']
 	},
-	'Chien Pao-Mega': {
+	'Chien-Pao-Mega': {
 		types: ['Dark', 'Ice'],
 		bs: {hp: 80, at: 160, df: 100, sa: 110, sd: 85, sp: 145},
 		weightkg: 152.2,
@@ -21621,42 +21572,42 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Jaws of Carnage'},
 		innates: ['Berserk DNA', 'Water Veil', 'Primal Maw']
 	},
-	'Iron Heart': {
+	'Iron-Heart': {
 		types: ['Steel', 'Bug'],
 		bs: {hp: 78, at: 122, df: 92, sa: 74, sd: 92, sp: 112},
 		weightkg: 0.0,
 		abilities: {0: 'Parry'},
 		innates: ['Quark Drive', 'Vitality Strike', 'Steel Beetle']
 	},
-	'Snorlax Primal': {
+	'Snorlax-Primal': {
 		types: ['Normal'],
 		bs: {hp: 160, at: 130, df: 120, sa: 65, sd: 135, sp: 30},
 		weightkg: 460.0,
 		abilities: {0: 'Inversion'},
 		innates: ['Self Repair', 'Dream Whimsy', 'Dream State']
 	},
-	'Victini Primal': {
+	'Victini-Primal': {
 		types: ['Psychic', 'Fire'],
 		bs: {hp: 100, at: 140, df: 100, sa: 120, sd: 100, sp: 140},
 		weightkg: 4.0,
 		abilities: {0: 'Lucky Halo'},
 		innates: ['Victory Star', 'Victory Bomb', 'Turboblaze']
 	},
-	'Wigglytuff Primal': {
+	'Wigglytuff-Primal': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 120, at: 90, df: 65, sa: 155, sd: 115, sp: 90},
 		weightkg: 12.0,
 		abilities: {0: 'Apple Enlightenment'},
 		innates: ['Arcane Force', 'Soul-Heart', 'Competitive']
 	},
-	'Flygon-Redux B': {
+	'Flygon-Redux-B': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 100, df: 75, sa: 120, sd: 75, sp: 142},
 		weightkg: 82.0,
 		abilities: {0: 'Electro Surge'},
 		innates: ['Levitate', 'Galvanize', 'Clear Body']
 	},
-	'Flygon-Redux B-Mega': {
+	'Flygon-Redux-B-Mega': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 110, df: 95, sa: 150, sd: 95, sp: 162},
 		weightkg: 82.0,
@@ -21691,77 +21642,77 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sand Veil'},
 		innates: ['Assassin\'s Tools', 'Tough Claws', 'Sand Bender']
 	},
-	'Abomasnow Santa': {
+	'Abomasnow-Santa': {
 		types: ['Grass', 'Ice'],
 		bs: {hp: 90, at: 142, df: 105, sa: 142, sd: 105, sp: 30},
 		weightkg: 135.5,
 		abilities: {0: 'Christmas Spirit'},
 		innates: ['Cryo Proficiency', 'Whiteout', 'Overcoat']
 	},
-	'Bewear Angry': {
+	'Bewear-Angry': {
 		types: ['Normal', 'Fighting'],
 		bs: {hp: 120, at: 135, df: 100, sa: 55, sd: 60, sp: 130},
 		weightkg: 135.0,
 		abilities: {0: 'Blind Rage'},
 		innates: ['Parental Bond', 'Combat Specialist', 'Fur Coat']
 	},
-	'Mimikyu Rayquaza': {
+	'Mimikyu-Rayquaza': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 79, at: 120, df: 90, sa: 120, sd: 115, sp: 116},
 		weightkg: 0.7,
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Patchwork', 'Pretty Princess', 'Phantom Pain']
 	},
-	'Espeon Primal': {
+	'Espeon-Primal': {
 		types: ['Psychic'],
 		bs: {hp: 65, at: 90, df: 100, sa: 100, sd: 135, sp: 135},
 		weightkg: 26.5,
 		abilities: {0: 'Pure Power'},
 		innates: ['Forewarn', 'Tinted Lens', 'Magic Bounce']
 	},
-	'Darkrai Nightmare': {
+	'Darkrai-Nightmare': {
 		types: ['Dark'],
 		bs: {hp: 70, at: 110, df: 95, sa: 170, sd: 95, sp: 160},
 		weightkg: 50.5,
 		abilities: {0: 'Bad Dreams'},
 		innates: ['Shadow Tag', 'Fearmonger', 'Dark Aura']
 	},
-	'Solrock System': {
+	'Solrock-System': {
 		types: ['Rock', 'Psychic'],
 		bs: {hp: 90, at: 125, df: 115, sa: 125, sd: 115, sp: 120},
 		weightkg: 154.0,
 		abilities: {0: 'Phantom'},
 		innates: ['Desolate Land', 'Daybreak', 'Radiance']
 	},
-	'Spectrier Cloud': {
+	'Spectrier-Cloud': {
 		types: ['Flying'],
 		bs: {hp: 100, at: 80, df: 80, sa: 115, sd: 60, sp: 145},
 		weightkg: 44.5,
 		abilities: {0: 'Adrenaline Rush'},
 		innates: ['Slipstream', 'Weather Control', 'Fluffy']
 	},
-	'Calyrex Cloud Rider': {
+	'Calyrex-Cloud-Rider': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 100, at: 100, df: 100, sa: 135, sd: 80, sp: 165},
 		weightkg: 7.7,
 		abilities: {0: 'Breezy Neigh'},
 		innates: ['Slipstream', 'Weather Control', 'Fluffy']
 	},
-	'Mawile-Redux B': {
+	'Mawile-Redux-B': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 95, df: 75, sa: 85, sd: 80, sp: 75},
 		weightkg: 11.5,
 		abilities: {0: 'Heatproof'},
 		innates: ['Multi-Headed', 'Strong Jaw', 'Scare']
 	},
-	'Mawile-Redux B-Mega': {
+	'Mawile-Redux-B-Mega': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 105, df: 110, sa: 95, sd: 105, sp: 95},
 		weightkg: 11.5,
 		abilities: {0: 'Flaming Maw'},
 		innates: ['Huge Power', 'Multi-Headed', 'Corrosion']
 	},
-	'Wigglytuff Apex': {
+	'Wigglytuff-Apex': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 120, at: 70, df: 55, sa: 130, sd: 105, sp: 55},
 		weightkg: 12.0,
@@ -21775,7 +21726,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Dark Aura'},
 		innates: ['Opportunist', 'Giant Wings', 'Shadow Shield']
 	},
-	'Kartana Fallen': {
+	'Kartana-Fallen': {
 		types: ['Grass', 'Steel'],
 		bs: {hp: 159, at: 181, df: 149, sa: 67, sd: 101, sp: 113},
 		weightkg: 0.1,
@@ -22020,14 +21971,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Earth Eater', 'Iron Fist', 'Mold Breaker']
 	},
-	'Darmanitan Aura': {
+	'Darmanitan-Aura': {
 		types: ['Rock', 'Fighting'],
 		bs: {hp: 60, at: 50, df: 95, sa: 150, sd: 95, sp: 70},
 		weightkg: 92.9,
 		abilities: {0: 'Sage Power'},
 		innates: ['Rocky Payload', 'Magical Fists', 'Mold Breaker']
 	},
-	'Darmanitan-Redux Bond': {
+	'Darmanitan-Redux-Bond': {
 		types: ['Ground', 'Fighting'],
 		bs: {hp: 80, at: 140, df: 80, sa: 50, sd: 80, sp: 90},
 		weightkg: 92.9,
@@ -22083,14 +22034,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Ice Body'},
 		innates: ['Deep Freeze', 'Rough Skin', 'Swarm']
 	},
-	'Mimikyu Apex': {
+	'Mimikyu-Apex': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 79, at: 90, df: 80, sa: 90, sd: 105, sp: 96},
 		weightkg: 0.7,
 		abilities: {0: 'Predator'},
 		innates: ['Disguise', 'Overcoat', 'Phantom Pain']
 	},
-	'Mimikyu Apex Busted': {
+	'Mimikyu-Apex-Busted': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 79, at: 90, df: 80, sa: 90, sd: 105, sp: 96},
 		weightkg: 0.7,
@@ -22503,7 +22454,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Perfectionist'},
 		innates: ['Technician', 'Cute Charm', 'Fluffiest']
 	},
-};
+}
 
 const ZA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Absol: {otherFormes: ['Absol-Mega', 'Absol-Mega-Z']},
