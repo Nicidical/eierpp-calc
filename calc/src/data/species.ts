@@ -16602,7 +16602,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Impulse'},
 		innates: ['Aerodynamics', 'Overcoat', 'Looter']
 	},
-	'Bewarden Redux': {
+	'Bewarden-Redux': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 130, at: 120, df: 70, sa: 100, sd: 60, sp: 70},
 		weightkg: 6.9,
@@ -16700,28 +16700,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Mighty Horn'},
 		innates: ['Super Luck', 'Oblivious', 'Serene Grace']
 	},
-	'Dududunsparce Mega': {
+	'Dududunsparce-Mega': {
 		types: ['Normal', 'Ground'],
 		bs: {hp: 145, at: 135, df: 100, sa: 140, sd: 105, sp: 75},
 		weightkg: 770.0,
 		abilities: {0: 'Mighty Horn'},
 		innates: ['Super Luck', 'World Serpent', 'Lucky Wings']
 	},
-	'Ogerpon Mega': {
+	'Ogerpon-Mega': {
 		types: ['Grass'],
 		bs: {hp: 80, at: 125, df: 104, sa: 80, sd: 106, sp: 155},
 		weightkg: 39.8,
 		abilities: {0: 'Embody Aspect'},
 		innates: ['Defiant', 'Forest Rage', 'Super Slammer']
 	},
-	'Ogerpon Hearthflame Mega': {
+	'Ogerpon Hearthflame-Mega': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 80, at: 135, df: 104, sa: 110, sd: 96, sp: 125},
 		weightkg: 39.8,
 		abilities: {0: 'Embody Aspect'},
 		innates: ['Mold Breaker', 'Hellblaze', 'Super Slammer']
 	},
-	'Ogerpon Cornerstone Mega': {
+	'Ogerpon Cornerstone-Mega': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 80, at: 120, df: 156, sa: 80, sd: 96, sp: 118},
 		weightkg: 39.8,
@@ -16854,7 +16854,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Stamina'},
 		innates: ['Multi-Headed', 'Earthbound', 'Thick Fat']
 	},
-	'Crabominable Mega': {
+	'Crabominable-Mega': {
 		types: ['Fighting', 'Ice'],
 		bs: {hp: 97, at: 167, df: 132, sa: 62, sd: 127, sp: 33},
 		weightkg: 180.0,
@@ -16994,336 +16994,336 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Swift Swim'},
 		innates: ['Metallic', 'Ghost Frenzy', 'Infiltrator']
 	},
-	'Venusaur Mega Y': {
+	'Venusaur-Mega Y': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 90, at: 100, df: 123, sa: 122, sd: 120, sp: 80},
 		weightkg: 100.0,
 		abilities: {0: 'Big Leaves'},
 		innates: ['Forest Rage', 'Thick Fat', 'Poison Absorb']
 	},
-	'Charizard Mega X': {
+	'Charizard-Mega X': {
 		types: ['Fire', 'Dragon'],
 		bs: {hp: 79, at: 140, df: 111, sa: 105, sd: 100, sp: 100},
 		weightkg: 90.5,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Hellblaze', 'Levitate', 'Discipline']
 	},
-	'Charizard Mega Y': {
+	'Charizard-Mega Y': {
 		types: ['Fire', 'Flying'],
 		bs: {hp: 79, at: 123, df: 78, sa: 140, sd: 115, sp: 100},
 		weightkg: 90.5,
 		abilities: {0: 'Drought'},
 		innates: ['Hellblaze', 'Flash Fire', 'Solar Power']
 	},
-	'Blastoise Mega Y': {
+	'Blastoise-Mega Y': {
 		types: ['Water', 'Steel'],
 		bs: {hp: 84, at: 103, df: 120, sa: 135, sd: 115, sp: 78},
 		weightkg: 85.5,
 		abilities: {0: 'Artillery'},
 		innates: ['Riptide', 'Shell Armor', 'Mega Launcher']
 	},
-	'Beedrill Mega': {
+	'Beedrill-Mega': {
 		types: ['Bug', 'Poison'],
 		bs: {hp: 65, at: 150, df: 60, sa: 45, sd: 80, sp: 175},
 		weightkg: 29.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Hyper Aggressive', 'Merciless', 'Levitate']
 	},
-	'Pidgeot Mega': {
+	'Pidgeot-Mega': {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 83, at: 80, df: 95, sa: 130, sd: 80, sp: 126},
 		weightkg: 39.5,
 		abilities: {0: 'No Guard'},
 		innates: ['Flock', 'Majestic Bird', 'Giant Wings']
 	},
-	'Alakazam Mega': {
+	'Alakazam-Mega': {
 		types: ['Psychic'],
 		bs: {hp: 55, at: 50, df: 65, sa: 175, sd: 105, sp: 150},
 		weightkg: 48.0,
 		abilities: {0: 'Mystic Power'},
 		innates: ['Psychic Mind', 'Psychic Surge', 'Magic Guard']
 	},
-	'Slowbro Mega': {
+	'Slowbro-Mega': {
 		types: ['Water', 'Psychic'],
 		bs: {hp: 95, at: 75, df: 180, sa: 130, sd: 80, sp: 30},
 		weightkg: 78.5,
 		abilities: {0: 'Analytic'},
 		innates: ['Regenerator', 'Armor Tail', 'Shell Armor']
 	},
-	'Gengar Mega Y': {
+	'Gengar-Mega Y': {
 		types: ['Ghost', 'Poison'],
 		bs: {hp: 65, at: 65, df: 80, sa: 170, sd: 95, sp: 130},
 		weightkg: 40.5,
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Vengeance', 'Ectoplasm', 'Early Grave']
 	},
-	'Kangaskhan Mega': {
+	'Kangaskhan-Mega': {
 		types: ['Normal'],
 		bs: {hp: 105, at: 125, df: 100, sa: 60, sd: 100, sp: 100},
 		weightkg: 80.0,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Parental Bond', 'Scrappy', 'Avenger']
 	},
-	'Pinsir Mega': {
+	'Pinsir-Mega': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 65, at: 155, df: 120, sa: 65, sd: 90, sp: 105},
 		weightkg: 55.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Aerilate', 'Hyper Cutter', 'Grip Pincer']
 	},
-	'Gyarados Mega X': {
+	'Gyarados-Mega X': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 95, at: 155, df: 109, sa: 70, sd: 130, sp: 81},
 		weightkg: 235.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Aerialist', 'Beast Boost', 'Mold Breaker']
 	},
-	'Aerodactyl Mega': {
+	'Aerodactyl-Mega': {
 		types: ['Rock', 'Flying'],
 		bs: {hp: 80, at: 135, df: 85, sa: 70, sd: 95, sp: 150},
 		weightkg: 59.0,
 		abilities: {0: 'Speed Force'},
 		innates: ['Fossilized', 'Rock Head', 'Tough Claws']
 	},
-	'Mewtwo Mega X': {
+	'Mewtwo-Mega X': {
 		types: ['Psychic', 'Fighting'],
 		bs: {hp: 106, at: 190, df: 100, sa: 154, sd: 100, sp: 130},
 		weightkg: 122.0,
 		abilities: {0: 'Precise Fist'},
 		innates: ['Psychic Mind', 'Raging Boxer', 'Fatal Precision']
 	},
-	'Mewtwo Mega Y': {
+	'Mewtwo-Mega Y': {
 		types: ['Psychic'],
 		bs: {hp: 106, at: 150, df: 70, sa: 194, sd: 120, sp: 140},
 		weightkg: 122.0,
 		abilities: {0: 'Arcane Force'},
 		innates: ['Psychic Mind', 'Neuroforce', 'Fatal Precision']
 	},
-	'Ampharos Mega': {
+	'Ampharos-Mega': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 110, at: 95, df: 105, sa: 165, sd: 110, sp: 45},
 		weightkg: 61.5,
 		abilities: {0: 'Overwhelm'},
 		innates: ['Fluffy', 'Overcharge', 'Transistor']
 	},
-	'Steelix Mega': {
+	'Steelix-Mega': {
 		types: ['Steel', 'Ground'],
 		bs: {hp: 75, at: 145, df: 230, sa: 55, sd: 105, sp: 20},
 		weightkg: 400.0,
 		abilities: {0: 'Primal Armor'},
 		innates: ['Lead Coat', 'Impenetrable', 'Strong Jaw']
 	},
-	'Scizor Mega': {
+	'Scizor-Mega': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 70, at: 150, df: 140, sa: 65, sd: 100, sp: 75},
 		weightkg: 118.0,
 		abilities: {0: 'Sniper'},
 		innates: ['Tough Claws', 'Hyper Cutter', 'Technician']
 	},
-	'Heracross Mega': {
+	'Heracross-Mega': {
 		types: ['Bug', 'Fighting'],
 		bs: {hp: 80, at: 185, df: 115, sa: 50, sd: 95, sp: 75},
 		weightkg: 54.0,
 		abilities: {0: 'Skill Link'},
 		innates: ['Hunter\'s Horn', 'Battle Armor', 'Vital Spirit']
 	},
-	'Houndoom Mega': {
+	'Houndoom-Mega': {
 		types: ['Dark', 'Fire'],
 		bs: {hp: 75, at: 110, df: 90, sa: 140, sd: 90, sp: 125},
 		weightkg: 35.0,
 		abilities: {0: 'Combustion'},
 		innates: ['Hyper Aggressive', 'Pyromancy', 'Equinox']
 	},
-	'Tyranitar Mega': {
+	'Tyranitar-Mega': {
 		types: ['Rock', 'Dark'],
 		bs: {hp: 100, at: 164, df: 150, sa: 95, sd: 120, sp: 71},
 		weightkg: 202.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Juggernaut', 'Battle Armor', 'Power Core']
 	},
-	'Sceptile Mega': {
+	'Sceptile-Mega': {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 70, at: 145, df: 75, sa: 110, sd: 85, sp: 150},
 		weightkg: 52.2,
 		abilities: {0: 'Big Leaves'},
 		innates: ['Forest Rage', 'Speed Force', 'Keen Edge']
 	},
-	'Blaziken Mega': {
+	'Blaziken-Mega': {
 		types: ['Fire', 'Fighting'],
 		bs: {hp: 85, at: 160, df: 80, sa: 130, sd: 80, sp: 100},
 		weightkg: 52.0,
 		abilities: {0: 'Speed Boost'},
 		innates: ['Hellblaze', 'Roundhouse', 'Striker']
 	},
-	'Swampert Mega': {
+	'Swampert-Mega': {
 		types: ['Water', 'Ground'],
 		bs: {hp: 100, at: 150, df: 130, sa: 75, sd: 110, sp: 70},
 		weightkg: 81.9,
 		abilities: {0: 'Breakwater'},
 		innates: ['Riptide', 'Iron Fist', 'Regenerator']
 	},
-	'Gardevoir Mega': {
+	'Gardevoir-Mega': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 68, at: 85, df: 80, sa: 165, sd: 135, sp: 100},
 		weightkg: 48.4,
 		abilities: {0: 'Pixilate'},
 		innates: ['Serene Grace', 'Magic Guard', 'Soul-Heart']
 	},
-	'Sableye Mega': {
+	'Sableye-Mega': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 85, df: 130, sa: 85, sd: 120, sp: 20},
 		weightkg: 11.0,
 		abilities: {0: 'Prankster'},
 		innates: ['Haste Makes Waste', 'Magic Bounce', 'Coward']
 	},
-	'Mawile Mega': {
+	'Mawile-Mega': {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 70, at: 105, df: 130, sa: 55, sd: 100, sp: 50},
 		weightkg: 11.5,
 		abilities: {0: 'Huge Power'},
 		innates: ['Multi-Headed', 'Hungry Maws', 'Grip Pincer']
 	},
-	'Aggron Mega': {
+	'Aggron-Mega': {
 		types: ['Steel'],
 		bs: {hp: 70, at: 140, df: 230, sa: 60, sd: 80, sp: 50},
 		weightkg: 360.0,
 		abilities: {0: 'Juggernaut'},
 		innates: ['Lead Coat', 'Primal Armor', 'Impenetrable']
 	},
-	'Medicham Mega': {
+	'Medicham-Mega': {
 		types: ['Fighting', 'Psychic'],
 		bs: {hp: 60, at: 100, df: 100, sa: 95, sd: 85, sp: 110},
 		weightkg: 31.5,
 		abilities: {0: 'Huge Power'},
 		innates: ['Combat Specialist', 'Enlightened', 'Technician']
 	},
-	'Manectric Mega': {
+	'Manectric-Mega': {
 		types: ['Electric'],
 		bs: {hp: 70, at: 110, df: 80, sa: 135, sd: 80, sp: 155},
 		weightkg: 40.2,
 		abilities: {0: 'Generator'},
 		innates: ['Intimidate', 'Ground Shock', 'Overcharge']
 	},
-	'Sharpedo Mega': {
+	'Sharpedo-Mega': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 70, at: 150, df: 70, sa: 110, sd: 65, sp: 135},
 		weightkg: 88.8,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Strong Jaw', 'Speed Force', 'Violent Rush']
 	},
-	'Camerupt Mega': {
+	'Camerupt-Mega': {
 		types: ['Fire', 'Ground'],
 		bs: {hp: 90, at: 120, df: 110, sa: 145, sd: 115, sp: 20},
 		weightkg: 220.0,
 		abilities: {0: 'Drought'},
 		innates: ['Magma Armor', 'Artillery', 'Thick Fat']
 	},
-	'Altaria Mega': {
+	'Altaria-Mega': {
 		types: ['Dragon', 'Fairy'],
 		bs: {hp: 75, at: 110, df: 110, sa: 110, sd: 105, sp: 100},
 		weightkg: 20.6,
 		abilities: {0: 'Pixilate'},
 		innates: ['Natural Cure', 'Fluffiest', 'Imposing Wings']
 	},
-	'Banette Mega': {
+	'Banette-Mega': {
 		types: ['Ghost', 'Normal'],
 		bs: {hp: 84, at: 165, df: 105, sa: 75, sd: 103, sp: 108},
 		weightkg: 12.5,
 		abilities: {0: 'Soul Linker'},
 		innates: ['Intimidate', 'Prankster', 'Soul Eater']
 	},
-	'Absol Mega': {
+	'Absol-Mega': {
 		types: ['Dark', 'Fairy'],
 		bs: {hp: 65, at: 175, df: 65, sa: 105, sd: 65, sp: 125},
 		weightkg: 47.0,
 		abilities: {0: 'Dark Aura'},
 		innates: ['Super Luck', 'Keen Edge', 'Magic Guard']
 	},
-	'Glalie Mega': {
+	'Glalie-Mega': {
 		types: ['Ice'],
 		bs: {hp: 80, at: 130, df: 100, sa: 80, sd: 90, sp: 120},
 		weightkg: 256.5,
 		abilities: {0: 'Jaws of Carnage'},
 		innates: ['Cryo Proficiency', 'Glacial Rage', 'Immovable Object']
 	},
-	'Salamence Mega': {
+	'Salamence-Mega': {
 		types: ['Dragon', 'Flying'],
 		bs: {hp: 95, at: 145, df: 130, sa: 120, sd: 90, sp: 120},
 		weightkg: 102.6,
 		abilities: {0: 'Beast Boost'},
 		innates: ['Reckless', 'Overwhelm', 'Predator']
 	},
-	'Metagross Mega': {
+	'Metagross-Mega': {
 		types: ['Steel', 'Psychic'],
 		bs: {hp: 80, at: 150, df: 150, sa: 105, sd: 110, sp: 105},
 		weightkg: 550.0,
 		abilities: {0: 'Light Metal'},
 		innates: ['Tough Claws', 'Full Metal Body', 'Levitate']
 	},
-	'Latias Mega': {
+	'Latias-Mega': {
 		types: ['Dragon', 'Psychic'],
 		bs: {hp: 80, at: 100, df: 120, sa: 140, sd: 150, sp: 110},
 		weightkg: 40.0,
 		abilities: {0: 'Natural Recovery'},
 		innates: ['Levitate', 'Prism Armor', 'Mystic Power']
 	},
-	'Latios Mega': {
+	'Latios-Mega': {
 		types: ['Dragon', 'Psychic'],
 		bs: {hp: 80, at: 130, df: 100, sa: 160, sd: 120, sp: 110},
 		weightkg: 60.0,
 		abilities: {0: 'Speed Boost'},
 		innates: ['Levitate', 'Multiscale', 'Arcane Force']
 	},
-	'Lopunny Mega': {
+	'Lopunny-Mega': {
 		types: ['Normal', 'Fighting'],
 		bs: {hp: 65, at: 136, df: 74, sa: 64, sd: 96, sp: 135},
 		weightkg: 33.3,
 		abilities: {0: 'Scrappy'},
 		innates: ['Limber', 'Fur Coat', 'Striker']
 	},
-	'Garchomp Mega': {
+	'Garchomp-Mega': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 108, at: 160, df: 120, sa: 90, sd: 120, sp: 102},
 		weightkg: 95.0,
 		abilities: {0: 'Overwhelm'},
 		innates: ['Hyper Aggressive', 'Keen Edge', 'Hyper Cutter']
 	},
-	'Lucario Mega X': {
+	'Lucario-Mega X': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 70, at: 145, df: 78, sa: 145, sd: 70, sp: 117},
 		weightkg: 54.0,
 		abilities: {0: 'Iron Fist'},
 		innates: ['Inner Focus', 'Adaptability', 'Fighting Spirit']
 	},
-	'Abomasnow Mega': {
+	'Abomasnow-Mega': {
 		types: ['Grass', 'Ice'],
 		bs: {hp: 90, at: 142, df: 105, sa: 142, sd: 105, sp: 30},
 		weightkg: 135.5,
 		abilities: {0: 'North Wind'},
 		innates: ['Snow Warning', 'Whiteout', 'Permafrost']
 	},
-	'Gallade Mega': {
+	'Gallade-Mega': {
 		types: ['Psychic', 'Fighting'],
 		bs: {hp: 68, at: 135, df: 95, sa: 95, sd: 125, sp: 115},
 		weightkg: 52.0,
 		abilities: {0: 'Intrepid Sword'},
 		innates: ['Dual Wield', 'Fatal Precision', 'Avenger']
 	},
-	'Audino Mega': {
+	'Audino-Mega': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 103, at: 90, df: 126, sa: 90, sd: 126, sp: 50},
 		weightkg: 31.0,
 		abilities: {0: 'Pastel Veil'},
 		innates: ['Pure Love', 'Natural Recovery', 'Triage']
 	},
-	'Diancie Mega': {
+	'Diancie-Mega': {
 		types: ['Rock', 'Fairy'],
 		bs: {hp: 50, at: 160, df: 110, sa: 160, sd: 110, sp: 110},
 		weightkg: 8.8,
 		abilities: {0: 'Equinox'},
 		innates: ['Solid Rock', 'Levitate', 'Magic Guard']
 	},
-	'Rayquaza Mega': {
+	'Rayquaza-Mega': {
 		types: ['Dragon', 'Flying'],
 		bs: {hp: 105, at: 180, df: 100, sa: 180, sd: 100, sp: 115},
 		weightkg: 206.5,
@@ -17344,259 +17344,259 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Solar Power'},
 		innates: ['Molten Down', 'Primal Armor', 'Desolate Land']
 	},
-	'Rattata Alolan': {
+	'Rattata-Alolan': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 30, at: 56, df: 35, sa: 25, sd: 35, sp: 72},
 		weightkg: 3.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Cheap Tactics', 'Run Away', 'Thick Fat']
 	},
-	'Raticate Alolan': {
+	'Raticate-Alolan': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 75, at: 71, df: 70, sa: 40, sd: 80, sp: 77},
 		weightkg: 18.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Jaws of Carnage', 'Opportunist', 'Retriever']
 	},
-	'Raichu Alolan': {
+	'Raichu-Alolan': {
 		types: ['Electric', 'Psychic'],
 		bs: {hp: 60, at: 85, df: 50, sa: 95, sd: 85, sp: 115},
 		weightkg: 30.0,
 		abilities: {0: 'Psychic Mind'},
 		innates: ['Surge Surfer', 'Levitate', 'Ground Shock']
 	},
-	'Sandshrew Alolan': {
+	'Sandshrew-Alolan': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 70, at: 75, df: 90, sa: 10, sd: 35, sp: 40},
 		weightkg: 12.0,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Freezing Point', 'Slush Rush', 'Battle Armor']
 	},
-	'Sandslash Alolan': {
+	'Sandslash-Alolan': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 95, at: 100, df: 120, sa: 25, sd: 65, sp: 65},
 		weightkg: 29.5,
 		abilities: {0: 'Whiteout'},
 		innates: ['Let\'s Roll', 'Tough Claws', 'Iron Barbs']
 	},
-	'Vulpix Alolan': {
+	'Vulpix-Alolan': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 38, at: 41, df: 40, sa: 60, sd: 65, sp: 65},
 		weightkg: 9.9,
 		abilities: {0: 'Ice Dew'},
 		innates: ['Quick Feet', 'Refrigerate', 'Frozen Soul']
 	},
-	'Ninetales Alolan': {
+	'Ninetales-Alolan': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 73, at: 67, df: 75, sa: 91, sd: 100, sp: 109},
 		weightkg: 19.9,
 		abilities: {0: 'Frozen Soul'},
 		innates: ['Serene Grace', 'Ice Dew', 'Queenly Majesty']
 	},
-	'Diglett Alolan': {
+	'Diglett-Alolan': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 10, at: 55, df: 30, sa: 35, sd: 45, sp: 90},
 		weightkg: 0.8,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Tangling Hair', 'Steelworker', 'Ambush']
 	},
-	'Dugtrio Alolan': {
+	'Dugtrio-Alolan': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 35, at: 100, df: 60, sa: 50, sd: 70, sp: 110},
 		weightkg: 33.3,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Multi-Headed', 'Sand Force', 'Speed Force']
 	},
-	'Meowth Alolan': {
+	'Meowth-Alolan': {
 		types: ['Dark'],
 		bs: {hp: 40, at: 45, df: 35, sa: 75, sd: 40, sp: 90},
 		weightkg: 4.2,
 		abilities: {0: 'Pickpocket'},
 		innates: ['Cheap Tactics', 'Coward', 'Perfectionist']
 	},
-	'Persian Alolan': {
+	'Persian-Alolan': {
 		types: ['Dark'],
 		bs: {hp: 65, at: 78, df: 65, sa: 105, sd: 65, sp: 117},
 		weightkg: 32.0,
 		abilities: {0: 'Fur Coat'},
 		innates: ['Coward', 'Prim and Proper', 'Low Blow']
 	},
-	'Geodude Alolan': {
+	'Geodude-Alolan': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 40, at: 80, df: 75, sa: 30, sd: 40, sp: 35},
 		weightkg: 20.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Let\'s Roll', 'Sturdy', 'Static']
 	},
-	'Graveler Alolan': {
+	'Graveler-Alolan': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 55, at: 95, df: 90, sa: 45, sd: 60, sp: 45},
 		weightkg: 105.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Let\'s Roll', 'Sturdy', 'Static']
 	},
-	'Golem Alolan': {
+	'Golem-Alolan': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 90, at: 135, df: 110, sa: 45, sd: 95, sp: 45},
 		weightkg: 300.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Ground Shock', 'Sturdy', 'Galvanize']
 	},
-	'Grimer Alolan': {
+	'Grimer-Alolan': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 90, at: 80, df: 55, sa: 40, sd: 55, sp: 25},
 		weightkg: 30.0,
 		abilities: {0: 'Poison Touch'},
 		innates: ['Liquified', 'Corrosion', 'Power of Alchemy']
 	},
-	'Muk Alolan': {
+	'Muk-Alolan': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 105, at: 105, df: 85, sa: 65, sd: 110, sp: 50},
 		weightkg: 30.0,
 		abilities: {0: 'Poison Touch'},
 		innates: ['Liquified', 'Corrosion', 'Power of Alchemy']
 	},
-	'Exeggutor Alolan': {
+	'Exeggutor-Alolan': {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 95, at: 125, df: 85, sa: 105, sd: 75, sp: 45},
 		weightkg: 120.0,
 		abilities: {0: 'Sun Basking'},
 		innates: ['Long Reach', 'Sun\'s Bounty', 'Multi-Headed']
 	},
-	'Marowak Alolan': {
+	'Marowak-Alolan': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 75, at: 80, df: 110, sa: 50, sd: 80, sp: 60},
 		weightkg: 45.0,
 		abilities: {0: 'Ill Will'},
 		innates: ['Bone Zone', 'Early Grave', 'Rock Head']
 	},
-	'Meowth Galarian': {
+	'Meowth-Galarian': {
 		types: ['Steel'],
 		bs: {hp: 50, at: 75, df: 55, sa: 65, sd: 40, sp: 40},
 		weightkg: 4.2,
 		abilities: {0: 'Sniper'},
 		innates: ['Tough Claws', 'Opportunist', 'Perfectionist']
 	},
-	'Ponyta Galarian': {
+	'Ponyta-Galarian': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 50, at: 85, df: 55, sa: 65, sd: 65, sp: 90},
 		weightkg: 30.0,
 		abilities: {0: 'Guilt Trip'},
 		innates: ['Coward', 'Speed Force', 'Dazzling']
 	},
-	'Rapidash Galarian': {
+	'Rapidash-Galarian': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 85, at: 110, df: 70, sa: 75, sd: 80, sp: 120},
 		weightkg: 95.0,
 		abilities: {0: 'Power Edge'},
 		innates: ['Mighty Horn', 'Speed Force', 'Dazzling']
 	},
-	'Slowpoke Galarian': {
+	'Slowpoke-Galarian': {
 		types: ['Psychic'],
 		bs: {hp: 90, at: 65, df: 65, sa: 65, sd: 40, sp: 15},
 		weightkg: 36.0,
 		abilities: {0: 'Unaware'},
 		innates: ['Oblivious', 'Poison Absorb', 'Stall']
 	},
-	'Slowbro Galarian': {
+	'Slowbro-Galarian': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 110, df: 90, sa: 110, sd: 65, sp: 20},
 		weightkg: 78.5,
 		abilities: {0: 'Unaware'},
 		innates: ['Oblivious', 'Quick Draw', 'Stall']
 	},
-	'Farfetchd Galarian': {
+	'Farfetchd-Galarian': {
 		types: ['Fighting'],
 		bs: {hp: 52, at: 95, df: 55, sa: 58, sd: 62, sp: 55},
 		weightkg: 15.0,
 		abilities: {0: 'Hyper Cutter'},
 		innates: ['Scrappy', 'Sniper', 'Moxie']
 	},
-	'Weezing Galarian': {
+	'Weezing-Galarian': {
 		types: ['Poison', 'Fairy'],
 		bs: {hp: 85, at: 70, df: 120, sa: 95, sd: 90, sp: 60},
 		weightkg: 9.5,
 		abilities: {0: 'Pressure'},
 		innates: ['Levitate', 'Multi-Headed', 'Poison Absorb']
 	},
-	'Mr Mime Galarian': {
+	'Mr Mime-Galarian': {
 		types: ['Ice', 'Psychic'],
 		bs: {hp: 50, at: 65, df: 65, sa: 90, sd: 90, sp: 100},
 		weightkg: 54.5,
 		abilities: {0: 'Prankster'},
 		innates: ['Screen Cleaner', 'Ice Body', 'Oblivious']
 	},
-	'Articuno Galarian': {
+	'Articuno-Galarian': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 90, at: 85, df: 85, sa: 125, sd: 100, sp: 95},
 		weightkg: 55.4,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Aurora Borealis', 'Permafrost', 'Gifted Mind']
 	},
-	'Zapdos Galarian': {
+	'Zapdos-Galarian': {
 		types: ['Fighting', 'Flying'],
 		bs: {hp: 90, at: 125, df: 90, sa: 85, sd: 90, sp: 100},
 		weightkg: 52.6,
 		abilities: {0: 'Defiant'},
 		innates: ['Striker', 'Speed Boost', 'Roundhouse']
 	},
-	'Moltres Galarian': {
+	'Moltres-Galarian': {
 		types: ['Dark', 'Flying'],
 		bs: {hp: 90, at: 85, df: 90, sa: 100, sd: 125, sp: 90},
 		weightkg: 60.0,
 		abilities: {0: 'Bad Luck'},
 		innates: ['Dark Aura', 'Shadow Shield', 'Tipping Point']
 	},
-	'Slowking Galarian': {
+	'Slowking-Galarian': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 65, df: 80, sa: 110, sd: 110, sp: 30},
 		weightkg: 79.5,
 		abilities: {0: 'Rejection'},
 		innates: ['Spiteful', 'Pressure', 'Permanence']
 	},
-	'Corsola Galarian': {
+	'Corsola-Galarian': {
 		types: ['Ghost'],
 		bs: {hp: 60, at: 55, df: 100, sa: 65, sd: 100, sp: 30},
 		weightkg: 5.0,
 		abilities: {0: 'Perish Body'},
 		innates: ['Cursed Body', 'Sturdy', 'Rattled']
 	},
-	'Zigzagoon Galarian': {
+	'Zigzagoon-Galarian': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 38, at: 60, df: 41, sa: 30, sd: 41, sp: 70},
 		weightkg: 17.5,
 		abilities: {0: 'Pickup'},
 		innates: ['Scrappy', 'Quick Feet', 'Guts']
 	},
-	'Linoone Galarian': {
+	'Linoone-Galarian': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 78, at: 100, df: 61, sa: 50, sd: 61, sp: 110},
 		weightkg: 32.5,
 		abilities: {0: 'Pickup'},
 		innates: ['Defiant', 'Violent Rush', 'Guts']
 	},
-	'Darumaka Galarian': {
+	'Darumaka-Galarian': {
 		types: ['Ice'],
 		bs: {hp: 70, at: 90, df: 45, sa: 15, sd: 45, sp: 50},
 		weightkg: 37.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Heatproof', 'Inner Focus', 'Ice Body']
 	},
-	'Darmanitan Galarian': {
+	'Darmanitan-Galarian': {
 		types: ['Ice'],
 		bs: {hp: 105, at: 140, df: 65, sa: 50, sd: 65, sp: 95},
 		weightkg: 92.9,
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Heatproof', 'Iron Fist', 'Mold Breaker']
 	},
-	'Yamask Galarian': {
+	'Yamask-Galarian': {
 		types: ['Ground', 'Ghost'],
 		bs: {hp: 38, at: 55, df: 85, sa: 30, sd: 65, sp: 30},
 		weightkg: 1.5,
 		abilities: {0: 'Ill Will'},
 		innates: ['Vengeance', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Stunfisk Galarian': {
+	'Stunfisk-Galarian': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 109, at: 81, df: 99, sa: 66, sd: 84, sp: 32},
 		weightkg: 11.0,
@@ -18170,7 +18170,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sheer Force'},
 		innates: ['Enlightened', 'Impenetrable', 'Psychic Mind']
 	},
-	'Darmanitan Zen Mode Galarian': {
+	'Darmanitan Zen Mode-Galarian': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 105, at: 120, df: 60, sa: 35, sd: 60, sp: 140},
 		weightkg: 92.9,
@@ -19150,133 +19150,133 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'As One'},
 		innates: ['Shadow Shield', 'Fearmonger', 'Speed Boost']
 	},
-	'Qwilfish Hisuian': {
+	'Qwilfish-Hisuian': {
 		types: ['Dark', 'Poison'],
 		bs: {hp: 65, at: 95, df: 85, sa: 55, sd: 55, sp: 85},
 		weightkg: 3.9,
 		abilities: {0: 'Water Veil'},
 		innates: ['Merciless', 'Aftermath', 'Toxic Debris']
 	},
-	'Growlithe Hisuian': {
+	'Growlithe-Hisuian': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 60, at: 75, df: 45, sa: 65, sd: 50, sp: 55},
 		weightkg: 19.0,
 		abilities: {0: 'Rock Head'},
 		innates: ['Fluffy', 'Predator', 'Violent Rush']
 	},
-	'Arcanine Hisuian': {
+	'Arcanine-Hisuian': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 90, at: 130, df: 90, sa: 80, sd: 90, sp: 120},
 		weightkg: 155.0,
 		abilities: {0: 'Rock Head'},
 		innates: ['Elude', 'Predator', 'Violent Rush']
 	},
-	'Voltorb Hisuian': {
+	'Voltorb-Hisuian': {
 		types: ['Electric', 'Grass'],
 		bs: {hp: 40, at: 30, df: 50, sa: 55, sd: 55, sp: 100},
 		weightkg: 10.4,
 		abilities: {0: 'Chloroplast'},
 		innates: ['Impenetrable', 'Aftermath', 'Grassy Surge']
 	},
-	'Electrode Hisuian': {
+	'Electrode-Hisuian': {
 		types: ['Electric', 'Grass'],
 		bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 150},
 		weightkg: 66.6,
 		abilities: {0: 'Terminal Velocity'},
 		innates: ['Impenetrable', 'Aftermath', 'Grassy Surge']
 	},
-	'Typhlosion Hisuian': {
+	'Typhlosion-Hisuian': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 93, at: 74, df: 78, sa: 120, sd: 85, sp: 85},
 		weightkg: 79.5,
 		abilities: {0: 'Early Grave'},
 		innates: ['Blaze', 'Pyromancy', 'Frisk']
 	},
-	'Sneasel Hisuian': {
+	'Sneasel-Hisuian': {
 		types: ['Poison', 'Fighting'],
 		bs: {hp: 60, at: 95, df: 55, sa: 35, sd: 75, sp: 115},
 		weightkg: 28.0,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Tough Claws', 'Intoxicate', 'Unburden']
 	},
-	'Samurott Hisuian': {
+	'Samurott-Hisuian': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 90, at: 110, df: 80, sa: 100, sd: 65, sp: 90},
 		weightkg: 94.6,
 		abilities: {0: 'Exploit Weakness'},
 		innates: ['Torrent', 'Shell Armor', 'Keen Edge']
 	},
-	'Lilligant Hisuian': {
+	'Lilligant-Hisuian': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 80, at: 105, df: 80, sa: 50, sd: 80, sp: 105},
 		weightkg: 16.3,
 		abilities: {0: 'Chlorophyll'},
 		innates: ['Blade Dance', 'Speed Force', 'Taekkyeon']
 	},
-	'Braviary Hisuian': {
+	'Braviary-Hisuian': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 100, at: 57, df: 75, sa: 123, sd: 75, sp: 80},
 		weightkg: 41.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Tinted Lens', 'Giant Wings', 'Resonance']
 	},
-	'Sliggoo Hisuian': {
+	'Sliggoo-Hisuian': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 58, at: 75, df: 83, sa: 83, sd: 113, sp: 40},
 		weightkg: 17.5,
 		abilities: {0: 'Gooey'},
 		innates: ['Shell Armor', 'Impenetrable', 'Filter']
 	},
-	'Goodra Hisuian': {
+	'Goodra-Hisuian': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 80, at: 100, df: 100, sa: 110, sd: 150, sp: 60},
 		weightkg: 150.5,
 		abilities: {0: 'Gooey'},
 		innates: ['Shell Armor', 'Impenetrable', 'Filter']
 	},
-	'Avalugg Hisuian': {
+	'Avalugg-Hisuian': {
 		types: ['Ice', 'Rock'],
 		bs: {hp: 95, at: 127, df: 184, sa: 34, sd: 76, sp: 38},
 		weightkg: 505.0,
 		abilities: {0: 'Technician'},
 		innates: ['Primal Armor', 'Impenetrable', 'Strong Jaw']
 	},
-	'Decidueye Hisuian': {
+	'Decidueye-Hisuian': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 90, at: 120, df: 90, sa: 50, sd: 90, sp: 95},
 		weightkg: 36.6,
 		abilities: {0: 'Archer'},
 		innates: ['Overgrow', 'Sniper', 'Aerodynamics']
 	},
-	'Zorua Hisuian': {
+	'Zorua-Hisuian': {
 		types: ['Normal', 'Ghost'],
 		bs: {hp: 35, at: 60, df: 40, sa: 85, sd: 40, sp: 70},
 		weightkg: 12.5,
 		abilities: {0: 'Ambush'},
 		innates: ['Illusion', 'Vengeance', 'Opportunist']
 	},
-	'Zoroark Hisuian': {
+	'Zoroark-Hisuian': {
 		types: ['Normal', 'Ghost'],
 		bs: {hp: 55, at: 100, df: 60, sa: 125, sd: 60, sp: 110},
 		weightkg: 81.1,
 		abilities: {0: 'Ambush'},
 		innates: ['Illusion', 'Vengeance', 'Exploit Weakness']
 	},
-	'Tauros Paldean Aqua Breed': {
+	'Tauros-Paldean-Aqua-Breed': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 95, at: 130, df: 105, sa: 30, sd: 70, sp: 100},
 		weightkg: 88.4,
 		abilities: {0: 'Violent Rush'},
 		innates: ['Rock Head', 'Anger Point', 'Torrent']
 	},
-	'Tauros Paldean Blaze Breed': {
+	'Tauros-Paldean-Blaze-Breed': {
 		types: ['Fighting', 'Fire'],
 		bs: {hp: 95, at: 130, df: 105, sa: 30, sd: 70, sp: 100},
 		weightkg: 88.4,
 		abilities: {0: 'Violent Rush'},
 		innates: ['Rock Head', 'Anger Point', 'Blaze']
 	},
-	'Tauros Paldean Combat Breed': {
+	'Tauros-Paldean-Combat-Breed': {
 		types: ['Fighting'],
 		bs: {hp: 95, at: 130, df: 105, sa: 30, sd: 70, sp: 100},
 		weightkg: 88.4,
@@ -19479,14 +19479,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Patchwork', 'Pretty Princess', 'Phantom Pain']
 	},
-	'Slaking Mega Ape Shift': {
+	'Slaking-Mega Ape Shift': {
 		types: ['Normal', 'Ice'],
 		bs: {hp: 130, at: 210, df: 110, sa: 85, sd: 105, sp: 110},
 		weightkg: 130.5,
 		abilities: {0: 'Unseen Fist'},
 		innates: ['Ape Shift', 'Mold Breaker', 'Crystallize']
 	},
-	'Raichu Mega Y': {
+	'Raichu-Mega Y': {
 		types: ['Electric'],
 		bs: {hp: 60, at: 100, df: 60, sa: 160, sd: 80, sp: 130},
 		weightkg: 30.0,
@@ -19556,532 +19556,532 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Mind Crunch'},
 		innates: ['Fluffy', 'Moon Spirit', 'Dazzling']
 	},
-	'Scrafty Mega': {
+	'Scrafty-Mega': {
 		types: ['Dark', 'Fighting'],
 		bs: {hp: 65, at: 130, df: 135, sa: 55, sd: 135, sp: 68},
 		weightkg: 30.0,
 		abilities: {0: 'Backstreet Boy'},
 		innates: ['Wonder Scale', 'Backflip', 'Overcoat']
 	},
-	'Falinks Mega': {
+	'Falinks-Mega': {
 		types: ['Fighting'],
 		bs: {hp: 65, at: 135, df: 135, sa: 70, sd: 65, sp: 100},
 		weightkg: 62.0,
 		abilities: {0: 'Fort Knox'},
 		innates: ['Voltron', 'Warrior\'s Spear', 'Vital Spirit']
 	},
-	'Pyroar Mega': {
+	'Pyroar-Mega': {
 		types: ['Normal', 'Fire'],
 		bs: {hp: 86, at: 88, df: 92, sa: 129, sd: 86, sp: 136},
 		weightkg: 81.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Emperor\'s Wrath', 'Rivalry', 'Predator']
 	},
-	'Chesnaught Mega': {
+	'Chesnaught-Mega': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 88, at: 137, df: 172, sa: 74, sd: 115, sp: 49},
 		weightkg: 90.0,
 		abilities: {0: 'King\'s Wrath'},
 		innates: ['Forest Rage', 'Stalwart', 'Spike Armor']
 	},
-	'Delphox Mega': {
+	'Delphox-Mega': {
 		types: ['Fire', 'Psychic'],
 		bs: {hp: 75, at: 69, df: 73, sa: 159, sd: 125, sp: 134},
 		weightkg: 39.0,
 		abilities: {0: 'Deadly Precision'},
 		innates: ['Hellblaze', 'Witch Broom', 'Magic Guard']
 	},
-	'Greninja Mega': {
+	'Greninja-Mega': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 72, at: 125, df: 77, sa: 138, sd: 81, sp: 142},
 		weightkg: 40.0,
 		abilities: {0: 'Fatal Precision'},
 		innates: ['Riptide', 'Giant Shuriken', 'Anticipation']
 	},
-	'Eelektross Mega': {
+	'Eelektross-Mega': {
 		types: ['Electric'],
 		bs: {hp: 85, at: 145, df: 90, sa: 135, sd: 100, sp: 80},
 		weightkg: 80.5,
 		abilities: {0: 'Electromorphosis'},
 		innates: ['Mucus Membrane', 'Levitate', 'Amphibious']
 	},
-	'Malamar Mega': {
+	'Malamar-Mega': {
 		types: ['Dark', 'Psychic'],
 		bs: {hp: 86, at: 102, df: 88, sa: 115, sd: 120, sp: 88},
 		weightkg: 47.0,
 		abilities: {0: 'Entrance'},
 		innates: ['Hypnotic Trance', 'Brain Overload', 'Brain Mass']
 	},
-	'Victreebel Mega': {
+	'Victreebel-Mega': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 100, at: 125, df: 95, sa: 135, sd: 105, sp: 70},
 		weightkg: 15.5,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Tummyache', 'Acid Reflux', 'Wonder Skin']
 	},
-	'Dragalge Mega': {
+	'Dragalge-Mega': {
 		types: ['Poison', 'Dragon'],
 		bs: {hp: 85, at: 97, df: 105, sa: 142, sd: 163, sp: 44},
 		weightkg: 81.5,
 		abilities: {0: 'Protean'},
 		innates: ['Waterborne', 'Toxic Spill', 'Drakelp Head']
 	},
-	'Hawlucha Mega': {
+	'Hawlucha-Mega': {
 		types: ['Fighting', 'Flying'],
 		bs: {hp: 78, at: 137, df: 100, sa: 74, sd: 93, sp: 118},
 		weightkg: 21.5,
 		abilities: {0: 'Good As Gold'},
 		innates: ['Lucha Libre', 'Stamina', 'Vital Spirit']
 	},
-	'Clefable Mega Y': {
+	'Clefable-Mega Y': {
 		types: ['Fairy', 'Flying'],
 		bs: {hp: 100, at: 80, df: 95, sa: 135, sd: 110, sp: 88},
 		weightkg: 40.0,
 		abilities: {0: 'Lepidopteran'},
 		innates: ['Pollinate', 'Giant Wings', 'Magic Guard']
 	},
-	'Dragonite Mega Y': {
+	'Dragonite-Mega Y': {
 		types: ['Dragon', 'Flying'],
 		bs: {hp: 91, at: 124, df: 115, sa: 145, sd: 125, sp: 100},
 		weightkg: 210.0,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Angelic Wings', 'Mystic Power', 'Inner Focus']
 	},
-	'Excadrill Mega': {
+	'Excadrill-Mega': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 110, at: 165, df: 100, sa: 65, sd: 65, sp: 103},
 		weightkg: 40.4,
 		abilities: {0: 'Mold Breaker'},
 		innates: ['Mega Drill', 'Steelworker', 'Aftershock']
 	},
-	'Scolipede Mega': {
+	'Scolipede-Mega': {
 		types: ['Bug', 'Poison'],
 		bs: {hp: 90, at: 140, df: 159, sa: 75, sd: 99, sp: 62},
 		weightkg: 200.5,
 		abilities: {0: 'Tinted Lens'},
 		innates: ['Toxic Shell', 'Hemotoxin', 'Mighty Horn']
 	},
-	'Chandelure Mega Y': {
+	'Chandelure-Mega Y': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 80, at: 75, df: 110, sa: 175, sd: 110, sp: 90},
 		weightkg: 34.3,
 		abilities: {0: 'Purgatory'},
 		innates: ['Levitate', 'Ethereal Rush', 'Radiance']
 	},
-	'Floette Mega': {
+	'Floette-Mega': {
 		types: ['Fairy'],
 		bs: {hp: 74, at: 85, df: 87, sa: 155, sd: 148, sp: 102},
 		weightkg: 0.9,
 		abilities: {0: 'Energy Siphon'},
 		innates: ['Eternal Flower', 'Magic Guard', 'Fairy Aura']
 	},
-	'Zygarde Mega': {
+	'Zygarde-Mega': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 216, at: 70, df: 121, sa: 216, sd: 85, sp: 100},
 		weightkg: 305.0,
 		abilities: {0: 'Nihil Blaster'},
 		innates: ['Primal Armor', 'Earthbound', 'Power Core']
 	},
-	'Barbaracle Mega': {
+	'Barbaracle-Mega': {
 		types: ['Rock', 'Fighting'],
 		bs: {hp: 72, at: 140, df: 130, sa: 64, sd: 106, sp: 88},
 		weightkg: 96.0,
 		abilities: {0: 'Frisk'},
 		innates: ['Hand Barnacles', 'Tough Claws', 'Solid Rock']
 	},
-	'Drampa Mega': {
+	'Drampa-Mega': {
 		types: ['Normal', 'Dragon'],
 		bs: {hp: 78, at: 95, df: 110, sa: 160, sd: 126, sp: 36},
 		weightkg: 185.0,
 		abilities: {0: 'Storm Cloud'},
 		innates: ['Thunder Clouds', 'Overcoat', 'Going Berserk']
 	},
-	'Starmie Mega': {
+	'Starmie-Mega': {
 		types: ['Water', 'Psychic'],
 		bs: {hp: 60, at: 100, df: 110, sa: 130, sd: 105, sp: 120},
 		weightkg: 80.0,
 		abilities: {0: 'Huge Power'},
 		innates: ['Break it Down', 'Blur', 'Mystic Power']
 	},
-	'Skarmory Mega Y': {
+	'Skarmory-Mega Y': {
 		types: ['Steel', 'Flying'],
 		bs: {hp: 75, at: 140, df: 110, sa: 40, sd: 100, sp: 130},
 		weightkg: 50.5,
 		abilities: {0: 'Talon Trap'},
 		innates: ['To The Bone', 'Light Metal', 'Hyper Aggressive']
 	},
-	'Froslass Mega Y': {
+	'Froslass-Mega Y': {
 		types: ['Ice', 'Ghost'],
 		bs: {hp: 70, at: 80, df: 70, sa: 140, sd: 100, sp: 140},
 		weightkg: 26.6,
 		abilities: {0: 'Cryomancy'},
 		innates: ['Yuki Onna', 'Whiteout', 'Glacial Ghost']
 	},
-	'Milotic Mega': {
+	'Milotic-Mega': {
 		types: ['Water', 'Fairy'],
 		bs: {hp: 95, at: 69, df: 110, sa: 129, sd: 156, sp: 81},
 		weightkg: 162.0,
 		abilities: {0: 'Natural Recovery'},
 		innates: ['Prism Scales', 'Tangling Hair', 'Adaptability']
 	},
-	'Butterfree Mega': {
+	'Butterfree-Mega': {
 		types: ['Bug', 'Psychic'],
 		bs: {hp: 75, at: 15, df: 65, sa: 165, sd: 140, sp: 115},
 		weightkg: 32.0,
 		abilities: {0: 'Tinted Lens'},
 		innates: ['Shield Dust', 'Compound Eyes', 'Imposing Wings']
 	},
-	'Machamp Mega': {
+	'Machamp-Mega': {
 		types: ['Fighting'],
 		bs: {hp: 90, at: 170, df: 100, sa: 65, sd: 105, sp: 75},
 		weightkg: 130.0,
 		abilities: {0: 'Raging Boxer'},
 		innates: ['No Guard', 'Iron Fist', 'Anger Point']
 	},
-	'Kingler Mega': {
+	'Kingler-Mega': {
 		types: ['Water'],
 		bs: {hp: 80, at: 170, df: 135, sa: 50, sd: 80, sp: 85},
 		weightkg: 60.0,
 		abilities: {0: 'Swift Swim'},
 		innates: ['Shell Armor', 'Hyper Cutter', 'Tough Claws']
 	},
-	'Lapras Mega Y': {
+	'Lapras-Mega Y': {
 		types: ['Water', 'Ice'],
 		bs: {hp: 130, at: 105, df: 110, sa: 125, sd: 125, sp: 50},
 		weightkg: 220.0,
 		abilities: {0: 'Liquid Voice'},
 		innates: ['Ice Scales', 'Shell Armor', 'Self Sufficient']
 	},
-	'Flygon Mega': {
+	'Flygon-Mega': {
 		types: ['Ground', 'Bug'],
 		bs: {hp: 80, at: 125, df: 80, sa: 130, sd: 100, sp: 125},
 		weightkg: 82.0,
 		abilities: {0: 'Sand Song'},
 		innates: ['Dragonfly', 'Sepia Lens', 'Desert Spirit']
 	},
-	'Kingdra Mega X': {
+	'Kingdra-Mega X': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 75, at: 105, df: 100, sa: 145, sd: 100, sp: 115},
 		weightkg: 152.0,
 		abilities: {0: 'Swift Swim'},
 		innates: ['Raging Storm', 'Mega Launcher', 'Multiscale']
 	},
-	'Dewgong Mega': {
+	'Dewgong-Mega': {
 		types: ['Water', 'Ice'],
 		bs: {hp: 90, at: 135, df: 110, sa: 110, sd: 110, sp: 90},
 		weightkg: 120.0,
 		abilities: {0: 'Hardened Sheath'},
 		innates: ['Cold Rebound', 'Water Veil', 'Arctic Fur']
 	},
-	'Hitmonchan Mega': {
+	'Hitmonchan-Mega': {
 		types: ['Fighting', 'Ground'],
 		bs: {hp: 80, at: 145, df: 99, sa: 35, sd: 120, sp: 106},
 		weightkg: 50.2,
 		abilities: {0: 'Parry'},
 		innates: ['Raging Boxer', 'Power Fists', 'Blitz Boxer']
 	},
-	'Hitmonlee Mega': {
+	'Hitmonlee-Mega': {
 		types: ['Fighting', 'Rock'],
 		bs: {hp: 80, at: 140, df: 73, sa: 60, sd: 110, sp: 122},
 		weightkg: 49.8,
 		abilities: {0: 'Roundhouse'},
 		innates: ['Hustle', 'Mineralize', 'Striker']
 	},
-	'Hitmontop Mega': {
+	'Hitmontop-Mega': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 80, at: 135, df: 115, sa: 45, sd: 135, sp: 75},
 		weightkg: 48.0,
 		abilities: {0: 'Spinning Top'},
 		innates: ['Technician', 'Battle Armor', 'Intimidate']
 	},
-	'Crobat Mega': {
+	'Crobat-Mega': {
 		types: ['Poison', 'Flying'],
 		bs: {hp: 85, at: 140, df: 70, sa: 120, sd: 70, sp: 160},
 		weightkg: 75.0,
 		abilities: {0: 'Elude'},
 		innates: ['Ominous Shroud', 'Spectral Shroud', 'Nosferatu']
 	},
-	'Skarmory Mega X': {
+	'Skarmory-Mega X': {
 		types: ['Steel', 'Flying'],
 		bs: {hp: 75, at: 100, df: 174, sa: 40, sd: 138, sp: 68},
 		weightkg: 50.5,
 		abilities: {0: 'Shattered Armor'},
 		innates: ['Steelworker', 'Self Repair', 'Power Core']
 	},
-	'Torterra Mega': {
+	'Torterra-Mega': {
 		types: ['Grass', 'Ground'],
 		bs: {hp: 95, at: 150, df: 184, sa: 65, sd: 105, sp: 36},
 		weightkg: 310.0,
 		abilities: {0: 'Grassy Surge'},
 		innates: ['Forest Rage', 'Shell Armor', 'Atlas']
 	},
-	'Infernape Mega': {
+	'Infernape-Mega': {
 		types: ['Fire', 'Fighting'],
 		bs: {hp: 76, at: 145, df: 71, sa: 145, sd: 71, sp: 127},
 		weightkg: 55.0,
 		abilities: {0: 'Evaporate'},
 		innates: ['Hellblaze', 'Equinox', 'Adrenaline Rush']
 	},
-	'Empoleon Mega': {
+	'Empoleon-Mega': {
 		types: ['Water', 'Steel'],
 		bs: {hp: 84, at: 80, df: 118, sa: 136, sd: 121, sp: 96},
 		weightkg: 84.5,
 		abilities: {0: 'No Guard'},
 		innates: ['Riptide', 'Antarctic Bird', 'Battle Armor']
 	},
-	'Shuckle Mega': {
+	'Shuckle-Mega': {
 		types: ['Bug', 'Rock'],
 		bs: {hp: 50, at: 60, df: 255, sa: 10, sd: 255, sp: 5},
 		weightkg: 20.5,
 		abilities: {0: 'Self Repair'},
 		innates: ['Multi-Headed', 'Juggernaut', 'Fort Knox']
 	},
-	'Relicanth Mega': {
+	'Relicanth-Mega': {
 		types: ['Water', 'Rock'],
 		bs: {hp: 100, at: 160, df: 130, sa: 45, sd: 75, sp: 95},
 		weightkg: 23.4,
 		abilities: {0: 'Marine Apex'},
 		innates: ['Impenetrable', 'Reckless', 'Primal Armor']
 	},
-	'Toucannon Mega': {
+	'Toucannon-Mega': {
 		types: ['Normal', 'Steel'],
 		bs: {hp: 80, at: 120, df: 110, sa: 135, sd: 110, sp: 70},
 		weightkg: 26.0,
 		abilities: {0: 'Sturdy'},
 		innates: ['Steel Barrel', 'Iron Barrage', 'Pyro Shells']
 	},
-	'Dragonite Mega': {
+	'Dragonite-Mega': {
 		types: ['Dragon', 'Electric'],
 		bs: {hp: 91, at: 159, df: 120, sa: 125, sd: 125, sp: 80},
 		weightkg: 210.0,
 		abilities: {0: 'Multiscale'},
 		innates: ['Galvanize', 'Discipline', 'Thundercall']
 	},
-	'Breloom Mega': {
+	'Breloom-Mega': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 60, at: 140, df: 130, sa: 50, sd: 110, sp: 70},
 		weightkg: 39.2,
 		abilities: {0: 'Long Reach'},
 		innates: ['Perfectionist', 'Technician', 'Fungal Infection']
 	},
-	'Slaking Mega': {
+	'Slaking-Mega': {
 		types: ['Normal', 'Ice'],
 		bs: {hp: 130, at: 210, df: 110, sa: 85, sd: 105, sp: 110},
 		weightkg: 130.5,
 		abilities: {0: 'Unseen Fist'},
 		innates: ['Ape Shift', 'Truant', 'Crystallize']
 	},
-	'Feraligatr Mega X': {
+	'Feraligatr-Mega X': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 85, at: 160, df: 130, sa: 89, sd: 93, sp: 78},
 		weightkg: 88.8,
 		abilities: {0: 'Crushing Jaw'},
 		innates: ['Riptide', 'Sharp Edges', 'Predator']
 	},
-	'Feraligatr Mega Y': {
+	'Feraligatr-Mega Y': {
 		types: ['Water', 'Electric'],
 		bs: {hp: 85, at: 80, df: 130, sa: 159, sd: 113, sp: 68},
 		weightkg: 88.8,
 		abilities: {0: 'Atomic Burst'},
 		innates: ['Riptide', 'Predator', 'Berserker Rage']
 	},
-	'Granbull Mega': {
+	'Granbull-Mega': {
 		types: ['Fairy', 'Ground'],
 		bs: {hp: 90, at: 160, df: 135, sa: 70, sd: 105, sp: 35},
 		weightkg: 48.7,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Pretty Princess', 'Defiant', 'Hyper Aggressive']
 	},
-	'Quagsire Mega': {
+	'Quagsire-Mega': {
 		types: ['Water', 'Ground'],
 		bs: {hp: 95, at: 110, df: 130, sa: 110, sd: 130, sp: 35},
 		weightkg: 75.0,
 		abilities: {0: 'Unaware'},
 		innates: ['Clueless', 'Water Absorb', 'Water Veil']
 	},
-	'Gyarados Mega Y': {
+	'Gyarados-Mega Y': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 95, at: 95, df: 99, sa: 130, sd: 140, sp: 81},
 		weightkg: 235.0,
 		abilities: {0: 'Mystic Power'},
 		innates: ['Aerialist', 'Prism Scales', 'Drake Of Rage']
 	},
-	'Haxorus Mega': {
+	'Haxorus-Mega': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 76, at: 180, df: 110, sa: 82, sd: 90, sp: 102},
 		weightkg: 105.5,
 		abilities: {0: 'Fearmonger'},
 		innates: ['Hyper Cutter', 'Keen Edge', 'Mold Breaker']
 	},
-	'Meganium Mega': {
+	'Meganium-Mega': {
 		types: ['Grass', 'Fairy'],
 		bs: {hp: 80, at: 92, df: 115, sa: 143, sd: 115, sp: 90},
 		weightkg: 100.5,
 		abilities: {0: 'Grassy Surge'},
 		innates: ['Forest Rage', 'Flower Necklace', 'Triage']
 	},
-	'Luxray Mega': {
+	'Luxray-Mega': {
 		types: ['Electric'],
 		bs: {hp: 90, at: 143, df: 96, sa: 89, sd: 96, sp: 119},
 		weightkg: 42.0,
 		abilities: {0: 'Shocking Maw'},
 		innates: ['Gleam Eyes', 'Merciless', 'Jaws of Carnage']
 	},
-	'Nidoking Mega': {
+	'Nidoking-Mega': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 81, at: 142, df: 92, sa: 85, sd: 95, sp: 110},
 		weightkg: 62.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['King\'s Wrath', 'Fearmonger', 'Venom Crown']
 	},
-	'Nidoqueen Mega': {
+	'Nidoqueen-Mega': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 90, at: 82, df: 112, sa: 125, sd: 110, sp: 86},
 		weightkg: 60.0,
 		abilities: {0: 'Queenly Majesty'},
 		innates: ['Queen\'s Mourning', 'Blight Scale', 'Battle Armor']
 	},
-	'Sandslash Mega': {
+	'Sandslash-Mega': {
 		types: ['Ground'],
 		bs: {hp: 95, at: 140, df: 110, sa: 45, sd: 85, sp: 95},
 		weightkg: 29.5,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Desert Cloak', 'Sand Rush', 'Sand Force']
 	},
-	'Typhlosion Mega': {
+	'Typhlosion-Mega': {
 		types: ['Fire', 'Ground'],
 		bs: {hp: 78, at: 94, df: 98, sa: 150, sd: 105, sp: 110},
 		weightkg: 79.5,
 		abilities: {0: 'Volcano Rage'},
 		innates: ['Hellblaze', 'Magma Eater', 'Flaming Soul']
 	},
-	'Krookodile Mega': {
+	'Krookodile-Mega': {
 		types: ['Ground', 'Dark'],
 		bs: {hp: 95, at: 147, df: 110, sa: 65, sd: 100, sp: 102},
 		weightkg: 96.3,
 		abilities: {0: 'Scare'},
 		innates: ['Metallic Jaws', 'Dune Terror', 'Jaws of Carnage']
 	},
-	'Magnezone Mega': {
+	'Magnezone-Mega': {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 70, at: 75, df: 135, sa: 165, sd: 125, sp: 65},
 		weightkg: 180.0,
 		abilities: {0: 'Electric Burst'},
 		innates: ['Electro Surge', 'Multi-Headed', 'Magnet Pull']
 	},
-	'Shedinja Mega': {
+	'Shedinja-Mega': {
 		types: ['Bug', 'Ghost'],
 		bs: {hp: 1, at: 120, df: 45, sa: 120, sd: 30, sp: 120},
 		weightkg: 1.2,
 		abilities: {0: 'Cheating Death'},
 		innates: ['Tinted Lens', 'Magic Guard', 'Dead Power']
 	},
-	'Swalot Mega': {
+	'Swalot-Mega': {
 		types: ['Poison'],
 		bs: {hp: 100, at: 88, df: 138, sa: 128, sd: 110, sp: 43},
 		weightkg: 80.0,
 		abilities: {0: 'Wonder Skin'},
 		innates: ['Toxic Spill', 'Liquified', 'Corrosion']
 	},
-	'Lanturn Mega': {
+	'Lanturn-Mega': {
 		types: ['Water', 'Electric'],
 		bs: {hp: 125, at: 58, df: 88, sa: 126, sd: 116, sp: 67},
 		weightkg: 22.5,
 		abilities: {0: 'Hydro Circuit'},
 		innates: ['Radiance', 'Storm Drain', 'Volt Absorb']
 	},
-	'Lapras Mega X': {
+	'Lapras-Mega X': {
 		types: ['Water'],
 		bs: {hp: 130, at: 135, df: 105, sa: 100, sd: 90, sp: 85},
 		weightkg: 220.0,
 		abilities: {0: 'Primal Maw'},
 		innates: ['Swift Swim', 'Shell Armor', 'Jaws of Carnage']
 	},
-	'Slowking Mega': {
+	'Slowking-Mega': {
 		types: ['Psychic'],
 		bs: {hp: 95, at: 85, df: 80, sa: 130, sd: 180, sp: 20},
 		weightkg: 79.5,
 		abilities: {0: 'Analytic'},
 		innates: ['Psychic Surge', 'Gifted Mind', 'Shell Armor']
 	},
-	'Ribombee Mega': {
+	'Ribombee-Mega': {
 		types: ['Bug', 'Fairy'],
 		bs: {hp: 60, at: 55, df: 70, sa: 130, sd: 105, sp: 144},
 		weightkg: 0.5,
 		abilities: {0: 'Fairy Aura'},
 		innates: ['Aerialist', 'Radiance', 'Trickster']
 	},
-	'Alakazam Mega Redux': {
+	'Alakazam-Mega-Redux': {
 		types: ['Dark'],
 		bs: {hp: 55, at: 50, df: 105, sa: 175, sd: 65, sp: 150},
 		weightkg: 48.0,
 		abilities: {0: 'Minion Control'},
 		innates: ['Cheap Tactics', 'Mystic Power', 'Nocturnal']
 	},
-	'Beedrill Mega Redux': {
+	'Beedrill-Mega-Redux': {
 		types: ['Ice', 'Poison'],
 		bs: {hp: 65, at: 150, df: 60, sa: 45, sd: 80, sp: 175},
 		weightkg: 29.5,
 		abilities: {0: 'Freezing Point'},
 		innates: ['Skill Link', 'Exploit Weakness', 'Adaptability']
 	},
-	'Machamp Mega Redux': {
+	'Machamp-Mega-Redux': {
 		types: ['Fighting', 'Dragon'],
 		bs: {hp: 70, at: 130, df: 140, sa: 65, sd: 145, sp: 55},
 		weightkg: 130.0,
 		abilities: {0: 'Raging Boxer'},
 		innates: ['Brawling Wyvern', 'Stamina', 'Power Core']
 	},
-	'Skarmory Mega': {
+	'Skarmory-Mega': {
 		types: ['Steel', 'Fire'],
 		bs: {hp: 75, at: 130, df: 100, sa: 80, sd: 70, sp: 140},
 		weightkg: 50.5,
 		abilities: {0: 'Molten Blades'},
 		innates: ['Levitate', 'Flame Body', 'Speed Force']
 	},
-	'Arcanine Redux Mega': {
+	'Arcanine-Redux-Mega': {
 		types: ['Fire', 'Grass'],
 		bs: {hp: 90, at: 145, df: 100, sa: 135, sd: 100, sp: 130},
 		weightkg: 155.0,
 		abilities: {0: 'Scare'},
 		innates: ['Smoldering Wood', 'Stench', 'Immunity']
 	},
-	'Garchomp Mega Redux': {
+	'Garchomp-Mega-Redux': {
 		types: ['Water', 'Ghost'],
 		bs: {hp: 100, at: 150, df: 105, sa: 100, sd: 105, sp: 140},
 		weightkg: 95.0,
 		abilities: {0: 'Haunting Frenzy'},
 		innates: ['Keen Edge', 'Hyper Aggressive', 'Soul Eater']
 	},
-	'Mawile Mega Redux': {
+	'Mawile-Mega-Redux': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 105, df: 100, sa: 55, sd: 65, sp: 115},
 		weightkg: 11.5,
 		abilities: {0: 'Dead Power'},
 		innates: ['Multi-Headed', 'Strong Jaw', 'Shadow Tag']
 	},
-	'Sableye Mega Redux': {
+	'Sableye-Mega-Redux': {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 70, at: 100, df: 110, sa: 100, sd: 110, sp: 20},
 		weightkg: 11.0,
 		abilities: {0: 'Prankster'},
 		innates: ['Magic Guard', 'Stainless Steel', 'Magic Bounce']
 	},
-	'Houndoom Mega Redux': {
+	'Houndoom-Mega-Redux': {
 		types: ['Ghost'],
 		bs: {hp: 75, at: 115, df: 60, sa: 125, sd: 120, sp: 135},
 		weightkg: 35.0,
 		abilities: {0: 'Surprise!'},
 		innates: ['Haunted Spirit', 'Contrary', 'Purgatory']
 	},
-	'Froslass Mega X': {
+	'Froslass-Mega X': {
 		types: ['Ice', 'Ghost'],
 		bs: {hp: 70, at: 70, df: 120, sa: 130, sd: 120, sp: 90},
 		weightkg: 26.6,
 		abilities: {0: 'Rejection'},
 		innates: ['Hollow Ice Zone', 'Cryostasis', 'Aurora Borealis']
 	},
-	'Wigglytuff Mega X': {
+	'Wigglytuff-Mega X': {
 		types: ['Fighting', 'Fairy'],
 		bs: {hp: 120, at: 133, df: 45, sa: 100, sd: 40, sp: 135},
 		weightkg: 12.0,
@@ -20095,532 +20095,532 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Angel\'s Wrath'},
 		innates: ['Color Change', 'Impenetrable', 'Adaptability']
 	},
-	'Wigglytuff Mega Y': {
+	'Wigglytuff-Mega Y': {
 		types: ['Fire', 'Fairy'],
 		bs: {hp: 120, at: 90, df: 55, sa: 140, sd: 108, sp: 60},
 		weightkg: 12.0,
 		abilities: {0: 'Combustion'},
 		innates: ['Balloon Bomb', 'Immolate', 'Fur Coat']
 	},
-	'Lucario Mega Z': {
+	'Lucario-Mega Z': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 70, at: 100, df: 70, sa: 164, sd: 70, sp: 151},
 		weightkg: 54.0,
 		abilities: {0: 'Aura Armor'},
 		innates: ['Deflect', 'Mega Launcher', 'Inner Focus']
 	},
-	'Gyaradeath Mega X': {
+	'Gyaradeath-Mega X': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 95, at: 140, df: 109, sa: 70, sd: 120, sp: 106},
 		weightkg: 0.0,
 		abilities: {0: 'Fire Scales'},
 		innates: ['Levitate', 'Funeral Pyre', 'Soul Eater']
 	},
-	'Gyaradeath Mega Y': {
+	'Gyaradeath-Mega Y': {
 		types: ['Ghost', 'Psychic'],
 		bs: {hp: 95, at: 110, df: 90, sa: 140, sd: 69, sp: 136},
 		weightkg: 0.0,
 		abilities: {0: 'Psychic Surge'},
 		innates: ['Shadow Shield', 'Life Steal', 'Levitate']
 	},
-	'Arbok Mega': {
+	'Arbok-Mega': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 90, at: 130, df: 94, sa: 135, sd: 94, sp: 65},
 		weightkg: 65.0,
 		abilities: {0: 'Pattern Change'},
 		innates: ['Sniper', 'Merciless', 'Sidewinder']
 	},
-	'Kingambit Mega': {
+	'Kingambit-Mega': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 90, at: 135, df: 100, sa: 85, sd: 105, sp: 135},
 		weightkg: 120.0,
 		abilities: {0: 'Sweeping Edge'},
 		innates: ['Dual Wield', 'Intimidate', 'Olé!']
 	},
-	'Golisopod Mega Y': {
+	'Golisopod-Mega Y': {
 		types: ['Bug', 'Water'],
 		bs: {hp: 75, at: 155, df: 140, sa: 100, sd: 100, sp: 60},
 		weightkg: 108.0,
 		abilities: {0: 'No Turning Back'},
 		innates: ['Shell Armor', 'Sturdy', 'Tough Claws']
 	},
-	'Rapidash Mega': {
+	'Rapidash-Mega': {
 		types: ['Fire', 'Electric'],
 		bs: {hp: 85, at: 130, df: 100, sa: 95, sd: 100, sp: 130},
 		weightkg: 95.0,
 		abilities: {0: 'Reckless'},
 		innates: ['Speed Boost', 'Arc Flash', 'Speed Force']
 	},
-	'Rapidash Mega Galarian': {
+	'Rapidash-Mega-Galarian': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 85, at: 105, df: 90, sa: 122, sd: 90, sp: 148},
 		weightkg: 95.0,
 		abilities: {0: 'Mystic Blades'},
 		innates: ['Unicorn', 'Energy Horns', 'Speed Force']
 	},
-	'Oricorio Mega': {
+	'Oricorio-Mega': {
 		types: ['Flying'],
 		bs: {hp: 75, at: 70, df: 90, sa: 138, sd: 90, sp: 133},
 		weightkg: 3.4,
 		abilities: {0: 'Dancer'},
 		innates: ['Color Spectrum', 'Aerialist', 'Serene Grace']
 	},
-	'Aegislash Mega': {
+	'Aegislash-Mega': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 200, df: 200, sa: 20, sd: 40, sp: 70},
 		weightkg: 53.0,
 		abilities: {0: 'Adrenaline Rush'},
 		innates: ['Shadow Tag', 'Dual Wield', 'Stance Change']
 	},
-	'Aegislash Blade Redux Mega': {
+	'Aegislash Blade-Redux-Mega': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 20, df: 40, sa: 200, sd: 200, sp: 70},
 		weightkg: 53.0,
 		abilities: {0: 'Adrenaline Rush'},
 		innates: ['Shadow Tag', 'Mythical Arrows', 'Stance Change']
 	},
-	'Reuniclus Redux Mega': {
+	'Reuniclus-Redux-Mega': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 110, at: 125, df: 105, sa: 165, sd: 105, sp: 30},
 		weightkg: 20.1,
 		abilities: {0: 'Elemental Vortex'},
 		innates: ['Flame Bubble', 'Illuminate', 'Catastrophe']
 	},
-	'Hydreigon Redux Mega': {
+	'Hydreigon-Redux-Mega': {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 100, at: 105, df: 130, sa: 165, sd: 130, sp: 70},
 		weightkg: 160.0,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Eternal Blessing', 'Multi-Headed', 'Radiance']
 	},
-	'Cormoth Mega': {
+	'Cormoth-Mega': {
 		types: ['Grass'],
 		bs: {hp: 95, at: 70, df: 135, sa: 100, sd: 135, sp: 65},
 		weightkg: 0.0,
 		abilities: {0: 'Grass Pelt'},
 		innates: ['Self Sufficient', 'Big Leaves', 'Seed Sower']
 	},
-	'Popcorm Mega': {
+	'Popcorm-Mega': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 95, at: 120, df: 60, sa: 110, sd: 100, sp: 115},
 		weightkg: 0.0,
 		abilities: {0: 'Butter Up'},
 		innates: ['Puffy', 'Skill Link', 'Levitate']
 	},
-	'Torterra Redux Mega': {
+	'Torterra-Redux-Mega': {
 		types: ['Flying', 'Electric'],
 		bs: {hp: 95, at: 149, df: 184, sa: 85, sd: 85, sp: 37},
 		weightkg: 310.0,
 		abilities: {0: 'Giant Wings'},
 		innates: ['Thundercall', 'Shell Armor', 'Impenetrable']
 	},
-	'Infernape Redux Mega': {
+	'Infernape-Redux-Mega': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 76, at: 135, df: 90, sa: 105, sd: 95, sp: 134},
 		weightkg: 55.0,
 		abilities: {0: 'Blitz Boxer'},
 		innates: ['Nika', 'Raging Boxer', 'Riptide']
 	},
-	'Empoleon Redux Mega': {
+	'Empoleon-Redux-Mega': {
 		types: ['Fire', 'Ice'],
 		bs: {hp: 84, at: 88, df: 80, sa: 141, sd: 111, sp: 131},
 		weightkg: 84.5,
 		abilities: {0: 'Frost Burn'},
 		innates: ['Parental Bond', 'Thermomancy', 'Thermal Slide']
 	},
-	'Tsareena Redux Mega': {
+	'Tsareena-Redux-Mega': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 68, at: 62, df: 100, sa: 140, sd: 130, sp: 130},
 		weightkg: 21.4,
 		abilities: {0: 'Inflatable'},
 		innates: ['Water Bubble', 'Amplifier', 'Queenly Majesty']
 	},
-	'Toxtricity Redux Mega': {
+	'Toxtricity-Redux-Mega': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 80, at: 70, df: 115, sa: 139, sd: 80, sp: 118},
 		weightkg: 40.0,
 		abilities: {0: 'Piercing Solo'},
 		innates: ['Metallic', 'Power Metal', 'Bass Boosted']
 	},
-	'Toxtricity Redux Fuzz Mega': {
+	'Toxtricity-Redux-Fuzz-Mega': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 80, at: 70, df: 80, sa: 139, sd: 115, sp: 118},
 		weightkg: 40.0,
 		abilities: {0: 'Chunky Bass Line'},
 		innates: ['Phantom', 'Banshee', 'Bass Boosted']
 	},
-	'Flygon Redux Mega': {
+	'Flygon-Redux-Mega': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 80, at: 130, df: 85, sa: 130, sd: 90, sp: 125},
 		weightkg: 82.0,
 		abilities: {0: 'Slush Rush'},
 		innates: ['Dragonfly', 'Snowy Wrath', 'Fluffy']
 	},
-	'Clefable Redux Mega': {
+	'Clefable-Redux-Mega': {
 		types: ['Rock'],
 		bs: {hp: 95, at: 55, df: 103, sa: 140, sd: 120, sp: 95},
 		weightkg: 40.0,
 		abilities: {0: 'Lunar Affinity'},
 		innates: ['Solid Rock', 'Dazzling', 'Moon Spirit']
 	},
-	'Glalie Redux Mega': {
+	'Glalie-Redux-Mega': {
 		types: ['Dark', 'Fighting'],
 		bs: {hp: 90, at: 120, df: 110, sa: 80, sd: 110, sp: 90},
 		weightkg: 256.5,
 		abilities: {0: 'Bloodlust'},
 		innates: ['Rage Point', 'Battle Aura', 'Bad Omen']
 	},
-	'Froslass Mega': {
+	'Froslass-Mega': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 120, df: 90, sa: 70, sd: 120, sp: 130},
 		weightkg: 26.6,
 		abilities: {0: 'Blood Stigma'},
 		innates: ['Blood Stain', 'Dual Wield', 'Low Blow']
 	},
-	'Amphybuzz Mega': {
+	'Amphybuzz-Mega': {
 		types: ['Bug', 'Fairy'],
 		bs: {hp: 110, at: 95, df: 105, sa: 155, sd: 110, sp: 55},
 		weightkg: 38.7,
 		abilities: {0: 'Queen\'s Mourning'},
 		innates: ['Imposing Wings', 'Fluffy', 'Pretty Princess']
 	},
-	'Urshifu Mega': {
+	'Urshifu-Mega': {
 		types: ['Fighting', 'Dark'],
 		bs: {hp: 100, at: 200, df: 120, sa: 60, sd: 70, sp: 110},
 		weightkg: 105.0,
 		abilities: {0: 'Way of Precision'},
 		innates: ['Final Blow', 'Combat Specialist', 'Pretentious']
 	},
-	'Urshifu Rapid Strike Style Mega': {
+	'Urshifu Rapid Strike Style-Mega': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 90, at: 170, df: 100, sa: 70, sd: 80, sp: 150},
 		weightkg: 105.0,
 		abilities: {0: 'Way of Swiftness'},
 		innates: ['Final Blow', 'Combat Specialist', 'Technician']
 	},
-	'Melmetal Mega': {
+	'Melmetal-Mega': {
 		types: ['Steel'],
 		bs: {hp: 135, at: 183, df: 183, sa: 110, sd: 65, sp: 24},
 		weightkg: 80.0,
 		abilities: {0: 'Atomic Punch'},
 		innates: ['Iron Giant', 'Steely Spirit', 'Transistor']
 	},
-	'Venusaur Mega X': {
+	'Venusaur-Mega X': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 90, at: 125, df: 130, sa: 100, sd: 130, sp: 60},
 		weightkg: 100.0,
 		abilities: {0: 'Energy Siphon'},
 		innates: ['Forest Rage', 'Whiplash', 'Long Reach']
 	},
-	'Blastoise Mega X': {
+	'Blastoise-Mega X': {
 		types: ['Water', 'Steel'],
 		bs: {hp: 84, at: 145, df: 125, sa: 113, sd: 120, sp: 48},
 		weightkg: 85.5,
 		abilities: {0: 'Dauntless Shield'},
 		innates: ['Riptide', 'Shell Armor', 'Skill Link']
 	},
-	'Gengar Mega X': {
+	'Gengar-Mega X': {
 		types: ['Ghost', 'Poison'],
 		bs: {hp: 65, at: 155, df: 100, sa: 70, sd: 100, sp: 115},
 		weightkg: 40.5,
 		abilities: {0: 'Shadow Tag'},
 		innates: ['Jumpscare', 'Jaws of Carnage', 'Menacing Situation']
 	},
-	'Charizard Mega Z': {
+	'Charizard-Mega Z': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 90.5,
 		abilities: {0: 'Wildfire'},
 		innates: ['Hellblaze', 'Fire Scales', 'Flame Shield']
 	},
-	'Snorlax Mega': {
+	'Snorlax-Mega': {
 		types: ['Normal', 'Grass'],
 		bs: {hp: 160, at: 130, df: 65, sa: 95, sd: 160, sp: 30},
 		weightkg: 460.0,
 		abilities: {0: 'Raw Wood'},
 		innates: ['Self Repair', 'Thick Fat', 'Impenetrable']
 	},
-	'Rillaboom Mega': {
+	'Rillaboom-Mega': {
 		types: ['Grass'],
 		bs: {hp: 100, at: 150, df: 105, sa: 105, sd: 110, sp: 65},
 		weightkg: 90.0,
 		abilities: {0: 'Rhythmic'},
 		innates: ['Forest Rage', 'Higher Rank', 'Seed Sower']
 	},
-	'Cinderace Mega': {
+	'Cinderace-Mega': {
 		types: ['Fire'],
 		bs: {hp: 80, at: 145, df: 90, sa: 95, sd: 85, sp: 140},
 		weightkg: 33.0,
 		abilities: {0: 'Deadeye'},
 		innates: ['Hellblaze', 'Striker', 'Libero']
 	},
-	'Inteleon Mega': {
+	'Inteleon-Mega': {
 		types: ['Water'],
 		bs: {hp: 75, at: 125, df: 70, sa: 150, sd: 70, sp: 145},
 		weightkg: 45.2,
 		abilities: {0: 'Deadeye'},
 		innates: ['Riptide', 'Pretentious', 'Sniper']
 	},
-	'Corviknight Mega': {
+	'Corviknight-Mega': {
 		types: ['Flying', 'Steel'],
 		bs: {hp: 98, at: 68, df: 110, sa: 117, sd: 145, sp: 57},
 		weightkg: 75.0,
 		abilities: {0: 'Frisk'},
 		innates: ['Wind Rage', 'Chrome Coat', 'Mirror Armor']
 	},
-	'Drednaw Mega': {
+	'Drednaw-Mega': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 90, at: 145, df: 120, sa: 78, sd: 68, sp: 84},
 		weightkg: 115.5,
 		abilities: {0: 'Mountaineer'},
 		innates: ['Long Reach', 'Rocky Payload', 'Primal Maw']
 	},
-	'Coalossal Mega': {
+	'Coalossal-Mega': {
 		types: ['Rock', 'Fire'],
 		bs: {hp: 110, at: 100, df: 100, sa: 140, sd: 140, sp: 40},
 		weightkg: 310.5,
 		abilities: {0: 'Earth Eater'},
 		innates: ['Steam Engine', 'Rocky Payload', 'Tar Toss']
 	},
-	'Sandaconda Mega': {
+	'Sandaconda-Mega': {
 		types: ['Ground', 'Flying'],
 		bs: {hp: 72, at: 70, df: 135, sa: 142, sd: 85, sp: 106},
 		weightkg: 65.5,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Dune Terror', 'Aerilate', 'Mega Launcher']
 	},
-	'Copperajah Mega': {
+	'Copperajah-Mega': {
 		types: ['Steel'],
 		bs: {hp: 122, at: 160, df: 109, sa: 80, sd: 109, sp: 20},
 		weightkg: 650.0,
 		abilities: {0: 'Stall'},
 		innates: ['Steely Spirit', 'Juggernaut', 'Battle Armor']
 	},
-	'Hatterene Mega': {
+	'Hatterene-Mega': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 57, at: 110, df: 95, sa: 166, sd: 133, sp: 49},
 		weightkg: 5.1,
 		abilities: {0: 'Raging Goddess'},
 		innates: ['Pixilate', 'Magic Bounce', 'Psychic Mind']
 	},
-	'Garbodor Mega': {
+	'Garbodor-Mega': {
 		types: ['Poison', 'Steel'],
 		bs: {hp: 80, at: 130, df: 102, sa: 95, sd: 127, sp: 60},
 		weightkg: 107.3,
 		abilities: {0: 'Permanence'},
 		innates: ['Watch Your Step', 'Steelworker', 'Trash Heap']
 	},
-	'Orbeetle Mega': {
+	'Orbeetle-Mega': {
 		types: ['Bug', 'Psychic'],
 		bs: {hp: 60, at: 65, df: 130, sa: 120, sd: 150, sp: 100},
 		weightkg: 40.8,
 		abilities: {0: 'Power Spot'},
 		innates: ['Gifted Mind', 'Magical Dust', 'Tinted Lens']
 	},
-	'Grimmsnarl Mega': {
+	'Grimmsnarl-Mega': {
 		types: ['Dark', 'Fairy'],
 		bs: {hp: 95, at: 140, df: 75, sa: 110, sd: 105, sp: 85},
 		weightkg: 61.0,
 		abilities: {0: 'Fearmonger'},
 		innates: ['Fur Coat', 'Prankster', 'Twinkle Toes']
 	},
-	'Centiskorch Mega': {
+	'Centiskorch-Mega': {
 		types: ['Fire', 'Bug'],
 		bs: {hp: 100, at: 165, df: 90, sa: 85, sd: 90, sp: 95},
 		weightkg: 120.0,
 		abilities: {0: 'Mountaineer'},
 		innates: ['Coil Up', 'Hyper Aggressive', 'Molten Down']
 	},
-	'Alcremie Mega': {
+	'Alcremie-Mega': {
 		types: ['Fairy'],
 		bs: {hp: 75, at: 80, df: 80, sa: 140, sd: 146, sp: 84},
 		weightkg: 0.5,
 		abilities: {0: 'Natural Cure'},
 		innates: ['Fluffy', 'Super Hot Goo', 'Self Sufficient']
 	},
-	'Toxtricity Mega': {
+	'Toxtricity-Mega': {
 		types: ['Electric', 'Poison'],
 		bs: {hp: 75, at: 82, df: 90, sa: 144, sd: 90, sp: 121},
 		weightkg: 40.0,
 		abilities: {0: 'Stun Shock'},
 		innates: ['Sludgy Mix', 'Amplifier', 'Noise Cancel']
 	},
-	'Pikachu Mega': {
+	'Pikachu-Mega': {
 		types: ['Electric'],
 		bs: {hp: 50, at: 85, df: 65, sa: 135, sd: 80, sp: 120},
 		weightkg: 6.0,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Huge Power', 'Thick Fat', 'Thundercall']
 	},
-	'Eevee Mega': {
+	'Eevee-Mega': {
 		types: ['Normal'],
 		bs: {hp: 65, at: 125, df: 65, sa: 120, sd: 110, sp: 50},
 		weightkg: 6.5,
 		abilities: {0: 'Prankster'},
 		innates: ['Protean', 'Prim and Proper', 'Fluffiest']
 	},
-	'Meowth Mega': {
+	'Meowth-Mega': {
 		types: ['Normal'],
 		bs: {hp: 50, at: 140, df: 75, sa: 85, sd: 60, sp: 125},
 		weightkg: 4.2,
 		abilities: {0: 'Good As Gold'},
 		innates: ['On the Prowl', 'Mystic Power', 'Pure Power']
 	},
-	'Weavile Mega': {
+	'Weavile-Mega': {
 		types: ['Dark', 'Ice'],
 		bs: {hp: 70, at: 135, df: 85, sa: 80, sd: 85, sp: 155},
 		weightkg: 34.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Pressure', 'Predator', 'Tough Claws']
 	},
-	'Serperior Mega': {
+	'Serperior-Mega': {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 83, at: 87, df: 125, sa: 90, sd: 125, sp: 125},
 		weightkg: 63.0,
 		abilities: {0: 'Scare'},
 		innates: ['Forest Rage', 'Royal Decree', 'Multiscale']
 	},
-	'Emboar Mega': {
+	'Emboar-Mega': {
 		types: ['Fire', 'Fighting'],
 		bs: {hp: 110, at: 148, df: 75, sa: 110, sd: 110, sp: 82},
 		weightkg: 150.0,
 		abilities: {0: 'Fire Ruler'},
 		innates: ['Hellblaze', 'Evaporate', 'Brute Force']
 	},
-	'Samurott Mega': {
+	'Samurott-Mega': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 95, at: 120, df: 100, sa: 120, sd: 100, sp: 100},
 		weightkg: 94.6,
 		abilities: {0: 'Mystic Blades'},
 		innates: ['Riptide', 'Dual Wield', 'Adrenaline Rush']
 	},
-	'Decidueye Mega': {
+	'Decidueye-Mega': {
 		types: ['Grass', 'Ghost'],
 		bs: {hp: 78, at: 127, df: 75, sa: 100, sd: 90, sp: 165},
 		weightkg: 36.6,
 		abilities: {0: 'Hunter\'s Mark'},
 		innates: ['Forest Rage', 'Super Sniper', 'Archer']
 	},
-	'Decidueye Hisuian Mega': {
+	'Decidueye-Hisuian-Mega': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 90, at: 150, df: 100, sa: 80, sd: 90, sp: 125},
 		weightkg: 36.6,
 		abilities: {0: 'JunshiSanda'},
 		innates: ['Gladiator', 'Combat Specialist', 'Aerodynamics']
 	},
-	'Incineroar Mega': {
+	'Incineroar-Mega': {
 		types: ['Fire', 'Dark'],
 		bs: {hp: 100, at: 135, df: 110, sa: 100, sd: 110, sp: 80},
 		weightkg: 83.0,
 		abilities: {0: 'Champion\'s Entrance'},
 		innates: ['Hellblaze', 'Combat Specialist', 'Forsaken Heart']
 	},
-	'Meowscarada Mega': {
+	'Meowscarada-Mega': {
 		types: ['Grass', 'Dark'],
 		bs: {hp: 81, at: 140, df: 70, sa: 121, sd: 70, sp: 153},
 		weightkg: 31.2,
 		abilities: {0: 'Conjurer Of Deceit'},
 		innates: ['Forest Rage', 'Protean', 'Long Reach']
 	},
-	'Primarina Mega': {
+	'Primarina-Mega': {
 		types: ['Water', 'Fairy'],
 		bs: {hp: 80, at: 104, df: 94, sa: 146, sd: 141, sp: 70},
 		weightkg: 44.0,
 		abilities: {0: 'Presto'},
 		innates: ['Riptide', 'Liquid Voice', 'Water Absorb']
 	},
-	'Quaquaval Mega': {
+	'Quaquaval-Mega': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 85, at: 140, df: 115, sa: 85, sd: 95, sp: 115},
 		weightkg: 61.9,
 		abilities: {0: 'Gladiator'},
 		innates: ['Riptide', 'Moxie', 'Samba']
 	},
-	'Samurott Hisuian Mega': {
+	'Samurott-Hisuian-Mega': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 90, at: 148, df: 90, sa: 120, sd: 75, sp: 112},
 		weightkg: 94.6,
 		abilities: {0: 'Relentless'},
 		innates: ['Riptide', 'Shell Armor', 'Blademaster']
 	},
-	'Skeledirge Mega': {
+	'Skeledirge-Mega': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 104, at: 95, df: 120, sa: 130, sd: 100, sp: 86},
 		weightkg: 326.5,
 		abilities: {0: 'Banshee'},
 		innates: ['Hellblaze', 'Flaming Soul', 'Amplifier']
 	},
-	'Typhlosion Hisuian Mega': {
+	'Typhlosion-Hisuian-Mega': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 93, at: 89, df: 101, sa: 145, sd: 108, sp: 99},
 		weightkg: 79.5,
 		abilities: {0: 'Soul Devourer'},
 		innates: ['Hellblaze', 'Early Grave', 'Vengeful Spirit']
 	},
-	'Mienshao Mega': {
+	'Mienshao-Mega': {
 		types: ['Fighting', 'Flying'],
 		bs: {hp: 65, at: 150, df: 65, sa: 150, sd: 65, sp: 115},
 		weightkg: 35.5,
 		abilities: {0: 'Aerodynamics'},
 		innates: ['Combat Specialist', 'Regenerator', 'Qigong']
 	},
-	'Arcanine Mega': {
+	'Arcanine-Mega': {
 		types: ['Fire'],
 		bs: {hp: 90, at: 145, df: 100, sa: 135, sd: 100, sp: 130},
 		weightkg: 155.0,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Guard Dog', 'Flame Coat', 'Immolate']
 	},
-	'Goodra Mega': {
+	'Goodra-Mega': {
 		types: ['Dragon'],
 		bs: {hp: 90, at: 125, df: 85, sa: 140, sd: 170, sp: 90},
 		weightkg: 150.5,
 		abilities: {0: 'Poison Absorb'},
 		innates: ['Acidic Slime', 'Sap Sipper', 'Shell Armor']
 	},
-	'Slowbro Mega Galarian': {
+	'Slowbro-Mega-Galarian': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 150, df: 110, sa: 150, sd: 70, sp: 15},
 		weightkg: 78.5,
 		abilities: {0: 'Unaware'},
 		innates: ['Gunman', 'Quick Draw', 'Stall']
 	},
-	'Slowking Mega Galarian': {
+	'Slowking-Mega-Galarian': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 70, df: 110, sa: 135, sd: 150, sp: 30},
 		weightkg: 79.5,
 		abilities: {0: 'Poison Absorb'},
 		innates: ['Corrupted Mind', 'Shell Armor', 'Permanence']
 	},
-	'Roserade Mega': {
+	'Roserade-Mega': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 60, at: 145, df: 70, sa: 145, sd: 90, sp: 125},
 		weightkg: 14.5,
 		abilities: {0: 'Technician'},
 		innates: ['Equinox', 'Merciless', 'Long Reach']
 	},
-	'Clodsire Mega': {
+	'Clodsire-Mega': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 130, at: 145, df: 110, sa: 95, sd: 110, sp: 25},
 		weightkg: 223.0,
 		abilities: {0: 'Wonder Skin'},
 		innates: ['Toxic Surge', 'Water Absorb', 'Poison Quills']
 	},
-	'Gothitelle Mega': {
+	'Gothitelle-Mega': {
 		types: ['Psychic', 'Dark'],
 		bs: {hp: 80, at: 80, df: 120, sa: 130, sd: 150, sp: 80},
 		weightkg: 44.0,
 		abilities: {0: 'Mental Pollution'},
 		innates: ['Madness Enhancement', 'Magic Guard', 'Low Visibility']
 	},
-	'Arcanine Hisuian Mega': {
+	'Arcanine-Hisuian-Mega': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 90, at: 140, df: 110, sa: 110, sd: 110, sp: 140},
 		weightkg: 155.0,
 		abilities: {0: 'Tough Claws'},
 		innates: ['Rock Head', 'Molten Coat', 'Reckless']
 	},
-	'Reuniclus Mega': {
+	'Reuniclus-Mega': {
 		types: ['Psychic'],
 		bs: {hp: 110, at: 135, df: 105, sa: 135, sd: 125, sp: 30},
 		weightkg: 20.1,
@@ -20648,35 +20648,35 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Regenerator'},
 		innates: ['Amphibious', 'Poison Touch', 'Tough Claws']
 	},
-	'Swampage Mega': {
+	'Swampage-Mega': {
 		types: ['Dragon', 'Poison'],
 		bs: {hp: 95, at: 143, df: 98, sa: 112, sd: 95, sp: 92},
 		weightkg: 81.9,
 		abilities: {0: 'Swamp Thing'},
 		innates: ['Amphibious', 'Toxic Surge', 'Tough Claws']
 	},
-	'Chandelure Mega X': {
+	'Chandelure-Mega X': {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 80, at: 65, df: 100, sa: 190, sd: 115, sp: 90},
 		weightkg: 34.3,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Chandelier', 'Multi-Headed', 'Flame Body']
 	},
-	'Zapdos Mega': {
+	'Zapdos-Mega': {
 		types: ['Electric', 'Flying'],
 		bs: {hp: 90, at: 110, df: 85, sa: 155, sd: 110, sp: 150},
 		weightkg: 52.6,
 		abilities: {0: 'Supercell'},
 		innates: ['Lightning Aspect', 'Gale Wings', 'Static']
 	},
-	'Articuno Mega': {
+	'Articuno-Mega': {
 		types: ['Ice', 'Flying'],
 		bs: {hp: 90, at: 85, df: 130, sa: 125, sd: 150, sp: 120},
 		weightkg: 55.4,
 		abilities: {0: 'Aurora\'s Gale'},
 		innates: ['Ice Plumes', 'Winter Throne', 'Antarctic Bird']
 	},
-	'Moltres Mega': {
+	'Moltres-Mega': {
 		types: ['Fire', 'Flying'],
 		bs: {hp: 90, at: 100, df: 95, sa: 200, sd: 95, sp: 120},
 		weightkg: 60.0,
@@ -20704,14 +20704,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Air Blower'},
 		innates: ['Flash Fire', 'Molten Down', 'Pyromancy']
 	},
-	'Minccino Redux': {
+	'Minccino-Redux': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 50, at: 30, df: 40, sa: 55, sd: 45, sp: 80},
 		weightkg: 5.8,
 		abilities: {0: 'Pastel Veil'},
 		innates: ['Freezing Point', 'Arctic Fur', 'Serene Grace']
 	},
-	'Cinccino Redux': {
+	'Cinccino-Redux': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 65, at: 60, df: 80, sa: 95, sd: 75, sp: 95},
 		weightkg: 7.5,
@@ -20725,42 +20725,42 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Chilling Pellets'},
 		innates: ['Arctic Fur', 'Tangling Hair', 'Frosty Prescence']
 	},
-	'Sinistea Redux': {
+	'Sinistea-Redux': {
 		types: ['Ghost', 'Dragon'],
 		bs: {hp: 45, at: 74, df: 60, sa: 30, sd: 64, sp: 35},
 		weightkg: 0.2,
 		abilities: {0: 'Draco Morale'},
 		innates: ['Cursed Body', 'Limber', 'Fighting Spirit']
 	},
-	'Polteageist Redux': {
+	'Polteageist-Redux': {
 		types: ['Ghost', 'Dragon'],
 		bs: {hp: 80, at: 134, df: 85, sa: 45, sd: 114, sp: 50},
 		weightkg: 0.4,
 		abilities: {0: 'Overwhelm'},
 		innates: ['Warmonger', 'Limber', 'Fighting Spirit']
 	},
-	'Cetoddle Redux': {
+	'Cetoddle-Redux': {
 		types: ['Steel'],
 		bs: {hp: 60, at: 58, df: 78, sa: 30, sd: 46, sp: 62},
 		weightkg: 15.0,
 		abilities: {0: 'Predator'},
 		innates: ['Monster Hunter', 'Steelworker', 'Chainsaw']
 	},
-	'Cetitan Redux': {
+	'Cetitan-Redux': {
 		types: ['Steel', 'Dark'],
 		bs: {hp: 80, at: 89, df: 120, sa: 62, sd: 80, sp: 90},
 		weightkg: 700.0,
 		abilities: {0: 'Keen Edge'},
 		innates: ['Monster Hunter', 'Blood Price', 'Chainsaw']
 	},
-	'Talonflame Mega': {
+	'Talonflame-Mega': {
 		types: ['Fire', 'Flying'],
 		bs: {hp: 78, at: 121, df: 91, sa: 89, sd: 94, sp: 126},
 		weightkg: 24.5,
 		abilities: {0: 'Galeforce Wings'},
 		innates: ['Hyper Aggressive', 'Predator', 'Big Pecks']
 	},
-	'Carbonix Mega': {
+	'Carbonix-Mega': {
 		types: ['Rock', 'Dragon'],
 		bs: {hp: 75, at: 55, df: 105, sa: 145, sd: 230, sp: 20},
 		weightkg: 210.0,
@@ -20802,7 +20802,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Innards Out'},
 		innates: ['Water Absorb', 'Overcoat', 'Slime Mold']
 	},
-	'Heracreus Mega': {
+	'Heracreus-Mega': {
 		types: ['Grass', 'Fairy'],
 		bs: {hp: 75, at: 120, df: 130, sa: 75, sd: 110, sp: 90},
 		weightkg: 6.9,
@@ -20816,133 +20816,133 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shield Dust'},
 		innates: ['Locust Swarm', 'Shadow Shield', 'Curse of Famine']
 	},
-	'Dragapult Mega': {
+	'Dragapult-Mega': {
 		types: ['Dragon', 'Ghost'],
 		bs: {hp: 88, at: 125, df: 93, sa: 125, sd: 93, sp: 176},
 		weightkg: 50.0,
 		abilities: {0: 'Blur'},
 		innates: ['Parental Bond', 'Infiltrator', 'Mach 3']
 	},
-	'Sandslash Alolan Mega': {
+	'Sandslash-Alolan-Mega': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 95, at: 125, df: 135, sa: 55, sd: 75, sp: 85},
 		weightkg: 29.5,
 		abilities: {0: 'Whiteout'},
 		innates: ['Ice Picks', 'Battle Armor', 'Sharp Edges']
 	},
-	'Kleavor Mega': {
+	'Kleavor-Mega': {
 		types: ['Bug', 'Rock'],
 		bs: {hp: 70, at: 165, df: 130, sa: 65, sd: 75, sp: 95},
 		weightkg: 10.0,
 		abilities: {0: 'Mineralize'},
 		innates: ['Stonecutter', 'Dual Wield', 'Technician']
 	},
-	'Scyther Mega': {
+	'Scyther-Mega': {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 70, at: 130, df: 80, sa: 125, sd: 80, sp: 115},
 		weightkg: 56.0,
 		abilities: {0: 'Aerilate'},
 		innates: ['Perfectionist', 'Edgelord', 'Technician']
 	},
-	'Hydreigon Mega': {
+	'Hydreigon-Mega': {
 		types: ['Dark', 'Dragon'],
 		bs: {hp: 92, at: 115, df: 123, sa: 165, sd: 90, sp: 115},
 		weightkg: 160.0,
 		abilities: {0: 'Wings of Pestilence'},
 		innates: ['Hydra', 'Mind Crunch', 'Merciless']
 	},
-	'Vanilluxe Mega': {
+	'Vanilluxe-Mega': {
 		types: ['Ice'],
 		bs: {hp: 71, at: 110, df: 115, sa: 145, sd: 105, sp: 105},
 		weightkg: 57.5,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Multi-Headed', 'Sundae', 'Slush Rush']
 	},
-	'Pentadug Alolan': {
+	'Pentadug-Alolan': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 95, at: 120, df: 90, sa: 55, sd: 75, sp: 90},
 		weightkg: 6.9,
 		abilities: {0: 'Costar'},
 		innates: ['Multi-Headed', 'Steely Spirit', 'Moustache']
 	},
-	'Rattata Redux': {
+	'Rattata-Redux': {
 		types: ['Poison'],
 		bs: {hp: 35, at: 66, df: 40, sa: 20, sd: 30, sp: 62},
 		weightkg: 3.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Poison Touch', 'Stench', 'Scrappy']
 	},
-	'Raticate Redux': {
+	'Raticate-Redux': {
 		types: ['Poison', 'Fighting'],
 		bs: {hp: 70, at: 86, df: 80, sa: 40, sd: 55, sp: 82},
 		weightkg: 18.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Poison Touch', 'Stench', 'Scrappy']
 	},
-	'Vanillite Redux': {
+	'Vanillite-Redux': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 51, at: 64, df: 55, sa: 46, sd: 44, sp: 61},
 		weightkg: 5.7,
 		abilities: {0: 'Flash Fire'},
 		innates: ['Solid Rock', 'Molten Down', 'Crispy Cream']
 	},
-	'Vanillish Redux': {
+	'Vanillish-Redux': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 66, at: 84, df: 73, sa: 50, sd: 61, sp: 77},
 		weightkg: 41.0,
 		abilities: {0: 'Well Baked Body'},
 		innates: ['Solid Rock', 'Own Tempo', 'Crispy Cream']
 	},
-	'Vanilluxe Redux': {
+	'Vanilluxe-Redux': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 91, at: 125, df: 100, sa: 70, sd: 90, sp: 75},
 		weightkg: 57.5,
 		abilities: {0: 'Well Baked Body'},
 		innates: ['Solid Rock', 'Molten Down', 'Crispy Cream']
 	},
-	'Vanilluxe Redux Mega': {
+	'Vanilluxe-Redux-Mega': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 91, at: 155, df: 110, sa: 110, sd: 105, sp: 80},
 		weightkg: 57.5,
 		abilities: {0: 'Deep Fried'},
 		innates: ['Solid Rock', 'Gooey', 'Crispy Cream']
 	},
-	'Litwick Redux': {
+	'Litwick-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 45, at: 39, df: 64, sa: 74, sd: 58, sp: 25},
 		weightkg: 3.1,
 		abilities: {0: 'Backup Power'},
 		innates: ['Illuminate', 'Cursed Body', 'Static']
 	},
-	'Lampent Redux': {
+	'Lampent-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 72, at: 40, df: 64, sa: 95, sd: 64, sp: 35},
 		weightkg: 13.0,
 		abilities: {0: 'Backup Power'},
 		innates: ['Illuminate', 'Cursed Body', 'Levitate']
 	},
-	'Chandelure Redux': {
+	'Chandelure-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 100, at: 55, df: 90, sa: 145, sd: 90, sp: 60},
 		weightkg: 34.3,
 		abilities: {0: 'Backup Power'},
 		innates: ['Illuminate', 'Cursed Body', 'Levitate']
 	},
-	'Chandelure Mega': {
+	'Chandelure-Mega': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 100, at: 75, df: 110, sa: 165, sd: 110, sp: 80},
 		weightkg: 34.3,
 		abilities: {0: 'Backup Power'},
 		innates: ['Radiance', 'Power Leak', 'Levitate']
 	},
-	'Drilbur Redux': {
+	'Drilbur-Redux': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 73, at: 63, df: 59, sa: 32, sd: 59, sp: 42},
 		weightkg: 8.5,
 		abilities: {0: 'Hyper Cutter'},
 		innates: ['Mineralize', 'Thick Skin', 'Rattled']
 	},
-	'Excadrill Redux': {
+	'Excadrill-Redux': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 98, at: 105, df: 85, sa: 55, sd: 85, sp: 90},
 		weightkg: 40.4,
@@ -20956,28 +20956,28 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Tough Claws'},
 		innates: ['Rock Armor', 'Thick Blubber', 'Dragon\'s Maw']
 	},
-	'Swinub Redux': {
+	'Swinub-Redux': {
 		types: ['Ground', 'Grass'],
 		bs: {hp: 45, at: 55, df: 45, sa: 25, sd: 45, sp: 35},
 		weightkg: 6.5,
 		abilities: {0: 'Sap Sipper'},
 		innates: ['Overcoat', 'Own Tempo', 'Gluttony']
 	},
-	'Piloswine Redux': {
+	'Piloswine-Redux': {
 		types: ['Ground', 'Grass'],
 		bs: {hp: 70, at: 102, df: 84, sa: 55, sd: 65, sp: 74},
 		weightkg: 55.8,
 		abilities: {0: 'Sap Sipper'},
 		innates: ['Overcoat', 'Own Tempo', 'Natural Cure']
 	},
-	'Mamoswine Redux': {
+	'Mamoswine-Redux': {
 		types: ['Ground', 'Grass'],
 		bs: {hp: 110, at: 120, df: 80, sa: 70, sd: 80, sp: 70},
 		weightkg: 291.0,
 		abilities: {0: 'Earthbound'},
 		innates: ['Grass Pelt', 'Thick Fat', 'Harvest']
 	},
-	'Mamoswine Mega': {
+	'Mamoswine-Mega': {
 		types: ['Ground', 'Grass'],
 		bs: {hp: 110, at: 140, df: 100, sa: 90, sd: 100, sp: 90},
 		weightkg: 291.0,
@@ -20991,112 +20991,112 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Moon Spirit'},
 		innates: ['Phantom', 'Lunar Wrath', 'Levitate']
 	},
-	'Larvesta Redux': {
+	'Larvesta-Redux': {
 		types: ['Bug', 'Dark'],
 		bs: {hp: 45, at: 43, df: 52, sa: 78, sd: 92, sp: 50},
 		weightkg: 28.8,
 		abilities: {0: 'Illuminate'},
 		innates: ['Phantom', 'Overcoat', 'Nocturnal']
 	},
-	'Volcarona Redux': {
+	'Volcarona-Redux': {
 		types: ['Bug', 'Dark'],
 		bs: {hp: 65, at: 80, df: 90, sa: 100, sd: 110, sp: 105},
 		weightkg: 46.0,
 		abilities: {0: 'Moon Spirit'},
 		innates: ['Phantom', 'Prism Armor', 'Levitate']
 	},
-	'Klefki Redux': {
+	'Klefki-Redux': {
 		types: ['Electric', 'Poison'],
 		bs: {hp: 77, at: 95, df: 71, sa: 95, sd: 77, sp: 85},
 		weightkg: 3.0,
 		abilities: {0: 'Volt Absorb'},
 		innates: ['Spyware', 'Infiltrator', 'Levitate']
 	},
-	'Bellsprout Redux': {
+	'Bellsprout-Redux': {
 		types: ['Grass', 'Ice'],
 		bs: {hp: 66, at: 46, df: 62, sa: 46, sd: 58, sp: 42},
 		weightkg: 4.0,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Phantom', 'Overgrow', 'Permafrost']
 	},
-	'Weepinbell Redux': {
+	'Weepinbell-Redux': {
 		types: ['Grass', 'Ice'],
 		bs: {hp: 91, at: 70, df: 91, sa: 47, sd: 69, sp: 42},
 		weightkg: 6.4,
 		abilities: {0: 'Ice Body'},
 		innates: ['Frostmaw', 'Bad Omen', 'Dead Bark']
 	},
-	'Victreebel Redux': {
+	'Victreebel-Redux': {
 		types: ['Grass', 'Ice'],
 		bs: {hp: 106, at: 96, df: 112, sa: 76, sd: 89, sp: 51},
 		weightkg: 15.5,
 		abilities: {0: 'Ice Body'},
 		innates: ['Sap Trap', 'Bad Luck', 'Dead Bark']
 	},
-	'Sawk Redux': {
+	'Sawk-Redux': {
 		types: ['Normal'],
 		bs: {hp: 95, at: 95, df: 75, sa: 30, sd: 75, sp: 95},
 		weightkg: 51.0,
 		abilities: {0: 'Normalize'},
 		innates: ['Super Luck', 'Home Run', 'Super Slammer']
 	},
-	'Throh Redux': {
+	'Throh-Redux': {
 		types: ['Normal'],
 		bs: {hp: 110, at: 100, df: 100, sa: 30, sd: 80, sp: 45},
 		weightkg: 55.5,
 		abilities: {0: 'Battle Armor'},
 		innates: ['Bulletproof', 'Rocky Payload', 'Stamina']
 	},
-	'Sneasler Mega': {
+	'Sneasler-Mega': {
 		types: ['Fighting', 'Poison'],
 		bs: {hp: 80, at: 155, df: 70, sa: 65, sd: 120, sp: 120},
 		weightkg: 43.0,
 		abilities: {0: 'Weak Armor'},
 		innates: ['Lead Claws', 'Rocky Exterior', 'Mountaineer']
 	},
-	'Clefable Mega': {
+	'Clefable-Mega': {
 		types: ['Fairy'],
 		bs: {hp: 100, at: 60, df: 115, sa: 115, sd: 133, sp: 85},
 		weightkg: 40.0,
 		abilities: {0: 'Dazzling'},
 		innates: ['Cosmic Wings', 'Cosmic Dust', 'Moon Spirit']
 	},
-	'Tsareena Mega': {
+	'Tsareena-Mega': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 72, at: 142, df: 108, sa: 72, sd: 108, sp: 128},
 		weightkg: 21.4,
 		abilities: {0: 'Defiant'},
 		innates: ['Empress', 'Striker', 'Deadly Precision']
 	},
-	'Goodra Hisuian Mega': {
+	'Goodra-Hisuian-Mega': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 80, at: 130, df: 140, sa: 130, sd: 160, sp: 60},
 		weightkg: 150.5,
 		abilities: {0: 'Gooey'},
 		innates: ['Fortress', 'Impenetrable', 'Bulletproof']
 	},
-	'Hariyama Mega': {
+	'Hariyama-Mega': {
 		types: ['Fighting'],
 		bs: {hp: 144, at: 130, df: 100, sa: 60, sd: 100, sp: 70},
 		weightkg: 253.8,
 		abilities: {0: 'Steadfast'},
 		innates: ['Sumo Guard', 'Sumo Wrestler', 'Vital Spirit']
 	},
-	'Swablu Redux': {
+	'Swablu-Redux': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 46, at: 48, df: 62, sa: 55, sd: 75, sp: 54},
 		weightkg: 1.2,
 		abilities: {0: 'Overcoat'},
 		innates: ['Flash Fire', 'Levitate', 'Water Absorb']
 	},
-	'Altaria Redux': {
+	'Altaria-Redux': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 72, at: 68, df: 82, sa: 95, sd: 115, sp: 78},
 		weightkg: 20.6,
 		abilities: {0: 'Evaporate'},
 		innates: ['Taste the Rainbow', 'Levitate', 'Overcoat']
 	},
-	'Altaria Redux Mega': {
+	'Altaria-Redux-Mega': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 72, at: 84, df: 102, sa: 109, sd: 155, sp: 88},
 		weightkg: 20.6,
@@ -21110,21 +21110,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Rat King'},
 		innates: ['Poison Touch', 'Stench', 'Looter']
 	},
-	'Exeggcute Redux': {
+	'Exeggcute-Redux': {
 		types: ['Grass', 'Normal'],
 		bs: {hp: 60, at: 56, df: 55, sa: 54, sd: 80, sp: 20},
 		weightkg: 2.5,
 		abilities: {0: 'Grassy Surge'},
 		innates: ['Raw Wood', 'Multi-Headed', 'Effect Spore']
 	},
-	'Exeggutor Redux': {
+	'Exeggutor-Redux': {
 		types: ['Grass', 'Normal'],
 		bs: {hp: 100, at: 60, df: 105, sa: 130, sd: 105, sp: 30},
 		weightkg: 120.0,
 		abilities: {0: 'Triage'},
 		innates: ['Rite Of Spring', 'Multi-Headed', 'Oblivious']
 	},
-	'Luxzero Mega': {
+	'Luxzero-Mega': {
 		types: ['Electric', 'Ice'],
 		bs: {hp: 75, at: 125, df: 84, sa: 125, sd: 94, sp: 130},
 		weightkg: 42.0,
@@ -21138,14 +21138,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Prismatic Fur'},
 		innates: ['Retribution Blow', 'Thick Fat', 'North Wind']
 	},
-	'Noibat Redux': {
+	'Noibat-Redux': {
 		types: ['Rock', 'Ghost'],
 		bs: {hp: 50, at: 75, df: 45, sa: 30, sd: 50, sp: 95},
 		weightkg: 8.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Levitate', 'Nocturnal', 'Vengeance']
 	},
-	'Noivern Redux': {
+	'Noivern-Redux': {
 		types: ['Rock', 'Ghost'],
 		bs: {hp: 85, at: 97, df: 80, sa: 70, sd: 80, sp: 123},
 		weightkg: 85.0,
@@ -21166,399 +21166,399 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Elemental Charge'},
 		innates: ['Ice Age', 'Levitate', 'Dual Wield']
 	},
-	'Honedge Redux': {
+	'Honedge-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 45, at: 95, df: 85, sa: 35, sd: 37, sp: 28},
 		weightkg: 2.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Sweeping Edge', 'Vengeance', 'Cursed Body']
 	},
-	'Doublade Redux': {
+	'Doublade-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 59, at: 125, df: 110, sa: 45, sd: 49, sp: 60},
 		weightkg: 4.5,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Sweeping Edge', 'Vengeance', 'Cursed Body']
 	},
-	'Aegislash Redux': {
+	'Aegislash-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 140, df: 140, sa: 20, sd: 70, sp: 60},
 		weightkg: 53.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Shadow Tag', 'Keen Edge', 'Stance Change']
 	},
-	'Aegislash Blade Redux': {
+	'Aegislash Blade-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 20, df: 70, sa: 140, sd: 140, sp: 60},
 		weightkg: 53.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Shadow Tag', 'Mythical Arrows', 'Stance Change']
 	},
-	'Abra Redux': {
+	'Abra-Redux': {
 		types: ['Dark'],
 		bs: {hp: 25, at: 20, df: 55, sa: 105, sd: 15, sp: 90},
 		weightkg: 19.5,
 		abilities: {0: 'Intimidate'},
 		innates: ['Cheap Tactics', 'Nocturnal', 'Bad Luck']
 	},
-	'Kadabra Redux': {
+	'Kadabra-Redux': {
 		types: ['Dark', 'Fighting'],
 		bs: {hp: 40, at: 120, df: 105, sa: 35, sd: 70, sp: 30},
 		weightkg: 56.5,
 		abilities: {0: 'Exploit Weakness'},
 		innates: ['Cheap Tactics', 'Super Slammer', 'Nocturnal']
 	},
-	'Alakazam Redux': {
+	'Alakazam-Redux': {
 		types: ['Dark'],
 		bs: {hp: 55, at: 50, df: 95, sa: 135, sd: 45, sp: 120},
 		weightkg: 48.0,
 		abilities: {0: 'Minion Control'},
 		innates: ['Cheap Tactics', 'Mystic Power', 'Nocturnal']
 	},
-	'Weedle Redux': {
+	'Weedle-Redux': {
 		types: ['Ice', 'Poison'],
 		bs: {hp: 40, at: 35, df: 30, sa: 20, sd: 20, sp: 50},
 		weightkg: 3.2,
 		abilities: {0: 'Compound Eyes'},
 		innates: ['Ice Scales', 'Ice Dew', 'Overcoat']
 	},
-	'Kakuna Redux': {
+	'Kakuna-Redux': {
 		types: ['Ice', 'Poison'],
 		bs: {hp: 45, at: 25, df: 50, sa: 25, sd: 25, sp: 35},
 		weightkg: 10.0,
 		abilities: {0: 'Shed Skin'},
 		innates: ['Ice Body', 'Ice Dew', 'Overcoat']
 	},
-	'Beedrill Redux': {
+	'Beedrill-Redux': {
 		types: ['Ice', 'Poison'],
 		bs: {hp: 65, at: 110, df: 40, sa: 45, sd: 80, sp: 135},
 		weightkg: 29.5,
 		abilities: {0: 'Freezing Point'},
 		innates: ['Skill Link', 'Exploit Weakness', 'Levitate']
 	},
-	'Stufful Redux': {
+	'Stufful-Redux': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 70, at: 65, df: 60, sa: 65, sd: 45, sp: 35},
 		weightkg: 6.8,
 		abilities: {0: 'Cute Charm'},
 		innates: ['Fluffy', 'Guts', 'Innards Out']
 	},
-	'Bewear Redux': {
+	'Bewear-Redux': {
 		types: ['Normal', 'Fairy'],
 		bs: {hp: 120, at: 115, df: 80, sa: 85, sd: 55, sp: 45},
 		weightkg: 135.0,
 		abilities: {0: 'No Guard'},
 		innates: ['Fluffy', 'Entrance', 'Cute Charm']
 	},
-	'Panpour Redux': {
+	'Panpour-Redux': {
 		types: ['Psychic'],
 		bs: {hp: 50, at: 43, df: 45, sa: 75, sd: 45, sp: 64},
 		weightkg: 13.5,
 		abilities: {0: 'Trace'},
 		innates: ['Psychic Mind', 'Super Luck', 'Magic Bounce']
 	},
-	'Simipour Redux': {
+	'Simipour-Redux': {
 		types: ['Psychic'],
 		bs: {hp: 110, at: 70, df: 79, sa: 110, sd: 60, sp: 91},
 		weightkg: 29.0,
 		abilities: {0: 'Trace'},
 		innates: ['Psychic Mind', 'Super Luck', 'Magic Bounce']
 	},
-	'Pansage Redux': {
+	'Pansage-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 44, at: 63, df: 43, sa: 63, sd: 43, sp: 66},
 		weightkg: 10.5,
 		abilities: {0: 'Competitive'},
 		innates: ['Fighter', 'Inner Focus', 'Parry']
 	},
-	'Simisage Redux': {
+	'Simisage-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 75, at: 99, df: 63, sa: 110, sd: 63, sp: 110},
 		weightkg: 30.5,
 		abilities: {0: 'Competitive'},
 		innates: ['Fighter', 'Inner Focus', 'Parry']
 	},
-	'Pansear Redux': {
+	'Pansear-Redux': {
 		types: ['Dark'],
 		bs: {hp: 50, at: 61, df: 48, sa: 43, sd: 55, sp: 65},
 		weightkg: 11.0,
 		abilities: {0: 'Prankster'},
 		innates: ['Nocturnal', 'Low Blow', 'Pickup']
 	},
-	'Simisear Redux': {
+	'Simisear-Redux': {
 		types: ['Dark'],
 		bs: {hp: 80, at: 100, df: 79, sa: 70, sd: 90, sp: 101},
 		weightkg: 28.0,
 		abilities: {0: 'Prankster'},
 		innates: ['Nocturnal', 'Low Blow', 'Pickup']
 	},
-	'Slugma Redux': {
+	'Slugma-Redux': {
 		types: ['Grass'],
 		bs: {hp: 50, at: 40, df: 50, sa: 75, sd: 20, sp: 15},
 		weightkg: 35.0,
 		abilities: {0: 'Simple'},
 		innates: ['Shell Armor', 'Natural Cure', 'Harvest']
 	},
-	'Magcargo Redux': {
+	'Magcargo-Redux': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 70, at: 50, df: 140, sa: 100, sd: 45, sp: 25},
 		weightkg: 55.0,
 		abilities: {0: 'Shell Armor'},
 		innates: ['Overcoat', 'Harvest', 'Impenetrable']
 	},
-	'Buizel Redux': {
+	'Buizel-Redux': {
 		types: ['Flying'],
 		bs: {hp: 50, at: 50, df: 40, sa: 50, sd: 40, sp: 100},
 		weightkg: 29.5,
 		abilities: {0: 'Technician'},
 		innates: ['Aerodynamics', 'Keen Eye', 'Cloud Nine']
 	},
-	'Floatzel Redux': {
+	'Floatzel-Redux': {
 		types: ['Flying'],
 		bs: {hp: 80, at: 85, df: 60, sa: 85, sd: 60, sp: 125},
 		weightkg: 33.5,
 		abilities: {0: 'Technician'},
 		innates: ['Aerodynamics', 'Keen Eye', 'Cloud Nine']
 	},
-	'Azelf Redux': {
+	'Azelf-Redux': {
 		types: ['Dark', 'Fairy'],
 		bs: {hp: 70, at: 130, df: 65, sa: 130, sd: 65, sp: 120},
 		weightkg: 0.3,
 		abilities: {0: 'Comatose'},
 		innates: ['Levitate', 'Dark Aura', 'Malicious']
 	},
-	'Mesprit Redux': {
+	'Mesprit-Redux': {
 		types: ['Dark', 'Fairy'],
 		bs: {hp: 75, at: 110, df: 100, sa: 110, sd: 100, sp: 85},
 		weightkg: 0.3,
 		abilities: {0: 'Tinted Lens'},
 		innates: ['Levitate', 'Dark Aura', 'Malicious']
 	},
-	'Uxie Redux': {
+	'Uxie-Redux': {
 		types: ['Dark', 'Fairy'],
 		bs: {hp: 80, at: 80, df: 130, sa: 80, sd: 130, sp: 80},
 		weightkg: 0.3,
 		abilities: {0: 'Unaware'},
 		innates: ['Levitate', 'Dark Aura', 'Malicious']
 	},
-	'Machop Redux': {
+	'Machop-Redux': {
 		types: ['Fighting', 'Dragon'],
 		bs: {hp: 50, at: 70, df: 70, sa: 15, sd: 65, sp: 35},
 		weightkg: 19.5,
 		abilities: {0: 'Overwhelm'},
 		innates: ['No Guard', 'Iron Fist', 'Guts']
 	},
-	'Machoke Redux': {
+	'Machoke-Redux': {
 		types: ['Fighting', 'Dragon'],
 		bs: {hp: 60, at: 80, df: 100, sa: 30, sd: 90, sp: 45},
 		weightkg: 70.5,
 		abilities: {0: 'Overwhelm'},
 		innates: ['No Guard', 'Iron Fist', 'Guts']
 	},
-	'Machamp Redux': {
+	'Machamp-Redux': {
 		types: ['Fighting', 'Dragon'],
 		bs: {hp: 70, at: 110, df: 110, sa: 45, sd: 115, sp: 55},
 		weightkg: 130.0,
 		abilities: {0: 'Overwhelm'},
 		innates: ['Impenetrable', 'Iron Fist', 'Guts']
 	},
-	'Solosis Redux': {
+	'Solosis-Redux': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 45, at: 30, df: 50, sa: 95, sd: 50, sp: 20},
 		weightkg: 1.0,
 		abilities: {0: 'Overcoat'},
 		innates: ['Hydration', 'Flaming Soul', 'Adaptability']
 	},
-	'Duosion Redux': {
+	'Duosion-Redux': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 75, at: 40, df: 60, sa: 105, sd: 60, sp: 30},
 		weightkg: 8.0,
 		abilities: {0: 'Overcoat'},
 		innates: ['Hydration', 'Flaming Soul', 'Adaptability']
 	},
-	'Reuniclus Redux': {
+	'Reuniclus-Redux': {
 		types: ['Fire', 'Water'],
 		bs: {hp: 110, at: 115, df: 85, sa: 115, sd: 85, sp: 30},
 		weightkg: 20.1,
 		abilities: {0: 'Overcoat'},
 		innates: ['Water Bubble', 'Flaming Soul', 'Catastrophe']
 	},
-	'Skarmory Redux': {
+	'Skarmory-Redux': {
 		types: ['Steel', 'Fire'],
 		bs: {hp: 75, at: 110, df: 90, sa: 50, sd: 60, sp: 110},
 		weightkg: 50.5,
 		abilities: {0: 'Molten Down'},
 		innates: ['Levitate', 'Keen Edge', 'Opportunist']
 	},
-	'Growlithe Redux': {
+	'Growlithe-Redux': {
 		types: ['Fire', 'Grass'],
 		bs: {hp: 55, at: 60, df: 65, sa: 50, sd: 60, sp: 60},
 		weightkg: 19.0,
 		abilities: {0: 'Scare'},
 		innates: ['Raw Wood', 'Stench', 'Flash Fire']
 	},
-	'Arcanine Redux': {
+	'Arcanine-Redux': {
 		types: ['Fire', 'Grass'],
 		bs: {hp: 90, at: 115, df: 90, sa: 105, sd: 90, sp: 110},
 		weightkg: 155.0,
 		abilities: {0: 'Scare'},
 		innates: ['Raw Wood', 'Stench', 'Flash Fire']
 	},
-	'Whismur Redux': {
+	'Whismur-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 84, at: 36, df: 53, sa: 45, sd: 63, sp: 19},
 		weightkg: 16.3,
 		abilities: {0: 'Soundproof'},
 		innates: ['White Noise', 'Galvanize', 'Amplifier']
 	},
-	'Loudred Redux': {
+	'Loudred-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 104, at: 62, df: 73, sa: 71, sd: 83, sp: 39},
 		weightkg: 40.5,
 		abilities: {0: 'Noise Cancel'},
 		innates: ['White Noise', 'Galvanize', 'Amplifier']
 	},
-	'Exploud Redux': {
+	'Exploud-Redux': {
 		types: ['Ghost', 'Electric'],
 		bs: {hp: 134, at: 61, df: 103, sa: 91, sd: 113, sp: 98},
 		weightkg: 84.0,
 		abilities: {0: 'Noise Cancel'},
 		innates: ['White Noise', 'Galvanize', 'Amplifier']
 	},
-	'Gible Redux': {
+	'Gible-Redux': {
 		types: ['Water', 'Ghost'],
 		bs: {hp: 50, at: 80, df: 35, sa: 30, sd: 55, sp: 50},
 		weightkg: 20.5,
 		abilities: {0: 'Predator'},
 		innates: ['Hydration', 'Keen Edge', 'Hyper Aggressive']
 	},
-	'Gabite Redux': {
+	'Gabite-Redux': {
 		types: ['Water', 'Ghost'],
 		bs: {hp: 60, at: 100, df: 55, sa: 40, sd: 65, sp: 90},
 		weightkg: 56.0,
 		abilities: {0: 'Predator'},
 		innates: ['Hydration', 'Keen Edge', 'Hyper Aggressive']
 	},
-	'Garchomp Redux': {
+	'Garchomp-Redux': {
 		types: ['Water', 'Ghost'],
 		bs: {hp: 100, at: 140, df: 85, sa: 70, sd: 95, sp: 110},
 		weightkg: 95.0,
 		abilities: {0: 'Predator'},
 		innates: ['Hydration', 'Keen Edge', 'Hyper Aggressive']
 	},
-	'Deino Redux': {
+	'Deino-Redux': {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 52, at: 45, df: 50, sa: 65, sd: 50, sp: 38},
 		weightkg: 17.3,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Celestial Blessing', 'Tangling Hair', 'Misty Surge']
 	},
-	'Zweilous Redux': {
+	'Zweilous-Redux': {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 72, at: 65, df: 70, sa: 85, sd: 70, sp: 58},
 		weightkg: 50.0,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Celestial Blessing', 'Multi-Headed', 'Misty Surge']
 	},
-	'Hydreigon Redux': {
+	'Hydreigon-Redux': {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 100, at: 105, df: 100, sa: 125, sd: 100, sp: 70},
 		weightkg: 160.0,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Celestial Blessing', 'Multi-Headed', 'Misty Surge']
 	},
-	'Pawniard Redux': {
+	'Pawniard-Redux': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 45, at: 75, df: 65, sa: 40, sd: 40, sp: 75},
 		weightkg: 10.2,
 		abilities: {0: 'Defiant'},
 		innates: ['Keen Edge', 'Intimidate', 'Rattled']
 	},
-	'Bisharp Redux': {
+	'Bisharp-Redux': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 75, at: 115, df: 75, sa: 60, sd: 75, sp: 90},
 		weightkg: 70.0,
 		abilities: {0: 'Defiant'},
 		innates: ['Keen Edge', 'Intimidate', 'Olé!']
 	},
-	'Mawile Redux': {
+	'Mawile-Redux': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 95, df: 55, sa: 55, sd: 55, sp: 80},
 		weightkg: 11.5,
 		abilities: {0: 'Adaptability'},
 		innates: ['Strong Jaw', 'Opportunist', 'Fae Hunter']
 	},
-	'Sableye Redux': {
+	'Sableye-Redux': {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 70, at: 75, df: 80, sa: 65, sd: 70, sp: 50},
 		weightkg: 11.0,
 		abilities: {0: 'Fae Hunter'},
 		innates: ['Subdue', 'Steelworker', 'Wonder Skin']
 	},
-	'Houndour Redux': {
+	'Houndour-Redux': {
 		types: ['Ghost'],
 		bs: {hp: 45, at: 50, df: 35, sa: 95, sd: 50, sp: 75},
 		weightkg: 10.8,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Soul Eater', 'Phantom Pain', 'Vengeance']
 	},
-	'Houndoom Redux': {
+	'Houndoom-Redux': {
 		types: ['Ghost'],
 		bs: {hp: 75, at: 90, df: 50, sa: 130, sd: 80, sp: 105},
 		weightkg: 35.0,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Soul Eater', 'Phantom Pain', 'Vengeance']
 	},
-	'Doduo Redux': {
+	'Doduo-Redux': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 65, at: 95, df: 55, sa: 25, sd: 35, sp: 75},
 		weightkg: 39.2,
 		abilities: {0: 'Moody'},
 		innates: ['Solenoglyphs', 'Half Drake', 'Multi-Headed']
 	},
-	'Dodrio Redux': {
+	'Dodrio-Redux': {
 		types: ['Dark', 'Poison'],
 		bs: {hp: 90, at: 130, df: 80, sa: 50, sd: 60, sp: 100},
 		weightkg: 85.2,
 		abilities: {0: 'Moody'},
 		innates: ['Solenoglyphs', 'Half Drake', 'Multi-Headed']
 	},
-	'Kingambit Redux': {
+	'Kingambit-Redux': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 90, at: 125, df: 90, sa: 60, sd: 75, sp: 110},
 		weightkg: 120.0,
 		abilities: {0: 'Defiant'},
 		innates: ['Keen Edge', 'Intimidate', 'Olé!']
 	},
-	'Larvitar Redux': {
+	'Larvitar-Redux': {
 		types: ['Rock', 'Fire'],
 		bs: {hp: 90, at: 20, df: 30, sa: 90, sd: 30, sp: 40},
 		weightkg: 72.0,
 		abilities: {0: 'Determination'},
 		innates: ['Magma Armor', 'Furnace', 'Molten Down']
 	},
-	'Pupitar Redux': {
+	'Pupitar-Redux': {
 		types: ['Rock', 'Fire'],
 		bs: {hp: 110, at: 40, df: 50, sa: 110, sd: 50, sp: 50},
 		weightkg: 152.0,
 		abilities: {0: 'Solid Rock'},
 		innates: ['Magma Armor', 'Furnace', 'Molten Down']
 	},
-	'Tyranitar Redux': {
+	'Tyranitar-Redux': {
 		types: ['Rock', 'Fire'],
 		bs: {hp: 150, at: 81, df: 85, sa: 134, sd: 90, sp: 60},
 		weightkg: 202.0,
 		abilities: {0: 'Solid Rock'},
 		innates: ['Magma Armor', 'Furnace', 'Molten Down']
 	},
-	'Tyranitar Mega Redux': {
+	'Tyranitar-Mega-Redux': {
 		types: ['Rock', 'Fire'],
 		bs: {hp: 150, at: 91, df: 103, sa: 150, sd: 126, sp: 80},
 		weightkg: 202.0,
 		abilities: {0: 'Evaporate'},
 		innates: ['Primal Armor', 'Furnace', 'Molten Down']
 	},
-	'Ursaluna Mega': {
+	'Ursaluna-Mega': {
 		types: ['Ground', 'Normal'],
 		bs: {hp: 130, at: 180, df: 135, sa: 45, sd: 110, sp: 50},
 		weightkg: 290.0,
@@ -21572,14 +21572,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Teravolt'},
 		innates: ['Quark Drive', 'Exploit Weakness', 'Artillery']
 	},
-	'Scizor Redux': {
+	'Scizor-Redux': {
 		types: ['Poison', 'Steel'],
 		bs: {hp: 70, at: 50, df: 75, sa: 125, sd: 100, sp: 80},
 		weightkg: 118.0,
 		abilities: {0: 'Mind Crunch'},
 		innates: ['Half Drake', 'Envenom', 'Purple Haze']
 	},
-	'Wooper Paldean': {
+	'Wooper-Paldean': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 55, at: 55, df: 60, sa: 65, sd: 65, sp: 15},
 		weightkg: 8.5,
@@ -21593,7 +21593,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Mold Breaker'},
 		innates: ['Rattled', 'Adaptability', 'Hyper Aggressive']
 	},
-	'Escarginite Redux': {
+	'Escarginite-Redux': {
 		types: ['Grass', 'Rock'],
 		bs: {hp: 100, at: 50, df: 150, sa: 100, sd: 70, sp: 30},
 		weightkg: 10.0,
@@ -21607,14 +21607,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Multiscale'},
 		innates: ['Dragon\'s Ritual', 'Thick Fat', 'Discipline']
 	},
-	'Chien Pao Mega': {
+	'Chien Pao-Mega': {
 		types: ['Dark', 'Ice'],
 		bs: {hp: 80, at: 160, df: 100, sa: 110, sd: 85, sp: 145},
 		weightkg: 152.2,
 		abilities: {0: 'Sword of Damnation'},
 		innates: ['Apex Predator', 'Frostmaw', 'Primal Maw']
 	},
-	'Dracovish Mega': {
+	'Dracovish-Mega': {
 		types: ['Water', 'Dragon'],
 		bs: {hp: 90, at: 110, df: 110, sa: 85, sd: 100, sp: 110},
 		weightkg: 215.0,
@@ -21649,42 +21649,42 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Apple Enlightenment'},
 		innates: ['Arcane Force', 'Soul-Heart', 'Competitive']
 	},
-	'Flygon Redux B': {
+	'Flygon-Redux B': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 100, df: 75, sa: 120, sd: 75, sp: 142},
 		weightkg: 82.0,
 		abilities: {0: 'Electro Surge'},
 		innates: ['Levitate', 'Galvanize', 'Clear Body']
 	},
-	'Flygon Redux B Mega': {
+	'Flygon-Redux B-Mega': {
 		types: ['Electric', 'Dragon'],
 		bs: {hp: 88, at: 110, df: 95, sa: 150, sd: 95, sp: 162},
 		weightkg: 82.0,
 		abilities: {0: 'Electro Surge'},
 		innates: ['Thundercall', 'Galvanize', 'Energized']
 	},
-	'Ribombee Redux': {
+	'Ribombee-Redux': {
 		types: ['Bug', 'Electric'],
 		bs: {hp: 60, at: 105, df: 60, sa: 55, sd: 70, sp: 114},
 		weightkg: 0.5,
 		abilities: {0: 'Shield Dust'},
 		innates: ['Hover', 'Archer', 'Merciless']
 	},
-	'Ribombee Redux Mega': {
+	'Ribombee-Redux-Mega': {
 		types: ['Bug', 'Electric'],
 		bs: {hp: 60, at: 130, df: 90, sa: 55, sd: 95, sp: 134},
 		weightkg: 0.5,
 		abilities: {0: 'Magic Bounce'},
 		innates: ['Hover', 'Archer', 'Depravity']
 	},
-	'Weavile Redux': {
+	'Weavile-Redux': {
 		types: ['Ground', 'Dark'],
 		bs: {hp: 80, at: 105, df: 70, sa: 60, sd: 70, sp: 125},
 		weightkg: 34.0,
 		abilities: {0: 'Sand Pit'},
 		innates: ['Assassin\'s Tools', 'Merciless', 'Sniper']
 	},
-	'Weavile Redux Mega': {
+	'Weavile-Redux-Mega': {
 		types: ['Ground', 'Dark'],
 		bs: {hp: 80, at: 120, df: 90, sa: 75, sd: 90, sp: 155},
 		weightkg: 34.0,
@@ -21747,14 +21747,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Breezy Neigh'},
 		innates: ['Slipstream', 'Weather Control', 'Fluffy']
 	},
-	'Mawile Redux B': {
+	'Mawile-Redux B': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 95, df: 75, sa: 85, sd: 80, sp: 75},
 		weightkg: 11.5,
 		abilities: {0: 'Heatproof'},
 		innates: ['Multi-Headed', 'Strong Jaw', 'Scare']
 	},
-	'Mawile Redux B Mega': {
+	'Mawile-Redux B-Mega': {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 105, df: 110, sa: 95, sd: 105, sp: 95},
 		weightkg: 11.5,
@@ -21768,7 +21768,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Friend Guard'},
 		innates: ['Mystic Power', 'Fur Coat', 'Inflatable']
 	},
-	'Yveltal Mega': {
+	'Yveltal-Mega': {
 		types: ['Dark', 'Flying'],
 		bs: {hp: 126, at: 151, df: 105, sa: 151, sd: 108, sp: 139},
 		weightkg: 203.0,
@@ -21782,238 +21782,238 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Pinnacle Blade'},
 		innates: ['Beast Boost', 'Blademaster', 'Aerodynamics']
 	},
-	'Tinkaton Mega': {
+	'Tinkaton-Mega': {
 		types: ['Fairy', 'Steel'],
 		bs: {hp: 85, at: 110, df: 107, sa: 105, sd: 105, sp: 94},
 		weightkg: 112.8,
 		abilities: {0: 'Demolitionist'},
 		innates: ['Super Slammer', 'Long Reach', 'Mold Breaker']
 	},
-	'Turtwig Redux': {
+	'Turtwig-Redux': {
 		types: ['Flying', 'Fairy'],
 		bs: {hp: 57, at: 58, df: 64, sa: 55, sd: 75, sp: 11},
 		weightkg: 10.2,
 		abilities: {0: 'Fertilize'},
 		innates: ['Cloud Nine', 'Shell Armor', 'Impenetrable']
 	},
-	'Grotle Redux': {
+	'Grotle-Redux': {
 		types: ['Flying', 'Fairy'],
 		bs: {hp: 80, at: 79, df: 90, sa: 65, sd: 85, sp: 21},
 		weightkg: 97.0,
 		abilities: {0: 'Fertilize'},
 		innates: ['Cloud Nine', 'Shell Armor', 'Impenetrable']
 	},
-	'Torterra Redux': {
+	'Torterra-Redux': {
 		types: ['Flying', 'Fairy'],
 		bs: {hp: 95, at: 109, df: 134, sa: 65, sd: 95, sp: 37},
 		weightkg: 310.0,
 		abilities: {0: 'Fertilize'},
 		innates: ['Cloud Nine', 'Shell Armor', 'Impenetrable']
 	},
-	'Chimchar Redux': {
+	'Chimchar-Redux': {
 		types: ['Water'],
 		bs: {hp: 44, at: 62, df: 64, sa: 22, sd: 64, sp: 64},
 		weightkg: 6.2,
 		abilities: {0: 'Blitz Boxer'},
 		innates: ['Iron Fist', 'Torrent', 'Frisk']
 	},
-	'Monferno Redux': {
+	'Monferno-Redux': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 64, at: 83, df: 72, sa: 43, sd: 72, sp: 86},
 		weightkg: 22.0,
 		abilities: {0: 'Blitz Boxer'},
 		innates: ['Iron Fist', 'Torrent', 'Frisk']
 	},
-	'Infernape Redux': {
+	'Infernape-Redux': {
 		types: ['Water', 'Fighting'],
 		bs: {hp: 76, at: 115, df: 86, sa: 59, sd: 91, sp: 108},
 		weightkg: 55.0,
 		abilities: {0: 'Blitz Boxer'},
 		innates: ['Iron Fist', 'Long Reach', 'Inflatable']
 	},
-	'Piplup Redux': {
+	'Piplup-Redux': {
 		types: ['Fire', 'Ice'],
 		bs: {hp: 53, at: 31, df: 43, sa: 67, sd: 56, sp: 70},
 		weightkg: 5.2,
 		abilities: {0: 'Pyromancy'},
 		innates: ['Antarctic Bird', 'Flash Fire', 'Overcoat']
 	},
-	'Prinplup Redux': {
+	'Prinplup-Redux': {
 		types: ['Fire', 'Ice'],
 		bs: {hp: 69, at: 46, df: 58, sa: 86, sd: 81, sp: 80},
 		weightkg: 23.0,
 		abilities: {0: 'Pyromancy'},
 		innates: ['Antarctic Bird', 'Flash Fire', 'Overcoat']
 	},
-	'Empoleon Redux': {
+	'Empoleon-Redux': {
 		types: ['Fire', 'Ice'],
 		bs: {hp: 84, at: 66, df: 78, sa: 111, sd: 101, sp: 95},
 		weightkg: 84.5,
 		abilities: {0: 'Drought'},
 		innates: ['Thermal Slide', 'Molten Down', 'Flame Shield']
 	},
-	'Bounsweet Redux': {
+	'Bounsweet-Redux': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 38, at: 22, df: 30, sa: 50, sd: 30, sp: 64},
 		weightkg: 3.2,
 		abilities: {0: 'Oblivious'},
 		innates: ['Water Bubble', 'Limber', 'Let\'s Roll']
 	},
-	'Steenee Redux': {
+	'Steenee-Redux': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 48, at: 32, df: 40, sa: 70, sd: 40, sp: 94},
 		weightkg: 8.2,
 		abilities: {0: 'Oblivious'},
 		innates: ['Water Bubble', 'Limber', 'Thick Fat']
 	},
-	'Tsareena Redux': {
+	'Tsareena-Redux': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 68, at: 42, df: 90, sa: 120, sd: 90, sp: 120},
 		weightkg: 21.4,
 		abilities: {0: 'Inflatable'},
 		innates: ['Water Bubble', 'Limber', 'Queenly Majesty']
 	},
-	'Toxel Redux': {
+	'Toxel-Redux': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 40, at: 38, df: 38, sa: 70, sd: 37, sp: 55},
 		weightkg: 11.0,
 		abilities: {0: 'Prankster'},
 		innates: ['Electrocytes', 'Loud Bang', 'Volt Absorb']
 	},
-	'Toxtricity Redux': {
+	'Toxtricity-Redux': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 80, at: 65, df: 85, sa: 114, sd: 65, sp: 93},
 		weightkg: 40.0,
 		abilities: {0: 'Hyper Aggressive'},
 		innates: ['Metallic', 'Piercing Solo', 'Punk Rock']
 	},
-	'Toxtricity Redux Fuzz': {
+	'Toxtricity-Redux-Fuzz': {
 		types: ['Electric', 'Dark'],
 		bs: {hp: 80, at: 65, df: 65, sa: 114, sd: 85, sp: 93},
 		weightkg: 40.0,
 		abilities: {0: 'Rhythmic'},
 		innates: ['Phantom', 'Chunky Bass Line', 'Punk Rock']
 	},
-	'Trapinch Redux': {
+	'Trapinch-Redux': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 45, at: 110, df: 35, sa: 45, sd: 35, sp: 20},
 		weightkg: 15.0,
 		abilities: {0: 'Whiteout'},
 		innates: ['Strong Jaw', 'Fluffy', 'Overcoat']
 	},
-	'Vibrava Redux': {
+	'Vibrava-Redux': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 50, at: 80, df: 40, sa: 70, sd: 40, sp: 80},
 		weightkg: 15.3,
 		abilities: {0: 'Whiteout'},
 		innates: ['Dragonfly', 'Fluffy', 'Overcoat']
 	},
-	'Flygon Redux': {
+	'Flygon-Redux': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 80, at: 100, df: 80, sa: 100, sd: 80, sp: 100},
 		weightkg: 82.0,
 		abilities: {0: 'Whiteout'},
 		innates: ['Dragonfly', 'Fluffy', 'Mountaineer']
 	},
-	'Crabrawler Redux': {
+	'Crabrawler-Redux': {
 		types: ['Fighting', 'Dark'],
 		bs: {hp: 62, at: 72, df: 77, sa: 32, sd: 57, sp: 53},
 		weightkg: 7.0,
 		abilities: {0: 'Bulletproof'},
 		innates: ['Spike Armor', 'Hyper Aggressive', 'Shed Skin']
 	},
-	'Crabominable Redux': {
+	'Crabominable-Redux': {
 		types: ['Fighting', 'Dark'],
 		bs: {hp: 97, at: 122, df: 117, sa: 77, sd: 72, sp: 33},
 		weightkg: 180.0,
 		abilities: {0: 'Merciless'},
 		innates: ['Spike Armor', 'Super Slammer', 'Shed Skin']
 	},
-	'Cleffa Redux': {
+	'Cleffa-Redux': {
 		types: ['Rock'],
 		bs: {hp: 50, at: 15, df: 28, sa: 55, sd: 55, sp: 15},
 		weightkg: 3.0,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Solid Rock', 'Dazzling', 'Nocturnal']
 	},
-	'Clefairy Redux': {
+	'Clefairy-Redux': {
 		types: ['Rock'],
 		bs: {hp: 70, at: 20, df: 58, sa: 70, sd: 65, sp: 40},
 		weightkg: 7.5,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Solid Rock', 'Dazzling', 'Nocturnal']
 	},
-	'Clefable Redux': {
+	'Clefable-Redux': {
 		types: ['Rock'],
 		bs: {hp: 95, at: 50, df: 83, sa: 115, sd: 90, sp: 75},
 		weightkg: 40.0,
 		abilities: {0: 'Prism Armor'},
 		innates: ['Solid Rock', 'Dazzling', 'Nocturnal']
 	},
-	'Gligar Redux': {
+	'Gligar-Redux': {
 		types: ['Poison', 'Fire'],
 		bs: {hp: 55, at: 85, df: 85, sa: 60, sd: 50, sp: 95},
 		weightkg: 64.8,
 		abilities: {0: 'Violent Rush'},
 		innates: ['Grip Pincer', 'Shell Armor', 'Solenoglyphs']
 	},
-	'Gliscor Redux': {
+	'Gliscor-Redux': {
 		types: ['Poison', 'Fire'],
 		bs: {hp: 65, at: 105, df: 105, sa: 70, sd: 60, sp: 105},
 		weightkg: 42.5,
 		abilities: {0: 'Predator'},
 		innates: ['Grip Pincer', 'Shell Armor', 'Venoblaze Pincers']
 	},
-	'Psyduck Redux': {
+	'Psyduck-Redux': {
 		types: ['Dark'],
 		bs: {hp: 50, at: 75, df: 43, sa: 52, sd: 45, sp: 65},
 		weightkg: 19.6,
 		abilities: {0: 'Scare'},
 		innates: ['Fur Coat', 'Analytic', 'Nocturnal']
 	},
-	'Seel Redux': {
+	'Seel-Redux': {
 		types: ['Ice', 'Dragon'],
 		bs: {hp: 63, at: 66, df: 55, sa: 66, sd: 60, sp: 65},
 		weightkg: 90.0,
 		abilities: {0: 'Slush Rush'},
 		innates: ['Prism Scales', 'Hyper Aggressive', 'Unaware']
 	},
-	'Dewgong Redux': {
+	'Dewgong-Redux': {
 		types: ['Ice', 'Dragon'],
 		bs: {hp: 78, at: 120, df: 66, sa: 78, sd: 66, sp: 120},
 		weightkg: 120.0,
 		abilities: {0: 'Slush Rush'},
 		innates: ['Dragon\'s Maw', 'Ice Cold Hunter', 'Speed Force']
 	},
-	'Snorunt Redux': {
+	'Snorunt-Redux': {
 		types: ['Dark'],
 		bs: {hp: 65, at: 65, df: 50, sa: 60, sd: 60, sp: 70},
 		weightkg: 16.8,
 		abilities: {0: 'Prankster'},
 		innates: ['Nocturnal', 'Looter', 'Fur Coat']
 	},
-	'Glalie Redux': {
+	'Glalie-Redux': {
 		types: ['Dark', 'Fighting'],
 		bs: {hp: 90, at: 100, df: 90, sa: 60, sd: 90, sp: 70},
 		weightkg: 256.5,
 		abilities: {0: 'Contrary'},
 		innates: ['Blood Bath', 'Weak Armor', 'Battle Aura']
 	},
-	'Froslass Redux': {
+	'Froslass-Redux': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 110, df: 70, sa: 70, sd: 70, sp: 110},
 		weightkg: 26.6,
 		abilities: {0: 'Blood Price'},
 		innates: ['Low Blow', 'Keen Edge', 'Soul Eater']
 	},
-	'Darumaka Redux': {
+	'Darumaka-Redux': {
 		types: ['Ground', 'Fighting'],
 		bs: {hp: 50, at: 90, df: 55, sa: 15, sd: 55, sp: 50},
 		weightkg: 37.5,
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Earth Eater', 'Earthbound', 'Mold Breaker']
 	},
-	'Darmanitan Redux': {
+	'Darmanitan-Redux': {
 		types: ['Ground', 'Fighting'],
 		bs: {hp: 80, at: 140, df: 80, sa: 50, sd: 80, sp: 90},
 		weightkg: 92.9,
@@ -22027,35 +22027,35 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sage Power'},
 		innates: ['Rocky Payload', 'Magical Fists', 'Mold Breaker']
 	},
-	'Darmanitan Redux Bond': {
+	'Darmanitan-Redux Bond': {
 		types: ['Ground', 'Fighting'],
 		bs: {hp: 80, at: 140, df: 80, sa: 50, sd: 80, sp: 90},
 		weightkg: 92.9,
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Battle Bond', 'Iron Fist', 'Mold Breaker']
 	},
-	'Happiny Redux': {
+	'Happiny-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 15, at: 75, df: 5, sa: 10, sd: 5, sp: 110},
 		weightkg: 24.4,
 		abilities: {0: 'Wimp Out'},
 		innates: ['Vital Spirit', 'Long Reach', 'Iron Fist']
 	},
-	'Chansey Redux': {
+	'Chansey-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 35, at: 110, df: 10, sa: 110, sd: 10, sp: 175},
 		weightkg: 34.6,
 		abilities: {0: 'Emergency Exit'},
 		innates: ['Vital Spirit', 'Long Reach', 'Iron Fist']
 	},
-	'Blissey Redux': {
+	'Blissey-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 45, at: 135, df: 10, sa: 95, sd: 10, sp: 255},
 		weightkg: 46.8,
 		abilities: {0: 'Emergency Exit'},
 		innates: ['Vital Spirit', 'Long Reach', 'Iron Fist']
 	},
-	'Spiritomb Redux': {
+	'Spiritomb-Redux': {
 		types: ['Ghost', 'Poison'],
 		bs: {hp: 77, at: 60, df: 108, sa: 117, sd: 120, sp: 35},
 		weightkg: 108.0,
@@ -22069,14 +22069,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Battle Bond', 'Iron Fist', 'Mold Breaker']
 	},
-	'Dewpider Redux': {
+	'Dewpider-Redux': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 38, at: 65, df: 72, sa: 40, sd: 27, sp: 47},
 		weightkg: 4.0,
 		abilities: {0: 'Ice Body'},
 		innates: ['Deep Freeze', 'Rough Skin', 'Swarm']
 	},
-	'Araquanid Redux': {
+	'Araquanid-Redux': {
 		types: ['Ice', 'Bug'],
 		bs: {hp: 68, at: 90, df: 112, sa: 50, sd: 52, sp: 82},
 		weightkg: 82.0,
@@ -22097,154 +22097,154 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Predator'},
 		innates: ['Disguise', 'Overcoat', 'Phantom Pain']
 	},
-	'Tinkatink Redux': {
+	'Tinkatink-Redux': {
 		types: ['Water', 'Poison'],
 		bs: {hp: 51, at: 70, df: 52, sa: 33, sd: 33, sp: 72},
 		weightkg: 8.9,
 		abilities: {0: 'Toxic Debris'},
 		innates: ['Poison Point', 'Deviate', 'Limber']
 	},
-	'Tinkatuff Redux': {
+	'Tinkatuff-Redux': {
 		types: ['Water', 'Poison'],
 		bs: {hp: 61, at: 85, df: 62, sa: 47, sd: 47, sp: 92},
 		weightkg: 59.1,
 		abilities: {0: 'Toxic Debris'},
 		innates: ['Poison Point', 'Deviate', 'Torrent']
 	},
-	'Tinkaton Redux': {
+	'Tinkaton-Redux': {
 		types: ['Water', 'Poison'],
 		bs: {hp: 85, at: 105, df: 82, sa: 65, sd: 65, sp: 104},
 		weightkg: 112.8,
 		abilities: {0: 'Hydration'},
 		innates: ['Poison Point', 'Deviate', 'Toxic Debris']
 	},
-	'Tinkaton Redux Mega': {
+	'Tinkaton-Redux-Mega': {
 		types: ['Water', 'Poison'],
 		bs: {hp: 85, at: 140, df: 107, sa: 85, sd: 70, sp: 119},
 		weightkg: 112.8,
 		abilities: {0: 'Atlantic Ruler'},
 		innates: ['Super Slammer', 'Deviate', 'Poison Quills']
 	},
-	'Scyther Redux': {
+	'Scyther-Redux': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 70, at: 110, df: 60, sa: 110, sd: 60, sp: 90},
 		weightkg: 56.0,
 		abilities: {0: 'Merciless'},
 		innates: ['Half Drake', 'Envenom', 'Speed Boost']
 	},
-	'Scyther Redux Mega': {
+	'Scyther-Redux-Mega': {
 		types: ['Poison', 'Ground'],
 		bs: {hp: 70, at: 140, df: 70, sa: 140, sd: 70, sp: 110},
 		weightkg: 56.0,
 		abilities: {0: 'Dual Wield'},
 		innates: ['Komodo', 'Slipstream', 'Merciless']
 	},
-	'Scizor Redux Mega': {
+	'Scizor-Redux-Mega': {
 		types: ['Poison', 'Steel'],
 		bs: {hp: 70, at: 65, df: 110, sa: 155, sd: 125, sp: 75},
 		weightkg: 118.0,
 		abilities: {0: 'Primal Maw'},
 		innates: ['Komodo', 'Gnashing Cannon', 'Purple Haze']
 	},
-	'Kleavor Redux': {
+	'Kleavor-Redux': {
 		types: ['Poison', 'Rock'],
 		bs: {hp: 70, at: 135, df: 100, sa: 50, sd: 80, sp: 65},
 		weightkg: 10.0,
 		abilities: {0: 'Sweeping Edge'},
 		innates: ['Half Drake', 'Rough Skin', 'Violent Rush']
 	},
-	'Kleavor Redux Mega': {
+	'Kleavor-Redux-Mega': {
 		types: ['Poison', 'Rock'],
 		bs: {hp: 70, at: 155, df: 120, sa: 80, sd: 110, sp: 65},
 		weightkg: 10.0,
 		abilities: {0: 'Cutthroat'},
 		innates: ['Komodo', 'Dual Wield', 'Sharp Edges']
 	},
-	'Krabby Redux': {
+	'Krabby-Redux': {
 		types: ['Psychic'],
 		bs: {hp: 45, at: 38, df: 48, sa: 97, sd: 88, sp: 34},
 		weightkg: 6.5,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Magic Guard', 'Shell Armor', 'Mystic Power']
 	},
-	'Kingler Redux': {
+	'Kingler-Redux': {
 		types: ['Psychic'],
 		bs: {hp: 85, at: 50, df: 75, sa: 115, sd: 115, sp: 60},
 		weightkg: 60.0,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Magic Guard', 'Mystic Power', 'Archmage']
 	},
-	'Kingler Redux Mega': {
+	'Kingler-Redux-Mega': {
 		types: ['Psychic'],
 		bs: {hp: 85, at: 75, df: 80, sa: 150, sd: 145, sp: 65},
 		weightkg: 60.0,
 		abilities: {0: 'Mystic Power'},
 		innates: ['Magic Guard', 'Psychic Mind', 'Archmage']
 	},
-	'Shinx Redux': {
+	'Shinx-Redux': {
 		types: ['Grass'],
 		bs: {hp: 45, at: 65, df: 34, sa: 40, sd: 34, sp: 65},
 		weightkg: 9.5,
 		abilities: {0: 'Intimidate'},
 		innates: ['Leaf Guard', 'Grass Pelt', 'Guts']
 	},
-	'Luxio Redux': {
+	'Luxio-Redux': {
 		types: ['Grass'],
 		bs: {hp: 60, at: 85, df: 49, sa: 40, sd: 49, sp: 80},
 		weightkg: 30.5,
 		abilities: {0: 'Intimidate'},
 		innates: ['Guts', 'Grass Pelt', 'Strong Jaw']
 	},
-	'Luxray Redux': {
+	'Luxray-Redux': {
 		types: ['Grass'],
 		bs: {hp: 80, at: 100, df: 84, sa: 67, sd: 79, sp: 123},
 		weightkg: 42.0,
 		abilities: {0: 'Reckless'},
 		innates: ['Predator', 'Speed Force', 'Raw Wood']
 	},
-	'Luxray Redux Mega': {
+	'Luxray-Redux-Mega': {
 		types: ['Grass'],
 		bs: {hp: 80, at: 130, df: 99, sa: 89, sd: 99, sp: 136},
 		weightkg: 42.0,
 		abilities: {0: 'Brute Force'},
 		innates: ['King of the Jungle', 'Speed Force', 'Grassy Surge']
 	},
-	'Aron Redux': {
+	'Aron-Redux': {
 		types: ['Water', 'Rock'],
 		bs: {hp: 54, at: 70, df: 76, sa: 40, sd: 64, sp: 26},
 		weightkg: 60.0,
 		abilities: {0: 'Hydration'},
 		innates: ['Water Veil', 'Bulletproof', 'Solid Rock']
 	},
-	'Lairon Redux': {
+	'Lairon-Redux': {
 		types: ['Water', 'Rock'],
 		bs: {hp: 64, at: 91, df: 98, sa: 44, sd: 86, sp: 47},
 		weightkg: 120.0,
 		abilities: {0: 'Shell Armor'},
 		innates: ['Water Veil', 'Rockhard Will', 'Solid Rock']
 	},
-	'Aggron Redux': {
+	'Aggron-Redux': {
 		types: ['Water', 'Rock'],
 		bs: {hp: 70, at: 115, df: 140, sa: 50, sd: 100, sp: 55},
 		weightkg: 360.0,
 		abilities: {0: 'Weak Armor'},
 		innates: ['Water Veil', 'Mighty Horn', 'Solid Rock']
 	},
-	'Aggron Redux Mega': {
+	'Aggron-Redux-Mega': {
 		types: ['Water', 'Rock'],
 		bs: {hp: 70, at: 150, df: 160, sa: 55, sd: 125, sp: 70},
 		weightkg: 360.0,
 		abilities: {0: 'Hunter\'s Horn'},
 		innates: ['Water Veil', 'Sheer Force', 'Battle Armor']
 	},
-	'Makuhita Redux': {
+	'Makuhita-Redux': {
 		types: ['Fire', 'Steel'],
 		bs: {hp: 59, at: 46, df: 74, sa: 27, sd: 38, sp: 23},
 		weightkg: 86.4,
 		abilities: {0: 'Power Core'},
 		innates: ['Earthbound', 'Superheavy', 'Heavy Metal']
 	},
-	'Hariyama Redux': {
+	'Hariyama-Redux': {
 		types: ['Fire', 'Steel'],
 		bs: {hp: 85, at: 85, df: 109, sa: 50, sd: 105, sp: 70},
 		weightkg: 253.8,
@@ -22258,7 +22258,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Ancient Idol'},
 		innates: ['Grounded', 'Full Metal Body', 'Juggernaut']
 	},
-	'Kilozuna Mega': {
+	'Kilozuna-Mega': {
 		types: ['Steel', 'Fire'],
 		bs: {hp: 105, at: 130, df: 150, sa: 65, sd: 120, sp: 100},
 		weightkg: 253.8,
@@ -22286,42 +22286,42 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Overcharge'},
 		innates: ['Drizzle', 'Lightning Born', 'Fluffy']
 	},
-	'Ralts Redux': {
+	'Ralts-Redux': {
 		types: ['Water'],
 		bs: {hp: 42, at: 27, df: 27, sa: 57, sd: 32, sp: 48},
 		weightkg: 6.6,
 		abilities: {0: 'Run Away'},
 		innates: ['Torrent', 'Natural Cure', 'Liquid Ooze']
 	},
-	'Kirlia Redux': {
+	'Kirlia-Redux': {
 		types: ['Water'],
 		bs: {hp: 58, at: 36, df: 37, sa: 77, sd: 49, sp: 74},
 		weightkg: 20.2,
 		abilities: {0: 'Run Away'},
 		innates: ['Torrent', 'Predator', 'Static']
 	},
-	'Gardevoir Redux': {
+	'Gardevoir-Redux': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 75, at: 125, df: 78, sa: 85, sd: 65, sp: 105},
 		weightkg: 48.4,
 		abilities: {0: 'On the Prowl'},
 		innates: ['Phantom', 'Predator', 'Long Reach']
 	},
-	'Gallade Redux': {
+	'Gallade-Redux': {
 		types: ['Water', 'Fairy'],
 		bs: {hp: 105, at: 75, df: 78, sa: 85, sd: 125, sp: 65},
 		weightkg: 52.0,
 		abilities: {0: 'Best Offense'},
 		innates: ['Cute Charm', 'Rough Skin', 'Water Veil']
 	},
-	'Gardevoir Redux Mega': {
+	'Gardevoir-Redux-Mega': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 75, at: 150, df: 93, sa: 100, sd: 85, sp: 130},
 		weightkg: 48.4,
 		abilities: {0: 'Swift Swim'},
 		innates: ['Phantom', 'Impaler', 'Tag']
 	},
-	'Gallade Redux Mega': {
+	'Gallade-Redux-Mega': {
 		types: ['Water', 'Fairy'],
 		bs: {hp: 105, at: 85, df: 103, sa: 120, sd: 145, sp: 75},
 		weightkg: 52.0,
@@ -22342,147 +22342,147 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Dancer'},
 		innates: ['Fey Flight', 'Two Step', 'Festivities']
 	},
-	'Munchlax Redux': {
+	'Munchlax-Redux': {
 		types: ['Water'],
 		bs: {hp: 100, at: 27, df: 76, sa: 67, sd: 84, sp: 36},
 		weightkg: 105.0,
 		abilities: {0: 'Liquid Ooze'},
 		innates: ['Gooey', 'Soundproof', 'Immunity']
 	},
-	'Snorlax Redux': {
+	'Snorlax-Redux': {
 		types: ['Water'],
 		bs: {hp: 196, at: 57, df: 82, sa: 102, sd: 67, sp: 36},
 		weightkg: 460.0,
 		abilities: {0: 'Liquid Ooze'},
 		innates: ['Gooey', 'Soundproof', 'Liquified']
 	},
-	'Snorlax Redux Mega': {
+	'Snorlax-Redux-Mega': {
 		types: ['Water'],
 		bs: {hp: 196, at: 66, df: 104, sa: 114, sd: 104, sp: 56},
 		weightkg: 460.0,
 		abilities: {0: 'Hyper Cleanse'},
 		innates: ['Gooey', 'Liquid Ooze', 'Liquified']
 	},
-	'Raichu Mega X': {
+	'Raichu-Mega X': {
 		types: ['Electric', 'Fighting'],
 		bs: {hp: 60, at: 135, df: 95, sa: 90, sd: 95, sp: 115},
 		weightkg: 30.0,
 		abilities: {0: 'Electro Booster'},
 		innates: ['Ground Shock', 'Current Crash', 'Daredevil']
 	},
-	'Chimecho Mega': {
+	'Chimecho-Mega': {
 		types: ['Psychic', 'Steel'],
 		bs: {hp: 85, at: 50, df: 110, sa: 150, sd: 125, sp: 65},
 		weightkg: 1.0,
 		abilities: {0: 'Wind Chimes'},
 		innates: ['Levitate', 'Steelworker', 'Loud Bang']
 	},
-	'Absol Mega Z': {
+	'Absol-Mega Z': {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 65, at: 154, df: 75, sa: 85, sd: 70, sp: 151},
 		weightkg: 47.0,
 		abilities: {0: 'Reaper\'s Embarce'},
 		innates: ['Scare', 'Defiant', 'Bad Luck']
 	},
-	'Staraptor Mega': {
+	'Staraptor-Mega': {
 		types: ['Fighting', 'Flying'],
 		bs: {hp: 85, at: 140, df: 100, sa: 60, sd: 90, sp: 110},
 		weightkg: 24.9,
 		abilities: {0: 'Brute Force'},
 		innates: ['Bird of Prey', 'Feathercoat', 'Adrenaline Rush']
 	},
-	'Garchomp Mega Z': {
+	'Garchomp-Mega Z': {
 		types: ['Dragon'],
 		bs: {hp: 108, at: 130, df: 85, sa: 141, sd: 85, sp: 151},
 		weightkg: 95.0,
 		abilities: {0: 'Sinister Claws'},
 		innates: ['Terminal Velocity', 'Aerialist', 'Sleek Scales']
 	},
-	'Heatran Mega': {
+	'Heatran-Mega': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 430.0,
 		abilities: {0: 'Wildfire'},
 		innates: ['Hellblaze', 'Fire Scales', 'Flame Shield']
 	},
-	'Darkrai Mega': {
+	'Darkrai-Mega': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 50.5,
 		abilities: {0: 'Wildfire'},
 		innates: ['Hellblaze', 'Fire Scales', 'Flame Shield']
 	},
-	'Golurk Mega': {
+	'Golurk-Mega': {
 		types: ['Ground', 'Ghost'],
 		bs: {hp: 89, at: 169, df: 115, sa: 70, sd: 115, sp: 55},
 		weightkg: 330.0,
 		abilities: {0: 'Unstable Core'},
 		innates: ['Relic Stone', 'Power Fists', 'Shadow Shield']
 	},
-	'Meowstic Mega': {
+	'Meowstic-Mega': {
 		types: ['Psychic'],
 		bs: {hp: 84, at: 48, df: 89, sa: 153, sd: 101, sp: 124},
 		weightkg: 8.5,
 		abilities: {0: 'Prankster'},
 		innates: ['Overwhelming Mind', 'Hover', 'Duality']
 	},
-	'Golisopod Mega': {
+	'Golisopod-Mega': {
 		types: ['Bug', 'Steel'],
 		bs: {hp: 75, at: 150, df: 175, sa: 70, sd: 120, sp: 40},
 		weightkg: 108.0,
 		abilities: {0: 'Droideka'},
 		innates: ['Skill Link', 'Bulletproof', 'Galvanize']
 	},
-	'Magearna Mega': {
+	'Magearna-Mega': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 80.5,
 		abilities: {0: 'Wildfire'},
 		innates: ['Hellblaze', 'Fire Scales', 'Flame Shield']
 	},
-	'Zeraora Mega': {
+	'Zeraora-Mega': {
 		types: ['Fire'],
 		bs: {hp: 79, at: 94, df: 113, sa: 144, sd: 120, sp: 85},
 		weightkg: 44.5,
 		abilities: {0: 'Wildfire'},
 		innates: ['Hellblaze', 'Fire Scales', 'Flame Shield']
 	},
-	'Scovillain Mega': {
+	'Scovillain-Mega': {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 65, at: 138, df: 85, sa: 138, sd: 85, sp: 75},
 		weightkg: 15.0,
 		abilities: {0: 'Flaming Jaws'},
 		innates: ['Mob Boss', 'Multi-Headed', 'Ghost Pepper']
 	},
-	'Glimmora Mega': {
+	'Glimmora-Mega': {
 		types: ['Rock', 'Poison'],
 		bs: {hp: 83, at: 90, df: 105, sa: 150, sd: 96, sp: 101},
 		weightkg: 45.0,
 		abilities: {0: 'Corrosion'},
 		innates: ['Toxic Debris', 'Petal Shield', 'Accelerate']
 	},
-	'Tatsugiri Mega': {
+	'Tatsugiri-Mega': {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 68, at: 65, df: 90, sa: 135, sd: 125, sp: 92},
 		weightkg: 8.0,
 		abilities: {0: 'Commander'},
 		innates: ['Multiscale', 'High Tide', '3 > 1']
 	},
-	'Baxcalibur Mega': {
+	'Baxcalibur-Mega': {
 		types: ['Dragon', 'Ice'],
 		bs: {hp: 115, at: 175, df: 117, sa: 105, sd: 101, sp: 87},
 		weightkg: 210.0,
 		abilities: {0: 'Permafrost'},
 		innates: ['Thermal Entropy', 'Frost Dragon', 'Overwhelm']
 	},
-	'Spearow Redux': {
+	'Spearow-Redux': {
 		types: ['Fighting'],
 		bs: {hp: 45, at: 62, df: 29, sa: 26, sd: 32, sp: 68},
 		weightkg: 2.0,
 		abilities: {0: 'Defiant'},
 		innates: ['Flock', 'Deviate', 'Merciless']
 	},
-	'Fearow Redux': {
+	'Fearow-Redux': {
 		types: ['Fighting', 'Dark'],
 		bs: {hp: 85, at: 112, df: 85, sa: 51, sd: 51, sp: 98},
 		weightkg: 38.0,
