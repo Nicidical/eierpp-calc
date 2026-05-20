@@ -13928,7 +13928,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'No Guard'},
 		innates: ['Levitate', 'Dual Wield', 'Soul Eater']
 	},
-	Aegislash: {
+	'Aegislash-Shield': {
 		types: ['Steel', 'Ghost'],
 		bs: {hp: 60, at: 50, df: 140, sa: 50, sd: 140, sp: 60},
 		weightkg: 53.0,
@@ -18604,7 +18604,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sage Power'},
 		innates: ['Psychic Mind', 'Competitive', 'Hyper Aggressive']
 	},
-	'Aegislash Blade': {
+	'Aegislash-Blade': {
 		types: ['Steel', 'Ghost'],
 		bs: {hp: 60, at: 140, df: 50, sa: 140, sd: 50, sp: 60},
 		weightkg: 53.0,
@@ -20172,7 +20172,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Adrenaline Rush'},
 		innates: ['Shadow Tag', 'Dual Wield', 'Stance Change']
 	},
-	'Aegislash Blade-Redux-Mega': {
+	'Aegislash-Blade-Redux-Mega': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 20, df: 40, sa: 200, sd: 200, sp: 70},
 		weightkg: 53.0,
@@ -21180,14 +21180,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Soul Eater'},
 		innates: ['Sweeping Edge', 'Vengeance', 'Cursed Body']
 	},
-	'Aegislash-Redux': {
+	'Aegislash-Shield-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 140, df: 140, sa: 20, sd: 70, sp: 60},
 		weightkg: 53.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Shadow Tag', 'Keen Edge', 'Stance Change']
 	},
-	'Aegislash Blade-Redux': {
+	'Aegislash-Blade-Redux': {
 		types: ['Fighting', 'Ghost'],
 		bs: {hp: 70, at: 20, df: 70, sa: 140, sd: 140, sp: 60},
 		weightkg: 53.0,
