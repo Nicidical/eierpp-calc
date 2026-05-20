@@ -18268,34 +18268,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Egoist'},
 		innates: ['Serene Grace', 'Speed Force', 'Combat Specialist']
 	},
-	'Genesect-Douse-Drive': {
-		types: ['Bug', 'Steel'],
-		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
-		weightkg: 82.5,
-		abilities: {0: 'Download'},
-		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
-	},
-	'Genesect-Shock-Drive': {
-		types: ['Bug', 'Steel'],
-		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
-		weightkg: 82.5,
-		abilities: {0: 'Download'},
-		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
-	},
-	'Genesect-Burn-Drive': {
-		types: ['Bug', 'Steel'],
-		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
-		weightkg: 82.5,
-		abilities: {0: 'Download'},
-		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
-	},
-	'Genesect-Chill-Drive': {
-		types: ['Bug', 'Steel'],
-		bs: {hp: 71, at: 120, df: 95, sa: 120, sd: 95, sp: 99},
-		weightkg: 82.5,
-		abilities: {0: 'Download'},
-		innates: ['Full Metal Body', 'Predator', 'Mega Launcher']
-	},
 	'Greninja-Battle-Bond': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 72, at: 100, df: 67, sa: 103, sd: 71, sp: 122},
@@ -18310,229 +18282,12 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Surprise!'},
 		innates: ['Riptide', 'Skill Link', 'Battle Bond']
 	},
-	'Vivillon-Polar': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Tundra': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Continental': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Gardens': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Elegant': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Meadow': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Modern': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Marine': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Archipelago': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-High-Plains': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Sandstorm': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-River': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Monsoon': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Savanna': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Sun': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Ocean': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Jungle': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Fancy': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Vivillon-Pokéball': {
-		types: ['Bug', 'Flying'],
-		bs: {hp: 85, at: 51, df: 65, sa: 110, sd: 65, sp: 109},
-		weightkg: 17.0,
-		abilities: {0: 'Multiscale'},
-		innates: ['Powder Burst', 'Compound Eyes', 'Aerialist']
-	},
-	'Flabebe-Yellow': {
-		types: ['Fairy'],
-		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
-		weightkg: 0.1,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
-	},
-	'Flabebe-Orange': {
-		types: ['Fairy'],
-		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
-		weightkg: 0.1,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
-	},
-	'Flabebe-Blue': {
-		types: ['Fairy'],
-		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
-		weightkg: 0.1,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
-	},
-	'Flabebe-White': {
-		types: ['Fairy'],
-		bs: {hp: 54, at: 38, df: 59, sa: 61, sd: 79, sp: 32},
-		weightkg: 0.1,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Natural Cure', 'Aroma Veil', 'Flower Gift']
-	},
-	'Floette-Yellow': {
-		types: ['Fairy'],
-		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
-		weightkg: 0.9,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
-	},
-	'Floette-Orange': {
-		types: ['Fairy'],
-		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
-		weightkg: 0.9,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
-	},
-	'Floette-Blue': {
-		types: ['Fairy'],
-		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
-		weightkg: 0.9,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
-	},
-	'Floette-White': {
-		types: ['Fairy'],
-		bs: {hp: 64, at: 45, df: 67, sa: 75, sd: 98, sp: 42},
-		weightkg: 0.9,
-		abilities: {0: 'Flower Veil'},
-		innates: ['Pastel Veil', 'Regenerator', 'Water Veil']
-	},
 	'Floette-Eternal-Flower': {
 		types: ['Fairy'],
 		bs: {hp: 74, at: 65, df: 67, sa: 125, sd: 128, sp: 92},
 		weightkg: 0.9,
 		abilities: {0: 'Energy Tap'},
 		innates: ['Pastel Veil', 'Magic Guard', 'Mystic Power']
-	},
-	'Florges-Yellow': {
-		types: ['Fairy'],
-		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
-		weightkg: 10.0,
-		abilities: {0: 'Harvest'},
-		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
-	},
-	'Florges-Orange': {
-		types: ['Fairy'],
-		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
-		weightkg: 10.0,
-		abilities: {0: 'Harvest'},
-		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
-	},
-	'Florges-Blue': {
-		types: ['Fairy'],
-		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
-		weightkg: 10.0,
-		abilities: {0: 'Harvest'},
-		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
-	},
-	'Florges-White': {
-		types: ['Fairy'],
-		bs: {hp: 88, at: 55, df: 88, sa: 112, sd: 154, sp: 55},
-		weightkg: 10.0,
-		abilities: {0: 'Harvest'},
-		innates: ['Natural Cure', 'Regenerator', 'Self Sufficient']
 	},
 	'Furfrou-Heart': {
 		types: ['Normal'],
@@ -18618,27 +18373,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Shadow Shield'},
 		innates: ['Levitate', 'Keen Edge', 'Stance Change']
 	},
-	'Pumpkaboo-Small': {
-		types: ['Ghost', 'Grass'],
-		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
-		weightkg: 5.0,
-		abilities: {0: 'Frisk'},
-		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
-	},
-	'Pumpkaboo-Large': {
-		types: ['Ghost', 'Grass'],
-		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
-		weightkg: 5.0,
-		abilities: {0: 'Frisk'},
-		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
-	},
-	'Pumpkaboo-Super': {
-		types: ['Ghost', 'Grass'],
-		bs: {hp: 49, at: 44, df: 70, sa: 66, sd: 55, sp: 51},
-		weightkg: 5.0,
-		abilities: {0: 'Frisk'},
-		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
-	},
 	'Gourgeist-Small': {
 		types: ['Ghost', 'Grass'],
 		bs: {hp: 55, at: 58, df: 122, sa: 85, sd: 75, sp: 99},
@@ -18660,13 +18394,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Flare Boost'},
 		innates: ['Insomnia', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Xerneas-Active': {
-		types: ['Fairy'],
-		bs: {hp: 126, at: 131, df: 95, sa: 131, sd: 98, sp: 99},
-		weightkg: 215.0,
-		abilities: {0: 'Pixilate'},
-		innates: ['Fairy Aura', 'Illuminate', 'Soul-Heart']
-	},
 	'Zygarde-10': {
 		types: ['Dragon', 'Ground'],
 		bs: {hp: 74, at: 120, df: 71, sa: 61, sd: 85, sp: 115},
@@ -18680,13 +18407,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		weightkg: 305.0,
 		abilities: {0: 'Aura Break'},
 		innates: ['Primal Maw', 'Earthbound', 'Speed Force']
-	},
-	'Zygarde-50-Power-Construct': {
-		types: ['Dragon', 'Ground'],
-		bs: {hp: 108, at: 100, df: 121, sa: 81, sd: 95, sp: 95},
-		weightkg: 305.0,
-		abilities: {0: 'Aura Break'},
-		innates: ['Primal Armor', 'Earthbound', 'Power Core']
 	},
 	'Zygarde-Complete': {
 		types: ['Dragon', 'Ground'],
@@ -18870,97 +18590,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Unaware'},
 		innates: ['RKS System', 'Primal Armor', 'Regenerator']
 	},
-	'Minior-Orange': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Yellow': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Green': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Blue': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Indigo': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Violet': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 60, df: 100, sa: 60, sd: 100, sp: 60},
-		weightkg: 40.0,
-		abilities: {0: 'Regenerator'},
-		innates: ['Shields Down', 'Shell Armor', 'Overcoat']
-	},
-	'Minior-Core-Red': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Orange': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Yellow': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Green': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Blue': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Indigo': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
-	'Minior-Core-Violet': {
-		types: ['Rock', 'Flying'],
-		bs: {hp: 60, at: 100, df: 60, sa: 100, sd: 60, sp: 120},
-		weightkg: 40.0,
-		abilities: {0: 'Bulletproof'},
-		innates: ['Shields Down', 'Equinox', 'Frisk']
-	},
 	'Mimikyu-Busted': {
 		types: ['Ghost', 'Fairy'],
 		bs: {hp: 55, at: 90, df: 80, sa: 50, sd: 105, sp: 96},
@@ -18968,14 +18597,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Ethereal Rush'},
 		innates: ['Disguise', 'Violent Rush', 'Phantom Pain']
 	},
-	'Dusk-Mane': {
+	'Necrozma-Dusk-Mane': {
 		types: ['Psychic', 'Steel'],
 		bs: {hp: 97, at: 157, df: 127, sa: 113, sd: 109, sp: 77},
 		weightkg: 230.0,
 		abilities: {0: 'Neuroforce'},
 		innates: ['Solar Flare', 'Impenetrable', 'Prism Armor']
 	},
-	'Dawn-Wings': {
+	'Necrozma-Dawn-Wings': {
 		types: ['Psychic', 'Ghost'],
 		bs: {hp: 97, at: 113, df: 109, sa: 157, sd: 127, sp: 77},
 		weightkg: 230.0,
@@ -18988,13 +18617,6 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		weightkg: 230.0,
 		abilities: {0: 'Soul Eater'},
 		innates: ['Beast Boost', 'Neuroforce', 'Levitate']
-	},
-	'Magearna-Original': {
-		types: ['Steel', 'Fairy'],
-		bs: {hp: 80, at: 95, df: 115, sa: 130, sd: 115, sp: 65},
-		weightkg: 80.5,
-		abilities: {0: 'Steelworker'},
-		innates: ['Mirror Armor', 'Soul-Heart', 'Power Core']
 	},
 	'Cramorant-Gulping': {
 		types: ['Flying', 'Water'],
