@@ -599,7 +599,7 @@ function getEndOfTurn(
       damage += Math.floor(defender.maxHP() / 8);
       texts.push('Dry Skin recovery');
     } else if (defender.hasAbility('Rain Dish')) {
-      damage += Math.floor(defender.maxHP() / 16);
+      damage += Math.floor(defender.maxHP() / 8); /* Buffed from 1/16th to 1/8th */
       texts.push('Rain Dish recovery');
     }
   } else if (field.hasWeather('Sand')) {
@@ -643,6 +643,11 @@ function getEndOfTurn(
     !defender.hasAbility('Magic Guard', 'Klutz')) {
     damage -= Math.floor(defender.maxHP() / 8);
     texts.push('Sticky Barb damage');
+  }
+
+  if (defender.hasAbility('Water Veil') && !healBlock) {
+    damage += Math.floor(defender.maxHP() / 16);
+    texts.push('Aqua Ring recovery');
   }
 
   if (field.defenderSide.isSeeded) {

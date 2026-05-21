@@ -39,6 +39,8 @@ export interface MoveData {
   readonly isBullet?: boolean;
   readonly isSound?: boolean;
   readonly isPulse?: boolean;
+  readonly isKick?: boolean;
+  readonly isHammer?: boolean;
   readonly isSlicing?: boolean;
   readonly isWind?: boolean;
 }
@@ -5528,6 +5530,8 @@ class Move implements I.Move {
     'isBullet',
     'isSound',
     'isPulse',
+    'isKick',
+    'isHammer',
     'zp',
     'maxPower',
     'isSlicing',
@@ -5547,6 +5551,8 @@ class Move implements I.Move {
     if (data.isBullet) this.flags.bullet = 1;
     if (data.isSound) this.flags.sound = 1;
     if (data.isPulse) this.flags.pulse = 1;
+    if (data.isKick) this.flags.kick = 1;
+    if (data.isHammer) this.flags.hammer = 1;
     if (data.isSlicing) this.flags.slicing = 1;
     if (data.isWind) this.flags.wind = 1;
 

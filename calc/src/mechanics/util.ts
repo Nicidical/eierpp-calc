@@ -99,19 +99,25 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   // Pledge swamp would get applied here when implemented
   // speedMods.push(1024);
 
-  if ((pokemon.hasAbility('Unburden') && pokemon.abilityOn) ||
-      (pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
+  if (pokemon.hasAbility('Unburden') && pokemon.abilityOn) {
+    speedMods.push(8192);
+  }
+  if ((pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
       (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
       (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
-      (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather)) ||
-      (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric')
-  ) {
-    speedMods.push(8192);
-  } else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
+      (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather))) {
+        speedMods.push(6144); /* Abilities that modify speed in weather/terrain nerfed to 1.5x */
+  }
+  if (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric') {
     speedMods.push(6144);
-  } else if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
+  }
+  if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
+    speedMods.push(6144);
+  }
+  if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
     speedMods.push(2048);
-  } else if (isQPActive(pokemon, field) && getQPBoostedStat(pokemon, gen) === 'spe') {
+  }
+  if (isQPActive(pokemon, field) && getQPBoostedStat(pokemon, gen) === 'spe') {
     speedMods.push(6144);
   }
 
@@ -242,6 +248,9 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
     }
     if (target.hasAbility('Competitive')) {
       target.boosts.spa = Math.min(6, target.boosts.spa + 2);
+    }
+    if (target.hasAbility('Run Away')) {
+      target.boosts.spa = Math.min(6, target.boosts.spe + 1);
     }
   }
 }
