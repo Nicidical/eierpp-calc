@@ -12,12 +12,10 @@ export interface RawDesc {
   attackBoost?: number;
   attackEVs?: string;
   attackerAbility?: string;
-  attackerInnates?: string[];
   attackerItem?: string;
   attackerName: string;
   attackerTera?: string;
   defenderAbility?: string;
-  defenderInnates?: string[];
   defenderItem?: string;
   defenderName: string;
   defenderTera?: string;

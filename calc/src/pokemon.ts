@@ -21,6 +21,7 @@ export class Pokemon implements State.Pokemon {
   innates?: string[];
   abilityOn?: boolean;
   innatesOn?: boolean[];
+  descAbility?: string;
   isDynamaxed?: boolean;
   dynamaxLevel?: number;
   alliesFainted?: number;
@@ -129,11 +130,17 @@ export class Pokemon implements State.Pokemon {
 
   hasAbility(...abilities: string[]) {
     var isTrue = !!(this.ability && abilities.includes(this.ability))
-    if (isTrue) { return isTrue }
+    if (isTrue) {
+      this.descAbility = this.ability
+      return isTrue 
+    }
     else if (this.innates) {
       for (let innate of this.innates) {
         isTrue = !!(innate && abilities.includes(innate))
-        if (isTrue) { return isTrue }
+        if (isTrue) { 
+          this.descAbility = innate
+          return isTrue 
+        }
       }
     }
 
