@@ -1184,8 +1184,6 @@ export function calculateBPModsSMSSSV(
 
   // Use BasePower after moves with custom BP to determine if Technician should boost
   if ((attacker.hasAbility('Technician') && basePower <= 60) ||
-    (attacker.hasAbility('Flare Boost') &&
-      attacker.hasStatus('brn') && move.category === 'Special') ||
     (attacker.hasAbility('Toxic Boost') &&
       attacker.hasStatus('psn', 'tox') && move.category === 'Physical') ||
     (attacker.hasAbility('Mega Launcher') && move.flags.pulse) ||
@@ -1193,6 +1191,13 @@ export function calculateBPModsSMSSSV(
     (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
     (attacker.hasAbility('Sharpness') && move.flags.slicing)
   ) {
+    bpMods.push(6144);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+  }
+
+  /* Flare Boost now activates if Fog is up as well */
+  if ((attacker.hasAbility('Flare Boost') &&
+      attacker.hasStatus('brn') && move.category === 'Special') || field.hasWeather('Fog')) {
     bpMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
   }
@@ -1401,9 +1406,13 @@ export function calculateAtModsSMSSSV(
   ) {
     atMods.push(2048);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
-  } 
-  if ((attacker.hasAbility('Solar Power') &&
-     field.hasWeather('Sun', 'Harsh Sunshine') &&
+  }
+  /* Since we're here, Sand Force does the same thing now. There's also Whiteout for Hail, Raging Storm for Rain, and Ectoplasm for Fog. */
+  if ((((attacker.hasAbility('Solar Power') && field.hasWeather('Sun', 'Harsh Sunshine')) ||
+        (attacker.hasAbility('Raging Storm') && field.hasWeather('Rain', 'Heavy Rain')) ||
+        (attacker.hasAbility('Whiteout') && field.hasWeather('Hail')) ||
+        (attacker.hasAbility('Sand Force') && field.hasWeather('Sand')) ||
+        (attacker.hasAbility('Ectoplasm') && field.hasWeather('Fog'))) &&
      /* Solar Power now boosts highest offense instead of just special moves */
      ((move.category === 'Special' && attacker.stats.atk <= attacker.stats.spa) ||
       (move.category === 'Physical' && attacker.stats.atk >= attacker.stats.spa)))) {
@@ -1411,16 +1420,7 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     desc.weather = field.weather;
   }
-  /* Since we're here, Sand Force does the same thing now */
-  if ((attacker.hasAbility('Sand Force') &&
-     field.hasWeather('Sand') &&
-     /* Sand Force now boosts highest offense instead of just rock, ground, and steel moves */
-     ((move.category === 'Special' && attacker.stats.atk <= attacker.stats.spa) ||
-      (move.category === 'Physical' && attacker.stats.atk >= attacker.stats.spa)))) {
-    atMods.push(6144);
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
-    desc.weather = field.weather;
-  }
+
   if ((attacker.named('Cherrim') &&
      attacker.hasAbility('Flower Gift') &&
      field.hasWeather('Sun', 'Harsh Sunshine') &&
@@ -1443,13 +1443,13 @@ export function calculateAtModsSMSSSV(
   }
 
   /* For all the starter adjacent abilities, since they're all using different types
-  I'm pretty OK just leaving them in one if statement*/
+  I'm pretty OK just leaving them in one (close enough) if statement*/
   if (attacker.curHP() <= attacker.maxHP() / 3) {
-    regModifier = 6144
-    megaModifier = 7372
+    regModifier = 6144 // 1.5x
+    megaModifier = 7372 // 1.8x
   } else {
-    regModifier = 4915
-    megaModifier = 5325
+    regModifier = 4915 // 1.2x
+    megaModifier = 5325 // 1.3x
   }
   /* New one for Ghost, Ground, Electric, Psychic, Flying, Fighting, Rock, and Dark */
   if ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
@@ -1466,7 +1466,19 @@ export function calculateAtModsSMSSSV(
       (attacker.hasAbility('Foul Energy') && move.hasType('Dark'))) {
         atMods.push(regModifier);
         desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
-      }
+  }
+  /* There are "mega" versions, which use megaModifier rather than regModifier */
+  if ((attacker.hasAbility('Forest Rage') && move.hasType('Grass')) ||
+      (attacker.hasAbility('Hellblaze') && move.hasType('Fire')) ||
+      (attacker.hasAbility('Riptide') && move.hasType('Water')) ||
+      (attacker.hasAbility('Purgatory') && move.hasType('Ghost')) ||
+      (attacker.hasAbility('Overwhelming Mind') && move.hasType('Psychic')) ||
+      (attacker.hasAbility('Gladiator') && move.hasType('Fighting')) ||
+      (attacker.hasAbility('We Will Rock You') && move.hasType('Rock'))) {
+        atMods.push(megaModifier);
+        desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+  }
+
   if (move.category === 'Special' && attacker.abilityOn && attacker.hasAbility('Plus', 'Minus')) {
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
