@@ -344,7 +344,7 @@ export function checkMultihitBoost(
     } else {
       attacker.boosts.spe = Math.max(attacker.boosts.spe - 1, -6);
       attacker.stats.spe = getFinalSpeed(gen, attacker, field, field.attackerSide);
-      desc.defenderAbility = defender.ability;
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
     }
     // BUG: Technically Sitrus/Figy Berry + Unburden can also affect the defender's speed, but
     // this goes far beyond what we care to implement (especially once Gluttony is considered) now
@@ -362,10 +362,10 @@ export function checkMultihitBoost(
     (defender.hasItem('Kee Berry') && move.category === 'Physical')) {
     const defStat = defender.hasItem('Kee Berry') ? 'def' : 'spd';
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = attacker.ability;
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     } else {
       if (defender.hasAbility('Contrary')) {
-        desc.defenderAbility = defender.ability;
+        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
         if (defender.hasItem('White Herb') && !defenderUsedItem) {
           desc.defenderItem = defender.item;
           defenderUsedItem = true;
@@ -375,7 +375,7 @@ export function checkMultihitBoost(
       } else {
         defender.boosts[defStat] = Math.min(6, defender.boosts[defStat] + defSimple);
       }
-      if (defSimple === 2) desc.defenderAbility = defender.ability;
+      if (defSimple === 2) desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
       defender.stats[defStat] = getModifiedStat(defender.rawStats[defStat],
         defender.boosts[defStat],
         gen);
@@ -393,23 +393,23 @@ export function checkMultihitBoost(
 
   if (defender.hasAbility('Stamina')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = attacker.ability;
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 1, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      desc.defenderAbility = defender.ability;
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
     }
   } else if (defender.hasAbility('Water Compaction') && move.hasType('Water')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = attacker.ability;
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 2, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      desc.defenderAbility = defender.ability;
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
     }
   } else if (defender.hasAbility('Weak Armor')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = attacker.ability;
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     } else {
       if (defender.hasItem('White Herb') && !defenderUsedItem && defender.boosts.def === 0) {
         desc.defenderItem = defender.item;
@@ -418,7 +418,7 @@ export function checkMultihitBoost(
         defender.boosts.def = Math.max(defender.boosts.def - 1, -6);
         defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
       }
-      desc.defenderAbility = defender.ability;
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
     }
     defender.boosts.spe = Math.min(defender.boosts.spe + 2, 6);
     defender.stats.spe = getFinalSpeed(gen, defender, field, field.defenderSide);
@@ -426,7 +426,7 @@ export function checkMultihitBoost(
 
   if (move.dropsStats) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = attacker.ability;
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
     } else {
       // No move with dropsStats has fancy logic regarding category here
       const stat = move.category === 'Special' ? 'spa' : 'atk';
@@ -434,11 +434,11 @@ export function checkMultihitBoost(
       let boosts = attacker.boosts[stat];
       if (attacker.hasAbility('Contrary')) {
         boosts = Math.min(6, boosts + move.dropsStats);
-        desc.attackerAbility = attacker.ability;
+        desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
       } else {
         boosts = Math.max(-6, boosts - move.dropsStats * atkSimple);
       }
-      if (atkSimple === 2) desc.attackerAbility = attacker.ability;
+      if (atkSimple === 2) desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
 
       if (attacker.hasItem('White Herb') && attacker.boosts[stat] < 0 && !attackerUsedItem) {
         boosts += move.dropsStats * atkSimple;
@@ -457,7 +457,7 @@ export function checkMultihitBoost(
     attacker.ability = defender.ability;
     // If attacker ability is notable, then ability swap is notable.
     if (desc.attackerAbility) {
-      desc.defenderAbility = defender.ability;
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
     }
     if (defender.hasAbility('Wandering Spirit')) {
       defender.ability = oldAttackerAbility;
@@ -611,7 +611,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
     stabMod += 2048;
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
     stabMod += 2048;
-    desc.attackerAbility = pokemon.ability;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility);
   }
   const teraType = pokemon.teraType;
   if (teraType === move.type && teraType !== 'Stellar') {
@@ -620,7 +620,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   }
   if (pokemon.hasAbility('Adaptability') && pokemon.hasType(move.type)) {
     stabMod += teraType && pokemon.hasOriginalType(teraType) ? 1024 : 2048;
-    desc.attackerAbility = pokemon.ability;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility);
   }
   return stabMod;
 }
