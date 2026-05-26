@@ -1237,6 +1237,10 @@ export function calculateBPModsSMSSSV(
       bpMods.push(5448);
       if (isAttackerAura) desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
       if (isDefenderAura) desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+      if (!isAttackerAura && !isDefenderAura) {
+        if (isFieldFairyAura) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Fairy Aura', desc, 'a'); }
+        if (isFieldDarkAura) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Dark Aura', desc, 'a'); }
+      }
     }
   }
 
