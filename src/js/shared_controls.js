@@ -1279,6 +1279,8 @@ function createField() {
 	var isReflect = [$("#reflectL").prop("checked"), $("#reflectR").prop("checked")];
 	var isLightScreen = [$("#lightScreenL").prop("checked"), $("#lightScreenR").prop("checked")];
 	var isProtected = [$("#protectL").prop("checked"), $("#protectR").prop("checked")];
+	var isConfused = [$("#confusedL").prop("checked"), $("#confusedR").prop("checked")];
+	var isEnraged = [$("#enragedL").prop("checked"), $("#enragedR").prop("checked")];
 	var isSeeded = [$("#leechSeedL").prop("checked"), $("#leechSeedR").prop("checked")];
 	var isSaltCured = [$("#saltCureL").prop("checked"), $("#saltCureR").prop("checked")];
 	var isForesight = [$("#foresightL").prop("checked"), $("#foresightR").prop("checked")];
@@ -1307,6 +1309,8 @@ function createField() {
 			isReflect: isReflect[i],
 			isLightScreen: isLightScreen[i],
 			isProtected: isProtected[i],
+			isConfused: isConfused[i],
+			isEnraged: isEnraged[i],
 			isSeeded: isSeeded[i],
 			isSaltCured: isSaltCured[i],
 			isForesight: isForesight[i],
@@ -1595,6 +1599,10 @@ function clearField() {
 	$("#lightScreenR").prop("checked", false);
 	$("#protectL").prop("checked", false);
 	$("#protectR").prop("checked", false);
+	$("#confusedL").prop("checked", false);
+	$("#confusedR").prop("checked", false);
+	$("#enragedL").prop("checked", false);
+	$("#enragedR").prop("checked", false);
 	$("#leechSeedL").prop("checked", false);
 	$("#leechSeedR").prop("checked", false);
 	$("#flowerGiftL").prop("checked", false);

@@ -83,6 +83,8 @@ export class Side implements State.Side {
   isReflect: boolean;
   isLightScreen: boolean;
   isProtected: boolean;
+  isConfused: boolean;
+  isEnraged: boolean;
   isSeeded: boolean;
   isSaltCured: boolean;
   isForesight: boolean;
@@ -109,6 +111,8 @@ export class Side implements State.Side {
     this.isReflect = !!side.isReflect;
     this.isLightScreen = !!side.isLightScreen;
     this.isProtected = !!side.isProtected;
+    this.isConfused = !!side.isConfused;
+    this.isEnraged = !!side.isEnraged;
     this.isSeeded = !!side.isSeeded;
     this.isSaltCured = !!side.isSaltCured;
     this.isForesight = !!side.isForesight;

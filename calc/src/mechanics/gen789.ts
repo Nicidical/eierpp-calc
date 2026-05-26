@@ -180,7 +180,7 @@ export function calculateSMSSSV(
     'Sand Veil', 'Sap Sipper', 'Shell Armor', 'Shield Dust',
     'Simple', 'Snow Cloak', 'Solid Rock', 'Soundproof',
     'Sticky Hold', 'Storm Drain', 'Sturdy', 'Suction Cups',
-    'Sweet Veil', 'Tangled Feet', 'Telepathy', 'Tera Shell',
+    'Sweet Veil', 'Telepathy', 'Tera Shell',
     'Thermal Exchange', 'Thick Fat', 'Unaware', 'Vital Spirit',
     'Volt Absorb', 'Water Absorb', 'Water Bubble', 'Water Veil',
     'Well-Baked Body', 'White Smoke', 'Wind Rider', 'Wonder Guard',
@@ -1639,7 +1639,15 @@ export function calculateDefenseSMSSSV(
 ) {
   let defense: number;
   const hitsPhysical = move.overrideDefensiveStat === 'def' || move.category === 'Physical';
-  const defenseStat = hitsPhysical ? 'def' : 'spd';
+  const defenseStat = hitsPhysical ? 'def'
+  : (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) ? 'spe'
+  : 'spd';
+
+  /* Even though we checked for the abils that change the def stat, we still need to apply them to the desc */
+  if (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) {
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
   desc.defenseEVs = getStatDescriptionText(
     gen, defender, defenseStat, field.defenderSide.isPowerTrick, field.isWonderRoom
   );

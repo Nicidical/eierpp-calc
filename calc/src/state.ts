@@ -68,6 +68,8 @@ export namespace State {
     isReflect?: boolean;
     isLightScreen?: boolean;
     isProtected?: boolean;
+    isConfused?: boolean;
+    isEnraged?: boolean;
     isSeeded?: boolean;
     isSaltCured?: boolean;
     isForesight?: boolean;
