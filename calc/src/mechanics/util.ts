@@ -724,10 +724,12 @@ export function addSpacedStr(a: string | undefined, b: string | undefined, c: Ra
   if (b) {
     if (d === 'a') {
       if (c.attackerAbilityList && !c.attackerAbilityList.includes(b)) { c.attackerAbilityList.push(b); }
-      else { c.attackerAbilityList = [b]; }
+      else if (!c.attackerAbilityList) { c.attackerAbilityList = [b]; }
+      else { return a ? a : ''; }
     } else {
       if (c.defenderAbilityList && !c.defenderAbilityList.includes(b)) { c.defenderAbilityList.push(b); }
-      else { c.defenderAbilityList = [b]; }
+      else if (!c.defenderAbilityList) { c.defenderAbilityList = [b]; }
+      else { return a ? a : ''; }
     }
     return a ? a + ' ' + b : b;
   }
