@@ -12,10 +12,12 @@ export interface RawDesc {
   attackBoost?: number;
   attackEVs?: string;
   attackerAbility?: string;
+  attackerAbilityList?: string[]; // To prevent a weird bug with multihit moves
   attackerItem?: string;
   attackerName: string;
   attackerTera?: string;
   defenderAbility?: string;
+  defenderAbilityList?: string[]; // To prevent a weird bug with multihit moves
   defenderItem?: string;
   defenderName: string;
   defenderTera?: string;

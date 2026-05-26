@@ -353,7 +353,7 @@ export function checkMultihitBoost(
     } else {
       attacker.boosts.spe = Math.max(attacker.boosts.spe - 1, -6);
       attacker.stats.spe = getFinalSpeed(gen, attacker, field, field.attackerSide);
-      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
     }
     // BUG: Technically Sitrus/Figy Berry + Unburden can also affect the defender's speed, but
     // this goes far beyond what we care to implement (especially once Gluttony is considered) now
@@ -371,10 +371,10 @@ export function checkMultihitBoost(
     (defender.hasItem('Kee Berry') && move.category === 'Physical')) {
     const defStat = defender.hasItem('Kee Berry') ? 'def' : 'spd';
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
     } else {
       if (defender.hasAbility('Contrary')) {
-        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
         if (defender.hasItem('White Herb') && !defenderUsedItem) {
           desc.defenderItem = defender.item;
           defenderUsedItem = true;
@@ -384,7 +384,7 @@ export function checkMultihitBoost(
       } else {
         defender.boosts[defStat] = Math.min(6, defender.boosts[defStat] + defSimple);
       }
-      if (defSimple === 2) desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      if (defSimple === 2) desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
       defender.stats[defStat] = getModifiedStat(defender.rawStats[defStat],
         defender.boosts[defStat],
         gen);
@@ -402,23 +402,23 @@ export function checkMultihitBoost(
 
   if (defender.hasAbility('Stamina')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 1, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
     }
   } else if (defender.hasAbility('Water Compaction') && move.hasType('Water')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
     } else {
       defender.boosts.def = Math.min(defender.boosts.def + 2, 6);
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
-      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
     }
   } else if (defender.hasAbility('Weak Armor')) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
     } else {
       if (defender.hasItem('White Herb') && !defenderUsedItem && defender.boosts.def === 0) {
         desc.defenderItem = defender.item;
@@ -427,7 +427,7 @@ export function checkMultihitBoost(
         defender.boosts.def = Math.max(defender.boosts.def - 1, -6);
         defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
       }
-      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
     }
     defender.boosts.spe = Math.min(defender.boosts.spe + 2, 6);
     defender.stats.spe = getFinalSpeed(gen, defender, field, field.defenderSide);
@@ -435,7 +435,7 @@ export function checkMultihitBoost(
 
   if (move.dropsStats) {
     if (attacker.hasAbility('Unaware')) {
-      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
     } else {
       // No move with dropsStats has fancy logic regarding category here
       const stat = move.category === 'Special' ? 'spa' : 'atk';
@@ -443,11 +443,11 @@ export function checkMultihitBoost(
       let boosts = attacker.boosts[stat];
       if (attacker.hasAbility('Contrary')) {
         boosts = Math.min(6, boosts + move.dropsStats);
-        desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+        desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
       } else {
         boosts = Math.max(-6, boosts - move.dropsStats * atkSimple);
       }
-      if (atkSimple === 2) desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility);
+      if (atkSimple === 2) desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc.attackerAbilityList);
 
       if (attacker.hasItem('White Herb') && attacker.boosts[stat] < 0 && !attackerUsedItem) {
         boosts += move.dropsStats * atkSimple;
@@ -466,7 +466,7 @@ export function checkMultihitBoost(
     attacker.ability = defender.ability;
     // If attacker ability is notable, then ability swap is notable.
     if (desc.attackerAbility) {
-      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc.defenderAbilityList);
     }
     if (defender.hasAbility('Wandering Spirit')) {
       defender.ability = oldAttackerAbility;
@@ -620,7 +620,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
     stabMod += 2048;
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
     stabMod += 2048;
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc.attackerAbilityList);
   }
   const teraType = pokemon.teraType;
   if (teraType === move.type && teraType !== 'Stellar') {
@@ -629,7 +629,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   }
   if (pokemon.hasAbility('Adaptability') && pokemon.hasType(move.type)) {
     stabMod += teraType && pokemon.hasOriginalType(teraType) ? 1024 : 2048;
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc.attackerAbilityList);
   }
   return stabMod;
 }
@@ -719,8 +719,8 @@ export function OF32(n: number) {
   return n > 4294967295 ? n % 4294967296 : n;
 }
 
-export function addSpacedStr(a: string | undefined, b: string | undefined) {
-  if (b) {
+export function addSpacedStr(a: string | undefined, b: string | undefined, c: string[] | undefined) {
+  if (b && ((c && !c.includes(b)) || !c)) {
     return a ? a + ' ' + b : b;
   }
   return '';
