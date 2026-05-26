@@ -1331,6 +1331,8 @@ function createField() {
 	return new calc.Field({
 		gameType: gameType,
 		terrain: terrain,
+		isFairyAura: isFairyAura,
+		isDarkAura: isDarkAura,
 		isBeadsOfRuin: isBeadsOfRuin,
 		isTabletsOfRuin: isTabletsOfRuin,
 		isSwordOfRuin: isSwordOfRuin,

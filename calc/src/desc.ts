@@ -27,6 +27,8 @@ export interface RawDesc {
   alliesFainted?: number;
   dwc?: boolean;
   isStellarFirstUse?: boolean;
+  isFairyAura?: boolean;
+  isDarkAura?: boolean;
   isBeadsOfRuin?: boolean;
   isSwordOfRuin?: boolean;
   isTabletsOfRuin?: boolean;
@@ -1006,6 +1008,14 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
 
   if (description.isStellarFirstUse) {
     output += '(First Use) ';
+  }
+  
+  if (description.isFairyAura) {
+    output += 'Fairy Aura ';
+  }
+  
+  if (description.isDarkAura) {
+    output += 'Dark Aura ';
   }
 
   if (description.isBeadsOfRuin) {
