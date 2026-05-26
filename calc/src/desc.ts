@@ -592,7 +592,8 @@ function getEndOfTurn(
     );
 
   if (field.hasWeather('Sun', 'Harsh Sunshine')) {
-    if (defender.hasAbility('Dry Skin', 'Solar Power')) {
+    /* Solar Power doesn't take 1/8th HP in sun */
+    if (defender.hasAbility('Dry Skin')) {
       damage -= Math.floor(defender.maxHP() / 8);
       texts.push(defender.ability + ' damage');
     }
@@ -615,7 +616,8 @@ function getEndOfTurn(
     }
   } else if (field.hasWeather('Hail', 'Snow')) {
     if (defender.hasAbility('Ice Body') && !healBlock) {
-      damage += Math.floor(defender.maxHP() / 16);
+      /* Ice Body buffed to 1/8th HP per turn */
+      damage += Math.floor(defender.maxHP() / 8);
       texts.push('Ice Body recovery');
     } else if (
       !defender.hasType('Ice') &&
@@ -709,10 +711,8 @@ function getEndOfTurn(
       texts.push('toxic damage');
     }
   } else if (defender.hasStatus('brn')) {
-    if (defender.hasAbility('Heatproof')) {
-      damage -= Math.floor(defender.maxHP() / (gen.num === 0 || gen.num > 6 ? 32 : 16));
-      texts.push('reduced burn damage');
-    } else if (!defender.hasAbility('Magic Guard')) {
+    /* Heatproof fully negates burn damage */
+    if (!(defender.hasAbility('Heatproof') || defender.hasAbility('Magic Guard'))) {
       damage -= Math.floor(defender.maxHP() / (gen.num < 2 || gen.num > 6 ? 16 : 8));
       texts.push('burn damage');
     }
@@ -721,7 +721,8 @@ function getEndOfTurn(
     attacker.hasAbility('Bad Dreams') &&
     !defender.hasAbility('Magic Guard')
   ) {
-    damage -= Math.floor(defender.maxHP() / 8);
+    /* Bad Dreams buffed to 1/4th HP */
+    damage -= Math.floor(defender.maxHP() / 4);
     texts.push('Bad Dreams');
   }
 

@@ -35,6 +35,7 @@ import {
   getBaseDamage,
   getStatDescriptionText,
   getFinalDamage,
+  getFinalSpeed,
   getModifiedStat,
   getQPBoostedStat,
   getMoveEffectiveness,
@@ -401,7 +402,8 @@ export function calculateSMSSSV(
     defender.types[0],
     isGhostRevealed,
     field.isGravity,
-    isRingTarget
+    isRingTarget,
+    isNormalize
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -410,7 +412,8 @@ export function calculateSMSSSV(
       defender.types[1],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      isNormalize
     )
     : 1;
 
@@ -423,7 +426,8 @@ export function calculateSMSSSV(
       defender.teraType,
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      isNormalize
     );
   }
 
@@ -1136,6 +1140,7 @@ export function calculateBPModsSMSSSV(
       field.defenderSide.isForesight;
     const isRingTarget =
       defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
+    const isNormalize = attacker.hasAbility('Normalize');
     const types = defender.teraType && defender.teraType !== 'Stellar'
       ? [defender.teraType] : defender.types;
     const type1Effectiveness = getMoveEffectiveness(
@@ -1144,7 +1149,8 @@ export function calculateBPModsSMSSSV(
       types[0],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      isNormalize
     );
     const type2Effectiveness = types[1] ? getMoveEffectiveness(
       gen,
@@ -1152,7 +1158,8 @@ export function calculateBPModsSMSSSV(
       types[1],
       isGhostRevealed,
       field.isGravity,
-      isRingTarget
+      isRingTarget,
+      isNormalize
     ) : 1;
     if (type1Effectiveness * type2Effectiveness >= 2) {
       bpMods.push(5461);
@@ -1272,10 +1279,14 @@ export function calculateBPModsSMSSSV(
   // However, Max Moves also don't boost -ate Abilities
   /* if (!move.isMax && hasAteAbilityTypeChange) {
     bpMods.push(4915);
-  } No more power boost on -ate moves */
+  } No more power boost on -ate moves...with the exception of Normalize */
+  if (attacker.hasAbility('Normalize')) {
+    bpMods.push(4506);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
 
-  /* TODO: Once enraged is added, make it so that enraged always triggers this too */
-  if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage))) {
+  /* Enraged also triggers this */
+  if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage || field.attackerSide.isEnraged))) {
     bpMods.push(4915);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1918,8 +1929,21 @@ export function calculateFinalModsSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (defender.hasAbility('Solid Rock', 'Filter', 'Prism Armor') && typeEffectiveness > 1) {
-    finalMods.push(3072);
+  if (defender.hasAbility('Stall') && getFinalSpeed(gen, attacker, field, field.attackerSide) > getFinalSpeed(gen, attacker, field, field.defenderSide)) {
+    finalMods.push(2867);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
+  if (defender.hasAbility('Filter') && typeEffectiveness > 1) {
+    finalMods.push(2662);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+  if (defender.hasAbility('Solid Rock') && typeEffectiveness > 1) {
+    finalMods.push(2662);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+  if (defender.hasAbility('Prism Armor') && typeEffectiveness > 1) {
+    finalMods.push(2662);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 

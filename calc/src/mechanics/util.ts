@@ -149,6 +149,7 @@ export function getMoveEffectiveness(
   isGhostRevealed?: boolean,
   isGravity?: boolean,
   isRingTarget?: boolean,
+  isNormalize?: boolean,
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -157,6 +158,9 @@ export function getMoveEffectiveness(
   } else if (move.named('Freeze-Dry') && type === 'Water') {
     return 2;
   } else if (move.named('Nihil Light') && type === 'Fairy') {
+    return 1;
+  /* Normalize Ignores Resists (Ghosts are still immune) */
+  } else if (isNormalize && (type === 'Rock' || type === 'Steel')) {
     return 1;
   } else {
     let effectiveness = gen.types.get(toID(move.type))!.effectiveness[type]!;

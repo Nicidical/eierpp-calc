@@ -97,6 +97,7 @@ export interface MoveFlags {
   wind?: 1 | 0;
   kick?: 1 | 0;
   hammer?: 1 | 0;
+  field?: 1 | 0;
 }
 
 export interface SelfOrSecondaryEffect {

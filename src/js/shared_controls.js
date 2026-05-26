@@ -1259,6 +1259,8 @@ function createField() {
 	var isMagicRoom = $("#magicroom").prop("checked");
 	var isWonderRoom = $("#wonderroom").prop("checked");
 	var isGravity = $("#gravity").prop("checked");
+	var isFairyAura = $("#fairyaura").prop("checked");
+	var isDarkAura = $("#darkaura").prop("checked");
 	var isDWC = [$("#dwcL").prop("checked"), $("#dwcR").prop("checked")];
 	var isSR = [$("#srL").prop("checked"), $("#srR").prop("checked")];
 	var weather;
@@ -1575,6 +1577,8 @@ function clearField() {
 	$("#magicroom").prop("checked", false);
 	$("#wonderroom").prop("checked", false);
 	$("#gravity").prop("checked", false);
+	$("#fairyaura").prop("checked", false);
+	$("#darkaura").prop("checked", false);
 	$("#dwcL").prop("checked", true);
 	$("#dwcR").prop("checked", true);
 	$("#srL").prop("checked", false);
