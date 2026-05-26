@@ -720,9 +720,11 @@ export function OF32(n: number) {
 }
 
 export function addSpacedStr(a: string | undefined, b: string | undefined, c: string[] | undefined) {
+  console.log(c);
   if (b && ((c && !c.includes(b)) || !c)) {
-    if (c) { console.log(c); c.push(b); }
+    if (c) { c.push(b); }
     else { c = [b]; }
+    
     return a ? a + ' ' + b : b;
   }
   return '';
