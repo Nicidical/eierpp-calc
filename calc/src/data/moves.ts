@@ -44,6 +44,7 @@ export interface MoveData {
   readonly isField?: boolean;
   readonly isSlicing?: boolean;
   readonly isWind?: boolean;
+  readonly isHeal?: boolean;
 }
 
 const RBY: {[name: string]: MoveData} = {
@@ -10768,6 +10769,7 @@ class Move implements I.Move {
     'isPulse',
     'isKick',
     'isHammer',
+    'isHeal',
     'zp',
     'maxPower',
     'isSlicing',
@@ -10792,6 +10794,7 @@ class Move implements I.Move {
     if (data.isField) this.flags.field = 1;
     if (data.isSlicing) this.flags.slicing = 1;
     if (data.isWind) this.flags.wind = 1;
+    if (data.isHeal) this.flags.heal = 1;
 
     assignWithout(this, data, Move.FLAGS);
 

@@ -436,7 +436,7 @@ export function calculateSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (move.hasType(getThirdType(attacker))) { 
+  if (move.hasType(getThirdType(attacker)) && !['???', attacker.types[0], attacker.types[1]].includes(getThirdType(attacker))) { 
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   
@@ -652,11 +652,15 @@ export function calculateSMSSSV(
     isCritical
   );
 
-  // FIXME: this is incorrect, should be move.flags.heal, not move.drain
-  if ((attacker.hasAbility('Triage') && move.drain) ||
-      (attacker.hasAbility('Gale Wings') &&
-       move.hasType('Flying') &&
-       attacker.curHP() === attacker.maxHP())) {
+  if ((attacker.hasAbility('Triage') && move.flags.heal)) {
+    move.priority += 3;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  /* All of the type based priority moves */
+  if (((attacker.hasAbility('Gale Wings') && move.hasType('Flying')) ||
+       (attacker.hasAbility('Flaming Soul') && move.hasType('Fire'))) &&
+       attacker.curHP() === attacker.maxHP()
+  ) {
     move.priority = 1;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1222,14 +1226,11 @@ export function calculateBPModsSMSSSV(
   // Abilities
 
   // Use BasePower after moves with custom BP to determine if Technician should boost
-  if ((attacker.hasAbility('Technician') && basePower <= 60) ||
-    (attacker.hasAbility('Toxic Boost') &&
-      attacker.hasStatus('psn', 'tox') && move.category === 'Physical') ||
-    (attacker.hasAbility('Mega Launcher') && move.flags.pulse) ||
-    (attacker.hasAbility('Strong Jaw') && move.flags.bite) ||
-    (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
-    (attacker.hasAbility('Sharpness') && move.flags.slicing)
-  ) {
+  if ((attacker.hasAbility('Technician') && basePower <= 60)) {
+    bpMods.push(6144);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  if (attacker.hasAbility('Toxic Boost') && attacker.hasStatus('psn', 'tox') && move.category === 'Physical') {
     bpMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1282,6 +1283,26 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   if (attacker.hasAbility('Big Pecks') && move.flags.contact) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Mega Launcher') && move.flags.pulse) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Strong Jaw') && move.flags.bite) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Keen Edge') && move.flags.slicing) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
