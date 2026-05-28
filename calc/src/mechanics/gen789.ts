@@ -371,7 +371,7 @@ export function calculateSMSSSV(
       type = 'Flying';
     } else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal)) {
       type = 'Electric';
-    } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
+    } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound && normal)) {
       type = 'Water';
     } else if ((isPixilate = attacker.hasAbility('Pixilate') && normal)) {
       type = 'Fairy';
@@ -386,9 +386,9 @@ export function calculateSMSSSV(
     }
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDraconize || isSteelworker) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-      hasAteAbilityTypeChange = true;
     } else if (isLiquidVoice) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+      hasAteAbilityTypeChange = true;
     }
   }
 
@@ -403,7 +403,8 @@ export function calculateSMSSSV(
       field.defenderSide.isForesight;
   const isRingTarget =
     defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
-  const defIsSteelworker = defender.hasAbility('Steelworker');
+  const defIsSteelworker = defender.hasAbility('Steelworker') && defender.hasType('Steel');
+  const isCorrosion = attacker.hasAbility('Corrosion')
 
   const type1Effectiveness = getMoveEffectiveness(
     gen,
@@ -413,7 +414,8 @@ export function calculateSMSSSV(
     field.isGravity,
     isRingTarget,
     isNormalize,
-    defIsSteelworker
+    defIsSteelworker,
+    isCorrosion
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -424,7 +426,8 @@ export function calculateSMSSSV(
       field.isGravity,
       isRingTarget,
       isNormalize,
-      defIsSteelworker
+      defIsSteelworker,
+      isCorrosion
     )
     : 1;
 
@@ -437,7 +440,8 @@ export function calculateSMSSSV(
       field.isGravity,
       isRingTarget,
       isNormalize,
-      defIsSteelworker
+      defIsSteelworker,
+      isCorrosion
     )
     : 1;
 
@@ -450,8 +454,12 @@ export function calculateSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (defender.hasType('Steel') && move.hasType('Dark', 'Ghost') && defIsSteelworker) {
-    desc.defenderAbility = addSpacedStr(desc.defenderAbility, "STEELWORKER!", desc, 'd');
+  if (move.hasType('Dark', 'Ghost') && defIsSteelworker) {
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
+  if (move.hasType('Poison') && isCorrosion) {
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   
   if (defender.teraType && defender.teraType !== 'Stellar') {
@@ -463,7 +471,8 @@ export function calculateSMSSSV(
       field.isGravity,
       isRingTarget,
       isNormalize,
-      defIsSteelworker
+      defIsSteelworker,
+      isCorrosion
     );
   }
 
@@ -784,7 +793,7 @@ export function calculateSMSSSV(
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
         attacker.hasAbility(
-          'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Draconize', 'Steelworker'
+          'Liquid Voice'
         );
 
       if (move.timesUsed! > 1) {
@@ -1201,7 +1210,8 @@ export function calculateBPModsSMSSSV(
     const isRingTarget =
       defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
     const isNormalize = attacker.hasAbility('Normalize');
-    const defIsSteelworker = defender.hasAbility('Steelworker');
+    const isCorrosion = attacker.hasAbility('Corrosion');
+    const defIsSteelworker = defender.hasAbility('Steelworker') && defender.hasType('Steel');
     const types = defender.teraType && defender.teraType !== 'Stellar'
       ? [defender.teraType] : defender.types;
     const type1Effectiveness = getMoveEffectiveness(
@@ -1212,7 +1222,8 @@ export function calculateBPModsSMSSSV(
       field.isGravity,
       isRingTarget,
       isNormalize,
-      defIsSteelworker
+      defIsSteelworker,
+      isCorrosion
     );
     const type2Effectiveness = types[1] ? getMoveEffectiveness(
       gen,
@@ -1222,7 +1233,8 @@ export function calculateBPModsSMSSSV(
       field.isGravity,
       isRingTarget,
       isNormalize,
-      defIsSteelworker
+      defIsSteelworker,
+      isCorrosion
     ) : 1;
     if (type1Effectiveness * type2Effectiveness >= 2) {
       bpMods.push(5461);
@@ -1304,6 +1316,11 @@ export function calculateBPModsSMSSSV(
     }
   }
 
+  if (attacker.hasAbility('Long Reach') && !move.flags.contact) {
+    bpMods.push(4915);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
   // Sheer Force does not power up max moves or remove the effects (SadisticMystic)
   if ((attacker.hasAbility('Sheer Force') && (move.secondaries || move.named('Electro Shot', 'Order Up')) && !move.isMax)) {
     bpMods.push(5325);
@@ -1383,9 +1400,12 @@ export function calculateBPModsSMSSSV(
 
   // The -ate abilities already changed move typing earlier, so most checks are done and desc is set
   // However, Max Moves also don't boost -ate Abilities
-  /* if (!move.isMax && hasAteAbilityTypeChange) {
+
+  if (!move.isMax && hasAteAbilityTypeChange) {
     bpMods.push(4915);
-  } No more power boost on -ate moves...with the exception of Normalize */
+  } /* No more power boost on -ate moves...with the exception of Normalize */
+  /* As a result, the variable has been repurposed to boost the Sound abils (Liquid Voice, etc.) */
+
   if (attacker.hasAbility('Normalize')) {
     bpMods.push(4506);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
