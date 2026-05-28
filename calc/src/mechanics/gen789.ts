@@ -184,7 +184,8 @@ export function calculateSMSSSV(
     'Sticky Hold', 'Storm Drain', 'Sturdy', 'Suction Cups',
     'Sweet Veil', 'Telepathy', 'Tera Shell',
     'Thermal Exchange', 'Thick Fat', 'Unaware', 'Vital Spirit',
-    'Volt Absorb', 'Water Absorb', 'Water Bubble', 'Water Veil',
+    'Volt Absorb', 'Water Absorb', 'Water Bubble', 'Water Compaction',
+    'Water Veil',
     'Well-Baked Body', 'White Smoke', 'Wind Rider', 'Wonder Guard',
     'Wonder Skin'
   );
@@ -241,7 +242,9 @@ export function calculateSMSSSV(
   // Merciless does not ignore Shell Armor, damage dealt to a poisoned Pokemon with Shell Armor
   // will not be a critical hit (UltiMario)
   const isCritical = !defender.hasAbility('Battle Armor', 'Shell Armor') &&
-    (move.isCrit || (attacker.hasAbility('Merciless') && defender.hasStatus('psn', 'tox'))) &&
+    (move.isCrit || 
+    (attacker.hasAbility('Merciless') && /* Merciless now works against foes who are paralyzed/bleeding/speed dropped */
+    (defender.hasStatus('psn', 'tox', 'par', 'bld')) || defender.boosts['spe'] < 0)) &&
     move.timesUsed === 1;
 
   let type = move.type;
@@ -683,7 +686,15 @@ export function calculateSMSSSV(
     move.category === 'Physical' &&
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
+  const applyFrostbite = 
+    attacker.hasStatus('frz') &&
+    move.category === 'Special' &&
+    !attacker.hasAbility('Determination') &&
+    !move.named('Bravado');
   desc.isBurned = applyBurn;
+  desc.isFrostbitten = applyFrostbite;
+
+  const applyStatus = applyBurn || applyFrostbite;
   const finalMods = calculateFinalModsSMSSSV(
     gen,
     attacker,
@@ -712,8 +723,8 @@ export function calculateSMSSSV(
   let childDamage: number[] | undefined;
   if (attacker.hasAbility('Parental Bond') && move.hits === 1 && !isSpread) {
     const child = attacker.clone();
-    
-    /* Need to check which innate slot the ability is...or if it is the ability slot */
+
+    /* Need to check which innate slot the ability is in...or if it is the ability slot */
     if (child.innates) {
       var i;
       for (i = 0; i < 3; i++) {
@@ -732,7 +743,7 @@ export function calculateSMSSSV(
   const damage = [];
   for (let i = 0; i < 16; i++) {
     damage[i] =
-      getFinalDamage(baseDamage, i, typeEffectiveness, applyBurn, stabMod, finalMod, protect);
+      getFinalDamage(baseDamage, i, typeEffectiveness, applyStatus, stabMod, finalMod, protect);
   }
   result.damage = childDamage ? [damage, childDamage] : damage;
 
@@ -814,7 +825,7 @@ export function calculateSMSSSV(
           newBaseDamage,
           i,
           typeEffectiveness,
-          applyBurn,
+          applyStatus,
           stabMod,
           newFinalMod,
           protect
@@ -1646,9 +1657,11 @@ export function calculateAtModsSMSSSV(
   /* 1/2 damage from certain types of moves */
   if ((defender.hasAbility('Thick Fat') && move.hasType('Fire', 'Ice')) ||
       (defender.hasAbility('Purifying Salt') && move.hasType('Ghost')) ||
-      (defender.hasAbility('Immunity') && move.hasType('Poison'))) {
-        atMods.push(2048);
-        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+      (defender.hasAbility('Immunity') && move.hasType('Poison')) ||
+      (defender.hasAbility('Water Compaction') && move.hasType('Water'))
+  ) {
+    atMods.push(2048);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
   /* Water Bubble and Heatproof are seperate because the fire modifiers can stack */
