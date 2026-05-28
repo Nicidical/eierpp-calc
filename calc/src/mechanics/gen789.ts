@@ -784,7 +784,7 @@ export function calculateSMSSSV(
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
         attacker.hasAbility(
-          'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Draconize'
+          'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Draconize', 'Steelworker'
         );
 
       if (move.timesUsed! > 1) {
