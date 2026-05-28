@@ -18695,7 +18695,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Corrosion'},
 		innates: ['Levitate', 'Master Hand', 'Primal Armor']
 	},
-	'Urshifu-Rapid-Strike-Style': {
+	'Urshifu-Rapid-Strike': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 90, at: 140, df: 100, sa: 60, sd: 60, sp: 110},
 		weightkg: 105.0,
@@ -19864,7 +19864,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Way of Precision'},
 		innates: ['Final Blow', 'Combat Specialist', 'Pretentious']
 	},
-	'Urshifu-Rapid-Strike-Style-Mega': {
+	'Urshifu-Rapid-Strike-Mega': {
 		types: ['Fighting', 'Water'],
 		bs: {hp: 90, at: 170, df: 100, sa: 70, sd: 80, sp: 150},
 		weightkg: 105.0,
