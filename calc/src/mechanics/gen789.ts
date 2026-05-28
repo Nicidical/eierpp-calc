@@ -451,7 +451,7 @@ export function calculateSMSSSV(
   }
 
   if (defender.hasType('Steel') && move.hasType('Dark', 'Ghost') && defIsSteelworker) {
-    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, "STEELWORKER!", desc, 'd');
   }
   
   if (defender.teraType && defender.teraType !== 'Stellar') {
