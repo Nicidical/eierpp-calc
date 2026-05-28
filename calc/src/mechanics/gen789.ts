@@ -712,7 +712,17 @@ export function calculateSMSSSV(
   let childDamage: number[] | undefined;
   if (attacker.hasAbility('Parental Bond') && move.hits === 1 && !isSpread) {
     const child = attacker.clone();
-    child.ability = 'Parental Bond (Child)' as AbilityName;
+    
+    /* Need to check which innate slot the ability is...or if it is the ability slot */
+    if (child.innates) {
+      var i;
+      for (i = 0; i < 3; i++) {
+        if (child.innates[i] === attacker.descAbility) { break; }
+      }
+      if (i < 3) { child.innates[i] = 'Parental Bond (Child)' as AbilityName; }
+      else { child.ability = 'Parental Bond (Child)' as AbilityName; }
+    } else { child.ability = 'Parental Bond (Child)' as AbilityName; }
+
     checkMultihitBoost(gen, child, defender, move, field, desc);
     childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
     console.log(childDamage);
