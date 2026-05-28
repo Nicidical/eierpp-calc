@@ -574,7 +574,7 @@ export function calculateSMSSSV(
     return result;
   }
 
-  const weightBasedMove = move.named('Heat Crash', 'Heavy Slam', 'Low Kick', 'Grass Knot');
+  const weightBasedMove = move.named('Heat Crash', 'Heavy Slam', 'Low Kick', 'Grass Knot', 'Splash');
   if (defender.isDynamaxed && weightBasedMove) {
     return result;
   }
@@ -929,6 +929,7 @@ export function calculateBasePowerSMSSSV(
     break;
   case 'Heavy Slam':
   case 'Heat Crash':
+  case 'Splash':
     const wr =
         getWeight(attacker, desc, 'attacker') /
         getWeight(defender, desc, 'defender');
@@ -1063,13 +1064,10 @@ export function calculateBasePowerSMSSSV(
     break;
   // Triple Axel's damage increases after each consecutive hit (20, 40, 60)
   case 'Triple Axel':
+  case 'Triple Kick':
+  case 'Echoed Voice':
     basePower = hit * 20;
     desc.moveBP = move.hits === 2 ? 60 : move.hits === 3 ? 120 : 20;
-    break;
-  // Triple Kick's damage increases after each consecutive hit (10, 20, 30)
-  case 'Triple Kick':
-    basePower = hit * 10;
-    desc.moveBP = move.hits === 2 ? 30 : move.hits === 3 ? 60 : 10;
     break;
   case 'Crush Grip':
   case 'Wring Out':
@@ -1316,9 +1314,10 @@ export function calculateBPModsSMSSSV(
     }
   }
 
-  if (attacker.hasAbility('Long Reach') && !move.flags.contact) {
-    bpMods.push(4915);
+  if (attacker.hasAbility('Long Reach')) {
+    move.flags.contact = 0;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    if (move.category === 'Physical') { bpMods.push(4915); }
   }
 
   // Sheer Force does not power up max moves or remove the effects (SadisticMystic)
@@ -2041,7 +2040,7 @@ export function calculateFinalModsSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (defender.hasAbility('Fluffy') && move.flags.contact && !attacker.hasAbility('Long Reach')) {
+  if (defender.hasAbility('Fluffy') && move.flags.contact) {
     finalMods.push(2048);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
