@@ -560,7 +560,7 @@ export function calculateSMSSSV(
   const fixedDamage = handleFixedDamageMoves(attacker, move);
   if (fixedDamage) {
     if (attacker.hasAbility('Parental Bond')) {
-      result.damage = [fixedDamage, fixedDamage];
+      result.damage = [fixedDamage, fixedDamage / 4];
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
     } else {
       result.damage = fixedDamage;
@@ -715,6 +715,7 @@ export function calculateSMSSSV(
     child.ability = 'Parental Bond (Child)' as AbilityName;
     checkMultihitBoost(gen, child, defender, move, field, desc);
     childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+    console.log(childDamage);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
