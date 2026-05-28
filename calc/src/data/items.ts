@@ -533,6 +533,7 @@ const SV = SS.concat(
     'Cornerstone Mask',
     'Covert Cloak',
     'Fairy Feather',
+    'Frost Orb',
     'Hearthflame Mask',
     'Loaded Dice',
     'Malicious Armor',

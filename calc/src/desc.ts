@@ -1002,10 +1002,10 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   output = appendIfSet(output, description.attackerAbility);
   output = appendIfSet(output, description.rivalry);
   if (description.isBurned) {
-    output += 'burned ';
+    output += 'Burned ';
   }
   if (description.isFrostbitten) {
-    output += 'frostbitten ';
+    output += 'Frostbitten ';
   }
   if (description.alliesFainted) {
     output += Math.min(5, description.alliesFainted) +

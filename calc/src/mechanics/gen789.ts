@@ -351,7 +351,8 @@ export function calculateSMSSSV(
   let isGalvanize = false;
   let isLiquidVoice = false;
   let isNormalize = false;
-  let isDragonize = false;
+  let isDraconize = false;
+  let isSteelworker = false;
   const noTypeChange = move.named(
     'Revelation Dance',
     'Judgment',
@@ -378,10 +379,12 @@ export function calculateSMSSSV(
       type = 'Ice';
     } else if ((isNormalize = attacker.hasAbility('Normalize'))) { // Boosts any type
       type = 'Normal';
-    } else if ((isDragonize = attacker.hasAbility('Dragonize')) && normal) {
+    } else if ((isDraconize = attacker.hasAbility('Draconize')) && normal) {
       type = 'Dragon';
+    } else if ((isSteelworker = attacker.hasAbility('Steelworker')) && normal) {
+      type = 'Steel';
     }
-    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDragonize) {
+    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDraconize || isSteelworker) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
       hasAteAbilityTypeChange = true;
     } else if (isLiquidVoice) {
@@ -400,6 +403,7 @@ export function calculateSMSSSV(
       field.defenderSide.isForesight;
   const isRingTarget =
     defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
+  const defIsSteelworker = defender.hasAbility('Steelworker');
 
   const type1Effectiveness = getMoveEffectiveness(
     gen,
@@ -408,7 +412,8 @@ export function calculateSMSSSV(
     isGhostRevealed,
     field.isGravity,
     isRingTarget,
-    isNormalize
+    isNormalize,
+    defIsSteelworker
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -418,7 +423,8 @@ export function calculateSMSSSV(
       isGhostRevealed,
       field.isGravity,
       isRingTarget,
-      isNormalize
+      isNormalize,
+      defIsSteelworker
     )
     : 1;
 
@@ -430,7 +436,8 @@ export function calculateSMSSSV(
       isGhostRevealed,
       field.isGravity,
       isRingTarget,
-      isNormalize
+      isNormalize,
+      defIsSteelworker
     )
     : 1;
 
@@ -442,6 +449,10 @@ export function calculateSMSSSV(
   if (move.hasType(getThirdType(attacker)) && !['???', attacker.types[0], attacker.types[1]].includes(getThirdType(attacker))) { 
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
+
+  if (defender.hasType('Steel') && move.hasType('Dark', 'Ghost') && defIsSteelworker) {
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
   
   if (defender.teraType && defender.teraType !== 'Stellar') {
     typeEffectiveness = getMoveEffectiveness(
@@ -451,7 +462,8 @@ export function calculateSMSSSV(
       isGhostRevealed,
       field.isGravity,
       isRingTarget,
-      isNormalize
+      isNormalize,
+      defIsSteelworker
     );
   }
 
@@ -772,7 +784,7 @@ export function calculateSMSSSV(
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
         attacker.hasAbility(
-          'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Dragonize'
+          'Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Draconize'
         );
 
       if (move.timesUsed! > 1) {
@@ -1189,6 +1201,7 @@ export function calculateBPModsSMSSSV(
     const isRingTarget =
       defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
     const isNormalize = attacker.hasAbility('Normalize');
+    const defIsSteelworker = defender.hasAbility('Steelworker');
     const types = defender.teraType && defender.teraType !== 'Stellar'
       ? [defender.teraType] : defender.types;
     const type1Effectiveness = getMoveEffectiveness(
@@ -1198,7 +1211,8 @@ export function calculateBPModsSMSSSV(
       isGhostRevealed,
       field.isGravity,
       isRingTarget,
-      isNormalize
+      isNormalize,
+      defIsSteelworker
     );
     const type2Effectiveness = types[1] ? getMoveEffectiveness(
       gen,
@@ -1207,7 +1221,8 @@ export function calculateBPModsSMSSSV(
       isGhostRevealed,
       field.isGravity,
       isRingTarget,
-      isNormalize
+      isNormalize,
+      defIsSteelworker
     ) : 1;
     if (type1Effectiveness * type2Effectiveness >= 2) {
       bpMods.push(5461);

@@ -572,7 +572,11 @@ $(".item").change(function () {
 	} else if (itemName === "Toxic Orb") {
 		pokeObj.find(".status").val("Badly Poisoned");
 		pokeObj.find(".status").change();
+	} else if (itemName === "Frost Orb") {
+		pokeObj.find(".status").val("Frostbitten");
+		pokeObj.find(".status").change(); 
 	} else if (($(this).attr('data-prev') === "Flame Orb" && pokeObj.find(".status").val() === "Burned") ||
+			($(this).attr('data-prev') === "Frost Orb" && pokeObj.find(".status").val() === "Frostbitten") ||
 			($(this).attr('data-prev') === "Toxic Orb" && pokeObj.find(".status").val() === "Badly Poisoned")) {
 		pokeObj.find(".status").val("Healthy");
 		pokeObj.find(".status").change();

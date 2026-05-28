@@ -159,6 +159,7 @@ export function getMoveEffectiveness(
   isGravity?: boolean,
   isRingTarget?: boolean,
   isNormalize?: boolean,
+  defIsSteelworker?: boolean,
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -171,6 +172,9 @@ export function getMoveEffectiveness(
   /* Normalize Ignores Resists (Ghosts are still immune) */
   } else if (isNormalize && (type === 'Rock' || type === 'Steel')) {
     return 1;
+  /* Will need to remember to add something so this shows in the desc */
+  } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
+    return 0.5
   } else {
     let effectiveness = gen.types.get(toID(move.type))!.effectiveness[type]!;
     if (effectiveness === 0 && isRingTarget) {
