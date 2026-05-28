@@ -150,6 +150,7 @@ const BW = DPP.concat([
   'Healer',
   'Heavy Metal',
   'Illusion',
+  'Illusion (Broken)',
   'Imposter',
   'Infiltrator',
   'Iron Barbs',

@@ -35,9 +35,9 @@ import {
   getBaseDamage,
   getStatDescriptionText,
   getFinalDamage,
-  getFinalSpeed,
   getModifiedStat,
   getQPBoostedStat,
+  getThirdType,
   getMoveEffectiveness,
   getShellSideArmCategory,
   getWeight,
@@ -173,6 +173,7 @@ export function calculateSMSSSV(
     'Good as Gold', 'Guard Dog', 'Heatproof',
     'Heavy Metal', 'Hyper Cutter', 'Ice Face', 'Ice Scales',
     'Illuminate', 'Immunity', 'Inner Focus', 'Insomnia',
+    'Justified',
     'Keen Eye', 'Leaf Guard', 'Levitate', 'Light Metal',
     'Lightning Rod', 'Limber', 'Magic Bounce', 'Magma Armor',
     "Mind's Eye", 'Mirror Armor', 'Motor Drive',
@@ -396,6 +397,7 @@ export function calculateSMSSSV(
       field.defenderSide.isForesight;
   const isRingTarget =
     defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
+
   const type1Effectiveness = getMoveEffectiveness(
     gen,
     move,
@@ -417,8 +419,27 @@ export function calculateSMSSSV(
     )
     : 1;
 
-  let typeEffectiveness = type1Effectiveness * type2Effectiveness;
+  const type3Effectiveness = getThirdType(defender) !== '???'
+    ? getMoveEffectiveness(
+      gen,
+      move,
+      getThirdType(defender),
+      isGhostRevealed,
+      field.isGravity,
+      isRingTarget,
+      isNormalize
+    )
+    : 1;
 
+  let typeEffectiveness = type1Effectiveness * type2Effectiveness * type3Effectiveness;
+  if (type3Effectiveness !== 1) { 
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
+  if (move.hasType(getThirdType(attacker))) { 
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  
   if (defender.teraType && defender.teraType !== 'Stellar') {
     typeEffectiveness = getMoveEffectiveness(
       gen,
@@ -511,7 +532,8 @@ export function calculateSMSSSV(
       (move.flags.sound && !move.named('Clangorous Soul') && defender.hasAbility('Soundproof') && !attacker.hasItem('Throat Spray')) ||
       (move.priority > 0 && defender.hasAbility('Queenly Majesty', 'Dazzling', 'Armor Tail')) ||
       (move.hasType('Ground') && defender.hasAbility('Earth Eater')) ||
-      (move.flags.wind && defender.hasAbility('Wind Rider'))
+      (move.flags.wind && defender.hasAbility('Wind Rider')) ||
+      (move.hasType('Dark') && defender.hasAbility('Justified', 'Radiance'))
   ) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
     return result;
@@ -1214,7 +1236,7 @@ export function calculateBPModsSMSSSV(
 
   /* Flare Boost now activates if Fog is up as well */
   if ((attacker.hasAbility('Flare Boost') &&
-      attacker.hasStatus('brn') && move.category === 'Special') || field.hasWeather('Fog')) {
+      (attacker.hasStatus('brn') || field.hasWeather('Fog'))) && move.category === 'Special') {
     bpMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1245,16 +1267,38 @@ export function calculateBPModsSMSSSV(
   }
 
   // Sheer Force does not power up max moves or remove the effects (SadisticMystic)
-  if (
-    (attacker.hasAbility('Sheer Force') &&
-      (move.secondaries || move.named('Electro Shot', 'Order Up')) && !move.isMax) ||
-    (attacker.hasAbility('Analytic') &&
-      (turnOrder !== 'first' || field.defenderSide.isSwitching === 'out')) ||
-    (attacker.hasAbility('Tough Claws') && move.flags.contact) ||
-    (attacker.hasAbility('Punk Rock') && move.flags.sound)
-  ) {
+  if ((attacker.hasAbility('Sheer Force') && (move.secondaries || move.named('Electro Shot', 'Order Up')) && !move.isMax)) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Analytic') && (turnOrder !== 'first' || field.defenderSide.isSwitching === 'out')) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Tough Claws') && move.flags.contact) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  if (attacker.hasAbility('Big Pecks') && move.flags.contact) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Illusion')) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Flash Fire', desc, 'a');
+  }
+
+  if (attacker.hasAbility('Punk Rock') && move.flags.sound) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (defender.hasAbility('Stall') && turnOrder === 'first') {
+    bpMods.push(2867);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
   if (field.attackerSide.isBattery && move.category === 'Special') {
@@ -1920,10 +1964,14 @@ export function calculateFinalModsSMSSSV(
   if (defender.hasAbility('Fluffy') && move.flags.contact && !attacker.hasAbility('Long Reach')) {
     finalMods.push(2048);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
-  } else if (
-    (defender.hasAbility('Punk Rock') && move.flags.sound) ||
-    (defender.hasAbility('Ice Scales') && move.category === 'Special')
-  ) {
+  }
+
+  if (defender.hasAbility('Punk Rock') && move.flags.sound) {
+    finalMods.push(2048);
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
+  if (defender.hasAbility('Ice Scales') && move.category === 'Special') {
     finalMods.push(2048);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
@@ -1933,8 +1981,9 @@ export function calculateFinalModsSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (defender.hasAbility('Stall') && getFinalSpeed(gen, attacker, field, field.attackerSide) > getFinalSpeed(gen, attacker, field, field.defenderSide)) {
-    finalMods.push(2867);
+  /* Overcoat reduces special damage by 20% */
+  if (defender.hasAbility('Overcoat') && move.category === 'Special') {
+    finalMods.push(3276);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 

@@ -699,7 +699,7 @@ function getEndOfTurn(
         damage += Math.floor(defender.maxHP() / 8);
         texts.push('Poison Heal');
       }
-    } else if (!defender.hasAbility('Magic Guard')) {
+    } else if (!defender.hasAbility('Magic Guard', 'Toxic Boost')) {
       damage -= Math.floor(defender.maxHP() / (gen.num === 1 ? 16 : 8));
       texts.push('poison damage');
     }

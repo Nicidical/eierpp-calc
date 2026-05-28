@@ -162,6 +162,13 @@ export class Pokemon implements State.Pokemon {
         return true;
       }
     }
+
+    /* Additional Type Abilities */
+    if ((this.hasAbility('Turboblaze') && types.includes('Fire')) ||
+       (this.hasAbility('Teravolt') && types.includes('Electric'))
+    ) {
+      return true;
+    }
     return false;
   }
 
@@ -169,6 +176,13 @@ export class Pokemon implements State.Pokemon {
   hasOriginalType(...types: I.TypeName[]) {
     for (const type of types) {
       if (this.types.includes(type)) return true;
+    }
+    
+    /* Additional Type Abilities */
+    if ((this.hasAbility('Turboblaze') && types.includes('Fire')) ||
+       (this.hasAbility('Teravolt') && types.includes('Electric'))
+    ) {
+      return true;
     }
     return false;
   }

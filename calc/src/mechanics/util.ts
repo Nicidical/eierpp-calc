@@ -114,6 +114,9 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
     speedMods.push(6144);
   }
+  if (pokemon.hasAbility('Light Metal')) {
+    speedMods.push(5325);
+  }
   if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
     speedMods.push(2048);
   }
@@ -140,6 +143,12 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
 
   speed = Math.min(gen.num <= 2 ? 999 : 10000, speed);
   return Math.max(0, speed);
+}
+
+export function getThirdType(pokemon: Pokemon) {
+  return pokemon.hasAbility('Teravolt') ? 'Electric' : 
+         pokemon.hasAbility('Turboblaze') ? 'Fire' :
+         '???';
 }
 
 export function getMoveEffectiveness(
