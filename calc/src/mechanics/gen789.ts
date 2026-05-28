@@ -419,7 +419,7 @@ export function calculateSMSSSV(
     )
     : 1;
 
-  const type3Effectiveness = getThirdType(defender) !== '???'
+  const type3Effectiveness = !['???', defender.types[0], defender.types[1]].includes(getThirdType(defender))
     ? getMoveEffectiveness(
       gen,
       move,

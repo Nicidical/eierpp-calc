@@ -17344,259 +17344,259 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Solar Power'},
 		innates: ['Molten Down', 'Primal Armor', 'Desolate Land']
 	},
-	'Rattata-Alolan': {
+	'Rattata-Alola': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 30, at: 56, df: 35, sa: 25, sd: 35, sp: 72},
 		weightkg: 3.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Cheap Tactics', 'Run Away', 'Thick Fat']
 	},
-	'Raticate-Alolan': {
+	'Raticate-Alola': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 75, at: 71, df: 70, sa: 40, sd: 80, sp: 77},
 		weightkg: 18.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Jaws of Carnage', 'Opportunist', 'Retriever']
 	},
-	'Raichu-Alolan': {
+	'Raichu-Alola': {
 		types: ['Electric', 'Psychic'],
 		bs: {hp: 60, at: 85, df: 50, sa: 95, sd: 85, sp: 115},
 		weightkg: 30.0,
 		abilities: {0: 'Psychic Mind'},
 		innates: ['Surge Surfer', 'Levitate', 'Ground Shock']
 	},
-	'Sandshrew-Alolan': {
+	'Sandshrew-Alola': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 70, at: 75, df: 90, sa: 10, sd: 35, sp: 40},
 		weightkg: 12.0,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Freezing Point', 'Slush Rush', 'Battle Armor']
 	},
-	'Sandslash-Alolan': {
+	'Sandslash-Alola': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 95, at: 100, df: 120, sa: 25, sd: 65, sp: 65},
 		weightkg: 29.5,
 		abilities: {0: 'Whiteout'},
 		innates: ['Let\'s Roll', 'Tough Claws', 'Iron Barbs']
 	},
-	'Vulpix-Alolan': {
+	'Vulpix-Alola': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 38, at: 41, df: 40, sa: 60, sd: 65, sp: 65},
 		weightkg: 9.9,
 		abilities: {0: 'Ice Dew'},
 		innates: ['Quick Feet', 'Refrigerate', 'Frozen Soul']
 	},
-	'Ninetales-Alolan': {
+	'Ninetales-Alola': {
 		types: ['Ice', 'Fairy'],
 		bs: {hp: 73, at: 67, df: 75, sa: 91, sd: 100, sp: 109},
 		weightkg: 19.9,
 		abilities: {0: 'Frozen Soul'},
 		innates: ['Serene Grace', 'Ice Dew', 'Queenly Majesty']
 	},
-	'Diglett-Alolan': {
+	'Diglett-Alola': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 10, at: 55, df: 30, sa: 35, sd: 45, sp: 90},
 		weightkg: 0.8,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Tangling Hair', 'Steelworker', 'Ambush']
 	},
-	'Dugtrio-Alolan': {
+	'Dugtrio-Alola': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 35, at: 100, df: 60, sa: 50, sd: 70, sp: 110},
 		weightkg: 33.3,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Multi-Headed', 'Sand Force', 'Speed Force']
 	},
-	'Meowth-Alolan': {
+	'Meowth-Alola': {
 		types: ['Dark'],
 		bs: {hp: 40, at: 45, df: 35, sa: 75, sd: 40, sp: 90},
 		weightkg: 4.2,
 		abilities: {0: 'Pickpocket'},
 		innates: ['Cheap Tactics', 'Coward', 'Perfectionist']
 	},
-	'Persian-Alolan': {
+	'Persian-Alola': {
 		types: ['Dark'],
 		bs: {hp: 65, at: 78, df: 65, sa: 105, sd: 65, sp: 117},
 		weightkg: 32.0,
 		abilities: {0: 'Fur Coat'},
 		innates: ['Coward', 'Prim and Proper', 'Low Blow']
 	},
-	'Geodude-Alolan': {
+	'Geodude-Alola': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 40, at: 80, df: 75, sa: 30, sd: 40, sp: 35},
 		weightkg: 20.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Let\'s Roll', 'Sturdy', 'Static']
 	},
-	'Graveler-Alolan': {
+	'Graveler-Alola': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 55, at: 95, df: 90, sa: 45, sd: 60, sp: 45},
 		weightkg: 105.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Let\'s Roll', 'Sturdy', 'Static']
 	},
-	'Golem-Alolan': {
+	'Golem-Alola': {
 		types: ['Rock', 'Electric'],
 		bs: {hp: 90, at: 135, df: 110, sa: 45, sd: 95, sp: 45},
 		weightkg: 300.0,
 		abilities: {0: 'Magnet Pull'},
 		innates: ['Ground Shock', 'Sturdy', 'Galvanize']
 	},
-	'Grimer-Alolan': {
+	'Grimer-Alola': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 90, at: 80, df: 55, sa: 40, sd: 55, sp: 25},
 		weightkg: 30.0,
 		abilities: {0: 'Poison Touch'},
 		innates: ['Liquified', 'Corrosion', 'Power of Alchemy']
 	},
-	'Muk-Alolan': {
+	'Muk-Alola': {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 105, at: 105, df: 85, sa: 65, sd: 110, sp: 50},
 		weightkg: 30.0,
 		abilities: {0: 'Poison Touch'},
 		innates: ['Liquified', 'Corrosion', 'Power of Alchemy']
 	},
-	'Exeggutor-Alolan': {
+	'Exeggutor-Alola': {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 95, at: 125, df: 85, sa: 105, sd: 75, sp: 45},
 		weightkg: 120.0,
 		abilities: {0: 'Sun Basking'},
 		innates: ['Long Reach', 'Sun\'s Bounty', 'Multi-Headed']
 	},
-	'Marowak-Alolan': {
+	'Marowak-Alola': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 75, at: 80, df: 110, sa: 50, sd: 80, sp: 60},
 		weightkg: 45.0,
 		abilities: {0: 'Ill Will'},
 		innates: ['Bone Zone', 'Early Grave', 'Rock Head']
 	},
-	'Meowth-Galarian': {
+	'Meowth-Galar': {
 		types: ['Steel'],
 		bs: {hp: 50, at: 75, df: 55, sa: 65, sd: 40, sp: 40},
 		weightkg: 4.2,
 		abilities: {0: 'Sniper'},
 		innates: ['Tough Claws', 'Opportunist', 'Perfectionist']
 	},
-	'Ponyta-Galarian': {
+	'Ponyta-Galar': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 50, at: 85, df: 55, sa: 65, sd: 65, sp: 90},
 		weightkg: 30.0,
 		abilities: {0: 'Guilt Trip'},
 		innates: ['Coward', 'Speed Force', 'Dazzling']
 	},
-	'Rapidash-Galarian': {
+	'Rapidash-Galar': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 85, at: 110, df: 70, sa: 75, sd: 80, sp: 120},
 		weightkg: 95.0,
 		abilities: {0: 'Power Edge'},
 		innates: ['Mighty Horn', 'Speed Force', 'Dazzling']
 	},
-	'Slowpoke-Galarian': {
+	'Slowpoke-Galar': {
 		types: ['Psychic'],
 		bs: {hp: 90, at: 65, df: 65, sa: 65, sd: 40, sp: 15},
 		weightkg: 36.0,
 		abilities: {0: 'Unaware'},
 		innates: ['Oblivious', 'Poison Absorb', 'Stall']
 	},
-	'Slowbro-Galarian': {
+	'Slowbro-Galar': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 110, df: 90, sa: 110, sd: 65, sp: 20},
 		weightkg: 78.5,
 		abilities: {0: 'Unaware'},
 		innates: ['Oblivious', 'Quick Draw', 'Stall']
 	},
-	'Farfetchd-Galarian': {
+	'Farfetchd-Galar': {
 		types: ['Fighting'],
 		bs: {hp: 52, at: 95, df: 55, sa: 58, sd: 62, sp: 55},
 		weightkg: 15.0,
 		abilities: {0: 'Hyper Cutter'},
 		innates: ['Scrappy', 'Sniper', 'Moxie']
 	},
-	'Weezing-Galarian': {
+	'Weezing-Galar': {
 		types: ['Poison', 'Fairy'],
 		bs: {hp: 85, at: 70, df: 120, sa: 95, sd: 90, sp: 60},
 		weightkg: 9.5,
 		abilities: {0: 'Pressure'},
 		innates: ['Levitate', 'Multi-Headed', 'Poison Absorb']
 	},
-	'Mr. Mime-Galarian': {
+	'Mr. Mime-Galar': {
 		types: ['Ice', 'Psychic'],
 		bs: {hp: 50, at: 65, df: 65, sa: 90, sd: 90, sp: 100},
 		weightkg: 54.5,
 		abilities: {0: 'Prankster'},
 		innates: ['Screen Cleaner', 'Ice Body', 'Oblivious']
 	},
-	'Articuno-Galarian': {
+	'Articuno-Galar': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 90, at: 85, df: 85, sa: 125, sd: 100, sp: 95},
 		weightkg: 55.4,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Aurora Borealis', 'Permafrost', 'Gifted Mind']
 	},
-	'Zapdos-Galarian': {
+	'Zapdos-Galar': {
 		types: ['Fighting', 'Flying'],
 		bs: {hp: 90, at: 125, df: 90, sa: 85, sd: 90, sp: 100},
 		weightkg: 52.6,
 		abilities: {0: 'Defiant'},
 		innates: ['Striker', 'Speed Boost', 'Roundhouse']
 	},
-	'Moltres-Galarian': {
+	'Moltres-Galar': {
 		types: ['Dark', 'Flying'],
 		bs: {hp: 90, at: 85, df: 90, sa: 100, sd: 125, sp: 90},
 		weightkg: 60.0,
 		abilities: {0: 'Bad Luck'},
 		innates: ['Dark Aura', 'Shadow Shield', 'Tipping Point']
 	},
-	'Slowking-Galarian': {
+	'Slowking-Galar': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 65, df: 80, sa: 110, sd: 110, sp: 30},
 		weightkg: 79.5,
 		abilities: {0: 'Rejection'},
 		innates: ['Spiteful', 'Pressure', 'Permanence']
 	},
-	'Corsola-Galarian': {
+	'Corsola-Galar': {
 		types: ['Ghost'],
 		bs: {hp: 60, at: 55, df: 100, sa: 65, sd: 100, sp: 30},
 		weightkg: 5.0,
 		abilities: {0: 'Perish Body'},
 		innates: ['Cursed Body', 'Sturdy', 'Rattled']
 	},
-	'Zigzagoon-Galarian': {
+	'Zigzagoon-Galar': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 38, at: 60, df: 41, sa: 30, sd: 41, sp: 70},
 		weightkg: 17.5,
 		abilities: {0: 'Pickup'},
 		innates: ['Scrappy', 'Quick Feet', 'Guts']
 	},
-	'Linoone-Galarian': {
+	'Linoone-Galar': {
 		types: ['Dark', 'Normal'],
 		bs: {hp: 78, at: 100, df: 61, sa: 50, sd: 61, sp: 110},
 		weightkg: 32.5,
 		abilities: {0: 'Pickup'},
 		innates: ['Defiant', 'Violent Rush', 'Guts']
 	},
-	'Darumaka-Galarian': {
+	'Darumaka-Galar': {
 		types: ['Ice'],
 		bs: {hp: 70, at: 90, df: 45, sa: 15, sd: 45, sp: 50},
 		weightkg: 37.5,
 		abilities: {0: 'Hustle'},
 		innates: ['Heatproof', 'Inner Focus', 'Ice Body']
 	},
-	'Darmanitan-Galarian': {
+	'Darmanitan-Galar': {
 		types: ['Ice'],
 		bs: {hp: 105, at: 140, df: 65, sa: 50, sd: 65, sp: 95},
 		weightkg: 92.9,
 		abilities: {0: 'Gorilla Tactics'},
 		innates: ['Heatproof', 'Iron Fist', 'Mold Breaker']
 	},
-	'Yamask-Galarian': {
+	'Yamask-Galar': {
 		types: ['Ground', 'Ghost'],
 		bs: {hp: 38, at: 55, df: 85, sa: 30, sd: 65, sp: 30},
 		weightkg: 1.5,
 		abilities: {0: 'Ill Will'},
 		innates: ['Vengeance', 'Cursed Body', 'Haunted Spirit']
 	},
-	'Stunfisk-Galarian': {
+	'Stunfisk-Galar': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 109, at: 81, df: 99, sa: 66, sd: 84, sp: 32},
 		weightkg: 11.0,
@@ -18170,7 +18170,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Sheer Force'},
 		innates: ['Enlightened', 'Impenetrable', 'Psychic Mind']
 	},
-	'Darmanitan-Zen-Mode-Galarian': {
+	'Darmanitan-Zen-Mode-Galar': {
 		types: ['Ice', 'Fire'],
 		bs: {hp: 105, at: 120, df: 60, sa: 35, sd: 60, sp: 140},
 		weightkg: 92.9,
@@ -18723,112 +18723,112 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'As One'},
 		innates: ['Shadow Shield', 'Fearmonger', 'Speed Boost']
 	},
-	'Qwilfish-Hisuian': {
+	'Qwilfish-Hisui': {
 		types: ['Dark', 'Poison'],
 		bs: {hp: 65, at: 95, df: 85, sa: 55, sd: 55, sp: 85},
 		weightkg: 3.9,
 		abilities: {0: 'Water Veil'},
 		innates: ['Merciless', 'Aftermath', 'Toxic Debris']
 	},
-	'Growlithe-Hisuian': {
+	'Growlithe-Hisui': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 60, at: 75, df: 45, sa: 65, sd: 50, sp: 55},
 		weightkg: 19.0,
 		abilities: {0: 'Rock Head'},
 		innates: ['Fluffy', 'Predator', 'Violent Rush']
 	},
-	'Arcanine-Hisuian': {
+	'Arcanine-Hisui': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 90, at: 130, df: 90, sa: 80, sd: 90, sp: 120},
 		weightkg: 155.0,
 		abilities: {0: 'Rock Head'},
 		innates: ['Elude', 'Predator', 'Violent Rush']
 	},
-	'Voltorb-Hisuian': {
+	'Voltorb-Hisui': {
 		types: ['Electric', 'Grass'],
 		bs: {hp: 40, at: 30, df: 50, sa: 55, sd: 55, sp: 100},
 		weightkg: 10.4,
 		abilities: {0: 'Chloroplast'},
 		innates: ['Impenetrable', 'Aftermath', 'Grassy Surge']
 	},
-	'Electrode-Hisuian': {
+	'Electrode-Hisui': {
 		types: ['Electric', 'Grass'],
 		bs: {hp: 60, at: 50, df: 70, sa: 100, sd: 80, sp: 150},
 		weightkg: 66.6,
 		abilities: {0: 'Terminal Velocity'},
 		innates: ['Impenetrable', 'Aftermath', 'Grassy Surge']
 	},
-	'Typhlosion-Hisuian': {
+	'Typhlosion-Hisui': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 93, at: 74, df: 78, sa: 120, sd: 85, sp: 85},
 		weightkg: 79.5,
 		abilities: {0: 'Early Grave'},
 		innates: ['Blaze', 'Pyromancy', 'Frisk']
 	},
-	'Sneasel-Hisuian': {
+	'Sneasel-Hisui': {
 		types: ['Poison', 'Fighting'],
 		bs: {hp: 60, at: 95, df: 55, sa: 35, sd: 75, sp: 115},
 		weightkg: 28.0,
 		abilities: {0: 'Serene Grace'},
 		innates: ['Tough Claws', 'Intoxicate', 'Unburden']
 	},
-	'Samurott-Hisuian': {
+	'Samurott-Hisui': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 90, at: 110, df: 80, sa: 100, sd: 65, sp: 90},
 		weightkg: 94.6,
 		abilities: {0: 'Exploit Weakness'},
 		innates: ['Torrent', 'Shell Armor', 'Keen Edge']
 	},
-	'Lilligant-Hisuian': {
+	'Lilligant-Hisui': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 80, at: 105, df: 80, sa: 50, sd: 80, sp: 105},
 		weightkg: 16.3,
 		abilities: {0: 'Chlorophyll'},
 		innates: ['Blade Dance', 'Speed Force', 'Taekkyeon']
 	},
-	'Braviary-Hisuian': {
+	'Braviary-Hisui': {
 		types: ['Psychic', 'Flying'],
 		bs: {hp: 100, at: 57, df: 75, sa: 123, sd: 75, sp: 80},
 		weightkg: 41.0,
 		abilities: {0: 'Sheer Force'},
 		innates: ['Tinted Lens', 'Giant Wings', 'Resonance']
 	},
-	'Sliggoo-Hisuian': {
+	'Sliggoo-Hisui': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 58, at: 75, df: 83, sa: 83, sd: 113, sp: 40},
 		weightkg: 17.5,
 		abilities: {0: 'Gooey'},
 		innates: ['Shell Armor', 'Impenetrable', 'Filter']
 	},
-	'Goodra-Hisuian': {
+	'Goodra-Hisui': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 80, at: 100, df: 100, sa: 110, sd: 150, sp: 60},
 		weightkg: 150.5,
 		abilities: {0: 'Gooey'},
 		innates: ['Shell Armor', 'Impenetrable', 'Filter']
 	},
-	'Avalugg-Hisuian': {
+	'Avalugg-Hisui': {
 		types: ['Ice', 'Rock'],
 		bs: {hp: 95, at: 127, df: 184, sa: 34, sd: 76, sp: 38},
 		weightkg: 505.0,
 		abilities: {0: 'Technician'},
 		innates: ['Primal Armor', 'Impenetrable', 'Strong Jaw']
 	},
-	'Decidueye-Hisuian': {
+	'Decidueye-Hisui': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 90, at: 120, df: 90, sa: 50, sd: 90, sp: 95},
 		weightkg: 36.6,
 		abilities: {0: 'Archer'},
 		innates: ['Overgrow', 'Sniper', 'Aerodynamics']
 	},
-	'Zorua-Hisuian': {
+	'Zorua-Hisui': {
 		types: ['Normal', 'Ghost'],
 		bs: {hp: 35, at: 60, df: 40, sa: 85, sd: 40, sp: 70},
 		weightkg: 12.5,
 		abilities: {0: 'Ambush'},
 		innates: ['Illusion', 'Vengeance', 'Opportunist']
 	},
-	'Zoroark-Hisuian': {
+	'Zoroark-Hisui': {
 		types: ['Normal', 'Ghost'],
 		bs: {hp: 55, at: 100, df: 60, sa: 125, sd: 60, sp: 110},
 		weightkg: 81.1,
@@ -19724,7 +19724,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Reckless'},
 		innates: ['Speed Boost', 'Arc Flash', 'Speed Force']
 	},
-	'Rapidash-Mega-Galarian': {
+	'Rapidash-Mega-Galar': {
 		types: ['Psychic', 'Fairy'],
 		bs: {hp: 85, at: 105, df: 90, sa: 122, sd: 90, sp: 148},
 		weightkg: 95.0,
@@ -20074,7 +20074,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Hunter\'s Mark'},
 		innates: ['Forest Rage', 'Super Sniper', 'Archer']
 	},
-	'Decidueye-Hisuian-Mega': {
+	'Decidueye-Hisui-Mega': {
 		types: ['Grass', 'Fighting'],
 		bs: {hp: 90, at: 150, df: 100, sa: 80, sd: 90, sp: 125},
 		weightkg: 36.6,
@@ -20109,7 +20109,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Gladiator'},
 		innates: ['Riptide', 'Moxie', 'Samba']
 	},
-	'Samurott-Hisuian-Mega': {
+	'Samurott-Hisui-Mega': {
 		types: ['Water', 'Dark'],
 		bs: {hp: 90, at: 148, df: 90, sa: 120, sd: 75, sp: 112},
 		weightkg: 94.6,
@@ -20123,7 +20123,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Banshee'},
 		innates: ['Hellblaze', 'Flaming Soul', 'Amplifier']
 	},
-	'Typhlosion-Hisuian-Mega': {
+	'Typhlosion-Hisui-Mega': {
 		types: ['Fire', 'Ghost'],
 		bs: {hp: 93, at: 89, df: 101, sa: 145, sd: 108, sp: 99},
 		weightkg: 79.5,
@@ -20151,14 +20151,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Poison Absorb'},
 		innates: ['Acidic Slime', 'Sap Sipper', 'Shell Armor']
 	},
-	'Slowbro-Mega-Galarian': {
+	'Slowbro-Mega-Galar': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 150, df: 110, sa: 150, sd: 70, sp: 15},
 		weightkg: 78.5,
 		abilities: {0: 'Unaware'},
 		innates: ['Gunman', 'Quick Draw', 'Stall']
 	},
-	'Slowking-Mega-Galarian': {
+	'Slowking-Mega-Galar': {
 		types: ['Poison', 'Psychic'],
 		bs: {hp: 95, at: 70, df: 110, sa: 135, sd: 150, sp: 30},
 		weightkg: 79.5,
@@ -20186,7 +20186,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Mental Pollution'},
 		innates: ['Madness Enhancement', 'Magic Guard', 'Low Visibility']
 	},
-	'Arcanine-Hisuian-Mega': {
+	'Arcanine-Hisui-Mega': {
 		types: ['Fire', 'Rock'],
 		bs: {hp: 90, at: 140, df: 110, sa: 110, sd: 110, sp: 140},
 		weightkg: 155.0,
@@ -20396,7 +20396,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Blur'},
 		innates: ['Parental Bond', 'Infiltrator', 'Mach 3']
 	},
-	'Sandslash-Alolan-Mega': {
+	'Sandslash-Alola-Mega': {
 		types: ['Ice', 'Steel'],
 		bs: {hp: 95, at: 125, df: 135, sa: 55, sd: 75, sp: 85},
 		weightkg: 29.5,
@@ -20431,7 +20431,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Multi-Headed', 'Sundae', 'Slush Rush']
 	},
-	'Pentadug-Alolan': {
+	'Pentadug-Alola': {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 95, at: 120, df: 90, sa: 55, sd: 75, sp: 90},
 		weightkg: 6.9,
@@ -20641,7 +20641,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Defiant'},
 		innates: ['Empress', 'Striker', 'Deadly Precision']
 	},
-	'Goodra-Hisuian-Mega': {
+	'Goodra-Hisui-Mega': {
 		types: ['Dragon', 'Steel'],
 		bs: {hp: 80, at: 130, df: 140, sa: 130, sd: 160, sp: 60},
 		weightkg: 150.5,
