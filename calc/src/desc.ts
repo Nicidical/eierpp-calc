@@ -156,7 +156,7 @@ export function getRecovery(
   if (move.drain) {
     // Parental Bond counts as multiple heals for drain moves, but not for Shell Bell
     // Currently no drain moves are multihit, however this covers for it.
-    if (attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || move.hits > 1) {
+    if (attacker.hasAbility('Parental Bond', 'Hyper Aggressive', 'Raging Boxer') || move.hits > 1) {
       [minD, maxD] = multiDamageRange(damage) as [number[], number[]];
     }
     const percentHealed = move.drain[0] / move.drain[1];

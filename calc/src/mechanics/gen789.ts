@@ -621,6 +621,9 @@ export function calculateSMSSSV(
     if (attacker.hasAbility('Parental Bond', 'Hyper Aggressive')) {
       result.damage = [fixedDamage, fixedDamage / 4];
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    } else if (attacker.hasAbility('Raging Boxer') && move.flags.punch) {
+      result.damage = [fixedDamage, (fixedDamage * 2) / 5];
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
     } else {
       result.damage = fixedDamage;
     }
@@ -808,6 +811,24 @@ export function calculateSMSSSV(
       if (i < 3) { child.innates[i] = 'Parental Bond (Child)' as AbilityName; }
       else { child.ability = 'Parental Bond (Child)' as AbilityName; }
     } else { child.ability = 'Parental Bond (Child)' as AbilityName; }
+
+    checkMultihitBoost(gen, child, defender, move, field, desc);
+    childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+    console.log(childDamage);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  } else if ((attacker.hasAbility('Raging Boxer') && move.flags.punch) && move.hits === 1 && !isSpread) {
+    const child = attacker.clone();
+
+    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+    if (child.innates) {
+      var i;
+      for (i = 0; i < 3; i++) {
+        if (child.innates[i] === attacker.descAbility) { break; }
+      }
+      if (i < 3) { child.innates[i] = 'Raging Boxer (Child)' as AbilityName; }
+      else { child.ability = 'Raging Boxer (Child)' as AbilityName; }
+    } else { child.ability = 'Raging Boxer (Child)' as AbilityName; }
 
     checkMultihitBoost(gen, child, defender, move, field, desc);
     childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
@@ -2056,6 +2077,8 @@ function calculateBaseDamageSMSSSV(
 
   if (attacker.hasAbility('Parental Bond (Child)')) {
     baseDamage = pokeRound(OF32(baseDamage * 1024) / 4096);
+  } else if (attacker.hasAbility('Raging Boxer (Child)')) {
+    baseDamage = pokeRound(OF32(baseDamage * 1638) / 4096);
   }
 
   const isMegaSol = attacker.hasAbility('Mega Sol');
