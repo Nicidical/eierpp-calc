@@ -1619,7 +1619,7 @@ export function calculateAttackSMSSSV(
 
   // Juggernaut also adds to attack directly as it needs the defense stat
   if (attacker.hasAbility('Juggernaut') && !attacker.hasAbility('Long Reach') && move.flags.contact) {
-    const defense = getModifiedStat(attackSource.rawStats['def']!, boosts);
+    const defense = getModifiedStat(attackSource.rawStats['def']!, attackSource.boosts['def']);
     attack = pokeRound(attack + defense * .2);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
