@@ -653,7 +653,7 @@ export function getWeight(pokemon: Pokemon, desc: RawDesc, role: 'defender' | 'a
   return weightHG / 10;
 }
 
-export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
+export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc, hasAteAbilityTypeChange?: boolean) {
   let stabMod = 4096;
   if (pokemon.hasOriginalType(move.type)) {
     stabMod += 2048;
@@ -664,6 +664,9 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (pokemon.hasAbility('Aurora Borealis') && move.hasType('Ice')) {
+    stabMod += 2048;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
+  } else if (hasAteAbilityTypeChange) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   }

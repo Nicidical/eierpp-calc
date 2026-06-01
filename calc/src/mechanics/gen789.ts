@@ -111,13 +111,6 @@ export function calculateSMSSSV(
     isWonderRoom: field.isWonderRoom,
   };
 
-  /* Ancient Idol Check */
-  if (attacker.hasAbility('Ancient Idol')) {
-    attacker.stats['atk'] = attacker.stats['def'];
-    attacker.stats['spa'] = attacker.stats['spa'];
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-  }
-
   // only display tera type if it applies
   if (attacker.teraType !== 'Stellar' || move.name === 'Tera Blast' || move.isStellarFirstUse) {
     // tera blast has special behavior with tera stellar
@@ -357,6 +350,7 @@ export function calculateSMSSSV(
   }
 
   let hasAteAbilityTypeChange = false;
+  let hasNonVoiceAbilityTypeChange = false;
   let isAerilate = false;
   let isPixilate = false;
   let isRefrigerate = false;
@@ -416,6 +410,7 @@ export function calculateSMSSSV(
     } 
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDraconize || isSteelworker || isImmolate || isCrystallize || isFightingSpirit || isTectonize || isHydrate) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+      hasNonVoiceAbilityTypeChange = true;
     } else if (isLiquidVoice || isSandSong) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
       hasAteAbilityTypeChange = true;
@@ -755,7 +750,7 @@ export function calculateSMSSSV(
 
   // the random factor is applied between the crit mod and the stab mod, so don't apply anything
   // below this until we're inside the loop
-  let preStellarStabMod = getStabMod(attacker, move, desc);
+  let preStellarStabMod = getStabMod(attacker, move, desc, hasNonVoiceAbilityTypeChange);
   let stabMod = getStellarStabMod(attacker, move, preStellarStabMod);
 
   const applyBurn =
@@ -857,7 +852,7 @@ export function calculateSMSSSV(
 
       if (move.timesUsed! > 1) {
         // Adaptability does not change between hits of a multihit, only between turns
-        preStellarStabMod = getStabMod(attacker, move, desc);
+        preStellarStabMod = getStabMod(attacker, move, desc, hasNonVoiceAbilityTypeChange);
         // Hack to make Tera Shell with multihit moves, but not over multiple turns
         typeEffectiveness = turn2typeEffectiveness;
         // Stellar damage boost applies for 1 turn, but all hits of multihit.
@@ -1561,10 +1556,14 @@ export function calculateAttackSMSSSV(
 ) {
   let attack: number;
   const attackSource = move.named('Foul Play') ? defender : attacker;
+  /* Ok I REALLY hope Ancient Idol is correct now */
   const attackStat =
-    move.named('Body Press')
-      ? (field.isWonderRoom ? 'spd' : 'def')
-      : (move.category === 'Special' ? 'spa' : 'atk');
+    move.named('Body Press') ? (field.isWonderRoom ? 'spd' : 'def') :
+    attacker.hasAbility('Ancient Idol') ? (move.category === 'Special' ? 'spd' : 'def')
+    : (move.category === 'Special' ? 'spa' : 'atk');
+  
+  if (attacker.hasAbility('Ancient Idol')) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a'); }
+
   // Body Press in Wonder Room uses normal Def, which checkRawStatChanges has moved to SpD
   desc.attackEVs =
     move.named('Foul Play')
