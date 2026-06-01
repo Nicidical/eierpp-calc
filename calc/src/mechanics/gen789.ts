@@ -393,19 +393,19 @@ export function calculateSMSSSV(
       type = 'Ice';
     } else if ((isNormalize = attacker.hasAbility('Normalize'))) { // Boosts any type
       type = 'Normal';
-    } else if ((isDraconize = attacker.hasAbility('Draconize')) && normal) {
+    } else if ((isDraconize = attacker.hasAbility('Draconize') && normal)) {
       type = 'Dragon';
-    } else if ((isSteelworker = attacker.hasAbility('Steelworker')) && normal) {
+    } else if ((isSteelworker = attacker.hasAbility('Steelworker') && normal)) {
       type = 'Steel';
-    } else if ((isImmolate = attacker.hasAbility('Immolate')) && normal) {
+    } else if ((isImmolate = attacker.hasAbility('Immolate') && normal)) {
       type = 'Fire';
-    } else if ((isCrystallize = attacker.hasAbility('Crystallize')) && type === 'Rock') {
+    } else if ((isCrystallize = attacker.hasAbility('Crystallize') && type === 'Rock')) {
       type = 'Ice';
-    } else if ((isFightingSpirit = attacker.hasAbility('Fighting Spirit')) && normal) {
+    } else if ((isFightingSpirit = attacker.hasAbility('Fighting Spirit') && normal)) {
       type = 'Fighting';
-    } else if ((isTectonize = attacker.hasAbility('Tectonize')) && normal) {
+    } else if ((isTectonize = attacker.hasAbility('Tectonize') && normal)) {
       type = 'Ground';
-    } else if ((isHydrate = attacker.hasAbility('Hydrate')) && normal) {
+    } else if ((isHydrate = attacker.hasAbility('Hydrate') && normal)) {
       type = 'Water';
     } 
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDraconize || isSteelworker || isImmolate || isCrystallize || isFightingSpirit || isTectonize || isHydrate) {
