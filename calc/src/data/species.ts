@@ -9522,6 +9522,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ground'],
 		bs: {hp: 35, at: 100, df: 50, sa: 50, sd: 70, sp: 120},
 		weightkg: 33.3,
+    heads: 3,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Multi-Headed', 'Sand Force', 'Speed Force']
 	},
@@ -9739,6 +9740,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 50, at: 60, df: 95, sa: 120, sd: 70, sp: 70},
 		weightkg: 60.0,
+    heads: 3,
 		abilities: {0: 'Analytic'},
 		innates: ['Filter', 'Multi-Headed', 'Magnet Pull']
 	},
@@ -9753,6 +9755,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 65, at: 85, df: 45, sa: 35, sd: 35, sp: 85},
 		weightkg: 39.2,
+    heads: 2,
 		abilities: {0: 'Speed Force'},
 		innates: ['Multi-Headed', 'Grounded', 'Moxie']
 	},
@@ -9760,6 +9763,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Normal', 'Flying'],
 		bs: {hp: 90, at: 110, df: 70, sa: 60, sd: 60, sp: 120},
 		weightkg: 85.2,
+    heads: 3,
 		abilities: {0: 'Vital Spirit'},
 		innates: ['Multi-Headed', 'Grounded', 'Moxie']
 	},
@@ -9879,6 +9883,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Psychic'],
 		bs: {hp: 60, at: 40, df: 80, sa: 60, sd: 45, sp: 40},
 		weightkg: 2.5,
+    heads: 3,
 		abilities: {0: 'Magic Bounce'},
 		innates: ['Solar Power', 'Chlorophyll', 'Multi-Headed']
 	},
@@ -9886,6 +9891,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Psychic'],
 		bs: {hp: 95, at: 95, df: 85, sa: 125, sd: 75, sp: 55},
 		weightkg: 120.0,
+    heads: 3,
 		abilities: {0: 'Magic Bounce'},
 		innates: ['Harvest', 'Chloroplast', 'Multi-Headed']
 	},
@@ -9935,6 +9941,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Poison'],
 		bs: {hp: 85, at: 90, df: 120, sa: 95, sd: 70, sp: 60},
 		weightkg: 9.5,
+    heads: 2,
 		abilities: {0: 'Flare Boost'},
 		innates: ['Levitate', 'Multi-Headed', 'Inflatable']
 	},
@@ -10586,6 +10593,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Normal', 'Psychic'],
 		bs: {hp: 70, at: 80, df: 65, sa: 90, sd: 65, sp: 85},
 		weightkg: 41.5,
+    heads: 2,
 		abilities: {0: 'Strong Jaw'},
 		innates: ['Multi-Headed', 'Nocturnal', 'Sap Sipper']
 	},
@@ -11286,6 +11294,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 70, at: 45, df: 115, sa: 55, sd: 75, sp: 50},
 		weightkg: 11.5,
+    heads: 2,
 		abilities: {0: 'Adaptability'},
 		innates: ['Multi-Headed', 'Huge Power', 'Jaws of Carnage']
 	},
@@ -12070,6 +12079,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Bug', 'Flying'],
 		bs: {hp: 40, at: 60, df: 42, sa: 60, sd: 42, sp: 80},
 		weightkg: 5.5,
+    heads: 3,
 		abilities: {0: 'Regenerator'},
 		innates: ['Swarm', 'Pollinate', 'Multi-Headed']
 	},
@@ -12399,6 +12409,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 70, at: 70, df: 115, sa: 130, sd: 90, sp: 60},
 		weightkg: 180.0,
+    heads: 3,
 		abilities: {0: 'Sighting System'},
 		innates: ['Filter', 'Multi-Headed', 'Magnet Pull']
 	},
@@ -12497,6 +12508,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Rock', 'Steel'],
 		bs: {hp: 60, at: 55, df: 145, sa: 95, sd: 150, sp: 40},
 		weightkg: 340.0,
+    heads: 3,
 		abilities: {0: 'Impenetrable'},
 		innates: ['Multi-Headed', 'Levitate', 'Solid Rock']
 	},
@@ -13253,6 +13265,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ice'],
 		bs: {hp: 71, at: 95, df: 85, sa: 110, sd: 95, sp: 95},
 		weightkg: 57.5,
+    heads: 2,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Multi-Headed', 'Ice Body', 'Slush Rush']
 	},
@@ -13358,6 +13371,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Steel'],
 		bs: {hp: 40, at: 55, df: 70, sa: 55, sd: 60, sp: 50},
 		weightkg: 21.0,
+    heads: 2,
 		abilities: {0: 'Steelworker'},
 		innates: ['Multi-Headed', 'Sturdy', 'Full Metal Body']
 	},
@@ -13365,6 +13379,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Steel'],
 		bs: {hp: 60, at: 80, df: 95, sa: 80, sd: 85, sp: 70},
 		weightkg: 51.0,
+    heads: 3,
 		abilities: {0: 'Steelworker'},
 		innates: ['Multi-Headed', 'Sturdy', 'Full Metal Body']
 	},
@@ -13372,6 +13387,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Steel'],
 		bs: {hp: 60, at: 100, df: 115, sa: 100, sd: 85, sp: 90},
 		weightkg: 81.0,
+    heads: 3,
 		abilities: {0: 'Technician'},
 		innates: ['Multi-Headed', 'Sturdy', 'Steelworker']
 	},
@@ -13603,6 +13619,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Dragon'],
 		bs: {hp: 72, at: 65, df: 70, sa: 85, sd: 70, sp: 58},
 		weightkg: 50.0,
+    heads: 2,
 		abilities: {0: 'Hustle'},
 		innates: ['Multi-Headed', 'Gluttony', 'Predator']
 	},
@@ -13610,6 +13627,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Dragon'],
 		bs: {hp: 92, at: 105, df: 90, sa: 125, sd: 90, sp: 98},
 		weightkg: 160.0,
+    heads: 3,
 		abilities: {0: 'Scare'},
 		innates: ['Multi-Headed', 'Levitate', 'Predator']
 	},
@@ -13981,6 +13999,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Rock', 'Water'],
 		bs: {hp: 42, at: 52, df: 67, sa: 39, sd: 56, sp: 50},
 		weightkg: 31.0,
+    heads: 2,
 		abilities: {0: 'Pickpocket'},
 		innates: ['Multi-Headed', 'Tough Claws', 'Sniper']
 	},
@@ -13988,6 +14007,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Rock', 'Water'],
 		bs: {hp: 72, at: 105, df: 115, sa: 54, sd: 86, sp: 68},
 		weightkg: 96.0,
+    heads: 3,
 		abilities: {0: 'Pickpocket'},
 		innates: ['Multi-Headed', 'Tough Claws', 'Sniper']
 	},
@@ -15829,6 +15849,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 65, at: 108, df: 65, sa: 108, sd: 65, sp: 75},
 		weightkg: 15.0,
+    heads: 2,
 		abilities: {0: 'Moody'},
 		innates: ['Water Absorb', 'Multi-Headed', 'Pyromancy']
 	},
@@ -15892,6 +15913,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Water'],
 		bs: {hp: 35, at: 100, df: 50, sa: 50, sd: 70, sp: 120},
 		weightkg: 5.4,
+    heads: 3,
 		abilities: {0: 'Accelerate'},
 		innates: ['Gooey', 'Field Explorer', 'Multi-Headed']
 	},
@@ -16088,6 +16110,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Electric', 'Ground'],
 		bs: {hp: 85, at: 81, df: 97, sa: 121, sd: 85, sp: 101},
 		weightkg: 60.0,
+    heads: 3,
 		abilities: {0: 'Ground Shock'},
 		innates: ['Protosynthesis', 'Multi-Headed', 'Transistor']
 	},
@@ -16116,6 +16139,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Flying'],
 		bs: {hp: 94, at: 80, df: 86, sa: 122, sd: 80, sp: 108},
 		weightkg: 111.0,
+    heads: 3,
 		abilities: {0: 'Hubris'},
 		innates: ['Quark Drive', 'Multi-Headed', 'Rapid Response']
 	},
@@ -16298,6 +16322,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 106, at: 80, df: 110, sa: 135, sd: 80, sp: 44},
 		weightkg: 10.0,
+    heads: 3,
 		abilities: {0: 'Self Sufficient'},
 		innates: ['Multi-Headed', 'Shell Armor', 'Super Hot Goo']
 	},
@@ -16851,6 +16876,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ground'],
 		bs: {hp: 90, at: 120, df: 80, sa: 60, sd: 75, sp: 100},
 		weightkg: 6.9,
+    heads: 3,
 		abilities: {0: 'Stamina'},
 		innates: ['Multi-Headed', 'Earthbound', 'Thick Fat']
 	},
@@ -16872,6 +16898,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Water'],
 		bs: {hp: 70, at: 120, df: 75, sa: 55, sd: 75, sp: 130},
 		weightkg: 6.9,
+    heads: 3,
 		abilities: {0: 'Accelerate'},
 		innates: ['Limber', 'Depth Explorer', 'Multi-Headed']
 	},
@@ -17180,6 +17207,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Steel', 'Fairy'],
 		bs: {hp: 70, at: 105, df: 130, sa: 55, sd: 100, sp: 50},
 		weightkg: 11.5,
+    heads: 3,
 		abilities: {0: 'Huge Power'},
 		innates: ['Multi-Headed', 'Hungry Maws', 'Grip Pincer']
 	},
@@ -17404,6 +17432,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 35, at: 100, df: 60, sa: 50, sd: 70, sp: 110},
 		weightkg: 33.3,
+    heads: 3,
 		abilities: {0: 'Sand Rush'},
 		innates: ['Multi-Headed', 'Sand Force', 'Speed Force']
 	},
@@ -17460,6 +17489,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Dragon'],
 		bs: {hp: 95, at: 125, df: 85, sa: 105, sd: 75, sp: 45},
 		weightkg: 120.0,
+    heads: 3,
 		abilities: {0: 'Sun Basking'},
 		innates: ['Long Reach', 'Sun\'s Bounty', 'Multi-Headed']
 	},
@@ -17516,6 +17546,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Poison', 'Fairy'],
 		bs: {hp: 85, at: 70, df: 120, sa: 95, sd: 90, sp: 60},
 		weightkg: 9.5,
+    heads: 2,
 		abilities: {0: 'Pressure'},
 		innates: ['Levitate', 'Multi-Headed', 'Poison Absorb']
 	},
@@ -19259,6 +19290,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Rock', 'Fighting'],
 		bs: {hp: 72, at: 140, df: 130, sa: 64, sd: 106, sp: 88},
 		weightkg: 96.0,
+    heads: 3,
 		abilities: {0: 'Frisk'},
 		innates: ['Hand Barnacles', 'Tough Claws', 'Solid Rock']
 	},
@@ -19406,6 +19438,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Bug', 'Rock'],
 		bs: {hp: 50, at: 60, df: 255, sa: 10, sd: 255, sp: 5},
 		weightkg: 20.5,
+    heads: 3,
 		abilities: {0: 'Self Repair'},
 		innates: ['Multi-Headed', 'Juggernaut', 'Fort Knox']
 	},
@@ -19539,6 +19572,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Electric', 'Steel'],
 		bs: {hp: 70, at: 75, df: 135, sa: 165, sd: 125, sp: 65},
 		weightkg: 180.0,
+    heads: 3,
 		abilities: {0: 'Electric Burst'},
 		innates: ['Electric Surge', 'Multi-Headed', 'Magnet Pull']
 	},
@@ -19630,6 +19664,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Ghost'],
 		bs: {hp: 70, at: 105, df: 100, sa: 55, sd: 65, sp: 115},
 		weightkg: 11.5,
+    heads: 3,
 		abilities: {0: 'Dead Power'},
 		innates: ['Multi-Headed', 'Strong Jaw', 'Shadow Tag']
 	},
@@ -19763,6 +19798,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 100, at: 105, df: 130, sa: 165, sd: 130, sp: 70},
 		weightkg: 160.0,
+    heads: 3,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Eternal Blessing', 'Multi-Headed', 'Radiance']
 	},
@@ -20232,6 +20268,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ghost', 'Fire'],
 		bs: {hp: 80, at: 65, df: 100, sa: 190, sd: 115, sp: 90},
 		weightkg: 34.3,
+    heads: 3,
 		abilities: {0: 'Friend Guard'},
 		innates: ['Chandelier', 'Multi-Headed', 'Flame Body']
 	},
@@ -20421,6 +20458,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Dragon'],
 		bs: {hp: 92, at: 115, df: 123, sa: 165, sd: 90, sp: 115},
 		weightkg: 160.0,
+    heads: 3,
 		abilities: {0: 'Wings of Pestilence'},
 		innates: ['Hydra', 'Mind Crunch', 'Merciless']
 	},
@@ -20428,6 +20466,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ice'],
 		bs: {hp: 71, at: 110, df: 115, sa: 145, sd: 105, sp: 105},
 		weightkg: 57.5,
+    heads: 3,
 		abilities: {0: 'Snow Cloak'},
 		innates: ['Multi-Headed', 'Sundae', 'Slush Rush']
 	},
@@ -20435,6 +20474,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Ground', 'Steel'],
 		bs: {hp: 95, at: 120, df: 90, sa: 55, sd: 75, sp: 90},
 		weightkg: 6.9,
+    heads: 3,
 		abilities: {0: 'Costar'},
 		innates: ['Multi-Headed', 'Steely Spirit', 'Moustache']
 	},
@@ -20687,6 +20727,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Normal'],
 		bs: {hp: 60, at: 56, df: 55, sa: 54, sd: 80, sp: 20},
 		weightkg: 2.5,
+    heads: 3,
 		abilities: {0: 'Grassy Surge'},
 		innates: ['Raw Wood', 'Multi-Headed', 'Effect Spore']
 	},
@@ -20694,6 +20735,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Normal'],
 		bs: {hp: 100, at: 60, df: 105, sa: 130, sd: 105, sp: 30},
 		weightkg: 120.0,
+    heads: 3,
 		abilities: {0: 'Triage'},
 		innates: ['Rite Of Spring', 'Multi-Headed', 'Oblivious']
 	},
@@ -21030,6 +21072,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 72, at: 65, df: 70, sa: 85, sd: 70, sp: 58},
 		weightkg: 50.0,
+    heads: 2,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Celestial Blessing', 'Multi-Headed', 'Misty Surge']
 	},
@@ -21037,6 +21080,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Fairy', 'Dragon'],
 		bs: {hp: 100, at: 105, df: 100, sa: 125, sd: 100, sp: 70},
 		weightkg: 160.0,
+    heads: 3,
 		abilities: {0: 'Mega Launcher'},
 		innates: ['Celestial Blessing', 'Multi-Headed', 'Misty Surge']
 	},
@@ -21086,6 +21130,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Poison', 'Dark'],
 		bs: {hp: 65, at: 95, df: 55, sa: 25, sd: 35, sp: 75},
 		weightkg: 39.2,
+    heads: 2,
 		abilities: {0: 'Moody'},
 		innates: ['Solenoglyphs', 'Half Drake', 'Multi-Headed']
 	},
@@ -21093,6 +21138,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dark', 'Poison'],
 		bs: {hp: 90, at: 130, df: 80, sa: 50, sd: 60, sp: 100},
 		weightkg: 85.2,
+    heads: 3,
 		abilities: {0: 'Moody'},
 		innates: ['Solenoglyphs', 'Half Drake', 'Multi-Headed']
 	},
@@ -21324,6 +21370,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 95, df: 75, sa: 85, sd: 80, sp: 75},
 		weightkg: 11.5,
+    heads: 2,
 		abilities: {0: 'Heatproof'},
 		innates: ['Multi-Headed', 'Strong Jaw', 'Scare']
 	},
@@ -21331,6 +21378,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Poison'],
 		bs: {hp: 70, at: 105, df: 110, sa: 95, sd: 105, sp: 95},
 		weightkg: 11.5,
+    heads: 3,
 		abilities: {0: 'Flaming Maw'},
 		innates: ['Huge Power', 'Multi-Headed', 'Corrosion']
 	},
@@ -22024,6 +22072,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Grass', 'Fire'],
 		bs: {hp: 65, at: 138, df: 85, sa: 138, sd: 85, sp: 75},
 		weightkg: 15.0,
+    heads: 2,
 		abilities: {0: 'Flaming Jaws'},
 		innates: ['Mob Boss', 'Multi-Headed', 'Ghost Pepper']
 	},
@@ -22038,6 +22087,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		types: ['Dragon', 'Water'],
 		bs: {hp: 68, at: 65, df: 90, sa: 135, sd: 125, sp: 92},
 		weightkg: 8.0,
+    heads: 3,
 		abilities: {0: 'Commander'},
 		innates: ['Multiscale', 'High Tide', '3 > 1']
 	},

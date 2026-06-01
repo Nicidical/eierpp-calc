@@ -156,7 +156,7 @@ export function getRecovery(
   if (move.drain) {
     // Parental Bond counts as multiple heals for drain moves, but not for Shell Bell
     // Currently no drain moves are multihit, however this covers for it.
-    if (attacker.hasAbility('Parental Bond') || move.hits > 1) {
+    if (attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || move.hits > 1) {
       [minD, maxD] = multiDamageRange(damage) as [number[], number[]];
     }
     const percentHealed = move.drain[0] / move.drain[1];
@@ -548,7 +548,7 @@ function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
   }
 
   if (!defender.hasType('Flying') &&
-      !defender.hasAbility('Magic Guard', 'Levitate') &&
+      !defender.hasAbility('Magic Guard', 'Levitate', 'Dragonfly') &&
       !defender.hasItem('Air Balloon')
   ) {
     if (defenderSide.spikes === 1) {
@@ -655,6 +655,10 @@ function getEndOfTurn(
   if (defender.hasAbility('Water Veil') && !healBlock) {
     damage += Math.floor(defender.maxHP() / 16);
     texts.push('Aqua Ring recovery');
+  }
+  if (defender.hasAbility('Self Sufficient') && !healBlock) {
+    damage += Math.floor(defender.maxHP() / 16);
+    texts.push('Self Sufficient recovery');
   }
 
   if (field.defenderSide.isSeeded) {

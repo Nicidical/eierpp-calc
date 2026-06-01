@@ -30,7 +30,7 @@ const EV_ITEMS = [
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
-      !pokemon.hasAbility('Levitate') &&
+      !pokemon.hasAbility('Levitate', 'Dragonfly') &&
       !pokemon.hasItem('Air Balloon')));
 }
 
@@ -114,11 +114,18 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
     speedMods.push(6144);
   }
+  /* Light Metal now gives a 1.3x speed boost + half weight */
   if (pokemon.hasAbility('Light Metal')) {
     speedMods.push(5325);
   }
   if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
     speedMods.push(2048);
+  }
+  if (pokemon.hasAbility('Lead Coat')) {
+    speedMods.push(3686);
+  }
+  if (pokemon.hasAbility('Chrome Coat')) {
+    speedMods.push(3686);
   }
   if (isQPActive(pokemon, field) && getQPBoostedStat(pokemon, gen) === 'spe') {
     speedMods.push(6144);
@@ -148,6 +155,11 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
 export function getThirdType(pokemon: Pokemon) {
   return pokemon.hasAbility('Teravolt') ? 'Electric' : 
          pokemon.hasAbility('Turboblaze') ? 'Fire' :
+         pokemon.hasAbility('Aquatic') ? 'Water' :
+         pokemon.hasAbility('Grounded') ? 'Ground' :
+         pokemon.hasAbility('Ice Age') ? 'Ice' :
+         pokemon.hasAbility('Half Drake', 'Dragonfly') ? 'Dragon' :
+         pokemon.hasAbility('Metallic') ? 'Steel' :
          '???';
 }
 
@@ -161,6 +173,7 @@ export function getMoveEffectiveness(
   isNormalize?: boolean,
   defIsSteelworker?: boolean,
   isCorrosion?: boolean,
+  isGroundShock?: boolean
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -176,6 +189,8 @@ export function getMoveEffectiveness(
   /* Corrosion makes Poison Super Effective against Steel */
   } else if (isCorrosion && type === 'Steel' && move.hasType('Poison')) {
     return 2;
+  } else if (isGroundShock && type === 'Ground' && move.hasType('Electric')) {
+    return 0.5;
   /* Will need to remember to add something so this shows in the desc */
   } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
     return 0.5
@@ -298,6 +313,9 @@ export function checkIntrepidSword(source: Pokemon, gen: Generation) {
 
 export function checkDauntlessShield(source: Pokemon, gen: Generation) {
   if (source.hasAbility('Dauntless Shield') && gen.num > 7) {
+    source.boosts.def = Math.min(6, source.boosts.def + 1);
+  }
+  if (source.hasAbility('Let\'s Roll')) {
     source.boosts.def = Math.min(6, source.boosts.def + 1);
   }
 }
@@ -642,13 +660,19 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
+  } else if (pokemon.hasAbility('Mystic Power')) {
+    stabMod += 2048;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
+  } else if (pokemon.hasAbility('Aurora Borealis') && move.hasType('Ice')) {
+    stabMod += 2048;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   }
   const teraType = pokemon.teraType;
   if (teraType === move.type && teraType !== 'Stellar') {
     stabMod += 2048;
     desc.attackerTera = teraType;
   }
-  if (pokemon.hasAbility('Adaptability') && pokemon.hasType(move.type)) {
+  if (pokemon.hasAbility('Adaptability') && stabMod == 6144) {
     stabMod += teraType && pokemon.hasOriginalType(teraType) ? 1024 : 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   }

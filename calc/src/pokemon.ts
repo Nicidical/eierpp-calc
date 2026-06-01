@@ -165,7 +165,12 @@ export class Pokemon implements State.Pokemon {
 
     /* Additional Type Abilities */
     if ((this.hasAbility('Turboblaze') && types.includes('Fire')) ||
-       (this.hasAbility('Teravolt') && types.includes('Electric'))
+       (this.hasAbility('Teravolt') && types.includes('Electric')) ||
+       (this.hasAbility('Aquatic') && types.includes('Water')) ||
+       (this.hasAbility('Grounded') && types.includes('Ground')) ||
+       (this.hasAbility('Ice Age') && types.includes('Ice')) ||
+       (this.hasAbility('Half Drake', 'Dragonfly') && types.includes('Dragon')) ||
+       (this.hasAbility('Metallic') && types.includes('Steel'))
     ) {
       return true;
     }
@@ -180,7 +185,12 @@ export class Pokemon implements State.Pokemon {
     
     /* Additional Type Abilities */
     if ((this.hasAbility('Turboblaze') && types.includes('Fire')) ||
-       (this.hasAbility('Teravolt') && types.includes('Electric'))
+       (this.hasAbility('Teravolt') && types.includes('Electric')) ||
+       (this.hasAbility('Aquatic') && types.includes('Water')) ||
+       (this.hasAbility('Grounded') && types.includes('Ground')) ||
+       (this.hasAbility('Ice Age') && types.includes('Ice')) ||
+       (this.hasAbility('Half Drake', 'Dragonfly') && types.includes('Dragon')) ||
+       (this.hasAbility('Metallic') && types.includes('Steel'))
     ) {
       return true;
     }
