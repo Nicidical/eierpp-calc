@@ -1616,6 +1616,14 @@ export function calculateAttackSMSSSV(
     attack = pokeRound((attack * 7) / 5);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
+
+  // Juggernaut also adds to attack directly as it needs the defense stat
+  if (attacker.hasAbility('Juggernaut') && !attacker.hasAbility('Long Reach') && move.flags.contact) {
+    const defense = getModifiedStat(attackSource.rawStats['def']!, boosts);
+    attack = pokeRound(attack + defense * .2);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
   const atMods = calculateAtModsSMSSSV(gen, attacker, defender, move, field, desc);
   attack = OF16(Math.max(1, pokeRound((attack * chainMods(atMods, 410, 131072)) / 4096)));
   return attack;
