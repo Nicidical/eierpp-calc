@@ -160,6 +160,7 @@ export function getThirdType(pokemon: Pokemon) {
          pokemon.hasAbility('Ice Age') ? 'Ice' :
          pokemon.hasAbility('Half Drake', 'Dragonfly') ? 'Dragon' :
          pokemon.hasAbility('Metallic') ? 'Steel' :
+         pokemon.hasAbility('Phantom') ? 'Ghost' :
          '???';
 }
 
@@ -173,7 +174,8 @@ export function getMoveEffectiveness(
   isNormalize?: boolean,
   defIsSteelworker?: boolean,
   isCorrosion?: boolean,
-  isGroundShock?: boolean
+  isGroundShock?: boolean,
+  isOverwhelm?: boolean
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -191,6 +193,8 @@ export function getMoveEffectiveness(
     return 2;
   } else if (isGroundShock && type === 'Ground' && move.hasType('Electric')) {
     return 0.5;
+  } else if (isOverwhelm && type === 'Fairy' && move.hasType('Dragon')) {
+    return 1;
   /* Will need to remember to add something so this shows in the desc */
   } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
     return 0.5
@@ -317,6 +321,27 @@ export function checkDauntlessShield(source: Pokemon, gen: Generation) {
   }
   if (source.hasAbility('Let\'s Roll')) {
     source.boosts.def = Math.min(6, source.boosts.def + 1);
+  }
+}
+
+export function checkMajesticMoth(source: Pokemon, gen: Generation) {
+  const atkStat = source.rawStats.atk;
+  const defStat = source.rawStats.def;
+  const spaStat = source.rawStats.spa;
+  const spdStat = source.rawStats.spd;
+  const speStat = source.rawStats.spe;
+  if (source.hasAbility('Majestic Moth')) {
+    if (Math.max(atkStat, defStat, spaStat, spdStat, speStat) === atkStat) {
+      source.boosts.atk = Math.min(6, source.boosts.atk + 1);
+    } else if (Math.max(defStat, spaStat, spdStat, speStat) === defStat) {
+      source.boosts.def = Math.min(6, source.boosts.def + 1);
+    } else if (Math.max(spaStat, spdStat, speStat) === spaStat) {
+      source.boosts.spa = Math.min(6, source.boosts.spa + 1);
+    } else if (Math.max(spdStat, speStat) === spdStat) {
+      source.boosts.spd = Math.min(6, source.boosts.spd + 1);
+    } else {
+      source.boosts.spe = Math.min(6, source.boosts.spe + 1);
+    }
   }
 }
 
