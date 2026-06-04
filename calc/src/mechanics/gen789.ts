@@ -187,7 +187,7 @@ export function calculateSMSSSV(
     "Mind's Eye", 'Mirror Armor', 'Motor Drive', 'Mountaineer',
     'Multiscale', 'Nocturnal', 
     'Oblivious', 'Overcoat', 'Own Tempo',
-    'Pastel Veil', 'Permafrost', 'Primal Armor',
+    'Pastel Veil', 'Permafrost', 'Poison Absorb', 'Primal Armor',
     'Punk Rock', 'Purifying Salt', 'Queenly Majesty',
     'Sand Veil', 'Sap Sipper', 'Shell Armor', 'Shield Dust',
     'Simple', 'Snow Cloak', 'Solid Rock', 'Soundproof',
@@ -611,6 +611,7 @@ export function calculateSMSSSV(
       (move.flags.wind && defender.hasAbility('Wind Rider')) ||
       (move.hasType('Flying') && defender.hasAbility('Aerodynamics')) ||
       (move.hasType('Rock') && defender.hasAbility('Mountaineer')) ||
+      (move.hasType('Poison') && defender.hasAbility('Poison Absorb')) ||
       (move.hasType('Dark') && defender.hasAbility('Justified', 'Radiance'))
   ) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
@@ -815,9 +816,10 @@ export function calculateSMSSSV(
      ['allAdjacent', 'allAdjacentFoes'].includes(move.target);
 
   let childDamage: number[] | undefined;
+  let child2Damage: number[] | undefined;
   // There should be only one of these abilities on every Pokemon. So, I'm coding them with if/elses.
   /* Parental Bond / Hyper Aggressive */
-  if (attacker.hasAbility('Parental Bond', 'Hyper Aggressive') && move.hits === 1 && !isSpread) {
+  if ((attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || (attacker.hasAbility('Multi-Headed') && attacker.heads === 2)) && move.hits === 1 && !isSpread) {
     const child = attacker.clone();
 
     /* Need to check which innate slot the ability is in...or if it is the ability slot 
@@ -853,6 +855,37 @@ export function calculateSMSSSV(
     childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
     console.log(childDamage);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  } else if ((attacker.hasAbility('Multi-Headed') && attacker.heads === 3) && move.hits === 1 && !isSpread) {
+    const hit1 = attacker.clone();
+    const hit2 = attacker.clone();
+
+    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+    if (hit1.innates && hit2.innates) {
+      var i;
+      for (i = 0; i < 3; i++) {
+        if (hit1.innates[i] === attacker.descAbility) { break; }
+      }
+      if (i < 3) { 
+        hit1.innates[i] = 'Multi-Headed 2/3' as AbilityName;
+        hit2.innates[i] = 'Multi-Headed 3/3' as AbilityName; 
+      }
+      else { 
+        hit1.ability = 'Multi-Headed 2/3' as AbilityName;
+        hit2.ability = 'Multi-Headed 3/3' as AbilityName;
+      }
+    } else { 
+      hit1.ability = 'Multi-Headed 2/3' as AbilityName; 
+      hit2.ability = 'Multi-Headed 3/3' as AbilityName; 
+    }
+
+    checkMultihitBoost(gen, hit1, defender, move, field, desc);
+    checkMultihitBoost(gen, hit2, defender, move, field, desc);
+    childDamage = calculateSMSSSV(gen, hit1, defender, move, field).damage as number[];
+    console.log(childDamage);
+    child2Damage = calculateSMSSSV(gen, hit2, defender, move, field).damage as number[];
+    console.log(child2Damage);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
   const damage = [];
@@ -860,7 +893,9 @@ export function calculateSMSSSV(
     damage[i] =
       getFinalDamage(baseDamage, i, typeEffectiveness, applyStatus, stabMod, finalMod, protect);
   }
-  result.damage = childDamage ? [damage, childDamage] : damage;
+  result.damage = childDamage ? [damage, childDamage] :
+                  childDamage && child2Damage ? [damage, childDamage, child2Damage] : 
+                  damage;
 
   if (move.timesUsed! > 1 || move.hits > 1) {
     // store boosts so intermediate boosts don't show.
@@ -1809,7 +1844,9 @@ export function calculateAtModsSMSSSV(
   }
 
   /* The 2x type boosters*/
-  if ((attacker.hasAbility('Water Bubble') && move.hasType('Water'))) {
+  if ((attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
+      (attacker.hasAbility('Seaweed') && move.hasType('Grass') && defender.hasType('Fire'))
+  ) {
     atMods.push(8192);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1864,12 +1901,16 @@ export function calculateAtModsSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  /* Water Bubble and Heatproof are seperate because the fire modifiers can stack */
+  /* Water Bubble, Seaweed and Heatproof are seperate because the fire modifiers can stack */
   if (defender.hasAbility('Water Bubble') && move.hasType('Fire')) {
         atMods.push(2048);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
   if (defender.hasAbility('Heatproof') && move.hasType('Fire')) {
+        atMods.push(2048);
+        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+  if (defender.hasAbility('Seaweed') && defender.hasType('Grass') && move.hasType('Fire')) {
         atMods.push(2048);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
@@ -2123,6 +2164,10 @@ function calculateBaseDamageSMSSSV(
     baseDamage = pokeRound(OF32(baseDamage * 1024) / 4096);
   } else if (attacker.hasAbility('Raging Boxer (Child)')) {
     baseDamage = pokeRound(OF32(baseDamage * 1638) / 4096);
+  } else if (attacker.hasAbility('Multi-Headed 2/3')) {
+    baseDamage = pokeRound(OF32(baseDamage * 819) / 4096);
+  } else if (attacker.hasAbility('Multi-Headed 3/3')) {
+    baseDamage = pokeRound(OF32(baseDamage * 614) / 4096);
   }
 
   const isMegaSol = attacker.hasAbility('Mega Sol');

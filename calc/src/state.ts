@@ -8,6 +8,7 @@ export namespace State {
     innatesOn?: boolean[];
     ability?: I.AbilityName;
     abilityOn?: boolean;
+    heads?: number,
     isDynamaxed?: boolean;
     dynamaxLevel?: number;
     alliesFainted?: number;
