@@ -1525,7 +1525,7 @@ export function calculateBPModsSMSSSV(
 
   if (attacker.hasAbilityActive('Illusion')) {
     bpMods.push(5325);
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Flash Fire', desc, 'a');
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
   if (attacker.hasAbility('Punk Rock') && move.flags.sound) {
