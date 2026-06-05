@@ -432,6 +432,7 @@ export function calculateSMSSSV(
   const isCorrosion = attacker.hasAbility('Corrosion');
   const isGroundShock = attacker.hasAbility('Ground Shock');
   const isOverwhelm = attacker.hasAbility('Overwhelm');
+  const isOvercharge = attacker.hasAbility('Overcharge');
 
   const type1Effectiveness = getMoveEffectiveness(
     gen,
@@ -444,7 +445,8 @@ export function calculateSMSSSV(
     defIsSteelworker,
     isCorrosion,
     isGroundShock,
-    isOverwhelm
+    isOverwhelm,
+    isOvercharge
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -458,7 +460,8 @@ export function calculateSMSSSV(
       defIsSteelworker,
       isCorrosion,
       isGroundShock,
-      isOverwhelm
+      isOverwhelm,
+      isOvercharge
     )
     : 1;
 
@@ -474,7 +477,8 @@ export function calculateSMSSSV(
       defIsSteelworker,
       isCorrosion,
       isGroundShock,
-      isOverwhelm
+      isOverwhelm,
+      isOvercharge
     )
     : 1;
 
@@ -1340,6 +1344,7 @@ export function calculateBPModsSMSSSV(
     const isCorrosion = attacker.hasAbility('Corrosion');
     const isGroundShock = attacker.hasAbility('Ground Shock');
     const isOverwhelm = attacker.hasAbility('Overwhelm');
+    const isOvercharge = attacker.hasAbility('Overcharge');
     const defIsSteelworker = defender.hasAbility('Steelworker') && defender.hasType('Steel');
     const types = defender.teraType && defender.teraType !== 'Stellar'
       ? [defender.teraType] : defender.types;
@@ -1354,7 +1359,8 @@ export function calculateBPModsSMSSSV(
       defIsSteelworker,
       isCorrosion,
       isGroundShock,
-      isOverwhelm
+      isOverwhelm,
+      isOvercharge
     );
     const type2Effectiveness = types[1] ? getMoveEffectiveness(
       gen,
@@ -1367,9 +1373,26 @@ export function calculateBPModsSMSSSV(
       defIsSteelworker,
       isCorrosion,
       isGroundShock,
-      isOverwhelm
+      isOverwhelm,
+      isOvercharge
     ) : 1;
-    if (type1Effectiveness * type2Effectiveness >= 2) {
+    const type3Effectiveness = !['???', defender.types[0], defender.types[1]].includes(getThirdType(defender))
+    ? getMoveEffectiveness(
+      gen,
+      move,
+      getThirdType(defender),
+      isGhostRevealed,
+      field.isGravity,
+      isRingTarget,
+      isNormalize,
+      defIsSteelworker,
+      isCorrosion,
+      isGroundShock,
+      isOverwhelm,
+      isOvercharge
+    )
+    : 1;
+    if (type1Effectiveness * type2Effectiveness * type3Effectiveness >= 2) {
       bpMods.push(5461);
       desc.moveBP = basePower * (5461 / 4096);
     }
@@ -1500,7 +1523,7 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (attacker.hasAbility('Illusion')) {
+  if (attacker.hasAbilityActive('Illusion')) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Flash Fire', desc, 'a');
   }
@@ -1701,7 +1724,7 @@ export function calculateAtModsSMSSSV(
 
 
   // Slow Start also halves damage with special Z-moves
-  if ((attacker.hasAbility('Slow Start') && attacker.abilityOn &&
+  if ((attacker.hasAbility('Slow Start') && attacker.hasAbilityActive('Slow Start') &&
        (move.category === 'Physical' || (move.category === 'Special' && move.isZ))) ||
        /* Defeatist now requires <1/3 HP instead of <1/2 HP */
       (attacker.hasAbility('Defeatist') && attacker.curHP() <= attacker.maxHP() / 3)
@@ -1744,6 +1767,11 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
+  if (attacker.hasAbilityActive('Violent Rush')) {
+    atMods.push(4915);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
   /* For all the starter adjacent abilities, since they're all using different types
   I'm pretty OK just leaving them in one (close enough) if statement*/
   if (attacker.curHP() <= attacker.maxHP() / 3) {
@@ -1781,11 +1809,11 @@ export function calculateAtModsSMSSSV(
         desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (move.category === 'Special' && attacker.abilityOn && attacker.hasAbility('Plus', 'Minus')) {
+  if (move.category === 'Special' && attacker.hasAbilityActive('Plus', 'Minus')) {
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
-  if (attacker.hasAbility('Flash Fire') && attacker.abilityOn && move.hasType('Fire')) {
+  if (attacker.hasAbilityActive('Flash Fire') && move.hasType('Fire')) {
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Flash Fire', desc, 'a');
   }
@@ -1838,7 +1866,7 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (attacker.hasAbility('Stakeout') && attacker.abilityOn) {
+  if (attacker.hasAbilityActive('Stakeout')) {
     atMods.push(8192);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }

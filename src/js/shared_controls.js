@@ -273,7 +273,7 @@ $(".ability").bind("keyup change", function () {
 		$(this).closest(".poke-info").find(moveSelector).find(".move-hits").val(moveHits);
 	}
 
-	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero'];
+	var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero', 'Illusion', 'Violent Rush'];
 
 	if (TOGGLE_ABILITIES.indexOf(ability) >= 0) {
 		$(this).closest(".poke-info").find(".abilityToggle").show();
@@ -1171,7 +1171,7 @@ function createPokemon(pokeInfo) {
 			ability: ability,
 			innates: innates,
 			abilityOn: pokeInfo.find(".abilityToggle").is(":checked"),
-			innatesOn: [true, true, true],
+			innatesOn: [pokeInfo.find(".innate1Toggle").is(":checked"), pokeInfo.find(".innate2Toggle").is(":checked"), pokeInfo.find(".innate3Toggle").is(":checked")],
 			item: item,
 			gender: gender,
 			nature: pokeInfo.find(".nature").val(),

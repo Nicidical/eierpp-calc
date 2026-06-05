@@ -149,6 +149,16 @@ export class Pokemon implements State.Pokemon {
     return isTrue;
   }
 
+  hasAbilityActive(...abilities: string[]) {
+    if ((this.ability && abilities.includes(this.ability) && this.abilityOn) ||
+        (this.innates && this.innatesOn &&
+        ((abilities.includes(this.innates[0]) && this.innatesOn[0]) ||
+        (abilities.includes(this.innates[1]) && this.innatesOn[1]) ||
+        (abilities.includes(this.innates[2]) && this.innatesOn[2])))) {
+          return true;
+    } else { return false; }
+  }
+
   hasItem(...items: string[]) {
     return !!(this.item && items.includes(this.item));
   }

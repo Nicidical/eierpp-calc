@@ -1,4 +1,5 @@
 import type {
+  AbilityName,
   Generation,
   ID,
   ItemName,
@@ -99,7 +100,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   // Pledge swamp would get applied here when implemented
   // speedMods.push(1024);
 
-  if (pokemon.hasAbility('Unburden') && pokemon.abilityOn) {
+  if (pokemon.hasAbilityActive('Unburden')) {
     speedMods.push(8192);
   }
   if ((pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
@@ -118,7 +119,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   if (pokemon.hasAbility('Light Metal')) {
     speedMods.push(5325);
   }
-  if (pokemon.hasAbility('Slow Start') && pokemon.abilityOn) {
+  if (pokemon.hasAbilityActive('Slow Start')) {
     speedMods.push(2048);
   }
   if (pokemon.hasAbility('Lead Coat')) {
@@ -131,7 +132,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
     speedMods.push(6144);
   }
 
-  if (!(pokemon.hasAbility('Unburden') && pokemon.abilityOn)) {
+  if (!(pokemon.hasAbilityActive('Unburden'))) {
     // Unburden active implies item no longer present
     if (pokemon.hasItem('Choice Scarf')) {
       speedMods.push(6144);
@@ -175,7 +176,8 @@ export function getMoveEffectiveness(
   defIsSteelworker?: boolean,
   isCorrosion?: boolean,
   isGroundShock?: boolean,
-  isOverwhelm?: boolean
+  isOverwhelm?: boolean,
+  isOvercharge?: boolean,
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -195,6 +197,8 @@ export function getMoveEffectiveness(
     return 0.5;
   } else if (isOverwhelm && type === 'Fairy' && move.hasType('Dragon')) {
     return 1;
+  } else if (isOvercharge && type === 'Electric' && move.hasType('Electric')) {
+    return 2;
   /* Will need to remember to add something so this shows in the desc */
   } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
     return 0.5
@@ -218,7 +222,7 @@ export function checkAirLock(pokemon: Pokemon, field: Field) {
 }
 
 export function checkTeraformZero(pokemon: Pokemon, field: Field) {
-  if (pokemon.hasAbility('Teraform Zero') && pokemon.abilityOn) {
+  if (pokemon.hasAbilityActive('Teraform Zero')) {
     field.weather = undefined;
     field.terrain = undefined;
   }
@@ -278,7 +282,7 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
     // More abilities now block Intimidate in Gen 8+ (DaWoblefet, Cloudy Mistral)
     (gen.num >= 8 && target.hasAbility('Inner Focus', 'Own Tempo', 'Oblivious', 'Scrappy')) ||
     target.hasItem('Clear Amulet');
-  if (source.hasAbility('Intimidate') && source.abilityOn && !blocked) {
+  if (source.hasAbilityActive('Intimidate') && !blocked) {
     if (target.hasAbility('Contrary', 'Defiant', 'Guard Dog')) {
       target.boosts.atk = Math.min(6, target.boosts.atk + 1);
     } else if (target.hasAbility('Simple')) {
