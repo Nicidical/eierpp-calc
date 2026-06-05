@@ -1523,7 +1523,7 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (attacker.hasAbilityActive('Illusion')) {
+  if (attacker.hasAbilityActive('Illusion') && attacker.hasAbility('Illusion')) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1767,7 +1767,7 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (attacker.hasAbilityActive('Violent Rush')) {
+  if (attacker.hasAbilityActive('Violent Rush') && attacker.hasAbility('Violent Rush') && move.category === 'Physical') {
     atMods.push(4915);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1809,11 +1809,11 @@ export function calculateAtModsSMSSSV(
         desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (move.category === 'Special' && attacker.hasAbilityActive('Plus', 'Minus')) {
+  if (move.category === 'Special' && attacker.hasAbility('Plus', 'Minus') && attacker.hasAbilityActive('Plus', 'Minus')) {
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
-  if (attacker.hasAbilityActive('Flash Fire') && move.hasType('Fire')) {
+  if (attacker.hasAbility('Flash Fire') && attacker.hasAbilityActive('Flash Fire') && move.hasType('Fire')) {
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, 'Flash Fire', desc, 'a');
   }
@@ -1866,7 +1866,7 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (attacker.hasAbilityActive('Stakeout')) {
+  if (attacker.hasAbility('Stakeout') && attacker.hasAbilityActive('Stakeout')) {
     atMods.push(8192);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }

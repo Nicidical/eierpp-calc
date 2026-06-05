@@ -257,6 +257,7 @@ $(".percent-hp").keyup(function () {
 var TOGGLE_ABILITIES = ['Flash Fire', 'Intimidate', 'Minus', 'Plus', 'Slow Start', 'Unburden', 'Stakeout', 'Teraform Zero', 'Illusion', 'Violent Rush'];
 $(".ability").bind("keyup change", function () {
 	var ability = $(this).closest(".poke-info").find(".ability").val();
+	console.log("Ability: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
 		var moveSelector = ".move" + i;
@@ -302,6 +303,7 @@ $(".ability").bind("keyup change", function () {
 
 $(".innate1").bind("keyup change", function () {
 	var ability = $(this).closest(".poke-info").find(".innate1").val();
+	console.log("Innate 1: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
 		var moveSelector = ".move" + i;
@@ -331,6 +333,7 @@ $(".innate1").bind("keyup change", function () {
 
 $(".innate2").bind("keyup change", function () {
 	var ability = $(this).closest(".poke-info").find(".innate2").val();
+	console.log("Innate 2: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
 		var moveSelector = ".move" + i;
@@ -360,6 +363,7 @@ $(".innate2").bind("keyup change", function () {
 
 $(".innate3").bind("keyup change", function () {
 	var ability = $(this).closest(".poke-info").find(".innate3").val();
+	console.log("Innate 3: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
 		var moveSelector = ".move" + i;
