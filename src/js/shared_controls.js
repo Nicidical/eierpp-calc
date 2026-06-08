@@ -301,8 +301,8 @@ $(".ability").bind("keyup change", function () {
 
 });
 
-$(".innate1").bind("keyup change", function () {
-	var ability = $(this).closest(".poke-info").find(".innate1").val();
+$(".innates innate1").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innates innate1").val();
 	console.log("Innate 1: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
@@ -331,8 +331,8 @@ $(".innate1").bind("keyup change", function () {
 
 });
 
-$(".innate2").bind("keyup change", function () {
-	var ability = $(this).closest(".poke-info").find(".innate2").val();
+$(".innates innate2").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innates innate2").val();
 	console.log("Innate 2: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
@@ -361,8 +361,8 @@ $(".innate2").bind("keyup change", function () {
 
 });
 
-$(".innate3").bind("keyup change", function () {
-	var ability = $(this).closest(".poke-info").find(".innate3").val();
+$(".innates innate3").bind("keyup change", function () {
+	var ability = $(this).closest(".poke-info").find(".innates innate3").val();
 	console.log("Innate 3: ", ability);
 
 	for (var i = 1; i <= 4; i++) {
