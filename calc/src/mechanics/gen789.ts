@@ -2337,6 +2337,10 @@ export function calculateFinalModsSMSSSV(
     desc.isAuroraVeil = true;
   }
 
+  if (attacker.hasAbility('Arcane Force') && typeEffectiveness > 1) {
+    finalMods.push(4505);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
   /* Buffed from 1.25x to 1.35x */
   if (attacker.hasAbility('Neuroforce') && typeEffectiveness > 1) {
     finalMods.push(5530);
