@@ -1170,7 +1170,8 @@ export function calculateBasePowerSMSSSV(
   case 'Dragon Energy':
   case 'Eruption':
   case 'Water Spout':
-    basePower = Math.max(1, Math.floor((150 * attacker.curHP()) / attacker.maxHP()));
+    /* Changed to move.bp for Volcano Rage specifically, functions the exact same otherwise (in theory) */
+    basePower = Math.max(1, Math.floor((move.bp * attacker.curHP()) / attacker.maxHP()));
     desc.moveBP = basePower;
     break;
   case 'Flail':
