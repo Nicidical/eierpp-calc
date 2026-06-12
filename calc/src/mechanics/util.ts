@@ -31,7 +31,7 @@ const EV_ITEMS = [
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
-      !pokemon.hasAbility('Levitate', 'Dragonfly') &&
+      !pokemon.hasAbility('Levitate', 'Dragonfly', 'Aerialist') &&
       !pokemon.hasItem('Air Balloon')));
 }
 
@@ -103,7 +103,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   if (pokemon.hasAbilityActive('Unburden')) {
     speedMods.push(8192);
   }
-  if ((pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
+  if ((pokemon.hasAbility('Chlorophyll', 'Big Leaves') && weather.includes('Sun')) ||
       (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
       (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
       (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather))) {
@@ -178,6 +178,7 @@ export function getMoveEffectiveness(
   isGroundShock?: boolean,
   isOverwhelm?: boolean,
   isOvercharge?: boolean,
+  isMoltenDown?: boolean,
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
@@ -198,6 +199,8 @@ export function getMoveEffectiveness(
   } else if (isOverwhelm && type === 'Fairy' && move.hasType('Dragon')) {
     return 1;
   } else if (isOvercharge && type === 'Electric' && move.hasType('Electric')) {
+    return 2;
+  } else if (isMoltenDown && type === 'Rock' && move.hasType('Fire')) {
     return 2;
   /* Will need to remember to add something so this shows in the desc */
   } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
@@ -283,7 +286,7 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
     (gen.num >= 8 && target.hasAbility('Inner Focus', 'Own Tempo', 'Oblivious', 'Scrappy')) ||
     target.hasItem('Clear Amulet');
   if (source.hasAbilityActive('Intimidate') && !blocked) {
-    if (target.hasAbility('Contrary', 'Defiant', 'Guard Dog')) {
+    if (target.hasAbility('Contrary', 'Defiant', 'Guard Dog', 'Lucha Libre')) {
       target.boosts.atk = Math.min(6, target.boosts.atk + 1);
     } else if (target.hasAbility('Simple')) {
       target.boosts.atk = Math.max(-6, target.boosts.atk - 2);
@@ -484,7 +487,29 @@ export function checkMultihitBoost(
       defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
       desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
     }
-  } else if (defender.hasAbility('Weak Armor')) {
+  }
+  
+  if (defender.hasAbility('Inflatable') && move.hasType('Fire', 'Flying')) {
+    if (attacker.hasAbility('Unaware')) {
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    } else {
+      defender.boosts.def = Math.min(defender.boosts.def + 1, 6);
+      defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
+      defender.boosts.spd = Math.min(defender.boosts.spd + 1, 6);
+      defender.stats.spd = getModifiedStat(defender.rawStats.spd, defender.boosts.spd, gen);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+    }
+  } else if (defender.hasAbility('Water Compaction') && move.hasType('Water')) {
+    if (attacker.hasAbility('Unaware')) {
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    } else {
+      defender.boosts.def = Math.min(defender.boosts.def + 2, 6);
+      defender.stats.def = getModifiedStat(defender.rawStats.def, defender.boosts.def, gen);
+      desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+    }
+  }
+
+  if (defender.hasAbility('Weak Armor')) {
     if (attacker.hasAbility('Unaware')) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
     } else {
@@ -689,7 +714,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc, hasAteAb
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
-  } else if (pokemon.hasAbility('Mystic Power')) {
+  } else if (pokemon.hasAbility('Mystic Power', 'Arcane Force')) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (pokemon.hasAbility('Aurora Borealis') && move.hasType('Ice')) {
