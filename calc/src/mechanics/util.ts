@@ -352,6 +352,27 @@ export function checkMajesticMoth(source: Pokemon, gen: Generation) {
   }
 }
 
+export function checkWeatherStatRaises(source: Pokemon, field: Field, gen: Generation) {
+  const atkStat = source.rawStats.atk;
+  const defStat = source.rawStats.def;
+  const spaStat = source.rawStats.spa;
+  const spdStat = source.rawStats.spd;
+  const speStat = source.rawStats.spe;
+  if (source.hasAbility('Sea Guardian') && field.hasWeather('Rain')) {
+    if (Math.max(atkStat, defStat, spaStat, spdStat, speStat) === atkStat) {
+      source.boosts.atk = Math.min(6, source.boosts.atk + 1);
+    } else if (Math.max(defStat, spaStat, spdStat, speStat) === defStat) {
+      source.boosts.def = Math.min(6, source.boosts.def + 1);
+    } else if (Math.max(spaStat, spdStat, speStat) === spaStat) {
+      source.boosts.spa = Math.min(6, source.boosts.spa + 1);
+    } else if (Math.max(spdStat, speStat) === spdStat) {
+      source.boosts.spd = Math.min(6, source.boosts.spd + 1);
+    } else {
+      source.boosts.spe = Math.min(6, source.boosts.spe + 1);
+    }
+  }
+}
+
 export function checkWindRider(source: Pokemon, attackingSide: Side) {
   if (source.hasAbility('Wind Rider') && attackingSide.isTailwind) {
     source.boosts.atk = Math.min(6, source.boosts.atk + 1);
@@ -718,6 +739,9 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc, hasAteAb
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (pokemon.hasAbility('Aurora Borealis') && move.hasType('Ice')) {
+    stabMod += 2048;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
+  } else if (pokemon.hasAbility('Old Mariner') && move.hasType('Water')) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (hasAteAbilityTypeChange) {
