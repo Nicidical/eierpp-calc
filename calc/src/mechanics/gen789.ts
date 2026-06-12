@@ -1,4 +1,4 @@
-import type {Generation, AbilityName, StatID, Terrain} from '../data/interface';
+import type {Generation, AbilityName, MoveName, StatID, Terrain} from '../data/interface';
 import {toID} from '../util';
 import {
   getBerryResistType,
@@ -9,10 +9,10 @@ import {
   getTechnoBlast,
   SEED_BOOSTED_STAT,
 } from '../items';
-import type {RawDesc} from '../desc';
-import type {Field} from '../field';
-import type {Move} from '../move';
-import type {Pokemon} from '../pokemon';
+import {RawDesc} from '../desc';
+import {Field} from '../field';
+import {Move} from '../move';
+import {Pokemon} from '../pokemon';
 import {Result} from '../result';
 import {
   chainMods,
@@ -915,7 +915,8 @@ export function calculateSMSSSV(
   /* Follow-Up Attacks */
   if (attacker.hasAbility('Volcano Rage') && move.hasType('Fire')) {
     const child = attacker.clone();
-    const eruption = move.clone();
+    const childMove = new Move(gen, 'Eruption');
+    childMove.bp = 50;
 
     /* Need to check which innate slot the ability is in...or if it is the ability slot 
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
@@ -928,13 +929,8 @@ export function calculateSMSSSV(
       else { child.ability = 'Volcano Rage (Child)' as AbilityName; }
     } else { child.ability = 'Volcano Rage (Child)' as AbilityName; }
 
-    eruption.bp = 50;
-    eruption.target = 'allAdjacentFoes';
-    eruption.type = 'Fire';
-    eruption.flags.pulse = 1;
-
-    checkMultihitBoost(gen, child, defender, eruption, field, desc);
-    childDamage = calculateSMSSSV(gen, child, defender, eruption, field).damage as number[];
+    checkMultihitBoost(gen, child, defender, childMove, field, desc);
+    childDamage = calculateSMSSSV(gen, child, defender, childMove, field).damage as number[];
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
