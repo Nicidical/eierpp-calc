@@ -98,6 +98,7 @@ export interface MoveFlags {
   kick?: 1 | 0;
   hammer?: 1 | 0;
   field?: 1 | 0;
+  bone?: 1 | 0;
 }
 
 export interface SelfOrSecondaryEffect {

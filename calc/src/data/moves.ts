@@ -45,6 +45,7 @@ export interface MoveData {
   readonly isSlicing?: boolean;
   readonly isWind?: boolean;
   readonly isHeal?: boolean;
+  readonly isBone?: boolean;
 }
 
 const RBY: {[name: string]: MoveData} = {
@@ -10795,6 +10796,7 @@ class Move implements I.Move {
     if (data.isSlicing) this.flags.slicing = 1;
     if (data.isWind) this.flags.wind = 1;
     if (data.isHeal) this.flags.heal = 1;
+	if (data.isBone) this.flags.bone = 1;
 
     assignWithout(this, data, Move.FLAGS);
 

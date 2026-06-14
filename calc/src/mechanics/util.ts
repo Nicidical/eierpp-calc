@@ -31,7 +31,7 @@ const EV_ITEMS = [
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
-      !pokemon.hasAbility('Levitate', 'Dragonfly', 'Aerialist') &&
+      !pokemon.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover') &&
       !pokemon.hasItem('Air Balloon')));
 }
 
@@ -105,7 +105,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   }
   if ((pokemon.hasAbility('Chlorophyll', 'Big Leaves') && weather.includes('Sun')) ||
       (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
-      (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
+      (pokemon.hasAbility('Swift Swim', 'Breakwater') && weather.includes('Rain')) ||
       (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather))) {
         speedMods.push(6144); /* Abilities that modify speed in weather/terrain nerfed to 1.5x */
   }
@@ -162,6 +162,7 @@ export function getThirdType(pokemon: Pokemon) {
          pokemon.hasAbility('Half Drake', 'Dragonfly') ? 'Dragon' :
          pokemon.hasAbility('Metallic') ? 'Steel' :
          pokemon.hasAbility('Phantom') ? 'Ghost' :
+         pokemon.hasAbility('Hover') ? 'Psychic' :
          '???';
 }
 
@@ -179,12 +180,13 @@ export function getMoveEffectiveness(
   isOverwhelm?: boolean,
   isOvercharge?: boolean,
   isMoltenDown?: boolean,
+  isBoneZone?: boolean,
 ) {
   if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
     return 1;
   } else if (isGravity && type === 'Flying' && move.hasType('Ground')) {
     return 1;
-  } else if (move.named('Freeze-Dry') && type === 'Water') {
+  } else if (move.named('Freeze-Dry', 'Sheer Cold') && type === 'Water') {
     return 2;
   } else if (move.named('Nihil Light') && type === 'Fairy') {
     return 1;
@@ -214,6 +216,8 @@ export function getMoveEffectiveness(
       // Can only do this because flying has no other interactions
       effectiveness *= gen.types.get('flying' as ID)!.effectiveness[type]!;
     }
+    if (effectiveness == 0 && move.flags.bone && isBoneZone) { effectiveness = 1; }
+
     return effectiveness;
   }
 }
@@ -293,7 +297,7 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
     } else {
       target.boosts.atk = Math.max(-6, target.boosts.atk - 1);
     }
-    if (target.hasAbility('Competitive')) {
+    if (target.hasAbility('Competitive', 'Duality')) {
       target.boosts.spa = Math.min(6, target.boosts.spa + 2);
     }
     if (target.hasAbility('Run Away')) {
@@ -398,7 +402,7 @@ export function checkEmbody(source: Pokemon, gen: Generation) {
 }
 
 export function checkInfiltrator(pokemon: Pokemon, affectedSide: Side) {
-  if (pokemon.hasAbility('Infiltrator')) {
+  if (pokemon.hasAbility('Infiltrator', 'Duality', 'Marine Apex')) {
     affectedSide.isReflect = false;
     affectedSide.isLightScreen = false;
     affectedSide.isAuroraVeil = false;

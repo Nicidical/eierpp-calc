@@ -172,7 +172,8 @@ export function calculateSMSSSV(
     return result;
   }
 
-  const defenderAbilityIgnored = defender.hasAbility(
+/* ============================ MOLD BREAKER ================================== */
+  const ignoredDefensiveAbilities = [
     'Aerialist', 'Aerodynamics',
     'Armor Tail', 'Aroma Veil', 'Aura Break', 'Bad Luck',
     'Battle Armor',
@@ -180,9 +181,11 @@ export function calculateSMSSSV(
     'Damp', 'Dazzling', 'Disguise', 'Dragonfly',
     'Dragonslayer', 'Dry Skin',
     'Earth Eater', 'Filter', 'Flash Fire', 'Flower Gift',
-    'Flower Veil', 'Fluffy', 'Friend Guard', 'Fur Coat',
+    'Flower Veil', 'Fluffy', 'Fort Knox',
+    'Friend Guard', 'Fur Coat',
     'Gifted Mind', 'Good as Gold', 'Guard Dog', 'Heatproof',
-    'Heavy Metal', 'Hyper Cutter', 'Ice Face', 'Ice Scales',
+    'Heavy Metal', 'Hover',
+    'Hyper Cutter', 'Ice Face', 'Ice Scales',
     'Illuminate', 'Immunity', 'Inner Focus', 'Insomnia',
     'Justified',
     'Keen Eye', 'Leaf Guard', 'Levitate', 'Light Metal',
@@ -195,6 +198,7 @@ export function calculateSMSSSV(
     'Punk Rock', 'Purifying Salt', 'Queenly Majesty', 'Resevoir',
     'Sand Veil', 'Sap Sipper', 'Shell Armor', 'Shield Dust',
     'Simple', 'Snow Cloak', 'Solid Rock', 'Soundproof',
+    'Stainless Steel',
     'Sticky Hold', 'Storm Drain', 'Sturdy', 'Suction Cups',
     'Sweet Veil', 'Telepathy', 'Tera Shell',
     'Thermal Exchange', 'Thick Fat', 'Unaware', 'Vital Spirit',
@@ -202,7 +206,7 @@ export function calculateSMSSSV(
     'Water Veil',
     'Well-Baked Body', 'White Smoke', 'Wind Rider', 'Wonder Guard',
     'Wonder Skin'
-  );
+  ];
 
   const attackerIgnoresAbility = attacker.hasAbility('Mold Breaker', 'Teravolt', 'Turboblaze');
   const moveIgnoresAbility = move.named(
@@ -217,12 +221,48 @@ export function calculateSMSSSV(
     'Sunsteel Strike'
   );
 
-  if (defenderAbilityIgnored && (attackerIgnoresAbility || moveIgnoresAbility)) {
+  let hasIgnorableDefAbil = false;
+  if (attackerIgnoresAbility || moveIgnoresAbility) {
     if (attackerIgnoresAbility) desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
     if (defender.hasItem('Ability Shield')) {
       desc.defenderItem = defender.item;
     } else {
-      defender.ability = '' as AbilityName;
+      if (ignoredDefensiveAbilities.includes(defender.ability as string)) { defender.ability = '' as AbilityName; hasIgnorableDefAbil = true; }
+      if (defender.innates) {
+        if (ignoredDefensiveAbilities.includes(defender.innates[0] as string)) { defender.innates[0] = '' as AbilityName; hasIgnorableDefAbil = true; }
+        if (ignoredDefensiveAbilities.includes(defender.innates[1] as string)) { defender.innates[1] = '' as AbilityName; hasIgnorableDefAbil = true; }
+        if (ignoredDefensiveAbilities.includes(defender.innates[2] as string)) { defender.innates[2] = '' as AbilityName; hasIgnorableDefAbil = true; }
+      }
+
+      if (attackerIgnoresAbility && hasIgnorableDefAbil) {
+        desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+      }
+    }
+  }
+
+  /* ============================ WONDER SKIN ================================== */
+  const ignoredOffensiveAbilities = [
+    'Flash Fire'
+  ];
+
+  const defenderIgnoresAbility = attacker.hasAbility('Wonder Skin', 'Fort Knox', 'Stainless Steel', 'Prim and Proper');
+
+  let hasIgnorableAtkAbil = false;
+  if (defenderIgnoresAbility) {
+    if (defenderIgnoresAbility) desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+    if (attacker.hasItem('Ability Shield')) {
+      desc.attackerItem = attacker.item;
+    } else {
+      if (ignoredOffensiveAbilities.includes(attacker.ability as string)) { attacker.ability = '' as AbilityName; hasIgnorableAtkAbil = true; }
+      if (attacker.innates) {
+        if (ignoredOffensiveAbilities.includes(attacker.innates[0] as string)) { attacker.innates[0] = '' as AbilityName; hasIgnorableAtkAbil = true; }
+        if (ignoredOffensiveAbilities.includes(attacker.innates[1] as string)) { attacker.innates[1] = '' as AbilityName; hasIgnorableAtkAbil = true; }
+        if (ignoredOffensiveAbilities.includes(attacker.innates[2] as string)) { attacker.innates[2] = '' as AbilityName; hasIgnorableAtkAbil = true; }
+      }
+
+      if (defenderIgnoresAbility && hasIgnorableAtkAbil) {
+        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+      }
     }
   }
 
@@ -438,6 +478,7 @@ export function calculateSMSSSV(
   const isOverwhelm = attacker.hasAbility('Overwhelm');
   const isOvercharge = attacker.hasAbility('Overcharge');
   const isMoltenDown = attacker.hasAbility('Molten Down');
+  const isBoneZone = attacker.hasAbility('Bone Zone');
 
   const type1Effectiveness = getMoveEffectiveness(
     gen,
@@ -452,7 +493,8 @@ export function calculateSMSSSV(
     isGroundShock,
     isOverwhelm,
     isOvercharge,
-    isMoltenDown
+    isMoltenDown,
+    isBoneZone
   );
   const type2Effectiveness = defender.types[1]
     ? getMoveEffectiveness(
@@ -468,7 +510,8 @@ export function calculateSMSSSV(
       isGroundShock,
       isOverwhelm,
       isOvercharge,
-      isMoltenDown
+      isMoltenDown,
+      isBoneZone
     )
     : 1;
 
@@ -486,7 +529,8 @@ export function calculateSMSSSV(
       isGroundShock,
       isOverwhelm,
       isOvercharge,
-      isMoltenDown
+      isMoltenDown,
+      isBoneZone
     )
     : 1;
 
@@ -512,6 +556,10 @@ export function calculateSMSSSV(
   }
 
   if (move.hasType('Dragon') && isOverwhelm && defender.types.includes('Fairy')) {
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (move.flags.bone && isBoneZone) {
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   
@@ -615,7 +663,7 @@ export function calculateSMSSSV(
         defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) ||
       (move.hasType('Ground') &&
         !field.isGravity && !move.named('Thousand Arrows') &&
-        !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate', 'Dragonfly', 'Aerialist')) ||
+        !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover')) ||
       (move.flags.bullet && defender.hasAbility('Bulletproof')) ||
       /* Throat Spray now ignores sound immunities, pretty cool right? */
       (move.flags.sound && !move.named('Clangorous Soul') && defender.hasAbility('Soundproof') && !attacker.hasItem('Throat Spray')) ||
@@ -1610,7 +1658,7 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
-  if (defender.hasAbility('Stall') && turnOrder === 'first') {
+  if (defender.hasAbility('Stall', 'Breakwater') && turnOrder === 'first') {
     bpMods.push(2867);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
@@ -1956,6 +2004,10 @@ export function calculateAtModsSMSSSV(
     atMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
+  if (defender.hasType('Water') && attacker.hasAbility('Marine Apex')) {
+    atMods.push(6144);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
 
   if (attacker.hasAbility('Majestic Bird') && move.category === 'Special') {
     atMods.push(6144);
@@ -2208,6 +2260,12 @@ export function calculateDfModsSMSSSV(
         dfMods.push(6144);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
+  if (defender.hasAbility('Flower Necklace') &&
+      field.hasTerrain('Grassy') &&
+      !hitsPhysical) {
+        dfMods.push(6144);
+        desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
   if (defender.hasAbility('Fur Coat') && hitsPhysical) {
         dfMods.push(8192);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
@@ -2372,10 +2430,16 @@ export function calculateFinalModsSMSSSV(
   if (attacker.hasAbility('Neuroforce') && typeEffectiveness > 1) {
     finalMods.push(5530);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-  } else if (attacker.hasAbility('Sniper') && isCritical) {
+  }
+  if (attacker.hasAbility('Sniper') && isCritical) {
     finalMods.push(6144);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-  } else if (attacker.hasAbility('Tinted Lens') && typeEffectiveness < 1) {
+  }
+  if (attacker.hasAbility('Tinted Lens') && typeEffectiveness < 1) {
+    finalMods.push(8192);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  if (attacker.hasAbility('Bone Zone') && move.flags.bone && typeEffectiveness < 1) {
     finalMods.push(8192);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }

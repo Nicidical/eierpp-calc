@@ -183,7 +183,8 @@ export class Pokemon implements State.Pokemon {
        (this.hasAbility('Ice Age') && types.includes('Ice')) ||
        (this.hasAbility('Half Drake', 'Dragonfly') && types.includes('Dragon')) ||
        (this.hasAbility('Metallic') && types.includes('Steel')) ||
-       (this.hasAbility('Phantom') && types.includes('Ghost'))
+       (this.hasAbility('Phantom') && types.includes('Ghost')) ||
+       (this.hasAbility('Hover') && types.includes('Psychic'))
     ) {
       return true;
     }
@@ -204,7 +205,8 @@ export class Pokemon implements State.Pokemon {
        (this.hasAbility('Ice Age') && types.includes('Ice')) ||
        (this.hasAbility('Half Drake', 'Dragonfly') && types.includes('Dragon')) ||
        (this.hasAbility('Metallic') && types.includes('Steel')) ||
-       (this.hasAbility('Phantom') && types.includes('Ghost'))
+       (this.hasAbility('Phantom') && types.includes('Ghost')) ||
+       (this.hasAbility('Hover') && types.includes('Psychic'))
     ) {
       return true;
     }
