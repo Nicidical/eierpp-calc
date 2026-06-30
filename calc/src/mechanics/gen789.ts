@@ -1694,6 +1694,10 @@ export function calculateBPModsSMSSSV(
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
+  if (attacker.hasAbility('Amplifier') && move.flags.sound) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
 
   if (defender.hasAbility('Stall', 'Breakwater') && turnOrder === 'first') {
     bpMods.push(2867);
@@ -2385,6 +2389,9 @@ function calculateBaseDamageSMSSSV(
     (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
   if (isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
+    if ((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1)) {
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a')
+    }
   }
 
   if (attacker.hasAbility('Parental Bond (Child)')) {
@@ -2395,7 +2402,7 @@ function calculateBaseDamageSMSSSV(
     baseDamage = pokeRound(OF32(baseDamage * 819) / 4096);
   } else if (attacker.hasAbility('Multi-Headed 3/3')) {
     baseDamage = pokeRound(OF32(baseDamage * 614) / 4096);
-  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)')) {
+  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)') && !isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 2867) / 4096);
   }
 
