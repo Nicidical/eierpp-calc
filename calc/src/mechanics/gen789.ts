@@ -186,8 +186,8 @@ export function calculateSMSSSV(
     'Gifted Mind', 'Good as Gold', 'Guard Dog', 'Heatproof',
     'Heavy Metal', 'Hover',
     'Hyper Cutter', 'Ice Face', 'Ice Scales',
-    'Illuminate', 'Immunity', 'Inner Focus', 'Insomnia',
-    'Justified',
+    'Illuminate', 'Immunity', 'Imposing Wings',
+    'Inner Focus', 'Insomnia', 'Justified',
     'Keen Eye', 'Leaf Guard', 'Levitate', 'Light Metal',
     'Lightning Rod', 'Limber', 'Liquified', 'Lucha Libre',
     'Magic Bounce', 'Magma Armor',
@@ -242,7 +242,11 @@ export function calculateSMSSSV(
 
   /* ============================ WONDER SKIN ================================== */
   const ignoredOffensiveAbilities = [
-    'Flash Fire'
+    'Aerialist', 'Amplifier',
+    'Analytic', 'Arcane Force', 'Combat Specialist',
+    'Flash Fire', 'Flock', 'Hyper Aggressive', 'Ice Cold Hunter',
+    'Iron Fist', 'Keen Edge', 'Mega Launcher',
+    'Mystic Blades', 'Strong Jaw', 'Technician', 'Water Bubble'
   ];
 
   const defenderIgnoresAbility = attacker.hasAbility('Wonder Skin', 'Fort Knox', 'Stainless Steel', 'Prim and Proper');
@@ -345,7 +349,7 @@ export function calculateSMSSSV(
       (field.hasTerrain('Psychic') && isGrounded(defender, field))))) {
       desc.moveType = type;
     }
-  } else if (move.originalName === 'Revelation Dance') {
+  } else if (['Revelation Dance', 'Spit Up'].includes(move.originalName)) {
     if (attacker.teraType) {
       type = attacker.teraType;
     } else if (attacker.types[0] === '???' && attacker.types[1]) {
@@ -599,7 +603,8 @@ export function calculateSMSSSV(
     /* Merciless now works against foes who are paralyzed/bleeding/speed dropped */
     (attacker.hasAbility('Merciless') && (defender.hasStatus('psn', 'tox', 'par', 'bld')) || defender.boosts['spe'] < 0) ||
     (attacker.hasAbility('Fatal Precision') && typeEffectiveness > 1) ||
-    (attacker.hasAbility('Ambush') && attacker.hasAbilityActive('Ambush'))) &&
+    (attacker.hasAbility('Ambush') && attacker.hasAbilityActive('Ambush')) ||
+    (move.named('Flail', 'Reversal') && attacker.curHP() < attacker.maxHP() / 2)) &&
     move.timesUsed === 1;
 
   if ((move.named('Sky Drop') &&
@@ -663,7 +668,7 @@ export function calculateSMSSSV(
         defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) ||
       (move.hasType('Ground') &&
         !field.isGravity && !move.named('Thousand Arrows') &&
-        !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover')) ||
+        !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover', 'Imposing Wings')) ||
       (move.flags.bullet && defender.hasAbility('Bulletproof')) ||
       /* Throat Spray now ignores sound immunities, pretty cool right? */
       (move.flags.sound && !move.named('Clangorous Soul') && defender.hasAbility('Soundproof') && !attacker.hasItem('Throat Spray')) ||
@@ -809,20 +814,27 @@ export function calculateSMSSSV(
        (attacker.hasAbility('Flaming Soul') && move.hasType('Fire'))) &&
        attacker.curHP() === attacker.maxHP()
   ) {
-    move.priority = 1;
+    move.priority += 1;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   /* All of the category based priority moves */
   if (((attacker.hasAbility('Blitz Boxer') && move.flags.punch)) &&
        attacker.curHP() === attacker.maxHP()
   ) {
-    move.priority = 1;
+    move.priority += 1;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
   /* Perfectionist will be left seperate */
   if (attacker.hasAbility('Perfectionist') && move.bp < 26) {
-    move.priority = 1;
+    move.priority += 1;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  /* Priority Boosters: Moves */
+  if ((move.named("Grassy Glide") && isGrounded(attacker, field) && field.hasTerrain("Grassy")) ||
+      (move.named("Thief") && !defender.item)
+  ) {
+    move.priority += 1;
   }
 
   if (hasTerrainSeed(defender) &&
@@ -876,13 +888,14 @@ export function calculateSMSSSV(
 
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
-    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1));
+    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1) ||
+    (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
 
   let childDamage: number[] | undefined;
   let child2Damage: number[] | undefined;
   // There should be only one of these abilities on every Pokemon. So, I'm coding them with if/elses.
   /* Parental Bond / Hyper Aggressive */
-  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2')) {
+  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)')) {
     if ((attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || (attacker.hasAbility('Multi-Headed', '3 > 1') && attacker.heads === 2)) && move.hits === 1 && !isSpread) {
       const child = attacker.clone();
 
@@ -959,6 +972,23 @@ export function calculateSMSSSV(
         if (i < 3) { child.innates[i] = 'Ice Cold Hunter 2' as AbilityName; }
         else { child.ability = 'Ice Cold Hunter 2' as AbilityName; }
       } else { child.ability = 'Ice Cold Hunter 2' as AbilityName; }
+
+      checkMultihitBoost(gen, child, defender, move, field, desc);
+      childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    } else if ((attacker.hasAbility('Dual Wield') && (move.flags.slicing || move.flags.pulse)) && move.hits === 1 && !isSpread) {
+      const child = attacker.clone();
+
+      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+      if (child.innates) {
+        var i;
+        for (i = 0; i < 3; i++) {
+          if (child.innates[i] === attacker.descAbility) { break; }
+        }
+        if (i < 3) { child.innates[i] = 'Dual Wield (Child)' as AbilityName; }
+        else { child.ability = 'Dual Wield (Child)' as AbilityName; }
+      } else { child.ability = 'Dual Wield (Child)' as AbilityName; }
 
       checkMultihitBoost(gen, child, defender, move, field, desc);
       childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
@@ -1193,7 +1223,7 @@ export function calculateBasePowerSMSSSV(
   case 'Acrobatics':
     basePower = move.bp * (attacker.hasItem('Flying Gem') ||
         (!attacker.item ||
-          (isQPActive(attacker, field) && attacker.hasItem('Booster Energy'))) ? 2 : 1);
+          (isQPActive(attacker, field) && attacker.hasItem('Booster Energy'))) ? 1.5 : 1);
     desc.moveBP = basePower;
     break;
   case 'Assurance':
@@ -1248,12 +1278,14 @@ export function calculateBasePowerSMSSSV(
     basePower = Math.max(1, Math.floor((move.bp * attacker.curHP()) / attacker.maxHP()));
     desc.moveBP = basePower;
     break;
+  /*
   case 'Flail':
   case 'Reversal':
     const p = Math.floor((48 * attacker.curHP()) / attacker.maxHP());
     basePower = p <= 1 ? 200 : p <= 4 ? 150 : p <= 9 ? 100 : p <= 16 ? 80 : p <= 32 ? 40 : 20;
     desc.moveBP = basePower;
     break;
+  */
   case 'Natural Gift':
     if (attacker.item?.endsWith('Berry')) {
       const gift = getNaturalGift(gen, attacker.item)!;
@@ -1442,7 +1474,7 @@ export function calculateBPModsSMSSSV(
     desc.moveBP = basePower * 1.5;
   } else if ((move.named('Knock Off') && !resistedKnockOffDamage) ||
     (move.named('Misty Explosion') && isGrounded(attacker, field) && field.hasTerrain('Misty')) ||
-    (move.named('Grav Apple') && field.isGravity)
+    (move.named('Grav Apple', 'Egg Bomb') && field.isGravity)
   ) {
     bpMods.push(6144);
     desc.moveBP = basePower * 1.5;
@@ -1634,6 +1666,11 @@ export function calculateBPModsSMSSSV(
   }
 
   if (attacker.hasAbility('Strong Jaw') && move.flags.bite) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Giant Wings', 'Imposing Wings') && move.flags.wind) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1971,7 +2008,7 @@ export function calculateAtModsSMSSSV(
   }
 
   /* 1.25x type boosters */
-  if ((attacker.hasAbility('Levitate', 'Aerialist') && move.hasType('Flying')) ||
+  if ((attacker.hasAbility('Levitate', 'Aerialist', 'Imposing Wings') && move.hasType('Flying')) ||
       (attacker.hasAbility('Electrocytes') && move.hasType('Electric')) ||
       (attacker.hasAbility('Nocturnal') && move.hasType('Dark'))
   ) {
@@ -2344,7 +2381,8 @@ function calculateBaseDamageSMSSSV(
   let baseDamage = getBaseDamage(attacker.level, basePower, attack, defense);
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
-    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1));
+    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1) ||
+    (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
   if (isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
   }
@@ -2357,6 +2395,8 @@ function calculateBaseDamageSMSSSV(
     baseDamage = pokeRound(OF32(baseDamage * 819) / 4096);
   } else if (attacker.hasAbility('Multi-Headed 3/3')) {
     baseDamage = pokeRound(OF32(baseDamage * 614) / 4096);
+  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)')) {
+    baseDamage = pokeRound(OF32(baseDamage * 2867) / 4096);
   }
 
   const isMegaSol = attacker.hasAbility('Mega Sol');
@@ -2452,7 +2492,7 @@ export function calculateFinalModsSMSSSV(
       defender.curHP() === defender.maxHP() &&
       hitCount === 0 &&
       (!field.defenderSide.isSR && (!field.defenderSide.spikes || defender.hasType('Flying')) ||
-      defender.hasItem('Heavy-Duty Boots') || defender.hasAbility('Shield Dust')) && !attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2')
+      defender.hasItem('Heavy-Duty Boots') || defender.hasAbility('Shield Dust')) && !attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)')
   ) {
     finalMods.push(2048);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');

@@ -99,6 +99,9 @@ export interface MoveFlags {
   hammer?: 1 | 0;
   field?: 1 | 0;
   bone?: 1 | 0;
+  horn?: 1 | 0;
+  weather?: 1 | 0;
+  throw?: 1 | 0;
 }
 
 export interface SelfOrSecondaryEffect {

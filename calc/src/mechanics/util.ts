@@ -31,7 +31,7 @@ const EV_ITEMS = [
 export function isGrounded(pokemon: Pokemon, field: Field) {
   return (field.isGravity || pokemon.hasItem('Iron Ball') ||
     (!pokemon.hasType('Flying') &&
-      !pokemon.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover') &&
+      !pokemon.hasAbility('Levitate', 'Dragonfly', 'Aerialist', 'Hover', 'Imposing Wings') &&
       !pokemon.hasItem('Air Balloon')));
 }
 
@@ -186,9 +186,12 @@ export function getMoveEffectiveness(
     return 1;
   } else if (isGravity && type === 'Flying' && move.hasType('Ground')) {
     return 1;
-  } else if (move.named('Freeze-Dry', 'Sheer Cold') && type === 'Water') {
+  } else if ((move.named('Freeze-Dry', 'Sheer Cold', 'Sludge') && type === 'Water') ||
+            (move.named('Sonic Boom', 'Acid') && type === 'Steel') ||
+            (move.named('Poison Gas') && type === 'Flying')
+  ) {
     return 2;
-  } else if (move.named('Nihil Light') && type === 'Fairy') {
+  } else if (move.named('Nihil Light', 'Dragon Rage') && type === 'Fairy') {
     return 1;
   /* Normalize Ignores Resists (Ghosts are still immune) */
   } else if (isNormalize && (type === 'Rock' || type === 'Steel')) {
@@ -332,6 +335,10 @@ export function checkDauntlessShield(source: Pokemon, gen: Generation) {
   }
   if (source.hasAbility('Let\'s Roll')) {
     source.boosts.def = Math.min(6, source.boosts.def + 1);
+  }
+
+  if (source.hasAbility('Headstrong')) {
+    source.boosts.spd = Math.min(6, source.boosts.spd + 1);
   }
 }
 
@@ -746,6 +753,9 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc, hasAteAb
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (pokemon.hasAbility('Old Mariner') && move.hasType('Water')) {
+    stabMod += 2048;
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
+  } else if (pokemon.hasAbility('Moon Spirit') && move.hasType('Fairy', 'Dark')) {
     stabMod += 2048;
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, pokemon.descAbility, desc, 'a');
   } else if (hasAteAbilityTypeChange) {
