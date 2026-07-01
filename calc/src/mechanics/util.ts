@@ -182,13 +182,12 @@ export function getMoveEffectiveness(
   isMoltenDown?: boolean,
   isBoneZone?: boolean,
 ) {
-  if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
-    return 1;
-  } else if (isGravity && type === 'Flying' && move.hasType('Ground')) {
-    return 1;
-  } else if ((move.named('Freeze-Dry', 'Sheer Cold', 'Sludge') && type === 'Water') ||
-            (move.named('Sonic Boom', 'Acid') && type === 'Steel') ||
-            (move.named('Poison Gas') && type === 'Flying')
+  if ((move.named('Freeze-Dry', 'Sheer Cold', 'Sludge') && type === 'Water') ||
+            (move.named('Sonic Boom', 'Acid', 'Gigaton Hammer', 'Crackle Slam') && type === 'Steel') ||
+            (move.named('Poison Gas', 'Clay Dart') && type === 'Flying') ||
+            (move.named('Fumigation Bomb') && type === 'Bug') ||
+            (move.named('Aura Force') && type === 'Ghost') ||
+            (move.named('Tsunami Hammer') && type === 'Water')
   ) {
     return 2;
   } else if (move.named('Nihil Light', 'Dragon Rage') && type === 'Fairy') {
@@ -208,6 +207,10 @@ export function getMoveEffectiveness(
   } else if (isMoltenDown && type === 'Rock' && move.hasType('Fire')) {
     return 2;
   /* Will need to remember to add something so this shows in the desc */
+  } else if (isGhostRevealed && type === 'Ghost' && move.hasType('Normal', 'Fighting')) {
+    return 1;
+  } else if (isGravity && type === 'Flying' && move.hasType('Ground')) {
+    return 1;
   } else if (defIsSteelworker && type === 'Steel' && move.hasType('Ghost', 'Dark')) {
     return 0.5
   } else {
@@ -215,10 +218,7 @@ export function getMoveEffectiveness(
     if (effectiveness === 0 && isRingTarget) {
       effectiveness = 1;
     }
-    if (move.named('Flying Press')) {
-      // Can only do this because flying has no other interactions
-      effectiveness *= gen.types.get('flying' as ID)!.effectiveness[type]!;
-    }
+    
     if (effectiveness == 0 && move.flags.bone && isBoneZone) { effectiveness = 1; }
 
     return effectiveness;

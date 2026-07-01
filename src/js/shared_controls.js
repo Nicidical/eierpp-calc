@@ -449,6 +449,7 @@ function autosetWeather(ability, i) {
 		$("#rain").prop("checked", true);
 		break;
 	case "Sand Stream":
+	case "Sand Bender":
 		lastAutoWeather[i] = "Sand";
 		$("#sand").prop("checked", true);
 		break;

@@ -217,7 +217,9 @@ export function calculateSMSSSV(
     'Menacing Moonraze Maelstrom',
     'Moongeist Beam',
     'Photon Geyser',
+    'Rider Kick',
     'Searing Sunraze Smash',
+    'Smart Strike',
     'Sunsteel Strike'
   );
 
@@ -388,7 +390,7 @@ export function calculateSMSSSV(
   ) {
     move.target = 'allAdjacentFoes';
     type = 'Stellar';
-  } else if (move.named('Brick Break', 'Psychic Fangs')) {
+  } else if (move.named('Brick Break', 'Psychic Fangs', 'Iron Fangs', 'Raging Bull', 'Battering Ram')) {
     field.defenderSide.isReflect = false;
     field.defenderSide.isLightScreen = false;
     field.defenderSide.isAuroraVeil = false;
@@ -1197,13 +1199,31 @@ export function calculateBasePowerSMSSSV(
     desc.moveBP = basePower;
     break;
   case 'Hex':
-  case 'Infernal Parade':
+  case 'Plasma Pulse':
     // Hex deals double damage to Pokemon with Comatose (ih8ih8sn0w)
     basePower = move.bp * (defender.status || defender.hasAbility('Comatose') ? 2 : 1);
     desc.moveBP = basePower;
     break;
+  case 'Bitter Malice':
+  case 'Infernal Parade':
+    // Bitter Malice deals 1.5x to Pokemon with Comatose (ih8ih8sn0w)
+    basePower = move.bp * (defender.status || defender.hasAbility('Comatose') ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
   case 'Barb Barrage':
-    basePower = move.bp * (defender.hasStatus('psn', 'tox') ? 2 : 1);
+    basePower = move.bp * (defender.hasStatus('psn', 'tox') ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Terror Locks':
+    basePower = move.bp * (defender.hasStatus('bld') ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Volt Bolt':
+    basePower = move.bp * (defender.hasStatus('par') ? 2 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Dream Invasion':
+    basePower = move.bp * ((defender.hasStatus('slp') || defender.hasAbility('Comatose')) ? 2 : 1);
     desc.moveBP = basePower;
     break;
   case 'Heavy Slam':
@@ -1348,9 +1368,13 @@ export function calculateBasePowerSMSSSV(
   case 'Triple Axel':
   case 'Triple Kick':
   case 'Echoed Voice':
-    basePower = hit * 20;
-    desc.moveBP = move.hits === 2 ? 60 : move.hits === 3 ? 120 : 20;
+  case 'Fury Cutter':
+  case 'Whirling Strikes':
+  case 'Triple Tremor':
+    basePower = hit * move.bp;
+    desc.moveBP = move.hits === 2 ? move.bp * 3 : move.hits === 3 ? move.bp * 6 : move.bp;
     break;
+  /*
   case 'Crush Grip':
   case 'Wring Out':
     basePower = 100 * Math.floor((defender.curHP() * 4096) / defender.maxHP());
@@ -1361,6 +1385,13 @@ export function calculateBasePowerSMSSSV(
     basePower = 100 * Math.floor((defender.curHP() * 4096) / defender.maxHP());
     basePower = Math.floor(Math.floor((100 * basePower + 2048 - 1) / 4096) / 100) || 1;
     desc.moveBP = basePower;
+    break; */
+  case 'Dragon Darts':
+    basePower = attacker.hasAbility('Parental Bond') ? Math.floor(move.bp * 1.25) : move.bp;
+    if (attacker.hasAbility('Parental Bond')) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a'); }
+    break;
+  case 'Excalibur':
+    basePower = attacker.hasType('Steel') ? move.bp * 2 : move.bp;
     break;
   case 'Tera Blast':
     basePower = attacker.teraType === 'Stellar' ? 100 : 80;
@@ -1458,7 +1489,7 @@ export function calculateBPModsSMSSSV(
     resistedKnockOffDamage = true;
   }
 
-  if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox')) ||
+  if ((move.named('Facade', 'Bravado') && attacker.hasStatus('brn', 'par', 'psn', 'tox', 'frz', 'bld')) ||
     (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
     (move.named('Venoshock') && defender.hasStatus('psn', 'tox')) ||
     (move.named('Venoshock') && isGrounded(defender, field) && field.hasTerrain('Toxic')) || /* New Venoshock Condition */
@@ -1921,7 +1952,7 @@ export function calculateAtModsSMSSSV(
   if ((((attacker.hasAbility('Solar Power', 'Big Leaves') && field.hasWeather('Sun', 'Harsh Sunshine')) ||
         (attacker.hasAbility('Raging Storm') && field.hasWeather('Rain', 'Heavy Rain')) ||
         (attacker.hasAbility('Whiteout') && field.hasWeather('Hail')) ||
-        (attacker.hasAbility('Sand Force') && field.hasWeather('Sand')) ||
+        (attacker.hasAbility('Sand Force', 'Sand Bender') && field.hasWeather('Sand')) ||
         (attacker.hasAbility('Ectoplasm') && field.hasWeather('Fog'))) &&
      /* Solar Power now boosts highest offense instead of just special moves */
      ((move.category === 'Special' && attacker.stats.atk <= attacker.stats.spa) ||
