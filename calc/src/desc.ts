@@ -654,7 +654,7 @@ function getEndOfTurn(
     texts.push('Sticky Barb damage');
   }
 
-  if (defender.hasAbility('Water Veil') && !healBlock) {
+  if (defender.hasAbility('Water Veil', 'Purifying Waters') && !healBlock) {
     damage += Math.floor(defender.maxHP() / 16);
     texts.push('Aqua Ring recovery');
   }

@@ -180,7 +180,8 @@ export function calculateSMSSSV(
     'Big Pecks', 'Bulletproof', 'Clear Body', 'Contrary',
     'Damp', 'Dazzling', 'Disguise', 'Dragonfly',
     'Dragonslayer', 'Dry Skin',
-    'Earth Eater', 'Filter', 'Flash Fire', 'Flower Gift',
+    'Earth Eater', 'Filter', 'Flame Bubble',
+    'Flash Fire', 'Flower Gift',
     'Flower Veil', 'Fluffy', 'Fort Knox',
     'Friend Guard', 'Fur Coat',
     'Gifted Mind', 'Good as Gold', 'Guard Dog', 'Heatproof',
@@ -245,9 +246,10 @@ export function calculateSMSSSV(
   /* ============================ WONDER SKIN ================================== */
   const ignoredOffensiveAbilities = [
     'Aerialist', 'Amplifier',
-    'Analytic', 'Arcane Force', 'Combat Specialist',
+    'Analytic', 'Arcane Force', 'Bass Boosted', 'Best Offense',
+    'Combat Specialist', 'Flame Bubble',
     'Flash Fire', 'Flock', 'Hyper Aggressive', 'Ice Cold Hunter',
-    'Iron Fist', 'Keen Edge', 'Mega Launcher',
+    'Iron Fist', 'Keen Edge', 'Magus Blades', 'Mega Launcher',
     'Mystic Blades', 'Strong Jaw', 'Technician', 'Water Bubble'
   ];
 
@@ -413,6 +415,7 @@ export function calculateSMSSSV(
   let isTectonize = false;
   let isHydrate = false;
   let isIntoxicate = false;
+  let isPowerMetal = false;
   const noTypeChange = move.named(
     'Revelation Dance',
     'Judgment',
@@ -457,11 +460,13 @@ export function calculateSMSSSV(
       type = 'Water';
     } else if ((isIntoxicate = attacker.hasAbility('Intoxicate') && (normal || type === 'Poison'))) {
       type = 'Poison';
-    }  
+    } else if ((isPowerMetal = attacker.hasAbility('Power Metal') && !!move.flags.sound && normal)) {
+      type = 'Water';
+    }
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isDraconize || isSteelworker || isImmolate || isCrystallize || isFightingSpirit || isTectonize || isHydrate || isIntoxicate) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
       hasNonVoiceAbilityTypeChange = true;
-    } else if (isLiquidVoice || isSandSong) {
+    } else if (isLiquidVoice || isSandSong || isPowerMetal) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
       hasAteAbilityTypeChange = true;
     }
@@ -813,7 +818,7 @@ export function calculateSMSSSV(
   }
   /* All of the type based priority moves */
   if (((attacker.hasAbility('Gale Wings') && move.hasType('Flying')) ||
-       (attacker.hasAbility('Flaming Soul') && move.hasType('Fire'))) &&
+       (attacker.hasAbility('Flaming Soul', 'Flame Bubble') && move.hasType('Fire'))) &&
        attacker.curHP() === attacker.maxHP()
   ) {
     move.priority += 1;
@@ -890,7 +895,7 @@ export function calculateSMSSSV(
 
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
-    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1) ||
+    (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1) ||
     (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
 
   let childDamage: number[] | undefined;
@@ -978,7 +983,7 @@ export function calculateSMSSSV(
       checkMultihitBoost(gen, child, defender, move, field, desc);
       childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-    } else if ((attacker.hasAbility('Dual Wield') && (move.flags.slicing || move.flags.pulse)) && move.hits === 1 && !isSpread) {
+    } else if ((attacker.hasAbility('Dual Wield', 'Magus Blades') && (move.flags.slicing || move.flags.pulse)) && move.hits === 1 && !isSpread) {
       const child = attacker.clone();
 
       /* Need to check which innate slot the ability is in...or if it is the ability slot 
@@ -1023,6 +1028,26 @@ export function calculateSMSSSV(
     const child = attacker.clone();
     const childMove = new Move(gen, 'Surf');
     childMove.bp = 50;
+
+    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+    if (child.innates) {
+      var i;
+      for (i = 0; i < 3; i++) {
+        if (child.innates[i] === attacker.descAbility) { break; }
+      }
+      if (i < 3) { child.innates[i] = 'Follow-Up Move' as AbilityName; }
+      else { child.ability = 'Follow-Up Move' as AbilityName; }
+    } else { child.ability = 'Follow-Up Move' as AbilityName; }
+
+    checkMultihitBoost(gen, child, defender, childMove, field, desc);
+    childDamage = calculateSMSSSV(gen, child, defender, childMove, field).damage as number[];
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  if (attacker.hasAbility('Thundercall') && move.hasType('Electric')) {
+    const child = attacker.clone();
+    const childMove = new Move(gen, 'Smite');
+    childMove.bp = Math.floor(childMove.bp * .2);
 
     /* Need to check which innate slot the ability is in...or if it is the ability slot 
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
@@ -1715,6 +1740,14 @@ export function calculateBPModsSMSSSV(
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
+  if (attacker.hasAbility('Mystic Blades', 'Best Offense', 'Magus Blades') && move.flags.slicing) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+  if (attacker.hasAbility('Power Edge') && move.flags.slicing) {
+    bpMods.push(5325);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
 
   if (attacker.hasAbilityActive('Illusion') && attacker.hasAbility('Illusion')) {
     bpMods.push(5325);
@@ -1725,7 +1758,7 @@ export function calculateBPModsSMSSSV(
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
-  if (attacker.hasAbility('Amplifier') && move.flags.sound) {
+  if (attacker.hasAbility('Amplifier', 'Bass Boosted') && move.flags.sound) {
     bpMods.push(5325);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
@@ -1870,8 +1903,9 @@ export function calculateAttackSMSSSV(
   /* Ok I REALLY hope Ancient Idol is correct now */
   const attackStat =
     move.named('Body Press') ? (field.isWonderRoom ? 'spd' : 'def') :
-    attacker.hasAbility('Ancient Idol') ? (move.category === 'Special' ? 'spd' : 'def')
-    : (move.category === 'Special' ? 'spa' : 'atk');
+    attacker.hasAbility('Ancient Idol') ? (move.category === 'Special' ? 'spd' : 'def') :
+    attacker.hasAbility('Magus Blades', 'Best Offense', 'Mystic Blades') && move.flags.slicing ? 'spa' :
+    (move.category === 'Special' ? 'spa' : 'atk');
   
   if (attacker.hasAbility('Ancient Idol')) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a'); }
 
@@ -1918,6 +1952,27 @@ export function calculateAttackSMSSSV(
     const speed = getModifiedStat(attackSource.rawStats['spe']!, attackSource.boosts['spe']);
     attack = pokeRound(attack + speed * .2);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Best Offense', 'Magus Blades')) {
+    const defense = getModifiedStat(attackSource.rawStats['spd']!, attackSource.boosts['spd']);
+    attack = pokeRound(attack + defense * .2);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Power Core')) {
+    const defense = 
+      move.category === 'Special' ? getModifiedStat(attackSource.rawStats['spd']!, attackSource.boosts['spd']) :
+      getModifiedStat(attackSource.rawStats['def']!, attackSource.boosts['def']);
+    attack = pokeRound(attack + defense * .2);
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+  }
+
+  if (attacker.hasAbility('Soul Harvest')) {
+    const fainted = attacker.evs.spe
+    attack = pokeRound(attack * (1 + fainted * .05));
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, "(" + String(fainted) + " fainted)", desc, 'a');
   }
 
   const atMods = calculateAtModsSMSSSV(gen, attacker, defender, move, field, desc);
@@ -2092,7 +2147,7 @@ export function calculateAtModsSMSSSV(
   }
 
   /* The 2x type boosters*/
-  if ((attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
+  if ((attacker.hasAbility('Water Bubble', 'Flame Bubble') && move.hasType('Water')) ||
       (attacker.hasAbility('Seaweed', 'Old Mariner') && move.hasType('Grass') && defender.hasType('Fire'))
   ) {
     atMods.push(8192);
@@ -2150,7 +2205,9 @@ export function calculateAtModsSMSSSV(
   }
 
   /* Water Bubble, Seaweed and Heatproof are seperate because the fire modifiers can stack */
-  if (defender.hasAbility('Water Bubble') && move.hasType('Fire')) {
+  if ((defender.hasAbility('Water Bubble', 'Flame Bubble') && move.hasType('Fire')) ||
+     (defender.hasAbility('Hyper Cleanse') && move.hasType('Poison'))
+  ) {
         atMods.push(2048);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
@@ -2235,10 +2292,13 @@ export function calculateDefenseSMSSSV(
   !(move.flags.punch && attacker.hasAbility('Power Fists'));
   const defenseStat = hitsPhysical ? 'def'
   : (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) ? 'spe'
+  : (defender.hasAbility('Elude') && (!move.flags.contact || attacker.hasAbility('Long Reach'))) ? 'spe'
   : 'spd';
 
   /* Even though we checked for the abils that change the def stat, we still need to apply them to the desc */
   if (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) {
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  } else if (defender.hasAbility('Elude') && (!move.flags.contact || attacker.hasAbility('Long Reach'))) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
@@ -2280,6 +2340,13 @@ export function calculateDefenseSMSSSV(
     const speed = getModifiedStat(defender.rawStats['spe']!, defender.boosts['spe']);
     defense = pokeRound(defense + speed * .15);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+  }
+
+  if (attacker.hasAbility('Soul Harvest') && !hitsPhysical) {
+    const fainted = attacker.evs.spe
+    defense = pokeRound(defense * (1 + fainted * .05));
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    desc.attackerAbility = addSpacedStr(desc.attackerAbility, "(" + String(fainted) + " fainted)", desc, 'a');
   }
 
   const dfMods = calculateDfModsSMSSSV(
@@ -2416,7 +2483,7 @@ function calculateBaseDamageSMSSSV(
   let baseDamage = getBaseDamage(attacker.level, basePower, attack, defense);
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
-    (move.flags.sound && attacker.hasAbility('Amplifier') && move.hits === 1) ||
+    (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1) ||
     (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
   if (isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
@@ -2433,11 +2500,12 @@ function calculateBaseDamageSMSSSV(
     baseDamage = pokeRound(OF32(baseDamage * 819) / 4096);
   } else if (attacker.hasAbility('Multi-Headed 3/3')) {
     baseDamage = pokeRound(OF32(baseDamage * 614) / 4096);
-  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)') && !isSpread) {
+  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)', 'Magus Blades') && (move.flags.pulse || move.flags.slicing) && !isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 2867) / 4096);
   }
 
   const isMegaSol = attacker.hasAbility('Mega Sol');
+  const isCatastrophe = attacker.hasAbility('Catastrophe');
   if (
     (field.hasWeather('Sun') || isMegaSol) &&
       move.named('Hydro Steam') &&
@@ -2448,7 +2516,8 @@ function calculateBaseDamageSMSSSV(
   } else if (!defender.hasItem('Utility Umbrella')) {
     if (
       ((field.hasWeather('Sun', 'Harsh Sunshine') || isMegaSol) && move.hasType('Fire')) ||
-      ((field.hasWeather('Rain', 'Heavy Rain') && !isMegaSol) && move.hasType('Water'))
+      ((field.hasWeather('Rain', 'Heavy Rain') && !isMegaSol) && move.hasType('Water')) ||
+      ((field.hasWeather('Rain', 'Heavy Rain', 'Sun', 'Harsh Sunshine') && isCatastrophe) && move.hasType('Fire', 'Water'))
     ) {
       baseDamage = pokeRound(OF32(baseDamage * 6144) / 4096);
       isMegaSol ? desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a') : desc.weather = field.weather;
