@@ -2383,17 +2383,17 @@ export function calculateDefenseSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (attacker.hasAbility('Soul Harvest') && !hitsPhysical) {
-    const fainted = attacker.evs.spe
+  if (defender.hasAbility('Soul Harvest') && !hitsPhysical) {
+    const fainted = defender.evs.spe
     defense = pokeRound(defense * (1 + fainted * .05));
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, "(" + String(fainted) + " fainted)", desc, 'a');
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, "(" + String(fainted) + " fainted)", desc, 'd');
   }
   
-  if (attacker.hasAbility('Last Stand')) {
-    const ratio = 1 - (attacker.curHP() / attacker.maxHP())
+  if (defender.hasAbility('Last Stand')) {
+    const ratio = 1 - (defender.curHP() / defender.maxHP())
     defense = pokeRound(defense * (1 + ratio * .6));
-    desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
   const dfMods = calculateDfModsSMSSSV(
