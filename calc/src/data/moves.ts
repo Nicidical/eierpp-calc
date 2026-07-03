@@ -4429,6 +4429,7 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
 		category: 'Physical',
 		makesContact: true,
 		secondaries: true,
+		recoil: [0,0]
 	},
 	Thrash: {
 		bp: 130,

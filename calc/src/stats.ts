@@ -162,7 +162,7 @@ export const Stats = new (class {
     if (stat === 'hp') {
       return base === 1
         ? base
-        : Math.floor((Math.floor(((base * 2 + iv + Math.floor(ev / 4)) * level) / 100) + level + 10) * 1.5);
+        : Math.floor((Math.floor(((base * 2 + iv + Math.floor(ev / 4)) * level) / 100) + level + 10));
     } else {
       let mods: [StatID?, StatID?] = [undefined, undefined];
       if (nature) {
