@@ -17316,7 +17316,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 		abilities: {0: 'Overwhelm'},
 		innates: ['Hyper Aggressive', 'Keen Edge', 'Hyper Cutter']
 	},
-	'Lucario-Mega-X': {
+	'Lucario-Mega': {
 		types: ['Fighting', 'Steel'],
 		bs: {hp: 70, at: 145, df: 78, sa: 145, sd: 70, sp: 117},
 		weightkg: 54.0,
@@ -22538,7 +22538,7 @@ const ZA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
 };
 
-const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, PLA_PATCH, SV_PATCH, ZA_PATCH);
+const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, PLA_PATCH, SV_PATCH);
 
 for (const [name, specie] of Object.entries(SV)) {
   if (name.endsWith('-Gmax')) {

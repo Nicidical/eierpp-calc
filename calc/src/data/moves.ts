@@ -10730,7 +10730,7 @@ const ZA_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   },
 };
 
-const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH, ZA_PATCH);
+const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
 
 const CHAMPIONS_LIST = [
   '(No Move)',
