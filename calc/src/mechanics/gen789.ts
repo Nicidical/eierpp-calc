@@ -128,7 +128,7 @@ export function calculateSMSSSV(
   }
   if (defender.teraType !== 'Stellar') desc.defenderTera = defender.teraType;
 
-  if (move.named('Photon Geyser', 'Light That Burns the Sky', 
+  if (move.named('Photon Geyser', 'Light That Burns the Sky',
   /* Everything from here out in the function is new to ER */
   'Tri Attack', 'Blast Burn', 'Hydro Cannon', 'Frenzy Plant', 'Rock Wrecker', 'Attack Order',
   'Water Pledge', 'Fire Pledge', 'Grass Pledge', 'Relic Song', 'Prismatic Laser', 'Multi-Attack',
@@ -176,7 +176,7 @@ export function calculateSMSSSV(
   const ignoredDefensiveAbilities = [
     'Aerialist', 'Aerodynamics', 'Anticipation',
     'Armor Tail', 'Aroma Veil', 'Aura Armor',
-    'Aura Break', 'Bad Luck', 'Battle Armor', 'Big Leaves', 
+    'Aura Break', 'Bad Luck', 'Battle Armor', 'Big Leaves',
     'Big Pecks', 'Bulletproof', 'Clear Body', 'Contrary',
     'Damp', 'Dazzling', 'Deflect',
     'Disguise', 'Dragonfly',
@@ -194,7 +194,7 @@ export function calculateSMSSSV(
     'Lightning Rod', 'Limber', 'Liquified', 'Lucha Libre',
     'Magic Bounce', 'Magma Armor',
     "Mind's Eye", 'Mirror Armor', 'Motor Drive', 'Mountaineer',
-    'Multiscale', 'Nocturnal', 
+    'Multiscale', 'Nocturnal',
     'Oblivious', 'Old Mariner', 'Overcoat', 'Own Tempo',
     'Pastel Veil', 'Permafrost', 'Poison Absorb', 'Primal Armor',
     'Punk Rock', 'Purifying Salt', 'Queenly Majesty', 'Resevoir',
@@ -248,16 +248,16 @@ export function calculateSMSSSV(
   /* ============================ WONDER SKIN ================================== */
   const ignoredOffensiveAbilities = [
     'Aerialist', 'Amplifier', 'Analytic', 'Antarctic Bird',
-    'Arcane Force', 'Bass Boosted', 'Best Offense', 'Break it Down', 
+    'Arcane Force', 'Bass Boosted', 'Best Offense', 'Break it Down',
     'Combat Specialist', 'Crystallize', 'Dual Wield', 'Earthbound',
-    'Fatal Precision', 'Flame Bubble', 'Flash Fire', 'Flock', 
+    'Fatal Precision', 'Flame Bubble', 'Flash Fire', 'Flock',
     'Forest Rage', 'Galvanize', 'Giant Wings', 'Hyper Aggressive',
-    'Ice Cold Hunter', 'Imposing Wings', 'Iron Fist', 'Keen Edge', 
+    'Ice Cold Hunter', 'Imposing Wings', 'Iron Fist', 'Keen Edge',
     'Liquid Voice', 'Long Reach', 'Magus Blades', 'Marine Apex',
     'Mega Launcher', 'Mold Breaker', 'Molten Down', 'Multi-Headed',
-    'Mystic Blades', 'Old Mariner', 'Nosferatu', 
+    'Mystic Blades', 'Old Mariner', 'Nosferatu',
     'Perfectionist', 'Power Edge', 'Precise Fist', 'Psychic Mind',
-    'Reckless', 'Seaweed', 'Sheer Force', 'Strong Jaw', 
+    'Reckless', 'Seaweed', 'Sheer Force', 'Strong Jaw',
     'Technician', 'Teravolt', 'Thundercall', 'Tough Claws',
     'Volcano Rage', 'Water Bubble'
   ];
@@ -556,11 +556,11 @@ export function calculateSMSSSV(
     : 1;
 
   let typeEffectiveness = type1Effectiveness * type2Effectiveness * type3Effectiveness;
-  if (type3Effectiveness !== 1) { 
+  if (type3Effectiveness !== 1) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  if (move.hasType(getThirdType(attacker)) && !['???', attacker.types[0], attacker.types[1]].includes(getThirdType(attacker))) { 
+  if (move.hasType(getThirdType(attacker)) && !['???', attacker.types[0], attacker.types[1]].includes(getThirdType(attacker))) {
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
 
@@ -583,7 +583,7 @@ export function calculateSMSSSV(
   if (move.flags.bone && isBoneZone) {
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
-  
+
   if (defender.teraType && defender.teraType !== 'Stellar') {
     typeEffectiveness = getMoveEffectiveness(
       gen,
@@ -616,7 +616,7 @@ export function calculateSMSSSV(
   // will not be a critical hit (UltiMario)
   // Moved this in the code so we can use typeEffectiveness for Fatal Precision
   const isCritical = !defender.hasAbility('Battle Armor', 'Shell Armor', 'Bad Luck', 'Crystalline Armor') &&
-    (move.isCrit || 
+    (move.isCrit ||
     /* Merciless now works against foes who are paralyzed/bleeding/speed dropped */
     (attacker.hasAbility('Merciless') && (defender.hasStatus('psn', 'tox', 'par', 'bld')) || defender.boosts['spe'] < 0) ||
     (attacker.hasAbility('Fatal Precision') && typeEffectiveness > 1) ||
@@ -668,7 +668,7 @@ export function calculateSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
-  /* Color Change is...weird. I hardcoded the types because I'm lazy. 
+  /* Color Change is...weird. I hardcoded the types because I'm lazy.
   I don't think this implementation is 100% correct, but for game sake I'll leave it at this.*/
   if (defender.hasAbility('Color Change')) {
     if (move.hasType('Dragon', 'Electric', 'Fighting', 'Ghost', 'Ground', 'Normal', 'Poison', 'Psychic')) {
@@ -800,7 +800,7 @@ export function calculateSMSSSV(
   // #region (Special) Defense
 
   const defense = calculateDefenseSMSSSV(gen, attacker, defender, move, field, desc, isCritical);
-  
+
   const hitsPhysical = (move.overrideDefensiveStat === 'def' || move.category === 'Physical') &&
   !(move.flags.punch && attacker.hasAbility('Power Fists')) && !(move.flags.slicing && attacker.hasAbility('Power Edge'));
   const defenseStat = hitsPhysical ? 'def'
@@ -873,7 +873,7 @@ export function calculateSMSSSV(
     move.category === 'Physical' &&
     !attacker.hasAbility('Guts') &&
     !move.named('Facade');
-  const applyFrostbite = 
+  const applyFrostbite =
     attacker.hasStatus('frz') &&
     move.category === 'Special' &&
     !attacker.hasAbility('Determination') &&
@@ -917,7 +917,7 @@ export function calculateSMSSSV(
     if ((attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || (attacker.hasAbility('Multi-Headed', '3 > 1') && attacker.heads === 2))) {
       const child = attacker.clone();
 
-      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
       No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
       if (child.innates) {
         var i;
@@ -934,7 +934,7 @@ export function calculateSMSSSV(
     } else if ((attacker.hasAbility('Raging Boxer') && move.flags.punch)) {
       const child = attacker.clone();
 
-      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
       No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
       if (child.innates) {
         var i;
@@ -952,24 +952,24 @@ export function calculateSMSSSV(
       const hit1 = attacker.clone();
       const hit2 = attacker.clone();
 
-      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
       No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
       if (hit1.innates && hit2.innates) {
         var i;
         for (i = 0; i < 3; i++) {
           if (hit1.innates[i] === attacker.descAbility) { break; }
         }
-        if (i < 3) { 
+        if (i < 3) {
           hit1.innates[i] = 'Multi-Headed 2/3' as AbilityName;
-          hit2.innates[i] = 'Multi-Headed 3/3' as AbilityName; 
+          hit2.innates[i] = 'Multi-Headed 3/3' as AbilityName;
         }
-        else { 
+        else {
           hit1.ability = 'Multi-Headed 2/3' as AbilityName;
           hit2.ability = 'Multi-Headed 3/3' as AbilityName;
         }
-      } else { 
-        hit1.ability = 'Multi-Headed 2/3' as AbilityName; 
-        hit2.ability = 'Multi-Headed 3/3' as AbilityName; 
+      } else {
+        hit1.ability = 'Multi-Headed 2/3' as AbilityName;
+        hit2.ability = 'Multi-Headed 3/3' as AbilityName;
       }
 
       checkMultihitBoost(gen, hit1, defender, move, field, desc);
@@ -980,7 +980,7 @@ export function calculateSMSSSV(
     } else if ((attacker.hasAbility('Ice Cold Hunter') && field.hasWeather('Hail'))) {
       const child = attacker.clone();
 
-      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
       No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
       if (child.innates) {
         var i;
@@ -997,7 +997,7 @@ export function calculateSMSSSV(
     } else if ((attacker.hasAbility('Dual Wield', 'Magus Blades') && (move.flags.slicing || move.flags.pulse))) {
       const child = attacker.clone();
 
-      /* Need to check which innate slot the ability is in...or if it is the ability slot 
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
       No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
       if (child.innates) {
         var i;
@@ -1011,7 +1011,7 @@ export function calculateSMSSSV(
       checkMultihitBoost(gen, child, defender, move, field, desc);
       childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
-    } 
+    }
   }
 
   /* Follow-Up Attacks */
@@ -1020,7 +1020,7 @@ export function calculateSMSSSV(
     const childMove = new Move(gen, 'Eruption');
     childMove.bp = 50;
 
-    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    /* Need to check which innate slot the ability is in...or if it is the ability slot
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
     if (child.innates) {
       var i;
@@ -1040,7 +1040,7 @@ export function calculateSMSSSV(
     const childMove = new Move(gen, 'Surf');
     childMove.bp = 50;
 
-    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    /* Need to check which innate slot the ability is in...or if it is the ability slot
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
     if (child.innates) {
       var i;
@@ -1060,7 +1060,7 @@ export function calculateSMSSSV(
     const childMove = new Move(gen, 'Smite');
     childMove.bp = Math.floor(childMove.bp * .2);
 
-    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    /* Need to check which innate slot the ability is in...or if it is the ability slot
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
     if (child.innates) {
       var i;
@@ -1080,7 +1080,7 @@ export function calculateSMSSSV(
     const childMove = new Move(gen, 'Rapid Spin');
     childMove.bp = 20;
 
-    /* Need to check which innate slot the ability is in...or if it is the ability slot 
+    /* Need to check which innate slot the ability is in...or if it is the ability slot
     No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
     if (child.innates) {
       var i;
@@ -1102,7 +1102,7 @@ export function calculateSMSSSV(
       getFinalDamage(baseDamage, i, typeEffectiveness, applyStatus, stabMod, finalMod, protect);
   }
   result.damage = childDamage ? [damage, childDamage] :
-                  childDamage && child2Damage ? [damage, childDamage, child2Damage] : 
+                  childDamage && child2Damage ? [damage, childDamage, child2Damage] :
                   damage;
 
   if (move.timesUsed! > 1 || move.hits > 1) {
@@ -1944,9 +1944,9 @@ export function calculateAttackSMSSSV(
     move.named('Body Press') ? (field.isWonderRoom ? 'spd' : 'def') :
     attacker.hasAbility('Ancient Idol') ? (move.category === 'Special' ? 'spd' : 'def') :
     attacker.hasAbility('Magus Blades', 'Best Offense', 'Mystic Blades') && move.flags.slicing ? 'spa' :
-    attacker.hasAbility('Equinox') ? (physAttack < specAttack ? 'spa' : 'atk') : 
+    attacker.hasAbility('Equinox') ? (physAttack < specAttack ? 'spa' : 'atk') :
     (move.category === 'Special' ? 'spa' : 'atk');
-  
+
   if (attacker.hasAbility('Ancient Idol', 'Equinox')) { desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a'); }
 
   // Body Press in Wonder Room uses normal Def, which checkRawStatChanges has moved to SpD
@@ -2001,7 +2001,7 @@ export function calculateAttackSMSSSV(
   }
 
   if (attacker.hasAbility('Power Core')) {
-    const defense = 
+    const defense =
       move.category === 'Special' ? getModifiedStat(attackSource.rawStats['spd']!, attackSource.boosts['spd']) :
       getModifiedStat(attackSource.rawStats['def']!, attackSource.boosts['def']);
     attack = pokeRound(attack + defense * .2);
@@ -2157,7 +2157,7 @@ export function calculateAtModsSMSSSV(
     atMods.push(5530);
     desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
   }
-  
+
   /* The 1.5x type boosters */
   if ((attacker.hasAbility('Dragon\'s Maw') && move.hasType('Dragon')) ||
       (attacker.hasAbility('Transistor') && move.hasType('Electric')) ||
@@ -2368,11 +2368,11 @@ export function calculateDefenseSMSSSV(
     defense = pokeRound((defense * 3) / 2);
     desc.weather = field.weather;
   }
-  if (field.hasWeather('Hail') && defender.hasType('Ice') && hitsPhysical) { /* Changed from Snow to Hail */ 
+  if (field.hasWeather('Hail') && defender.hasType('Ice') && hitsPhysical) { /* Changed from Snow to Hail */
     defense = pokeRound((defense * 3) / 2);
     desc.weather = field.weather;
   }
-  if (field.hasWeather('Fog') && defender.hasType('Ghost')) { /* Fog Defense Boost */ 
+  if (field.hasWeather('Fog') && defender.hasType('Ghost')) { /* Fog Defense Boost */
     defense = pokeRound((defense * 6) / 5);
     desc.weather = field.weather;
   }
@@ -2389,7 +2389,7 @@ export function calculateDefenseSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, "(" + String(fainted) + " fainted)", desc, 'd');
   }
-  
+
   if (defender.hasAbility('Last Stand')) {
     const ratio = 1 - (defender.curHP() / defender.maxHP())
     defense = pokeRound(defense * (1 + ratio * .6));
@@ -2694,7 +2694,7 @@ export function calculateFinalModsSMSSSV(
     finalMods.push(3276);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
-  
+
   if (defender.hasAbility('Prism Scales') && move.category === 'Special') {
     finalMods.push(2867);
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
@@ -2776,7 +2776,7 @@ export function calculateFinalModsSMSSSV(
     desc.defenderItem = defender.item;
   }
 
-  if (typeEffectiveness === 4 && field.defenderSide.isDWC === true && hitCount === 0) {
+  if (typeEffectiveness === 4 && field.defenderSide.isDWC === true) {
     finalMods.push(2048);
     desc.dwc = true;
   }
