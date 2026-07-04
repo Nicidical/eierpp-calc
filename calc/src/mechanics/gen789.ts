@@ -619,7 +619,7 @@ export function calculateSMSSSV(
   const isCritical = !defender.hasAbility('Battle Armor', 'Shell Armor', 'Bad Luck', 'Crystalline Armor') &&
     (move.isCrit ||
     /* Merciless now works against foes who are paralyzed/bleeding/speed dropped */
-    (attacker.hasAbility('Merciless') && (defender.hasStatus('psn', 'tox', 'par', 'bld')) || defender.boosts['spe'] < 0) ||
+    (attacker.hasAbility('Merciless') && ((defender.hasStatus('psn', 'tox', 'par', 'bld')) || defender.boosts['spe'] < 0)) ||
     (attacker.hasAbility('Fatal Precision') && typeEffectiveness > 1) ||
     (attacker.hasAbility('Ambush') && attacker.hasAbilityActive('Ambush')) ||
     (move.named('Flail', 'Reversal') && attacker.curHP() < attacker.maxHP() / 2)) &&
