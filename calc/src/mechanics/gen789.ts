@@ -263,7 +263,7 @@ export function calculateSMSSSV(
     'Volcano Rage', 'Water Bubble'
   ];
 
-  const defenderIgnoresAbility = attacker.hasAbility('Wonder Skin', 'Fort Knox', 'Stainless Steel', 'Prim and Proper');
+  const defenderIgnoresAbility = defender.hasAbility('Wonder Skin', 'Fort Knox', 'Stainless Steel', 'Prim and Proper');
 
   let hasIgnorableAtkAbil = false;
   if (defenderIgnoresAbility) {
