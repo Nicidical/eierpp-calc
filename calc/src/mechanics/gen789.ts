@@ -2604,7 +2604,7 @@ function calculateBaseDamageSMSSSV(
     baseDamage = pokeRound(OF32(baseDamage * 819) / 4096);
   } else if (attacker.hasAbility('Multi-Headed 3/3')) {
     baseDamage = pokeRound(OF32(baseDamage * 614) / 4096);
-  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)', 'Magus Blades', 'Magus Blades (Child)') && (move.flags.pulse || move.flags.slicing) && !isSpread) {
+  } else if (attacker.hasAbility('Dual Wield', 'Dual Wield (Child)', 'Magus Blades', 'Magus Blades (Child)') && (move.flags.pulse || move.flags.slicing)) {
     baseDamage = pokeRound(OF32(baseDamage * 2867) / 4096);
   }
 
