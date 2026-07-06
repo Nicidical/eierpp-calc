@@ -914,7 +914,7 @@ export function calculateSMSSSV(
   let child2Damage: number[] | undefined;
   // There should be only one of these abilities on every Pokemon. So, I'm coding them with if/elses.
   /* Parental Bond / Hyper Aggressive */
-  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)', 'Magus Blades (Child)') && move.hits === 1 && !isSpread && !move.multiaccuracy) {
+  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)', 'Magus Blades (Child)') && move.hits === 1 && !isSpread && !move.multiaccuracy && !((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1) || (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1))) {
     if ((attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || (attacker.hasAbility('Multi-Headed', '3 > 1') && attacker.heads === 2))) {
       const child = attacker.clone();
 
@@ -2552,7 +2552,8 @@ function calculateBaseDamageSMSSSV(
     (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
   if (isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
-    if ((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1)) {
+    if ((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1) ||
+    (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1)) {
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a')
     }
   }
