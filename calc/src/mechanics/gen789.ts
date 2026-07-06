@@ -908,7 +908,7 @@ export function calculateSMSSSV(
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
     (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1) ||
-    (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
+    (move.flags.pulse && attacker.hasAbility('Artillery') && (move.hits === 1 || attacker.hasAbility('Dual Wield (Child)', 'Magus Blades (Child)'))));
 
   let childDamage: number[] | undefined;
   let child2Damage: number[] | undefined;
@@ -2587,7 +2587,7 @@ function calculateBaseDamageSMSSSV(
   const isSpread = field.gameType !== 'Singles' &&
      (['allAdjacent', 'allAdjacentFoes'].includes(move.target) ||
     (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1) ||
-    (move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1));
+    (move.flags.pulse && attacker.hasAbility('Artillery') && (move.hits === 1 || attacker.hasAbility('Dual Wield (Child)', 'Magus Blades (Child)'))));
   if (isSpread) {
     baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
     if ((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1) ||
