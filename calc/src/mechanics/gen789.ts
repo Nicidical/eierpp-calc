@@ -914,7 +914,7 @@ export function calculateSMSSSV(
   let child2Damage: number[] | undefined;
   // There should be only one of these abilities on every Pokemon. So, I'm coding them with if/elses.
   /* Parental Bond / Hyper Aggressive */
-  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)', 'Magus Blades (Child)') && move.hits === 1 && !isSpread && !move.multiaccuracy && !((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1) || (move.flags.sound && attacker.hasAbility('Amplifier', 'Bass Boosted') && move.hits === 1))) {
+  if (!attacker.hasAbility('Parental Bond (Child)', 'Raging Boxer (Child)', 'Multi-Headed 2/3', 'Multi-Headed 3/3', 'Ice Cold Hunter 2', 'Dual Wield (Child)', 'Magus Blades (Child)') && move.hits === 1 && !isSpread && !move.multiaccuracy) {
     if ((attacker.hasAbility('Parental Bond', 'Hyper Aggressive') || (attacker.hasAbility('Multi-Headed', '3 > 1') && attacker.heads === 2))) {
       const child = attacker.clone();
 
@@ -996,6 +996,44 @@ export function calculateSMSSSV(
       childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
       desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
     } else if ((attacker.hasAbility('Dual Wield') && (move.flags.slicing || move.flags.pulse))) {
+      const child = attacker.clone();
+
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
+      No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+      if (child.innates) {
+        var i;
+        for (i = 0; i < 3; i++) {
+          if (child.innates[i] === attacker.descAbility) { break; }
+        }
+        if (i < 3) { child.innates[i] = 'Dual Wield (Child)' as AbilityName; }
+        else { child.ability = 'Dual Wield (Child)' as AbilityName; }
+      } else { child.ability = 'Dual Wield (Child)' as AbilityName; }
+
+      checkMultihitBoost(gen, child, defender, move, field, desc);
+      childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    } else if ((attacker.hasAbility('Magus Blades') && (move.flags.slicing || move.flags.pulse))) {
+      const child = attacker.clone();
+
+      /* Need to check which innate slot the ability is in...or if it is the ability slot
+      No need for additional code for Hyper Aggressive, the ability will still show correctly in the damage text */
+      if (child.innates) {
+        var i;
+        for (i = 0; i < 3; i++) {
+          if (child.innates[i] === attacker.descAbility) { break; }
+        }
+        if (i < 3) { child.innates[i] = 'Magus Blades (Child)' as AbilityName; }
+        else { child.ability = 'Magus Blades (Child)' as AbilityName; }
+      } else { child.ability = 'Magus Blades (Child)' as AbilityName; }
+
+      checkMultihitBoost(gen, child, defender, move, field, desc);
+      childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+      desc.attackerAbility = addSpacedStr(desc.attackerAbility, attacker.descAbility, desc, 'a');
+    }
+  }
+
+  else if ((move.flags.pulse && attacker.hasAbility('Artillery') && move.hits === 1) || (move.flags.slicing && attacker.hasAbility('Sweeping Edge') && move.hits === 1)) {
+    if ((attacker.hasAbility('Dual Wield') && (move.flags.slicing || move.flags.pulse))) {
       const child = attacker.clone();
 
       /* Need to check which innate slot the ability is in...or if it is the ability slot
