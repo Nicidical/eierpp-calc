@@ -2311,7 +2311,7 @@ export function calculateAtModsSMSSSV(
         atMods.push(2048);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
-  if (defender.hasAbility('Seaweed') && defender.hasType('Grass') && move.hasType('Fire')) {
+  if (defender.hasAbility('Seaweed', 'Old Mariner') && defender.hasType('Grass') && move.hasType('Fire')) {
         atMods.push(2048);
         desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
