@@ -2389,7 +2389,7 @@ export function calculateDefenseSMSSSV(
   const defenseStat = hitsPhysical ? 'def'
   : (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) ? 'spe'
   : (defender.hasAbility('Elude') && (!move.flags.contact || attacker.hasAbility('Long Reach'))) ? 'spe'
-  : (defender.hasAbility('Blur') && (move.flags.contact || !attacker.hasAbility('Long Reach'))) ? 'spe'
+  : (defender.hasAbility('Blur') && (move.flags.contact && !attacker.hasAbility('Long Reach'))) ? 'spe'
   : 'spd';
 
   /* Even though we checked for the abils that change the def stat, we still need to apply them to the desc */
@@ -2397,7 +2397,7 @@ export function calculateDefenseSMSSSV(
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   } else if (defender.hasAbility('Elude') && (!move.flags.contact || attacker.hasAbility('Long Reach'))) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
-  } else if (defender.hasAbility('Blur') && (move.flags.contact || !attacker.hasAbility('Long Reach'))) {
+  } else if (defender.hasAbility('Blur') && (move.flags.contact && !attacker.hasAbility('Long Reach'))) {
     desc.defenderAbility = addSpacedStr(desc.defenderAbility, defender.descAbility, desc, 'd');
   }
 
