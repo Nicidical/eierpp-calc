@@ -2386,10 +2386,11 @@ export function calculateDefenseSMSSSV(
   let defense: number;
   const hitsPhysical = (move.overrideDefensiveStat === 'def' || move.category === 'Physical') &&
   !(move.flags.punch && attacker.hasAbility('Power Fists'));
-  const defenseStat = hitsPhysical ? 'def'
-  : (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) ? 'spe'
+  const defenseStat =
+  (defender.hasAbility('Tangled Feet') && (field.defenderSide.isConfused || field.defenderSide.isEnraged)) ? 'spe'
   : (defender.hasAbility('Elude') && (!move.flags.contact || attacker.hasAbility('Long Reach'))) ? 'spe'
   : (defender.hasAbility('Blur') && (move.flags.contact && !attacker.hasAbility('Long Reach'))) ? 'spe'
+  : hitsPhysical ? 'def'
   : 'spd';
 
   /* Even though we checked for the abils that change the def stat, we still need to apply them to the desc */
